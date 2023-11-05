@@ -1,0 +1,60 @@
+/* src/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	margin: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    position: relative; /* To ensure it acts as a reference for the absolute positioning of the SVG */
+}
+
+.pageSection {
+  position: relative;
+  z-index: 2; /* This ensures the section content is above the SVG background */
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/Euclid-Circular-B-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/Euclid-Circular-B-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/Euclid-Circular-B-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/Euclid-Circular-B-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/Euclid-Circular-B-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
