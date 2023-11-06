@@ -1,17 +1,18 @@
 <script></script>
 
-<container class="max-w-[1297px] mx-auto px-16 md:px-5 pt-40 pb-80 gap-10 text-gray-100">
+<container class="text-grey-800">
+	<main class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30 gap-10 ">
 	<section id="about" class="pageSection">
-		<h2 class="font-euclid text-3xl font-semibold my-4">ABOUT ME:</h2>
+		<h2 class="font-euclid text-xl font-semibold my-4">ABOUT ME:</h2>
 	</section>
 
 	<section class="grid grid-cols-12 gap-10 mb-10">
 		<!-- Text Card -->
         <div class="text-card card-one md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10">
-			<h2 class="font-euclid text-3xl font-semibold my-4">
+			<h2 class="font-euclid text-lg font-semibold my-4">
 				Designing Impact: From Pixel to Performance
 			</h2>
-			<p>
+			<p class="font-euclid font-normal text-xl">
 				My love for product & interaction design began when I realized I could mix coding, creative
 				design, and business strategy all into one. For me, it's not just about making things look
 				good. I pride myself on design that delivers real-world results.
@@ -26,85 +27,82 @@
 	<section class="skills-card text-grey-50 bg-grey-800 rounded-3xl p-10">
 		<!-- Card Header -->
 		<header class="text-left">
-			<h2 class="font-euclid text-3xl font-semibold my-4">Services</h2>
-			<p class="">Essential skills and services I offer:</p>
+		  <h2 class="font-euclid text-3xl font-semibold pb-2">Services</h2>
+		  <p>Essential skills and services I offer:</p>
 		</header>
-
+	  
 		<!-- Skills List -->
-		<div class="skills grid grid-cols-1 md:grid-cols-5 gap-4">
-			<!-- Skill: Customer Research -->
-			<article class="skill">
-				<div class="skill-image">
-					<img alt="ResearchIcon" src="/images/about/ResearchIco.svg" />
-				</div>
-				<ul>
-					<li><h3>Customer Research</h3></li>
-					<li>Interviews</li>
-					<li>Journey Mapping</li>
-					<li>Insights Analysis</li>
-					<li>Heuristic Evaluation</li>
-				</ul>
-			</article>
-			<!-- Skill: User Centred Design -->
-			<article class="skill">
-				<div class="skill-image">
-					<img alt="User Centred Design Icon" src="/images/about/ServiceDesignIco.svg" />
-				</div>
-				<ul>
-					<li><h3>User Centred Design</h3></li>
-					<li>Websites</li>
-					<li>Applications</li>
-					<li>Enterprise Design</li>
-					<li>Brand Design</li>
-				</ul>
-			</article>
-
-			<!-- Skill: Facililitation -->
-			<article class="skill">
-				<div class="skill-image">
-					<img alt="Facililitation Icon" src="/images/about/UserIco.svg" />
-				</div>
-				<ul>
-					<li><h3>Facililitation</h3></li>
-					<li>User Testing</li>
-					<li>Design Sprints</li>
-					<li>Workshops</li>
-					<li>Agile Workflow</li>
-				</ul>
-			</article>
-
-			<!-- Skill: Figma -->
-			<article class="skill">
-				<div class="skill-image">
-					<img alt="Figma Icon" src="/images/about/FigIco.svg" />
-				</div>
-				<ul>
-					<li><h3>Figma</h3></li>
-					<li>Design Systems</li>
-					<li>Components</li>
-					<li>Prototyping</li>
-					<li>Handoff & QA</li>
-				</ul>
-			</article>
-
-			<!-- Skill: Development -->
-			<article class="skill">
-				<div class="skill-image">
-					<img alt="Development Icon" src="/images/about/CodeIco.svg" />
-				</div>
-				<ul>
-					<li><h3>Development</h3></li>
-					<li>Accessibility</li>
-					<li>Responsive Design</li>
-					<li>SEO</li>
-					<li>HTML, CSS & JS</li>
-				</ul>
-			</article>
+		<div class="skills flex flex-wrap justify-around gap-4">
+		  <!-- Skill: Customer Research -->
+		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
+			<div class="skill-image flex justify-center py-2 max-h-[48px]">
+			  <img alt="ResearchIcon" src="/images/about/ResearchIco.svg" />
+			</div>
+			<ul class="text-center space-y-2">
+			  <li><h3 class="text-lg font-bold">Customer Research</h3></li>
+			  <li>Interviews</li>
+			  <li>Journey Mapping</li>
+			  <li>Insights Analysis</li>
+			  <li>Heuristic Evaluation</li>
+			</ul>
+		  </article>
+		  <!-- Skill: User Centred Design -->
+		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
+			<div class="skill-image flex justify-center py-2 max-h-[48px]">
+			  <img alt="User Centred Design Icon" src="/images/about/ServiceDesignIco.svg" />
+			</div>
+			<ul class="text-center space-y-2">
+			  <li><h3 class="text-lg font-bold">User Centred Design</h3></li>
+			  <li>Websites</li>
+			  <li>Applications</li>
+			  <li>Enterprise Design</li>
+			  <li>Brand Design</li>
+			</ul>
+		  </article>
+		  <!-- Skill: Facilitation -->
+		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
+			<div class="skill-image flex justify-center max-h-[48px] py-2">
+			  <img alt="Facilitation Icon" src="/images/about/UserIco.svg" />
+			</div>
+			<ul class="text-center space-y-2">
+			  <li><h3 class="text-lg font-bold">Facilitation</h3></li>
+			  <li>User Testing</li>
+			  <li>Design Sprints</li>
+			  <li>Workshops</li>
+			  <li>Agile Workflow</li>
+			</ul>
+		  </article>
+		  <!-- Skill: Figma -->
+		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
+			<div class="skill-image flex justify-center max-h-[48px] py-2">
+			  <img alt="Figma Icon" src="/images/about/FigIco.svg" />
+			</div>
+			<ul class="text-center space-y-2">
+			  <li><h3 class="text-lg font-bold">Figma</h3></li>
+			  <li>Design Systems</li>
+			  <li>Components</li>
+			  <li>Prototyping</li>
+			  <li>Handoff & QA</li>
+			</ul>
+		  </article>
+		  <!-- Skill: Development -->
+		  <article class="skill flex-1 min-w-[180px] m-2 p-4">
+			<div class="skill-image flex justify-center max-h-[48px] py-2">
+			  <img alt="Development Icon" src="/images/about/CodeIco.svg" />
+			</div>
+			<ul class="text-center space-y-2">
+			  <li><h3 class="text-lg font-bold">Development</h3></li>
+			  <li>Accessibility</li>
+			  <li>Responsive Design</li>
+			  <li>SEO</li>
+			  <li>HTML, CSS & JS</li>
+			</ul>
+		  </article>
 		</div>
-	</section>
+	  </section>
 
 	<section class="pt-10">
-		<h2 class="font-euclid text-3xl font-semibold my-4">BACKGROUND:</h2>
+		<h2 class="font-euclid text-xl font-semibold my-4">BACKGROUND:</h2>
 	</section>
 
 	<section class="split-card flex flex-wrap -mx-2 mb-10 rounded-3xl bg-grey-50">
@@ -171,16 +169,17 @@
 			/>
 		</div>
 	</section>
+</main>
 </container>
 
 <style lang="postcss">
 
 
-.card-one,
+/*.card-one,
   .card-two {
-    max-width: 630px;
+    max-width: 640px;
     min-height: 415px; 
-  } 
+  } */
 
 .card-one,
   .card-two,

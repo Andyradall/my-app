@@ -18,7 +18,7 @@ theme: {
       800: '#242527',
       900: '#18191B',
     },  
-  },    
+  },
   extend: {
     fontFamily: {
       'euclid': ['Euclid Circular B', 'sans-serif'],
