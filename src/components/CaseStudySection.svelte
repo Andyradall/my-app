@@ -37,15 +37,15 @@
 ];
 </script>
 
-<container class="text-grey-800 pageSection" id="work">
- <main class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30">
+<!--container class="text-grey-800 pageSection" id="work">
+ <main class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30 gap-10">
   <section>
-   <h2 class="font-euclid font-semibold text-lg">CASE STUDIES:</h2>
+   <h2 class="font-euclid text-xl pl-6 font-semibold my-4">CASE STUDIES:</h2>
   </section>
   <section>
     <div class="flex flex-wrap">
     {#each caseStudies as study}
-      <div class="w-full sm:w-1/2 p-2"> 
+      <div class="w-full sm:w-1/2 gap-10"> 
         <CaseStudyCard 
           title={study.title} 
           link={study.href}
@@ -59,4 +59,24 @@
     </div>
   </section>
   </main>
-</container>
+</container-->
+
+<section class="text-grey-800 pageSection" id="work">
+  <div class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30">
+    <section>
+      <h2 class="font-euclid text-xl pl-6 font-semibold my-4">CASE STUDIES:</h2>
+    </section>
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      {#each caseStudies as study}
+        <CaseStudyCard 
+          title={study.title} 
+          link={study.href}
+          ariaLabel={study.ariaLabel} 
+          category={study.category} 
+          image={study.image} 
+          alt={study.alt}
+        />
+      {/each}
+    </section>
+  </div>
+</section>

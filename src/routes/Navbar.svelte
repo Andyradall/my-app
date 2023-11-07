@@ -12,8 +12,8 @@
             isActive = true;
         }
     });
-    
-    // set the size correct from start 
+     
+    // set the size correct from starts
     let effectX = 0;     // Initial position
     let effectWidth = 0; // Initial width
     
