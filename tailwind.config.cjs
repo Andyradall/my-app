@@ -9,7 +9,8 @@ theme: {
     'grey': {
       50: '#F1F5FE',
       100: '#EBEEF4',
-      200: '#B6B9BD',
+      200: '#DDE0E6',
+      250: '#B6B9BD',
       300: '#9C9EA2',
       400: '#616366',
       500: '#515255',
@@ -19,6 +20,7 @@ theme: {
       900: '#18191B',
     },  
   },
+
   extend: {
     fontFamily: {
       'euclid': ['Euclid Circular B', 'sans-serif'],

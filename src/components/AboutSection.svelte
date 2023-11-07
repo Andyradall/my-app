@@ -8,7 +8,7 @@
 
 	<section class="grid grid-cols-12 gap-10 mb-10">
 		<!-- Text Card -->
-        <div class="text-card card-one md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10">
+        <div class="text-card card-one shadow-custom md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10">
 			<h2 class="font-euclid text-lg font-semibold my-4">
 				Designing Impact: From Pixel to Performance
 			</h2>
@@ -20,11 +20,11 @@
 		</div>
 
 		<!-- Image Card -->
-        <div class="image-card card-two md:col-span-6 col-span-12 flex justify-center overflow-hidden bg-grey-800 rounded-3xl">
+        <div class="image-card card-two shadow-custom md:col-span-6 col-span-12 flex justify-center overflow-hidden bg-grey-800 rounded-3xl">
 			<img class="max-w-full h-auto bg-grey-800" alt="Profile" src="/images/about/profil-1.webp" />
 		</div>
 	</section>
-	<section class="skills-card text-grey-50 bg-grey-800 rounded-3xl p-10">
+	<section class="skills-card shadow-custom text-grey-50 bg-grey-800 rounded-3xl p-10">
 		<!-- Card Header -->
 		<header class="text-left">
 		  <h2 class="font-euclid text-3xl font-semibold pb-2">Services</h2>
@@ -32,10 +32,10 @@
 		</header>
 	  
 		<!-- Skills List -->
-		<div class="skills flex flex-wrap justify-around gap-4">
+		<div class="skills flex flex-wrap justify-around gap-2">
 		  <!-- Skill: Customer Research -->
 		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
-			<div class="skill-image flex justify-center py-2 max-h-[48px]">
+			<div class="skill-image flex justify-center py-2 my-2 max-h-[48px]">
 			  <img alt="ResearchIcon" src="/images/about/ResearchIco.svg" />
 			</div>
 			<ul class="text-center space-y-2">
@@ -48,7 +48,7 @@
 		  </article>
 		  <!-- Skill: User Centred Design -->
 		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
-			<div class="skill-image flex justify-center py-2 max-h-[48px]">
+			<div class="skill-image flex justify-center py-2 my-2 max-h-[48px]">
 			  <img alt="User Centred Design Icon" src="/images/about/ServiceDesignIco.svg" />
 			</div>
 			<ul class="text-center space-y-2">
@@ -61,7 +61,7 @@
 		  </article>
 		  <!-- Skill: Facilitation -->
 		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
-			<div class="skill-image flex justify-center max-h-[48px] py-2">
+			<div class="skill-image flex justify-center max-h-[48px] my-2 py-2">
 			  <img alt="Facilitation Icon" src="/images/about/UserIco.svg" />
 			</div>
 			<ul class="text-center space-y-2">
@@ -74,7 +74,7 @@
 		  </article>
 		  <!-- Skill: Figma -->
 		  <article class="skill flex-1 min-w-[180px] m-1 p-4">
-			<div class="skill-image flex justify-center max-h-[48px] py-2">
+			<div class="skill-image flex justify-center max-h-[48px] my-2 py-2">
 			  <img alt="Figma Icon" src="/images/about/FigIco.svg" />
 			</div>
 			<ul class="text-center space-y-2">
@@ -87,7 +87,7 @@
 		  </article>
 		  <!-- Skill: Development -->
 		  <article class="skill flex-1 min-w-[180px] m-2 p-4">
-			<div class="skill-image flex justify-center max-h-[48px] py-2">
+			<div class="skill-image flex justify-center max-h-[48px] my-2 py-2">
 			  <img alt="Development Icon" src="/images/about/CodeIco.svg" />
 			</div>
 			<ul class="text-center space-y-2">
@@ -95,7 +95,7 @@
 			  <li>Accessibility</li>
 			  <li>Responsive Design</li>
 			  <li>SEO</li>
-			  <li>HTML, CSS & JS</li>
+			  <li>HTML, CSS, JS, <br>SvelteKit, Tailwind, Git</li>
 			</ul>
 		  </article>
 		</div>
@@ -105,14 +105,17 @@
 		<h2 class="font-euclid text-xl font-semibold my-4">BACKGROUND:</h2>
 	</section>
 
-	<section class="split-card flex flex-wrap -mx-2 mb-10 rounded-3xl bg-grey-50">
+	<section class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-grey-50">
 		<!-- Image Section -->
-		<div class="split-card-image w-full md:w-1/2 px-2">
+		<!--div class="split-card-image w-full md:w-1/2 bg-grey-800 align-middle">
 			<img alt="bildeholder" src="/images/about/bildeholder.webp" />
+		</div-->
+		<div class="split-card-image w-full md:w-1/2 bg-grey-800 flex justify-center items-center overflow-hidden">
+			<img alt="bildeholder" src="/images/about/bildeholder.webp" class="object-contain md:object-scale-down h-auto" />
 		</div>
 
 		<!-- Text Section -->
-		<div class="split-card-text w-full md:w-1/2 px-2">
+		<div class="split-card-text w-full md:w-1/2 py-4 px-8 ">
 			<h2 class="font-euclid text-3xl font-semibold my-4">Education</h2>
 			<p>
 				I finished my <strong>Interaction Design</strong> studies in 2019. Here I learned both
@@ -130,29 +133,33 @@
 				where I designed an administrator area for the tool, Designmaskinen.
 			</p>
 
-			<a
-				href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="My Resumé"
-				class="resume-btn-custom-link"
-			>
-				My Full Resumé
-				<span class="resume-btn-svg-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
-						<path
-							d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
-							fill="currentColor"
-						/>
-					</svg>
-				</span>
-			</a>
+<div class="flex justify-center"> <!-- This is the containing div that centers the button -->
+  <button class="inline-flex items-center bg-grey-200 font-medium hover:text-grey-600 my-8 py-2 px-6 rounded-full transition-all mx-auto">
+    <a
+      href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="My Resumé"
+      class="resume-btn-custom-link flex items-center"
+    >
+      My Full Resumé
+      <span class="resume-btn-svg-icon ml-0.5 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+          <path
+            d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </a>
+  </button>
+</div>
 		</div>
 	</section>
 
 	<section class="card-one-two grid grid-cols-12 gap-10">
 		<!-- Text Card -->
-        <div class="text-card card-one md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10">
+        <div class="text-card card-one shadow-custom md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10">
 			<h2 class="font-euclid text-3xl font-semibold my-4">Life Beyond Pixels</h2>
 			<p>
 				I love nature, and enjoy going skiing and cycling in Nordmarka, or running with our
@@ -161,7 +168,7 @@
 		</div>
 
 		<!-- Image Card -->
-        <div class="image-card card-two md:col-span-6 col-span-12 flex justify-center overflow-hidden bg-grey-800 rounded-3xl">
+        <div class="image-card card-two shadow-custom md:col-span-6 col-span-12 flex justify-center overflow-hidden bg-grey-800 rounded-3xl">
 			<img
 				class="image-to-stretch skibilde bg-grey-800"
 				alt="Skibilde"
@@ -174,19 +181,43 @@
 
 <style lang="postcss">
 
+/* Custom CSS for hover effect */
+.resume-btn-custom-link:hover .resume-btn-svg-icon {
+  transform: translateY(-2px) translateX(2px); /* Adjust values as needed for the hover effect */
+}
+
+/* Ensures the SVG icon is slightly lowered to align with the text */
+.resume-btn-svg-icon {
+  transform: translateY(-1px);
+  transition: transform 0.1s;
+}
 
 /*.card-one,
   .card-two {
     max-width: 640px;
     min-height: 415px; 
   } */
+	/* resume btn */
+/*
+	.resume-btn-custom-link {
+		display: inline-flex;
+		align-items: baseline;
+	}
 
-.card-one,
-  .card-two,
-  .split-card,
-  .skills-card {
-    @apply shadow-custom;
-  }
+	.resume-btn-svg-icon {
+		margin-left: 2px;
+		transform: translateY(3px);
+		transition: transform 0.1s;
+	}
+
+	.resume-btn-custom-link:hover .resume-btn-svg-icon {
+		transform: translateY(1px) translateX(2px);
+	}
+
+	.resume-btn-svg-icon svg path {
+		fill: currentColor;
+	}
+*/
 
 	/*.image-card.card-two .image-to-stretch {
     height: 100%;
@@ -309,27 +340,7 @@
 		padding-left: 2.5rem;
 	}
 */
-	/* resume btn */
-/*
-	.resume-btn-custom-link {
-		display: inline-flex;
-		align-items: baseline;
-	}
 
-	.resume-btn-svg-icon {
-		margin-left: 2px;
-		transform: translateY(3px);
-		transition: transform 0.1s;
-	}
-
-	.resume-btn-custom-link:hover .resume-btn-svg-icon {
-		transform: translateY(1px) translateX(2px);
-	}
-
-	.resume-btn-svg-icon svg path {
-		fill: currentColor;
-	}
-*/
 
 /*
 	@media (max-width: 768px) {
