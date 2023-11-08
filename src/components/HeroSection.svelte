@@ -16,7 +16,7 @@
 </section>
 
 
-<style>
+<style lang="postcss">
 #hero h1 {
 	font-size: 82px;
 	line-height: 5.5rem;

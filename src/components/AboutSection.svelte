@@ -1,7 +1,7 @@
 <script></script>
 
-<container class="text-grey-800">
-	<main class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30 gap-10">
+<main class="text-grey-800 mb-52">
+	<div class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30 gap-10">
 		<section id="about" class="pageSection">
 			<h2 class="font-euclid text-xl font-semibold pl-6 my-4">ABOUT ME:</h2>
 		</section>
@@ -203,8 +203,8 @@
 				/>
 			</div>
 		</section>
-	</main>
-</container>
+	</div>
+</main>
 
 <style lang="postcss">
 	/* Custom CSS for hover effect */

@@ -54,7 +54,7 @@ for(let i = 0; i < 4; i++) {
     {@html circles}
 </svg>
 
-<style>
+<style lang="postcss">
         :root {
         --pastel-blue: #A8DADC;
         --soft-coral: #F4A261;

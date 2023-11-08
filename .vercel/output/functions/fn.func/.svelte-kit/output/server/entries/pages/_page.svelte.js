@@ -1,26 +1,8 @@
 import { c as create_ssr_component, d as add_attribute, v as validate_component, e as escape, f as each } from "../../chunks/index.js";
 import "animejs";
-const Navbar_svelte_svelte_type_style_lang = "";
-const css$4 = {
-  code: "#nav-container.svelte-1wxch0j.svelte-1wxch0j{display:flex;justify-content:center;align-items:center}.menu-custom-link.svelte-1wxch0j.svelte-1wxch0j{display:inline-flex;align-items:baseline}.menu-custom-link.svelte-1wxch0j.svelte-1wxch0j:hover,.menu-custom-link.svelte-1wxch0j.svelte-1wxch0j:focus{color:#616366 !important}.menu-svg-icon.svelte-1wxch0j.svelte-1wxch0j{margin-left:2px;transform:translateY(3px);transition:transform 0.1s}.menu-custom-link.svelte-1wxch0j:hover .menu-svg-icon.svelte-1wxch0j{transform:translateY(1px) translateX(2px)}.menu-svg-icon.svelte-1wxch0j svg path.svelte-1wxch0j{fill:currentColor}@media(max-width: 768px){.menu-custom-link.svelte-1wxch0j.svelte-1wxch0j{display:none}.menu-effect.svelte-1wxch0j.svelte-1wxch0j{transform:translateX(4px)}#nav-container.svelte-1wxch0j.svelte-1wxch0j{width:92% !important;margin:0 auto !important}.main-navbar.svelte-1wxch0j.svelte-1wxch0j{width:92% !important;margin:0 auto !important;top:12px !important;padding:0px 4px !important;max-height:48px !important}.main-navbar.svelte-1wxch0j a.svelte-1wxch0j{font-size:calc(0.9em)!important;padding:3px 4px !important;white-space:nowrap}.main-navbar.svelte-1wxch0j ul.svelte-1wxch0j{padding:4px 16px !important;margin:4px !important;gap:0!important;display:flex;justify-content:center;justify-content:space-between;margin-block-start:0!important;margin-block-end:0!important;padding-inline-start:40px!important}.menu-effect.svelte-1wxch0j.svelte-1wxch0j{max-height:32px}}.main-navbar.svelte-1wxch0j.svelte-1wxch0j{position:fixed;top:24px;padding:0px 8px;align-items:center;height:64px;border:1px solid #DDE0E6;border-radius:198px;z-index:100;overflow:visible;background:#F7FBFF !important;box-shadow:0px 8px 16px 0px rgba(0, 0, 0, 0.01), \n                    0px 4px 6px 0px rgba(0, 0, 0, 0.03), \n                    0px 2px 3px 0px rgba(0, 0, 0, 0.02)}.main-navbar.svelte-1wxch0j ul.svelte-1wxch0j{list-style-type:none;padding:16px 0;margin:0;display:flex;position:relative;justify-content:center;align-items:center;gap:8px}.main-navbar.svelte-1wxch0j li.svelte-1wxch0j{display:flex;padding:0 8px;flex-direction:column;justify-content:center;align-items:flex-start}.main-navbar.svelte-1wxch0j a.svelte-1wxch0j{font-family:Euclid Circular B, sans-serif;color:#242527;font-size:calc(1em + 2px);font-style:normal;font-weight:500;line-height:33.33px;z-index:102;text-decoration:none;z-index:103;position:relative;padding:0 20px}.main-navbar.svelte-1wxch0j a.svelte-1wxch0j:hover{color:#616366}.menu-effect-container.svelte-1wxch0j.svelte-1wxch0j{width:163px;height:48px;position:absolute;width:100%;height:100%;top:0px;display:flex;align-items:center;justify-content:center;pointer-events:none}.menu-effect.svelte-1wxch0j.svelte-1wxch0j{opacity:1;background:#DDE0E6;height:48px;position:absolute;border-radius:104px;z-index:101}",
-  map: null
-};
-const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$4);
-  return `<nav><div id="nav-container" class="svelte-1wxch0j"><div id="main-navigation" class="main-navbar svelte-1wxch0j" role="navigation" aria-label="Main Navigation"><div class="menu-effect-container svelte-1wxch0j"><div class="menu-effect svelte-1wxch0j"></div></div>
-
-<ul class="svelte-1wxch0j"><li class="svelte-1wxch0j"><a href="#hero" aria-label="Anders Rådal" class="${["svelte-1wxch0j", ""].join(" ").trim()}">Anders Rådal</a></li>
-    <li class="svelte-1wxch0j"><a href="#work" aria-label="Case Studies" class="svelte-1wxch0j">Case Studies</a></li>
-    <li class="svelte-1wxch0j"><a href="#about" aria-label="About me" class="svelte-1wxch0j">About me</a></li>
-    <li class="svelte-1wxch0j"><a href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Read more in my resume, opens in a new window" class="menu-custom-link svelte-1wxch0j">Resumé
-            <span class="menu-svg-icon svelte-1wxch0j"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z" fill="currentColor" class="svelte-1wxch0j"></path></svg></span></a></li>
-    <li class="svelte-1wxch0j"><a href="https://www.linkedin.com/in/andersraa/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn, opens in a new window" class="menu-custom-link svelte-1wxch0j">LinkedIn
-            <span class="menu-svg-icon svelte-1wxch0j"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z" fill="currentColor" class="svelte-1wxch0j"></path></svg></span></a></li></ul></div></div> 
-</nav>`;
-});
 const BgAnimated_svelte_svelte_type_style_lang = "";
-const css$3 = {
-  code: ':root{--pastel-blue:#A8DADC;--soft-coral:#F4A261;--dusk-blue:#457B9D;--muted-gold:#E9C46A;--off-white-green:#F1FAEE;--white-again:#F5F8FF;--turquoise:#2A9D8F;--almost-white:#FAFAFA}@keyframes svelte-1hyjt6y-moveAnimation{25%{transform:translate3d(var(--transformX1), var(--transformY1), 0)}50%{transform:translate3d(var(--transformX2), var(--transformY2), 0)}75%{transform:translate3d(var(--transformX3), var(--transformY3), 0)}to{transform:translate3d(var(--transformX4), var(--transformY4), 0)}}.full-svg-bg.svelte-1hyjt6y{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.animatedCircle.svelte-1hyjt6y{animation:svelte-1hyjt6y-moveAnimation 30s infinite ease-in-out}.noise-overlay.svelte-1hyjt6y{position:fixed;top:0;left:0;width:100vw;height:100vh;;;background-image:url("/images/backgrounds/transparent_transformed_noisetiny.gif");background-repeat:repeat;opacity:0.015;backdrop-filter:blur(36px);pointer-events:none;z-index:-2;animation:animateNoise 5s infinite}.noise-overlay.svelte-1hyjt6y::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(99, 149, 195, 0.26);z-index:0}',
+const css$4 = {
+  code: ':root{--pastel-blue:#A8DADC;--soft-coral:#F4A261;--dusk-blue:#457B9D;--muted-gold:#E9C46A;--off-white-green:#F1FAEE;--white-again:#F5F8FF;--turquoise:#2A9D8F;--almost-white:#FAFAFA}@keyframes svelte-1dl8a65-moveAnimation{25%{transform:translate3d(var(--transformX1), var(--transformY1), 0)}50%{transform:translate3d(var(--transformX2), var(--transformY2), 0)}75%{transform:translate3d(var(--transformX3), var(--transformY3), 0)}to{transform:translate3d(var(--transformX4), var(--transformY4), 0)}}.full-svg-bg.svelte-1dl8a65{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.animatedCircle.svelte-1dl8a65{animation:svelte-1dl8a65-moveAnimation 30s infinite ease-in-out}.noise-overlay.svelte-1dl8a65{position:fixed;top:0;left:0;width:100vw;height:100vh;;;background-image:url("/images/backgrounds/transparent_transformed_noisetiny.gif");background-repeat:repeat;opacity:0.015;-webkit-backdrop-filter:blur(36px);backdrop-filter:blur(36px);pointer-events:none;z-index:-2;animation:animateNoise 5s infinite}.noise-overlay.svelte-1dl8a65::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(99, 149, 195, 0.26);z-index:0}',
   map: null
 };
 const BgAnimated = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -83,10 +65,10 @@ const BgAnimated = create_ssr_component(($$result, $$props, $$bindings, slots) =
         </circle>
     `).join("");
   }
-  $$result.css.add(css$3);
+  $$result.css.add(css$4);
   return `
-<div class="noise-overlay animatedCircle svelte-1hyjt6y"></div>
-<svg class="full-svg-bg svelte-1hyjt6y" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" preserveAspectRatio="none"><defs><!-- HTML_TAG_START -->${gradients}<!-- HTML_TAG_END --></defs><!-- HTML_TAG_START -->${circles}<!-- HTML_TAG_END --></svg>`;
+<div class="noise-overlay animatedCircle svelte-1dl8a65"></div>
+<svg class="full-svg-bg svelte-1dl8a65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" preserveAspectRatio="none"><defs><!-- HTML_TAG_START -->${gradients}<!-- HTML_TAG_END --></defs><!-- HTML_TAG_START -->${circles}<!-- HTML_TAG_END --></svg>`;
 });
 const NavArrow = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { href = "#work" } = $$props;
@@ -98,12 +80,12 @@ const NavArrow = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   return `<p class="flex justify-center items-center pt-20 pb-20"><a${add_attribute("href", href, 0)}${add_attribute("aria-label", ariaLabel, 0)}><span class="svg-icon-down"><svg width="23" height="79" viewBox="0 0 23 79" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5003 77.9467L1.85742 67.94L4.10742 65.6051L9.89314 71.6091V2.10669H13.1074V71.6091L18.8931 65.6051L21.1431 67.94L11.5003 77.9467Z" fill="#303133"></path></svg></span></a></p>`;
 });
 const HeroSection_svelte_svelte_type_style_lang = "";
-const css$2 = {
+const css$3 = {
   code: "#hero.svelte-uq33t6 h1.svelte-uq33t6{font-size:82px;line-height:5.5rem}",
   map: null
 };
 const HeroSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$2);
+  $$result.css.add(css$3);
   return `<section id="hero" class="pageSection max-w-[1297px] text-grey-800 mx-auto grid grid-cols-12 items-center pt-80 pb-50 text-gray-800 svelte-uq33t6"><div class="col-start-2 col-span-10 md:col-start-3 md:col-span-8 text-center"><h1 class="font-euclid font-bold pb-20 svelte-uq33t6">From Complexity to Clarity.
 		</h1>
 		<h2 class="font-euclid font-normal text-3xl">I design digital products that delight users and drive business success. Explore my case studies:
@@ -112,7 +94,7 @@ const HeroSection = create_ssr_component(($$result, $$props, $$bindings, slots) 
 </section>`;
 });
 const CaseStudyCard_svelte_svelte_type_style_lang = "";
-const css$1 = {
+const css$2 = {
   code: ".case-card-bg.svelte-yx1y8n.svelte-yx1y8n{padding:16px 0;border:1px solid #f6faff}.case-card.svelte-yx1y8n:hover .case-card-image img.svelte-yx1y8n{transform:scale(1.02);transition:transform 0.3s ease-out;opacity:0.94}.case-card.svelte-yx1y8n:hover .case-card-text .custom-link-front.svelte-yx1y8n,.case-card.svelte-yx1y8n:hover h2.svelte-yx1y8n,.case-card.svelte-yx1y8n:hover h3.svelte-yx1y8n,.case-card.svelte-yx1y8n:hover span.svelte-yx1y8n{color:#404244 !important}.custom-link-front.svelte-yx1y8n.svelte-yx1y8n{display:inline-flex}.custom-link-front.svelte-yx1y8n.svelte-yx1y8n:hover,.custom-link-front.svelte-yx1y8n.svelte-yx1y8n:focus{color:#404244 !important}.svg-icon-right.svelte-yx1y8n.svelte-yx1y8n{margin-left:4px;transform:translateX(4px) translateY(2px);transition:transform 0.09s;transition-timing-function:ease-out}.case-card.svelte-yx1y8n:hover .custom-link-front .svg-icon-right.svelte-yx1y8n{transform:translateX(8px) translateY(2px)}.svg-icon-right.svelte-yx1y8n svg path.svelte-yx1y8n{fill:currentColor}",
   map: null
 };
@@ -135,7 +117,7 @@ const CaseStudyCard = create_ssr_component(($$result, $$props, $$bindings, slots
     $$bindings.image(image);
   if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
     $$bindings.alt(alt);
-  $$result.css.add(css$1);
+  $$result.css.add(css$2);
   return `<div class="case-card svelte-yx1y8n"><div class="case-card-bg shadow-custom py-4 rounded-3xl bg-grey-50 max-w-[800px] max-h-[600px] svelte-yx1y8n"><a${add_attribute("href", link, 0)} aria-label="hidden" class="case-card-image"><img class="card-thumbnail svelte-yx1y8n"${add_attribute("src", image, 0)}${add_attribute("alt", alt, 0)}></a></div>
 	<div class="case-card-text"><h3 class="font-euclid font-medium text-gray-800 text-base pt-2 pb-1 leading-9 svelte-yx1y8n">${escape(category)}</h3>
 		<a${add_attribute("href", link, 0)}${add_attribute("aria-label", ariaLabel, 0)} class="custom-link-front font-euclid text-gray-800 text-2xl leading-11 pb-1 font-semibold svelte-yx1y8n"><h2 class="svelte-yx1y8n">${escape(title)}</h2>
@@ -197,13 +179,13 @@ const CaseStudySection = create_ssr_component(($$result, $$props, $$bindings, sl
   })}</section></div></section>`;
 });
 const AboutSection_svelte_svelte_type_style_lang = "";
-const css = {
+const css$1 = {
   code: ".resume-btn-custom-link.svelte-aneuen:hover .resume-btn-svg-icon.svelte-aneuen{transform:translateY(-2px) translateX(2px)}.resume-btn-svg-icon.svelte-aneuen.svelte-aneuen{transform:translateY(-1px);transition:transform 0.1s}",
   map: null
 };
 const AboutSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css);
-  return `<container class="text-grey-800"><main class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30 gap-10"><section id="about" class="pageSection"><h2 class="font-euclid text-xl font-semibold pl-6 my-4">ABOUT ME:</h2></section>
+  $$result.css.add(css$1);
+  return `<main class="text-grey-800 mb-52"><div class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30 gap-10"><section id="about" class="pageSection"><h2 class="font-euclid text-xl font-semibold pl-6 my-4">ABOUT ME:</h2></section>
 
 		<section class="grid grid-cols-12 gap-10 mb-10">
 			<div class="text-card card-one shadow-custom md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10"><h2 class="font-euclid text-3xl font-semibold mb-4">Designing Impact: From Pixel to Performance
@@ -292,16 +274,35 @@ const AboutSection = create_ssr_component(($$result, $$props, $$bindings, slots)
 				</p></div>
 
 			
-			<div class="image-card card-two shadow-custom md:col-span-6 col-span-12 flex justify-center overflow-hidden bg-grey-800 rounded-3xl"><img class="image-to-stretch skibilde bg-grey-800" alt="Skibilde" src="/images/about/Skibilde.webp"></div></section></main>
-</container>`;
+			<div class="image-card card-two shadow-custom md:col-span-6 col-span-12 flex justify-center overflow-hidden bg-grey-800 rounded-3xl"><img class="image-to-stretch skibilde bg-grey-800" alt="Skibilde" src="/images/about/Skibilde.webp"></div></section></div>
+</main>`;
+});
+const Navbar_svelte_svelte_type_style_lang = "";
+const css = {
+  code: ".menu-custom-link.svelte-g3oc3h.svelte-g3oc3h{display:inline-flex;align-items:baseline}.menu-custom-link.svelte-g3oc3h.svelte-g3oc3h:hover,.menu-custom-link.svelte-g3oc3h.svelte-g3oc3h:focus{color:#616366}.menu-svg-icon.svelte-g3oc3h.svelte-g3oc3h{margin-left:2px;transform:translateY(3px);transition:transform 0.1s}.menu-custom-link.svelte-g3oc3h:hover .menu-svg-icon.svelte-g3oc3h{transform:translateY(1px) translateX(2px)}.menu-svg-icon.svelte-g3oc3h svg path.svelte-g3oc3h{fill:currentColor}.main-navbar.svelte-g3oc3h.svelte-g3oc3h{position:fixed;top:24px;padding:0px 8px;align-items:center;height:64px;border:1px solid #dde0e6;z-index:100;overflow:visible}.main-navbar.svelte-g3oc3h ul.svelte-g3oc3h{list-style-type:none;padding:16px 0;margin:0;display:flex;position:relative;justify-content:center;align-items:center;gap:8px}.main-navbar.svelte-g3oc3h li.svelte-g3oc3h{display:flex;padding:0 8px;flex-direction:column;justify-content:center;align-items:flex-start}.main-navbar.svelte-g3oc3h a.svelte-g3oc3h{z-index:102;text-decoration:none;position:relative;padding:0 20px}.main-navbar.svelte-g3oc3h a.svelte-g3oc3h:hover{color:#616366}.menu-effect-container.svelte-g3oc3h.svelte-g3oc3h{width:163px;height:48px;position:absolute;width:100%;height:100%;top:0px;display:flex;align-items:center;justify-content:center;pointer-events:none}.menu-effect.svelte-g3oc3h.svelte-g3oc3h{opacity:1;height:48px;position:absolute;z-index:101}@media(max-width: 768px){.nav-container.svelte-g3oc3h.svelte-g3oc3h{width:92%;margin:0 auto}.menu-custom-link.svelte-g3oc3h.svelte-g3oc3h{display:none}.menu-effect.svelte-g3oc3h.svelte-g3oc3h{transform:translateX(4px)}.main-navbar.svelte-g3oc3h.svelte-g3oc3h{width:92%;margin:0 auto;top:12px;padding:0px 4px;max-height:48px}.main-navbar.svelte-g3oc3h a.svelte-g3oc3h{padding:3px 4px;white-space:nowrap}.main-navbar.svelte-g3oc3h ul.svelte-g3oc3h{padding:4px 16px;margin:4px;gap:0;display:flex;justify-content:space-between;margin-block-start:0;margin-block-end:0;padding-inline-start:40px}.menu-effect.svelte-g3oc3h.svelte-g3oc3h{max-height:32px}}",
+  map: null
+};
+const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css);
+  return `<nav><div class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-lg svelte-g3oc3h"><div id="main-navigation" class="main-navbar shadow-custom rounded-full bg-white svelte-g3oc3h" role="navigation" aria-label="Main Navigation"><div class="menu-effect-container svelte-g3oc3h"><div class="menu-effect bg-grey-200 min-w-90px rounded-full svelte-g3oc3h"></div></div>
+
+			<ul class="svelte-g3oc3h"><li class="svelte-g3oc3h"><a href="#hero" aria-label="Anders Rådal" class="${["svelte-g3oc3h", ""].join(" ").trim()}">Anders Rådal</a></li>
+				<li class="svelte-g3oc3h"><a href="#work" aria-label="Case Studies" class="svelte-g3oc3h">Case Studies</a></li>
+				<li class="svelte-g3oc3h"><a href="#about" aria-label="About me" class="svelte-g3oc3h">About me</a></li>
+				<li class="svelte-g3oc3h"><a href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Read more in my resume, opens in a new window" class="menu-custom-link svelte-g3oc3h">Resumé
+						<span class="menu-svg-icon svelte-g3oc3h"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z" fill="currentColor" class="svelte-g3oc3h"></path></svg></span></a></li>
+				<li class="svelte-g3oc3h"><a href="https://www.linkedin.com/in/andersraa/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn, opens in a new window" class="menu-custom-link svelte-g3oc3h">LinkedIn
+						<span class="menu-svg-icon svelte-g3oc3h"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z" fill="currentColor" class="svelte-g3oc3h"></path></svg></span></a></li></ul></div></div>
+</nav>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1qizn2k_START -->${$$result.title = `<title>Anders Rådal UX Portfolio</title>`, ""}<meta name="description" content="Anders Rådal UX Portfolio site"><!-- HEAD_svelte-1qizn2k_END -->`, ""}
+
     ${validate_component(BgAnimated, "BgAnimated").$$render($$result, {}, {}, {})}
-	${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
 	${validate_component(HeroSection, "HeroSection").$$render($$result, {}, {}, {})}
 	${validate_component(CaseStudySection, "CaseStudySection").$$render($$result, {}, {}, {})}
-	${validate_component(AboutSection, "AboutSection").$$render($$result, {}, {}, {})}`;
+	${validate_component(AboutSection, "AboutSection").$$render($$result, {}, {}, {})}
+	${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}`;
 });
 export {
   Page as default
