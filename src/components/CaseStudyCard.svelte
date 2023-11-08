@@ -1,6 +1,4 @@
 <script>
-	import { dirty_components } from 'svelte/internal';
-
 	export let title = '';
 	export let link = '#';
 	export let ariaLabel = '';
@@ -38,15 +36,10 @@
 <style lang="postcss">
 	/* case card specific css */
 	.case-card-bg {
-		/* max-width: 800px;
-    max-height: 500px; */
+     /* max-width: 800px;
+        max-height: 500px; */
 		padding: 16px 0;
-		/*background-color: #F6FAFF;*/
 		border: 1px solid #f6faff;
-		/* border-radius: 18px;*/
-		/* box-shadow: 0 1px 5px rgba(36, 37, 39, .04), 
-        0 2px 9px rgba(36, 37, 39, .06),
-        0 4px 14px rgba(36, 37, 39, .04);*/
 	}
 
 	.case-card:hover .case-card-image img {

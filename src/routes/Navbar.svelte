@@ -14,16 +14,20 @@
 	});
 
 	// set the size correct from starts
-	let effectX = 0; // Initial position
-	let effectWidth = 0; // Initial width
+    let effectX = 0; // Initial position. This matches 'left: 0px;'
+    let effectWidth = 0; // Initial size. This matches 'width: 170px;'
 
 	afterUpdate(() => {
 		const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
-
+        console.log('Active link element:', activeLink);
 		if (activeLink instanceof HTMLElement) {
 			effectX = activeLink.offsetLeft - 8; // Subtracted 8 for the left padding
 			effectWidth = activeLink.offsetWidth + 16; // Added 16 for total padding (8 on each side)
 		}
+        else {
+    // If activeLink is null, log that we didn't find it
+    console.log('No active link found');
+  }
 	});
 
 	// Cache navigation links and sections
@@ -59,7 +63,53 @@
 		};
 	}
 
-	function highlightPageNavigation() {
+    function highlightPageNavigation() {
+  console.log('Scroll event triggered'); // Log when the scroll event is triggered
+
+  const scrollPosition = window.scrollY;
+  const offset = 160; // Adjust this offset if needed
+  let foundMatch = false; // Flag to indicate if we've found our match
+
+  // We're reversing the pageSections order to start checking from bottom to top
+  pageSections.forEach((section) => {
+    if (foundMatch) return; // Skip the rest of the sections once a match is found
+
+    const sectionTop = section.offsetTop - offset;
+    const id = section.getAttribute('id');
+    console.log(`Checking section: ${id}, top: ${sectionTop}, scroll: ${scrollPosition}`); // Log the section and its position
+
+    // Check if we've scrolled past the section's top
+    if (scrollPosition >= sectionTop) {
+      foundMatch = true; // We found our match, set the flag to true
+      console.log(`Matched section: ${id}`); // Log when a section matches the scroll position
+
+      const navLink = pageSectionIdToNavigationLink[id];
+      if (navLink && !navLink.classList.contains('active')) {
+        // Remove 'active' class from all navigation links
+        pageNavigationLinks.forEach((link) => link.classList.remove('active'));
+        // Add 'active' class to the matched section's navigation link
+        navLink.classList.add('active');
+        
+        // Calculate new position and width for the highlight effect
+        const x = navLink.offsetLeft - 8;
+        const width = navLink.offsetWidth + 16;
+
+        // Animate the highlight effect to the new position and width
+        anime({
+            targets: '.menu-effect',
+						left: `${x}px`,
+						width: `${width}px`,
+						duration: 600,
+						endDelay: 1000
+        });
+
+        console.log(`Animating to x: ${x}px, width: ${width}px`); // Log the animation targets
+      }
+    }
+  });
+}
+
+/*	function highlightPageNavigation() {
 		const currentActiveLink = document.querySelector('#main-navigation > ul > li > a.active');
 		if (currentActiveLink && currentActiveLink.classList.contains('menu-custom-link')) {
 			return; // Exit if the active link is an external link
@@ -93,7 +143,7 @@
 				}
 			}
 		});
-	}
+	}*/
 
 	onMount(() => {
 		// Cache navigation links and sections
@@ -138,7 +188,7 @@
 			aria-label="Main Navigation"
 		>
 			<div class="menu-effect-container">
-				<div class="menu-effect bg-grey-200 min-w-90px rounded-full" />
+				<div class="menu-effect bg-grey-200 min-w-90px rounded-full" style="left: {effectX}px; width: {effectWidth}px;"/>
 			</div>
 
 			<ul>

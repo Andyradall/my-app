@@ -2,7 +2,7 @@ import { c as create_ssr_component, d as add_attribute, v as validate_component,
 import "animejs";
 const BgAnimated_svelte_svelte_type_style_lang = "";
 const css$4 = {
-  code: ':root{--pastel-blue:#A8DADC;--soft-coral:#F4A261;--dusk-blue:#457B9D;--muted-gold:#E9C46A;--off-white-green:#F1FAEE;--white-again:#F5F8FF;--turquoise:#2A9D8F;--almost-white:#FAFAFA}@keyframes svelte-1dl8a65-moveAnimation{25%{transform:translate3d(var(--transformX1), var(--transformY1), 0)}50%{transform:translate3d(var(--transformX2), var(--transformY2), 0)}75%{transform:translate3d(var(--transformX3), var(--transformY3), 0)}to{transform:translate3d(var(--transformX4), var(--transformY4), 0)}}.full-svg-bg.svelte-1dl8a65{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.animatedCircle.svelte-1dl8a65{animation:svelte-1dl8a65-moveAnimation 30s infinite ease-in-out}.noise-overlay.svelte-1dl8a65{position:fixed;top:0;left:0;width:100vw;height:100vh;;;background-image:url("/images/backgrounds/transparent_transformed_noisetiny.gif");background-repeat:repeat;opacity:0.015;-webkit-backdrop-filter:blur(36px);backdrop-filter:blur(36px);pointer-events:none;z-index:-2;animation:animateNoise 5s infinite}.noise-overlay.svelte-1dl8a65::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(99, 149, 195, 0.26);z-index:0}',
+  code: ':root{--pastel-blue:#A8DADC;--soft-coral:#F4A261;--dusk-blue:#457B9D;--muted-gold:#E9C46A;--off-white-green:#F1FAEE;--white-again:#F5F8FF;--turquoise:#2A9D8F;--almost-white:#FAFAFA}@keyframes svelte-1hyjt6y-moveAnimation{25%{transform:translate3d(var(--transformX1), var(--transformY1), 0)}50%{transform:translate3d(var(--transformX2), var(--transformY2), 0)}75%{transform:translate3d(var(--transformX3), var(--transformY3), 0)}to{transform:translate3d(var(--transformX4), var(--transformY4), 0)}}.full-svg-bg.svelte-1hyjt6y{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.animatedCircle.svelte-1hyjt6y{animation:svelte-1hyjt6y-moveAnimation 30s infinite ease-in-out}.noise-overlay.svelte-1hyjt6y{position:fixed;top:0;left:0;width:100vw;height:100vh;;;background-image:url("/images/backgrounds/transparent_transformed_noisetiny.gif");background-repeat:repeat;opacity:0.015;backdrop-filter:blur(36px);pointer-events:none;z-index:-2;animation:animateNoise 5s infinite}.noise-overlay.svelte-1hyjt6y::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(99, 149, 195, 0.26);z-index:0}',
   map: null
 };
 const BgAnimated = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -67,8 +67,8 @@ const BgAnimated = create_ssr_component(($$result, $$props, $$bindings, slots) =
   }
   $$result.css.add(css$4);
   return `
-<div class="noise-overlay animatedCircle svelte-1dl8a65"></div>
-<svg class="full-svg-bg svelte-1dl8a65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" preserveAspectRatio="none"><defs><!-- HTML_TAG_START -->${gradients}<!-- HTML_TAG_END --></defs><!-- HTML_TAG_START -->${circles}<!-- HTML_TAG_END --></svg>`;
+<div class="noise-overlay animatedCircle svelte-1hyjt6y"></div>
+<svg class="full-svg-bg svelte-1hyjt6y" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" preserveAspectRatio="none"><defs><!-- HTML_TAG_START -->${gradients}<!-- HTML_TAG_END --></defs><!-- HTML_TAG_START -->${circles}<!-- HTML_TAG_END --></svg>`;
 });
 const NavArrow = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { href = "#work" } = $$props;
@@ -95,7 +95,7 @@ const HeroSection = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 const CaseStudyCard_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".case-card-bg.svelte-yx1y8n.svelte-yx1y8n{padding:16px 0;border:1px solid #f6faff}.case-card.svelte-yx1y8n:hover .case-card-image img.svelte-yx1y8n{transform:scale(1.02);transition:transform 0.3s ease-out;opacity:0.94}.case-card.svelte-yx1y8n:hover .case-card-text .custom-link-front.svelte-yx1y8n,.case-card.svelte-yx1y8n:hover h2.svelte-yx1y8n,.case-card.svelte-yx1y8n:hover h3.svelte-yx1y8n,.case-card.svelte-yx1y8n:hover span.svelte-yx1y8n{color:#404244 !important}.custom-link-front.svelte-yx1y8n.svelte-yx1y8n{display:inline-flex}.custom-link-front.svelte-yx1y8n.svelte-yx1y8n:hover,.custom-link-front.svelte-yx1y8n.svelte-yx1y8n:focus{color:#404244 !important}.svg-icon-right.svelte-yx1y8n.svelte-yx1y8n{margin-left:4px;transform:translateX(4px) translateY(2px);transition:transform 0.09s;transition-timing-function:ease-out}.case-card.svelte-yx1y8n:hover .custom-link-front .svg-icon-right.svelte-yx1y8n{transform:translateX(8px) translateY(2px)}.svg-icon-right.svelte-yx1y8n svg path.svelte-yx1y8n{fill:currentColor}",
+  code: ".case-card-bg.svelte-plrhgk.svelte-plrhgk{padding:16px 0;border:1px solid #f6faff}.case-card.svelte-plrhgk:hover .case-card-image img.svelte-plrhgk{transform:scale(1.02);transition:transform 0.3s ease-out;opacity:0.94}.case-card.svelte-plrhgk:hover .case-card-text .custom-link-front.svelte-plrhgk,.case-card.svelte-plrhgk:hover h2.svelte-plrhgk,.case-card.svelte-plrhgk:hover h3.svelte-plrhgk,.case-card.svelte-plrhgk:hover span.svelte-plrhgk{color:#404244 !important}.custom-link-front.svelte-plrhgk.svelte-plrhgk{display:inline-flex}.custom-link-front.svelte-plrhgk.svelte-plrhgk:hover,.custom-link-front.svelte-plrhgk.svelte-plrhgk:focus{color:#404244 !important}.svg-icon-right.svelte-plrhgk.svelte-plrhgk{margin-left:4px;transform:translateX(4px) translateY(2px);transition:transform 0.09s;transition-timing-function:ease-out}.case-card.svelte-plrhgk:hover .custom-link-front .svg-icon-right.svelte-plrhgk{transform:translateX(8px) translateY(2px)}.svg-icon-right.svelte-plrhgk svg path.svelte-plrhgk{fill:currentColor}",
   map: null
 };
 const CaseStudyCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -118,10 +118,10 @@ const CaseStudyCard = create_ssr_component(($$result, $$props, $$bindings, slots
   if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
     $$bindings.alt(alt);
   $$result.css.add(css$2);
-  return `<div class="case-card svelte-yx1y8n"><div class="case-card-bg shadow-custom py-4 rounded-3xl bg-grey-50 max-w-[800px] max-h-[600px] svelte-yx1y8n"><a${add_attribute("href", link, 0)} aria-label="hidden" class="case-card-image"><img class="card-thumbnail svelte-yx1y8n"${add_attribute("src", image, 0)}${add_attribute("alt", alt, 0)}></a></div>
-	<div class="case-card-text"><h3 class="font-euclid font-medium text-gray-800 text-base pt-2 pb-1 leading-9 svelte-yx1y8n">${escape(category)}</h3>
-		<a${add_attribute("href", link, 0)}${add_attribute("aria-label", ariaLabel, 0)} class="custom-link-front font-euclid text-gray-800 text-2xl leading-11 pb-1 font-semibold svelte-yx1y8n"><h2 class="svelte-yx1y8n">${escape(title)}</h2>
-			<span class="svg-icon-right svelte-yx1y8n"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="28" viewBox="0 0 33 28"><path d="M16.1 0.583252L13.2624 2.94794L24.4921 12.3228H0V15.677H24.4921L13.2624 25.0519L16.1 27.4166L32.2 13.9999L16.1 0.583252Z" fill="currentColor" class="svelte-yx1y8n"></path></svg></span></a></div>
+  return `<div class="case-card svelte-plrhgk"><div class="case-card-bg shadow-custom py-4 rounded-3xl bg-grey-50 max-w-[800px] max-h-[600px] svelte-plrhgk"><a${add_attribute("href", link, 0)} aria-label="hidden" class="case-card-image"><img class="card-thumbnail svelte-plrhgk"${add_attribute("src", image, 0)}${add_attribute("alt", alt, 0)}></a></div>
+	<div class="case-card-text"><h3 class="font-euclid font-medium text-gray-800 text-base pt-2 pb-1 leading-9 svelte-plrhgk">${escape(category)}</h3>
+		<a${add_attribute("href", link, 0)}${add_attribute("aria-label", ariaLabel, 0)} class="custom-link-front font-euclid text-gray-800 text-2xl leading-11 pb-1 font-semibold svelte-plrhgk"><h2 class="svelte-plrhgk">${escape(title)}</h2>
+			<span class="svg-icon-right svelte-plrhgk"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="28" viewBox="0 0 33 28"><path d="M16.1 0.583252L13.2624 2.94794L24.4921 12.3228H0V15.677H24.4921L13.2624 25.0519L16.1 27.4166L32.2 13.9999L16.1 0.583252Z" fill="currentColor" class="svelte-plrhgk"></path></svg></span></a></div>
 </div>`;
 });
 const CaseStudySection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -159,9 +159,7 @@ const CaseStudySection = create_ssr_component(($$result, $$props, $$bindings, sl
       alt: "Karrierestart Case Study"
     }
   ];
-  return `
-
-<section class="text-grey-800 pageSection" id="work"><div class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30"><section><h2 class="font-euclid text-xl pl-6 font-semibold my-4">CASE STUDIES:</h2></section>
+  return `<section class="text-grey-800 pageSection" id="work"><div class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30"><section><h2 class="font-euclid text-xl pl-6 font-semibold my-4">CASE STUDIES:</h2></section>
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-10">${each(caseStudies, (study) => {
     return `${validate_component(CaseStudyCard, "CaseStudyCard").$$render(
       $$result,
@@ -283,8 +281,10 @@ const css = {
   map: null
 };
 const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let effectX = 0;
+  let effectWidth = 0;
   $$result.css.add(css);
-  return `<nav><div class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-lg svelte-g3oc3h"><div id="main-navigation" class="main-navbar shadow-custom rounded-full bg-white svelte-g3oc3h" role="navigation" aria-label="Main Navigation"><div class="menu-effect-container svelte-g3oc3h"><div class="menu-effect bg-grey-200 min-w-90px rounded-full svelte-g3oc3h"></div></div>
+  return `<nav><div class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-lg svelte-g3oc3h"><div id="main-navigation" class="main-navbar shadow-custom rounded-full bg-white svelte-g3oc3h" role="navigation" aria-label="Main Navigation"><div class="menu-effect-container svelte-g3oc3h"><div class="menu-effect bg-grey-200 min-w-90px rounded-full svelte-g3oc3h" style="${"left: " + escape(effectX, true) + "px; width: " + escape(effectWidth, true) + "px;"}"></div></div>
 
 			<ul class="svelte-g3oc3h"><li class="svelte-g3oc3h"><a href="#hero" aria-label="Anders Rådal" class="${["svelte-g3oc3h", ""].join(" ").trim()}">Anders Rådal</a></li>
 				<li class="svelte-g3oc3h"><a href="#work" aria-label="Case Studies" class="svelte-g3oc3h">Case Studies</a></li>
