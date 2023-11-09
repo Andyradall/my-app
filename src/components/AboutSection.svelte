@@ -188,7 +188,7 @@
 					I love nature, and enjoy going skiing and cycling in Nordmarka, or running with our
 					greyhound. I also practice Ashtanga yoga, as it gives me energy and focus. I also enjoy
 					staying up to date on modern frontend development and I built this portfolio in SvelteKit
-					with Tailwind CSS and self hosted it on Vercel, using Sanity.io as a headless CMS.
+					with Tailwind CSS and self hosted it on Vercel.
 				</p>
 			</div>
 
