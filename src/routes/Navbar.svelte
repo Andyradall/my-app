@@ -19,14 +19,11 @@
 
 	afterUpdate(() => {
 		const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
-        console.log('Active link element:', activeLink);
 		if (activeLink instanceof HTMLElement) {
 			effectX = activeLink.offsetLeft - 8; // Subtracted 8 for the left padding
 			effectWidth = activeLink.offsetWidth + 16; // Added 16 for total padding (8 on each side)
 		}
         else {
-    // If activeLink is null, log that we didn't find it
-  //  console.log('No active link found');
   }
 	});
 
@@ -64,8 +61,6 @@
 	}
 
     function highlightPageNavigation() {
-  console.log('Scroll event triggered'); // Log when the scroll event is triggered
-
   const scrollPosition = window.scrollY;
   const offset = 160; // Adjust this offset if needed
   let foundMatch = false; // Flag to indicate if we've found our match
@@ -76,8 +71,6 @@
 
     const sectionTop = section.offsetTop - offset;
     const id = section.getAttribute('id');
-  //  console.log(`Checking section: ${id}, top: ${sectionTop}, scroll: ${scrollPosition}`); // Log the section and its position
-
     // Check if we've scrolled past the section's top
     if (scrollPosition >= sectionTop) {
       foundMatch = true; // We found our match, set the flag to true
@@ -101,8 +94,6 @@
 						duration: 600,
 						endDelay: 1000
         });
-
-        //console.log(`Animating to x: ${x}px, width: ${width}px`); // Log the animation targets
       }
     }
   });
