@@ -26,7 +26,7 @@
 		}
         else {
     // If activeLink is null, log that we didn't find it
-    console.log('No active link found');
+  //  console.log('No active link found');
   }
 	});
 
@@ -76,12 +76,11 @@
 
     const sectionTop = section.offsetTop - offset;
     const id = section.getAttribute('id');
-    console.log(`Checking section: ${id}, top: ${sectionTop}, scroll: ${scrollPosition}`); // Log the section and its position
+  //  console.log(`Checking section: ${id}, top: ${sectionTop}, scroll: ${scrollPosition}`); // Log the section and its position
 
     // Check if we've scrolled past the section's top
     if (scrollPosition >= sectionTop) {
       foundMatch = true; // We found our match, set the flag to true
-      console.log(`Matched section: ${id}`); // Log when a section matches the scroll position
 
       const navLink = pageSectionIdToNavigationLink[id];
       if (navLink && !navLink.classList.contains('active')) {
@@ -103,47 +102,11 @@
 						endDelay: 1000
         });
 
-        console.log(`Animating to x: ${x}px, width: ${width}px`); // Log the animation targets
+        //console.log(`Animating to x: ${x}px, width: ${width}px`); // Log the animation targets
       }
     }
   });
 }
-
-/*	function highlightPageNavigation() {
-		const currentActiveLink = document.querySelector('#main-navigation > ul > li > a.active');
-		if (currentActiveLink && currentActiveLink.classList.contains('menu-custom-link')) {
-			return; // Exit if the active link is an external link
-		}
-
-		const scrollPosition = window.scrollY;
-		const offset = -160;
-		let matchedPageSections = {};
-
-		pageSections.forEach((section) => {
-			const sectionTop = section.offsetTop + offset;
-			const id = section.getAttribute('id');
-			if (id === 'resume' || id === 'linkedin') {
-				return; // Continue with the next iteration
-			}
-			if (!matchedPageSections[id] && scrollPosition >= sectionTop) {
-				matchedPageSections[id] = true;
-				const navLink = pageSectionIdToNavigationLink[id];
-				if (!navLink.classList.contains('active')) {
-					pageNavigationLinks.forEach((link) => link.classList.remove('active'));
-					navLink.classList.add('active');
-					const x = navLink.offsetLeft - 8;
-					const width = navLink.offsetWidth + 16;
-					anime({
-						targets: '.menu-effect',
-						left: `${x}px`,
-						width: `${width}px`,
-						duration: 600,
-						endDelay: 1000
-					});
-				}
-			}
-		});
-	}*/
 
 	onMount(() => {
 		// Cache navigation links and sections
