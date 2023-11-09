@@ -2,7 +2,7 @@ import { c as create_ssr_component, d as add_attribute, v as validate_component,
 import "animejs";
 const BgAnimated_svelte_svelte_type_style_lang = "";
 const css$4 = {
-  code: ':root{--pastel-blue:#A8DADC;--soft-coral:#F4A261;--dusk-blue:#457B9D;--muted-gold:#E9C46A;--off-white-green:#F1FAEE;--white-again:#F5F8FF;--turquoise:#2A9D8F;--almost-white:#FAFAFA}@keyframes svelte-1dl8a65-moveAnimation{25%{transform:translate3d(var(--transformX1), var(--transformY1), 0)}50%{transform:translate3d(var(--transformX2), var(--transformY2), 0)}75%{transform:translate3d(var(--transformX3), var(--transformY3), 0)}to{transform:translate3d(var(--transformX4), var(--transformY4), 0)}}.full-svg-bg.svelte-1dl8a65{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.animatedCircle.svelte-1dl8a65{animation:svelte-1dl8a65-moveAnimation 30s infinite ease-in-out}.noise-overlay.svelte-1dl8a65{position:fixed;top:0;left:0;width:100vw;height:100vh;;;background-image:url("/images/backgrounds/transparent_transformed_noisetiny.gif");background-repeat:repeat;opacity:0.015;-webkit-backdrop-filter:blur(36px);backdrop-filter:blur(36px);pointer-events:none;z-index:-2;animation:animateNoise 5s infinite}.noise-overlay.svelte-1dl8a65::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(99, 149, 195, 0.26);z-index:0}',
+  code: ':root{--pastel-blue:#A8DADC;--soft-coral:#F4A261;--dusk-blue:#457B9D;--muted-gold:#E9C46A;--off-white-green:#F1FAEE;--white-again:#F5F8FF;--turquoise:#2A9D8F;--almost-white:#FAFAFA}@keyframes svelte-1hyjt6y-moveAnimation{25%{transform:translate3d(var(--transformX1), var(--transformY1), 0)}50%{transform:translate3d(var(--transformX2), var(--transformY2), 0)}75%{transform:translate3d(var(--transformX3), var(--transformY3), 0)}to{transform:translate3d(var(--transformX4), var(--transformY4), 0)}}.full-svg-bg.svelte-1hyjt6y{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.animatedCircle.svelte-1hyjt6y{animation:svelte-1hyjt6y-moveAnimation 30s infinite ease-in-out}.noise-overlay.svelte-1hyjt6y{position:fixed;top:0;left:0;width:100vw;height:100vh;;;background-image:url("/images/backgrounds/transparent_transformed_noisetiny.gif");background-repeat:repeat;opacity:0.015;backdrop-filter:blur(36px);pointer-events:none;z-index:-2;animation:animateNoise 5s infinite}.noise-overlay.svelte-1hyjt6y::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(99, 149, 195, 0.26);z-index:0}',
   map: null
 };
 const BgAnimated = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -67,8 +67,8 @@ const BgAnimated = create_ssr_component(($$result, $$props, $$bindings, slots) =
   }
   $$result.css.add(css$4);
   return `
-<div class="noise-overlay animatedCircle svelte-1dl8a65"></div>
-<svg class="full-svg-bg svelte-1dl8a65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" preserveAspectRatio="none"><defs><!-- HTML_TAG_START -->${gradients}<!-- HTML_TAG_END --></defs><!-- HTML_TAG_START -->${circles}<!-- HTML_TAG_END --></svg>`;
+<div class="noise-overlay animatedCircle svelte-1hyjt6y"></div>
+<svg class="full-svg-bg svelte-1hyjt6y" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" preserveAspectRatio="none"><defs><!-- HTML_TAG_START -->${gradients}<!-- HTML_TAG_END --></defs><!-- HTML_TAG_START -->${circles}<!-- HTML_TAG_END --></svg>`;
 });
 const NavArrow = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { href = "#work" } = $$props;
