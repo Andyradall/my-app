@@ -4,7 +4,7 @@
   let caseStudies = [
   {
     title: 'Designmaskinen',
-    href: '/work/designmaskinen',
+    href: 'https://andersra.com/work/designmaskinen',
     ariaLabel: 'Designmaskinen Case Study',
     category: 'UX | PRODUCT DESIGN | 2023',
     image: '/images/thumbs/DMthumb800500.webp',
@@ -12,7 +12,7 @@
   },
   {
     title: 'Svenska Mässkonsult',
-    href: '/work/smab',
+    href: 'https://andersra.com/work/smab',
     ariaLabel: 'Svenska Mässkonsult Case Study',
     category: 'BRANDING | WEB DESIGN | 2023',
     image: '/images/thumbs/Smabthumb800500.webp',
@@ -20,7 +20,7 @@
   },
   {
     title: 'Solar Choice',
-    href: '/work/solarchoice',
+    href: 'https://andersra.com/work/solarchoice',
     ariaLabel: 'Solar Choice Case Study',
     category: 'BRAND DESIGN | 2022',
     image: '/images/thumbs/Solarthumblg-1.webp',
@@ -28,7 +28,7 @@
   },
   {
     title: 'Karrierestart',
-    href: '/work/karrierestart',
+    href: 'https://andersra.com/work/karrierestart',
     ariaLabel: 'Karrierestart Case Study',
     category: 'UX | PRODUCT DESIGN | 2021',
     image: '/images/thumbs/KSthumb8005001.webp',
