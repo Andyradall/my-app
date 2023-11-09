@@ -32,6 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sanity/base": "^2.36.2",
+		"@sanity/core": "^2.36.2",
 		"animejs": "^3.2.1"
 	}
 }
