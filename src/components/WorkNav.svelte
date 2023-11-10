@@ -1,188 +1,87 @@
 <script>
-// Casestudy sub navigation script:
-function caseStudyNavFunction() {
+  import { onMount } from 'svelte';
+  import anime from 'animejs';
 
-// Opacity hack to hide effect before its needed 
-    // Calculate the bottom position of the first section
-    var firstSectionBottom = jQuery('#first').offset().top + jQuery('#first').height() - 160;
-    // On window scroll, adjust the opacity of the .effect element based on scroll position
-    jQuery(window).on('scroll', function() {
-        var scrollPosition = jQuery(window).scrollTop();
+  let sticky = false;
+  let currentActiveId;
+  let navigationLinks;
+  let sections;
 
-        // Check if user scrolled past the first section
-        //if (scrollPosition >= firstSectionTop) {
-        if (scrollPosition > firstSectionBottom) {
-            jQuery('.effect').css('opacity', '1');  // Show the .effect
-        } else {
-            jQuery('.effect').css('opacity', '0');  // Hide the .effect
-        }
-    });
-// opacity hact end
+  onMount(() => {
+    const stickyMenu = document.getElementById('sub-navigation');
+    const stickyNavTop = stickyMenu.offsetTop;
+    navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
+    sections = Array.from(document.querySelectorAll('.section')).reverse();
 
-
-//Scroll smooth after clicking jumpto link
-(function(jQuery) {
-    jQuery(document).on('click', 'a[href^="#"]', function(e) {
-     var id = jQuery(this).attr('href');
-     var $id = jQuery(id);
-     if ($id.length === 0) {
-     return;
-     }
-     e.preventDefault();
-     var pos = $id.offset().top;
-     jQuery('body, html').animate({scrollTop: pos},800);
-     jQuery("body.open-menu #overlay-menu .menu-icon").trigger("click");
-    });
-    })(jQuery);
- 
-
-// Sticky subheader on scroll over
-    jQuery(document).ready(function() {
-        //Enter Your Class or ID
-        var $stickyMenu = jQuery('#sub-navigation');
-        var stickyNavTop = jQuery($stickyMenu).offset().top;
-    
-        //Get Height of Navbar Div
-        var navHeight = jQuery($stickyMenu).height(); 
-        var stickyNav = function(){
-            var scrollTop = jQuery(window).scrollTop();
-            if (scrollTop > stickyNavTop) { 
-                jQuery($stickyMenu).addClass('sticky');
-                jQuery('html').css('padding-top', navHeight + 'px')
-            } else {
-                jQuery($stickyMenu).removeClass('sticky');
-                jQuery('html').css('padding-top', '0')
-            }
-        };
-        stickyNav();
-        jQuery(window).scroll(function() {
-            stickyNav();
-        });
-    });
-
-// cache the navigation links 
-var $navigationLinks = jQuery('#sub-navigation > ul > li > a');
-// cache (in reversed order) the sections
-var $sections = jQuery(jQuery(".section").get().reverse());
-
-// map each section id to their corresponding navigation link
-var sectionIdTonavigationLink = {};
-$sections.each(function() {
-    var id = jQuery(this).attr('id');
-    sectionIdTonavigationLink[id] = jQuery('#sub-navigation > ul > li > a[href=\\#' + id + ']');
-});
-
-// Calculate the initial X position from the first navigation link
-var initialX;
-
-jQuery(document).ready(function() {
-    initialX = $navigationLinks.first().offset().left;
-
-    // Set the initial position of .effect
-    var effectElement = document.querySelector('.effect');
-    effectElement.style.left = `${initialX}px`; // Set the initial position based on the first navigation link
-});
-
-// throttle function, enforces a minimum time interval
- function throttle(fn, interval) {
-    var lastCall, timeoutId;
-    return function () {
-        var now = new Date().getTime();
-        if (lastCall && now < (lastCall + interval) ) {
-            // if we are inside the interval we wait
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(function () {
-                lastCall = now;
-                fn.call();
-            }, interval - (now - lastCall) );
-        } else {
-            // otherwise, we directly call the function 
-            lastCall = now;
-            fn.call();
-        }
+    const handleScroll = () => {
+      sticky = window.scrollY > stickyNavTop;
+      updateActiveLink();
     };
-}
 
-// Highlight the active section's corresponding navigation link
-function highlightNavigation() {
-    // get the current vertical position of the scroll bar
-    var scrollPosition = jQuery(window).scrollTop();
+    window.addEventListener('scroll', handleScroll);
 
-    // Define an offset value. For instance, if you want it to trigger 100px before the h2, use -100.
-    var offset = -160;
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 
-    // Keep track of matched sections to avoid duplicates
-    var matchedSections = {};
+  function scrollToSection(event) {
+    const href = event.currentTarget.getAttribute('href');
+    const id = href.replace('#', '');
+    const section = document.getElementById(id);
 
-    // iterate the sections
-    $sections.each(function() {
-        var currentSection = jQuery(this);
-        // get the position of the section
-        var sectionTop = currentSection.offset().top + offset; // Added offset here
-        var id = currentSection.attr('id');
+    if (section) {
+      event.preventDefault();
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
-        // if the section has already been matched or if the current scroll position is within the section
-        if (!matchedSections[id] && scrollPosition >= sectionTop) {
-            // Mark this section as matched
-            matchedSections[id] = true;
-            
-            // get the corresponding navigation link
-            var $navigationLink = sectionIdTonavigationLink[id];
-            // if the link is not active
-            if (!$navigationLink.hasClass('active')) {
-                // remove .active class from all the links
-                $navigationLinks.removeClass('active');
-                // add .active class to the current link
-                $navigationLink.addClass('active');
-
-                // Adjusting for the padding 
-                var x = $navigationLink.offset().left - 20; // Subtracted 20 for the left padding
-                var width = $navigationLink.outerWidth() + 40; // Added 40 for total padding (20 on each side)
-                
-                anime({
-                    targets: '.effect',
-                    left: `${x}px`,
-                    width: `${width}px`, // Set the new width
-                    duration: 600,
-                    endDelay: 1000,
-                });
-            }
-            // we have found our section, so we return false to exit the each loop
-            return false;
-        }
+  function updateActiveLink() {
+    const offset = 150; // Offset for activating the section
+    let activeSection = sections.find(section => {
+      const sectionTop = section.offsetTop;
+      return window.scrollY >= sectionTop - offset;
     });
-}
 
-// Throttle to increase performance: 
-jQuery(window).scroll( throttle(highlightNavigation,50) );
+    currentActiveId = activeSection ? activeSection.id : sections[0].id;
+    animateIndicator();
+  }
 
-}
+  function animateIndicator() {
+    const activeLink = navigationLinks.find(link => link.hash === `#${currentActiveId}`);
+    if (activeLink) {
+      anime({
+        targets: '.effect',
+        left: activeLink.offsetLeft,
+        width: activeLink.offsetWidth,
+        easing: 'easeOutExpo',
+        duration: 700
+      });
+    }
+  }
 </script>
 
-<div id="sub-navigation" class="header-navbar">
-    <button class="back" onclick="location.href='http://www.andersra.com'" aria-label="Back to frontpage" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+<div id="sub-navigation" class:sticky="{sticky}">
+  <button class="back" on:click={() => window.location.href = 'http://www.andersra.com'} aria-label="Back to frontpage" type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
             <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"/>
         </svg> Back
-    </button>
-
-    <div class="con-effect">
-        <div class="effect"></div>
-    </div>
-<ul>
-    <li><a href="#first" aria-label="Navigate to 'The challenge' section">The challenge</a></li>
-    <li><a href="#second" aria-label="Navigate to 'Design Process' section">Design Process</a></li>
-    <li><a href="#third" aria-label="Navigate to 'Final prototype' section">Final prototype</a></li>
-    <li><a href="#fourth" aria-label="Navigate to 'Insights' section">Insights</a></li>
-</ul>
+  </button>
+  <div class="con-effect">
+    <div class="effect"></div>
+  </div>
+  <ul>
+    {#each sections as section}
+      <li>
+        <a href="#{section.id}" class:active="{section.id === currentActiveId}" on:click={scrollToSection}>
+          {section.title}
+        </a>
+      </li>
+    {/each}
+  </ul>
 </div>
 
-   
-
-
-
 <style>
-* case study styles navbar */
 .header-navbar .remover {
     transition: ease transform 0.3s !important;
     } 
@@ -275,12 +174,6 @@ jQuery(window).scroll( throttle(highlightNavigation,50) );
       transform: scale(1.2);
     }
     
-    /* potential problem */
-    /* .active {
-      z-index: 5!important;
-      color: #242527 !important;  
-    }  */
-    
   .header-navbar button.back {
       opacity: 0;
       padding-left: 2vw;
@@ -335,5 +228,4 @@ jQuery(window).scroll( throttle(highlightNavigation,50) );
       border-radius: 104px;
     }
   
-
 </style>
