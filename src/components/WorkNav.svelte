@@ -61,7 +61,7 @@
   }
 </script>
 
-<div id="sub-navigation" class:sticky="{sticky}">
+<div id="sub-navigation" class="header-navbar" class:sticky="{sticky}">
   <button class="back" on:click={() => window.location.href = 'http://www.andersra.com'} aria-label="Back to frontpage" type="button">
     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
             <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"/>
@@ -82,14 +82,18 @@
 </div>
 
 <style>
+
+    /* /**maybe this is unneded with new script? Test! */ 
+    /*
 .header-navbar .remover {
     transition: ease transform 0.3s !important;
     } 
     
     .header-navbar.sticky .remover {
     display: none;
-    } 
+    } */
     
+    /* main css to refactor -> Tailwind */
     .header-navbar {
       border-bottom: 1px solid #ebeef4;
       padding: 0;
