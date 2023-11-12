@@ -1,6 +1,6 @@
 <script>
 	import WorkBack from '../../../components/WorkBack.svelte';
-    import WorkNextPrev from '../../../components/WorkNextPrev.svelte';
+    //import WorkNextPrev from '../../../components/WorkNextPrev.svelte';
     import WorkNav from '../../../components/WorkNav.svelte';
 </script>
 
@@ -51,7 +51,7 @@
 
     <section class="justify-center grid grid-cols-12 xl:col-span-12">
         <div class="content-wrapper">
-            <div class="header-navbar">
+            <div id="sub-navigation" class="header-navbar">
                 <button class="back" aria-label="Back to frontpage" type="button" on:click={() => window.location.href = 'http://www.andersra.com'}>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                         <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"></path>
@@ -71,7 +71,7 @@
         </div>
     </section>
     
-    <section class="justify-center grid grid-cols-12 xl:col-span-12">
+    <!--section class="justify-center grid grid-cols-12 xl:col-span-12">
         <div class="xl:col-span-12">
             <h3 class="font-euclid text-lg font-medium text-center">Case study overview</h3>
         </div>
@@ -87,11 +87,11 @@
         <div class="xl:col-span-3">
             <p class="font-euclid text-base align-center text-grey-800"><a href="#fourth" class="font-bold">4. Insights</a></p>
         </div>
-    </section>
+    </section-->
 
-    <section id="first" class="section justify-center grid grid-cols-12 xl:col-span-8">
+    <section class="justify-center grid grid-cols-12 xl:col-span-8">
         <div>
-            <div class="section">
+            <div id="first" class="pageSection">
                 <h2 class="font-euclid text-xl font-bold text-grey-800">Understanding the Challenge</h2>
             </div>
             <div class="section">
@@ -136,7 +136,7 @@
 
     <section class="justify-center grid grid-cols-12 xl:col-span-8">
         <div>
-            <div id="second" class="section">
+            <div id="second" class="pageSection">
                 <h2 class="font-euclid text-xl font-bold text-grey-800">Designing the brand assets toolbox</h2>
             </div>
             <h3 class="font-euclid text-lg font-medium">The Core of the Admin Area:</h3>
@@ -347,7 +347,7 @@
         </div>
     </section>
        
-    <section id="third" class="section justify-center grid grid-cols-12 xl:col-span-9">
+    <section id="third" class="pageSection justify-center grid grid-cols-12 xl:col-span-9">
         <div class="content-wrapper">
             <div class="column-content figmaproto" data-module="code">
                 <div class="is-content ce-code">
@@ -384,7 +384,7 @@
         </div>
     </section>
 
-    <section id="fourth" class="section justify-center grid grid-cols-12 xl:col-span-6">
+    <section id="fourth" class="pageSection justify-center grid grid-cols-12 xl:col-span-6">
         <div>
             <h2 class="font-euclid text-xl font-bold text-grey-800">Reflections on My Journey & the Consultancy World</h2>
             <ul class="font-euclid text-base align-center text-grey-800">

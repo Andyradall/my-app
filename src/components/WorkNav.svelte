@@ -11,7 +11,7 @@
     const stickyMenu = document.getElementById('sub-navigation');
     const stickyNavTop = stickyMenu.offsetTop;
     navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
-    sections = Array.from(document.querySelectorAll('.section')).reverse();
+    sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
 
     const handleScroll = () => {
       sticky = window.scrollY > stickyNavTop;
