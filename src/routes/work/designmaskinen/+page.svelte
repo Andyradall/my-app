@@ -89,7 +89,7 @@
         </div>
     </section>
 
-    <section class="justify-center grid grid-cols-12 xl:col-span-8">
+    <section id="first" class="section justify-center grid grid-cols-12 xl:col-span-8">
         <div>
             <div class="section">
                 <h2 class="font-euclid text-xl font-bold text-grey-800">Understanding the Challenge</h2>
@@ -136,7 +136,7 @@
 
     <section class="justify-center grid grid-cols-12 xl:col-span-8">
         <div>
-            <div class="section">
+            <div id="second" class="section">
                 <h2 class="font-euclid text-xl font-bold text-grey-800">Designing the brand assets toolbox</h2>
             </div>
             <h3 class="font-euclid text-lg font-medium">The Core of the Admin Area:</h3>
@@ -347,7 +347,7 @@
         </div>
     </section>
        
-    <section class="justify-center grid grid-cols-12 xl:col-span-9">
+    <section id="third" class="section justify-center grid grid-cols-12 xl:col-span-9">
         <div class="content-wrapper">
             <div class="column-content figmaproto" data-module="code">
                 <div class="is-content ce-code">
@@ -384,7 +384,7 @@
         </div>
     </section>
 
-    <section class="justify-center grid grid-cols-12 xl:col-span-6">
+    <section id="fourth" class="section justify-center grid grid-cols-12 xl:col-span-6">
         <div>
             <h2 class="font-euclid text-xl font-bold text-grey-800">Reflections on My Journey & the Consultancy World</h2>
             <ul class="font-euclid text-base align-center text-grey-800">
