@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import anime from 'animejs';
+  export let links = [];
 
   let sticky = false;
   let currentActiveId;
@@ -48,38 +49,44 @@
   }
 
   function animateIndicator() {
-    const activeLink = navigationLinks.find(link => link.hash === `#${currentActiveId}`);
-    if (activeLink) {
-      anime({
-        targets: '.effect',
-        left: activeLink.offsetLeft,
-        width: activeLink.offsetWidth,
-        easing: 'easeOutExpo',
-        duration: 700
-      });
-    }
+  const activeLink = navigationLinks.find(link => link.hash === `#${currentActiveId}`);
+  if (activeLink) {
+    anime({
+      targets: '.effect',
+      left: activeLink.offsetLeft,
+      width: activeLink.offsetWidth,
+			duration: 600,
+			endDelay: 1000
+    });
+  } else {
+    // Handle unwanted cases where activeLink is undefined
+    console.error('Active link not found');
   }
+}
+
 </script>
 
-<div id="sub-navigation" class="header-navbar" class:sticky="{sticky}">
+<nav>
+<div id="sub-navigation" class="header-navbar font-euclid" class:sticky="{sticky}">
   <button class="back" on:click={() => window.location.href = 'http://www.andersra.com'} aria-label="Back to frontpage" type="button">
     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
             <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"/>
         </svg> Back
   </button>
   <div class="con-effect">
-    <div class="effect"></div>
+    <div class="effect bg-grey-200"></div>
   </div>
   <ul>
-    {#each sections as section}
+    {#each links as link}
       <li>
-        <a href="#{section.id}" class:active="{section.id === currentActiveId}" on:click={scrollToSection}>
-          {section.title}
+        <a href={link.id} aria-label={link.ariaLabel} class:active="{link.id === `#${currentActiveId}`}" on:click={scrollToSection}>
+          {link.title}
         </a>
       </li>
     {/each}
   </ul>
 </div>
+</nav>
 
 <style>
 
@@ -115,7 +122,7 @@
       height: 52px;
       position: fixed;
       top: 0;
-      z-index: 20;
+      z-index: 100;
       opacity: 1;
       box-shadow: 0 1px 2px rgba(0,0,0,0.06), 
       0 2px 4px rgba(0,0,0,0.06), 
@@ -124,6 +131,11 @@
       0 16px 32px rgba(0,0,0,0.06), 
       0 32px 64px rgba(0,0,0,0.06);
     }
+
+    .header-navbar.sticky .effect {
+      opacity: 1;
+    }
+
     
     .header-navbar ul {
       padding: 0;
@@ -141,6 +153,12 @@
           margin: 0 1rem 0 1rem;}
       }
     
+      @media screen and (max-width: 460px) {
+      .header-navbar a{
+        font-size: 10px;
+      }
+    }
+    
     .header-navbar li {
       width: 200px;
       height: 50px;
@@ -150,6 +168,7 @@
       border: 0;
       background: transparent;
       border-radius: 20px;
+      z-index: 104; 
       transition: all .45s ease;
     }
    
@@ -158,7 +177,6 @@
       /*padding: 2px 0 0 0;*/
       color: #616366;
       font-size: 16px;
-      z-index: 20;
       text-decoration: none;
     }
 
@@ -167,12 +185,7 @@
       color: #242527 !important; 
     }
 
-    @media screen and (max-width: 460px) {
-      .header-navbar a{
-        font-size: 10px;
-      }
-    }
-    
+
     /* :not excludes class for specific use */
     .header-navbar a:active:not(.back) {
       transform: scale(1.2);
@@ -224,12 +237,13 @@
     
     .effect { 
       opacity: 0;
-      background: #DDE0E6;
+     /* background: #DDE0E6;*/
       width: 164px;
       height: 40px;
       position: absolute;
       left: 130px;
       border-radius: 104px;
+      z-index: 102;
     }
   
 </style>
