@@ -1,6 +1,6 @@
 <script>
-	import WorkNav from '../components/WorkNav.svelte';
-	import WorkBack from '../components/WorkBack.svelte';
+	import WorkNav from '../../components/WorkNav.svelte';
+	import WorkBack from '../../components/WorkBack.svelte';
 </script>
 
 <svelte:head>

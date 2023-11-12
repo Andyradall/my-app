@@ -4,7 +4,7 @@
   let caseStudies = [
   {
     title: 'Designmaskinen',
-    href: 'https://andersra.com/work/designmaskinen',
+    href: '/work/designmaskinen',
     ariaLabel: 'Designmaskinen Case Study',
     category: 'UX | PRODUCT DESIGN | 2023',
     image: '/images/thumbs/DMthumb800500.webp',

@@ -1,18 +1,17 @@
-<script>
-	import WorkNav from '../components/WorkNav.svelte';
-	import WorkBack from '../components/WorkBack.svelte';
-    import WorkNextPrev from '../components/WorkBack.svelte';
-</script>
+<!--script>
+	import WorkBack from '../../../components/WorkBack.svelte';
+    import WorkNextPrev from '../../../components/WorkNextPrev.svelte';
+    import WorkNav from '../../../components/WorkNav.svelte';
+</script-->
 
 <svelte:head>
 	<title>Designmaskinen Case Study</title>
 	<meta name="description" content="Designmaskinen Case Study" />
 </svelte:head>
 
-	<WorkBack />
+	<!--WorkBack />
 
-
-    <WorkNav />
+    <WorkNav /-->
 
     <section class="justify-left grid grid-cols-12">
         <div class="xl:col-span-8">
@@ -39,7 +38,7 @@
         </div>
         <div class="xl:col-span-6">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/iMac_FREE.webp" width="927" height="733" alt="Designmaskinen mockup" caption="Designmaskinen mockup">
+                <img src="/images/designmaskinen/iMac_FREE.webp" width="927" height="733" alt="Designmaskinen mockup">
             </div>
         </div>
     </section>
@@ -53,8 +52,8 @@
     <section class="justify-center grid grid-cols-12 xl:col-span-12">
         <div class="content-wrapper">
             <div class="header-navbar">
-                <button class="back" aria-label="Back to frontpage" type="button" onclick="location.href='http://www.andersra.com'">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 -960 960 960" width="24">
+                <button class="back" aria-label="Back to frontpage" type="button" on:click={() => window.location.href = 'http://www.andersra.com'}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                         <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"></path>
                     </svg> Back
                 </button>
@@ -107,7 +106,7 @@
         </div>
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Designmaskinenscale.webp" width="1200" height="948" alt="Designmaskinenscale">
+                <img src="/images/designmaskinen/Designmaskinenscale.webp" width="1200" height="948" alt="Designmaskinenscale">
             </div>
         </div>
     </section>
@@ -120,7 +119,7 @@
         </div>
         <div class="xl:col-span-12">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/User_journey_Designmaskinen.webp" width="2455" height="494" alt="User journey Designmaskinen">
+                <img src="/images/designmaskinen/User_journey_Designmaskinen.webp" width="2455" height="494" alt="User journey Designmaskinen">
             </div>
         </div>
         <div>
@@ -130,7 +129,7 @@
         </div>
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Sitemap.webp" width="1020" height="413" alt="Sitemap">
+                <img src="/images/designmaskinen/Sitemap.webp" width="1020" height="413" alt="Sitemap">
             </div>
         </div>
     </section>
@@ -145,7 +144,7 @@
         </div>
         <div class="xl:col-span-11">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Skisser_malbygger-1.webp" width="1250" height="552" alt="Skisser_malbygger-1">
+                <img src="/images/designmaskinen/Skisser_malbygger-1.webp" width="1250" height="552" alt="Skisser_malbygger-1">
             </div>
         </div>
     </section>
@@ -171,19 +170,19 @@
     <section class="justify-center grid grid-cols-12">
         <div class="xl:col-span-4">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Itr1_1.webp" width="1106" height="1382" alt="brand assets v 1">
+                <img src="/images/designmaskinen/Itr1_1.webp" width="1106" height="1382" alt="brand assets v 1">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Version 1.</p>
         </div>
         <div class="xl:col-span-4">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Verkt_ykasse.webp" width="1440" height="1800" alt="Admin_Verkt_ykasse" caption="Toolbox v 2">
+                <img src="/images/designmaskinen/Admin_Verkt_ykasse.webp" width="1440" height="1800" alt="Admin_Verkt_ykasse">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Version 2.&nbsp;</p>
         </div>
         <div class="xl:col-span-4">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Verkt_ykasse_final.webp" width="1440" height="1800" alt="Admin_Verkt_ykasse_final" caption="Brand assets final version">
+                <img src="/images/designmaskinen/Admin_Verkt_ykasse_final.webp" width="1440" height="1800" alt="Admin Verktøykasse final">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Version 3 (final)</p>
         </div>
@@ -199,7 +198,7 @@
         </div>
         <div class="xl:col-span-9">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/IMG_1885_2_2.webp" width="997" height="558" alt="Image albums sketch">
+                <img src="/images/designmaskinen/IMG_1885_2_2.webp" width="997" height="558" alt="Sketch of an image_album">
             </div>
         </div>
     </section>
@@ -218,13 +217,13 @@
     <section class="justify-center grid grid-cols-12 xl:col-span-6">
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Verkt_ykasse_Bilder_1.webp" width="1440" height="1000" alt="Image albums 1">
+                <img src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_1.webp" width="1440" height="1000" alt="Image_albums 1">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Version 1.</p>
         </div>
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Verkt_ykasse_Bilder_1v2.webp" width="1440" height="1000" alt="Image albums iteration 1 with lightbox">
+                <img src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_1v2.webp" width="1440" height="1000" alt="Image_albums iteration 1 with lightbox">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Version 1. Edit and change image description in input field in a modal window.&nbsp;</p>
         </div>
@@ -253,13 +252,13 @@
     <section class="justify-center grid grid-cols-12 xl:col-span-6">
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Verkt_ykasse_Bilder_Final_1.webp" width="1440" height="1000" alt="Image albums iteration 2">
+                <img src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_Final_1.webp" width="1440" height="1000" alt="Image_albums iteration 2">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Final version of image albums.&nbsp;</p>
         </div>
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Verkt_ykasse_Bilder_Final_Menu.webp" width="1440" height="1000" alt="Image albums iteration 2 with menu">
+                <img src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_Final_Menu.webp" width="1440" height="1000" alt="Image_albums iteration 2 with menu">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Final version with slide in edit field showing.&nbsp;</p>
         </div>
@@ -281,19 +280,19 @@
     <section class="justify-center grid grid-cols-12 xl:col-span-4">
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Maler_Some.webp" width="1440" height="1000" alt="Admin_Maler_Some">
+                <img src="/images/designmaskinen/Admin_Maler_Some.webp" width="1440" height="1000" alt="Admin_Maler_Some">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Template management area.&nbsp;</p>
         </div>
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Maler_Some_edit.webp" width="1440" height="1000" alt="Admin_Maler_Some_edit">
+                <img src="/images/designmaskinen/Admin_Maler_Some_edit.webp" width="1440" height="1000" alt="Admin_Maler_Some_edit">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">Edit options.&nbsp;</p>
         </div>
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Admin_Nymal.webp" width="1440" height="1000" alt="Admin New template">
+                <img src="/images/designmaskinen/Admin_Nymal.webp" width="1440" height="1000" alt="Admin New template">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">New template, choosing format changes colour profile (RGB/CMYK)</p>
         </div>
@@ -312,13 +311,13 @@
     <section class="justify-center grid grid-cols-12 xl:col-span-6">
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/User_areas.webp" width="915" height="645" alt="User areas sketch">
+                <img src="/images/designmaskinen/User_areas.webp" width="915" height="645" alt="User areas sketch">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">My sketch.</p>
         </div>
         <div>
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Brukere.webp" width="1440" height="1000" alt="User area management">
+                <img src="/images/designmaskinen/Brukere.webp" width="1440" height="1000" alt="User area management">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">User management final.</p>
         </div>
@@ -334,7 +333,7 @@
         </div>
         <div class="xl:col-span-9">
             <div class="ce-image" data-align="left">
-                <img src="/wp-content/uploads/2023/09/Malbygger_Tekst.webp" width="1440" height="1000" alt="Template builder">
+                <img src="/images/designmaskinen/Malbygger_Tekst.webp" width="1440" height="1000" alt="Template builder">
             </div>
         </div>
     </section>
@@ -354,7 +353,7 @@
                 <div class="is-content ce-code">
                     <style>#message {display: none; color: #FFFFFF;}</style>
     
-                    <div id="iframe-container" align="center"></div>
+                    <div id="iframe-container" class="justify-center"></div>
                     <div id="message">
                         <p>Sorry, the prototype only shows on larger screens.</p>
                     </div>
@@ -399,7 +398,7 @@
         </div>
         <div>
             <div class="ce-image" data-align="center">
-                <img src="/wp-content/uploads/2023/09/Team.webp" width="716" height="538" alt="Team">
+                <img src="/images/designmaskinen/Team.webp" width="716" height="538" alt="Team">
             </div>
             <p class="font-euclid text-base align-center text-grey-800">My team during a meeting.&nbsp;</p>
         </div>
@@ -407,7 +406,7 @@
 
 
   
-<WorkNextPrev />
+<!--WorkNextPrev /-->
 
 <section class="semplice-next-prev grid grid-cols-12 justify-center">
     <div class="container">
