@@ -1,17 +1,17 @@
-<!--script>
+<script>
 	import WorkBack from '../../../components/WorkBack.svelte';
     import WorkNextPrev from '../../../components/WorkNextPrev.svelte';
     import WorkNav from '../../../components/WorkNav.svelte';
-</script-->
+</script>
 
 <svelte:head>
 	<title>Designmaskinen Case Study</title>
 	<meta name="description" content="Designmaskinen Case Study" />
 </svelte:head>
 
-	<!--WorkBack />
+	<WorkBack />
 
-    <WorkNav /-->
+    <WorkNav />
 
     <section class="justify-left grid grid-cols-12">
         <div class="xl:col-span-8">
