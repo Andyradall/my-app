@@ -68,7 +68,7 @@
 
 <nav>
 <div id="sub-navigation" class="header-navbar font-euclid" class:sticky="{sticky}">
-  <button class="back" on:click={() => window.location.href = 'http://www.andersra.com'} aria-label="Back to frontpage" type="button">
+  <button class="back" on:click={() => window.location.href = "/"} aria-label="Back to frontpage" type="button">
     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
             <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"/>
         </svg> Back
@@ -105,7 +105,7 @@
       border-bottom: 1px solid #ebeef4;
       padding: 0;
       margin: 0;
-      position: absolute;
+      /*position: absolute;*/
       display: flex;
       align-items: center;
       justify-content: space-evenly;

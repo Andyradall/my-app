@@ -28,7 +28,7 @@ onMount(() => {
 <div id="backButton" class="absolute top-0 m-[2vw] z-20" class:hide-backButton={hideButton}>
     <button
       class="back text-grey-700 bg-grey-200 hover:bg-grey-100 hover:text-grey-600 rounded-full font-euclid text-base flex items-center justify-center pl-5 w-28 h-10"
-      on:click={() => (window.location.href = 'http://www.andersra.com')}
+      on:click={() => (window.location.href = '/')}
       aria-label="Back to frontpage"
       type="button"
     >
