@@ -1,104 +1,86 @@
 <script>
-  import { onMount, afterUpdate } from 'svelte';
-  import anime from 'animejs';
-  export let links = [];
+	import { onMount, afterUpdate } from 'svelte';
+	import anime from 'animejs';
+	export let links = [];
 
-  let sticky = false;
-  let currentActiveId;
-  let navigationLinks;
-  let sections;
-  let isActive = false;
-  let effectX = 0; // Initial position
-  let effectWidth = 0; // Initial size
+	let sticky = false;
+	let currentActiveId;
+	let navigationLinks;
+	let sections;
+	let effectX = 0;
+	let effectWidth = 0;
 
-  onMount(() => {
-    const stickyMenu = document.getElementById('sub-navigation');
-    const stickyNavTop = stickyMenu.offsetTop;
-    navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
-    sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
+	onMount(() => {
+		const stickyMenu = document.getElementById('sub-navigation');
+		const stickyNavTop = stickyMenu.offsetTop;
+		navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
+		sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
 
-    // Check if the current window location hash is "#first"
-    if (window.location.hash === '#hero') {
-      isActive = false;
-    }
+		// Set initial position and size based on the first link
+		const firstLink = navigationLinks[0];
+		if (firstLink instanceof HTMLElement) {
+			effectX = firstLink.offsetLeft - 8; // Adjust for padding
+			effectWidth = firstLink.offsetWidth + 24; // Adjust for padding
+		}
 
-    const handleScroll = () => {
-      sticky = window.scrollY > stickyNavTop;
-      updateActiveLink();
-    };
+		const handleScroll = () => {
+			sticky = window.scrollY > stickyNavTop;
+			updateActiveLink();
+		};
 
-    window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 
-  afterUpdate(() => {
-    const activeLink = document.querySelector('#sub-navigation > ul > li > a.active');
-    if (activeLink instanceof HTMLElement) {
-      effectX = activeLink.offsetLeft - 16; // Subtracted 8 for the left padding
-      effectWidth = activeLink.offsetWidth + 32; // Added 16 for total padding (8 on each side)
-    }
-  });
+	afterUpdate(() => {
+		animateIndicator();
+	});
 
-  function throttle(fn, interval) {
-    var lastCall = 0;
-    var timeoutId = null;
-    return function () {
-      var now = new Date().getTime();
-      if (lastCall && now < lastCall + interval) {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(function () {
-          lastCall = now;
-          fn.call();
-        }, interval - (now - lastCall));
-      } else {
-        lastCall = now;
-        fn.call();
-      }
-    };
-  }
+	function scrollToSection(event) {
+		const href = event.currentTarget.getAttribute('href');
+		const id = href.replace('#', '');
+		const section = document.getElementById(id);
 
-  function updateActiveLink() {
-    const offset = 150; // Offset for activating the section
-    let activeSection = sections.find(section => {
-      const sectionTop = section.offsetTop;
-      return window.scrollY >= sectionTop - offset;
-    });
+		if (section) {
+			event.preventDefault();
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 
-    currentActiveId = activeSection ? activeSection.id : sections[0].id;
-    animateIndicator();
-  }
+	function updateActiveLink() {
+		const offset = 150; // Offset for activating the section
+		let activeSection = sections.find((section) => {
+			const sectionTop = section.offsetTop;
+			return window.scrollY >= sectionTop - offset;
+		});
 
-  function animateIndicator() {
-    anime({
-      targets: '.effect',
-      left: effectX,
-      width: effectWidth,
-      duration: 600,
-      endDelay: 1000
-    });
-  }
+		currentActiveId = activeSection ? activeSection.id : sections[0].id;
+	}
 
-  function scrollToSection(event) {
-    const href = event.currentTarget.getAttribute('href');
-    const id = href.replace('#', '');
-    const section = document.getElementById(id);
-
-    if (section) {
-      event.preventDefault();
-      section.scrollIntoView(/*{ behavior: 'smooth' }*/);
-    }
-  }
-
+	function animateIndicator() {
+		const activeLink = navigationLinks.find((link) => link.hash === `#${currentActiveId}`);
+		if (activeLink) {
+			effectX = activeLink.offsetLeft - 8;
+			effectWidth = activeLink.offsetWidth + 16;
+			anime({
+				targets: '.effect',
+				left: effectX,
+				width: effectWidth,
+				easing: 'easeOutExpo',
+				duration: 700
+			});
+		}
+	}
 </script>
 
 <!----------->
 <nav>
-	<div id="sub-navigation" class="header-navbar font-euclid font-normal text-base" class:sticky>
+	<div id="sub-navigation" class="header-navbar font-euclid" class:sticky>
 		<button
-			class="back font-euclid text-base font-normal"
+			class="back"
 			on:click={() => (window.location.href = '/')}
 			aria-label="Back to frontpage"
 			type="button"
@@ -113,7 +95,7 @@
 		<ul>
 			{#each links as link}
 				<li>
-					<a class="font-euclid text-base"
+					<a
 						href={link.id}
 						aria-label={link.ariaLabel}
 						class:active={link.id === `#${currentActiveId}`}
@@ -208,6 +190,7 @@
 	}
 
 	.header-navbar a {
+		font-family: Euclid Circular B, sans-serif;
 		/*padding: 2px 0 0 0;*/
 		color: #616366;
 		font-size: 16px;
@@ -227,7 +210,8 @@
 	.header-navbar button.back {
 		opacity: 0;
 		padding-left: 2vw;
-		font-size: 16px;
+		font-family: Euclid Circular B, sans-serif;
+		font-size: 17px;
 		border: 0px;
 		outline: none;
 		background: none;
@@ -264,7 +248,7 @@
 		pointer-events: none;
 		display: flex;
 		align-items: center;
-		justify-content: center; 
+		justify-content: center;
 	}
 
 	.effect {
@@ -272,6 +256,7 @@
 		width: 164px;
 		height: 40px;
 		position: absolute;
+		/*left: 280px;*/
 		border-radius: 104px;
 		z-index: 102;
 	}

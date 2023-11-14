@@ -47,7 +47,7 @@
 
 <section class="justify-center grid grid-cols-12">
 	<div class="xl:col-span-6">
-		<h2 class="font-euclid text-xl font-bold text-grey-800">Case Overview</h2>
+		<h2 class="font-euclid font-bold text-grey-800">Case Overview</h2>
 		<p class="font-euclid text-base align-center text-grey-800">
 			In Spring 2023, during my three-month internship at Netlife Design, I contributed to the
 			development of Designmaskinen, a specialized design tool for creating print and digital
