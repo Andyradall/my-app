@@ -9,7 +9,7 @@ export const caseStudies = [
     },
     {
       title: 'Svenska Mässkonsult',
-      href: 'https://andersra.com/work/smab',
+      href: '/work/smab',
       ariaLabel: 'Svenska Mässkonsult Case Study',
       category: 'BRANDING | WEB DESIGN | 2023',
       image: '/images/thumbs/Smabthumb800500.webp',
@@ -17,7 +17,7 @@ export const caseStudies = [
     },
     {
       title: 'Solar Choice',
-      href: 'https://andersra.com/work/solarchoice',
+      href: '/work/solarchoice',
       ariaLabel: 'Solar Choice Case Study',
       category: 'BRAND DESIGN | 2022',
       image: '/images/thumbs/Solarthumblg-1.webp',
@@ -25,7 +25,7 @@ export const caseStudies = [
     },
     {
       title: 'Karrierestart',
-      href: 'https://andersra.com/work/karrierestart',
+      href: '/work/karrierestart',
       ariaLabel: 'Karrierestart Case Study',
       category: 'UX | PRODUCT DESIGN | 2021',
       image: '/images/thumbs/KSthumb8005001.webp',
