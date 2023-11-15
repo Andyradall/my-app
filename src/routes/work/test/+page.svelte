@@ -1,5 +1,4 @@
 <script>
-    // You can add script content here if needed
   </script>
 
   <main>
@@ -8,5 +7,4 @@
   </main>
   
   <style>
-    /* Add some styles if you like */
   </style>

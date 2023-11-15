@@ -74,13 +74,13 @@
 		</div>
 	</section>
 
-	<section class="mt-20">
+	<section class="mt-20 hidden sm:block">
 		<div>
-			<h1 class=" text-3xl font-medium text-grey-800 text-center">Process overview</h1>
+			<h1 class="text-3xl font-medium text-grey-800 text-center">Process overview</h1>
 		</div>
 	</section>
 
-	<section class="">
+	<section class="hidden sm:block">
 		<WorkNav {links} />
 	</section>
 

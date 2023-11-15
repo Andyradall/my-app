@@ -1,6 +1,6 @@
 <script>
     // Import Case studies arrsy
-	import { caseStudies } from '../lib/caseStudies.js';
+	import { caseStudies } from '../src/lib/caseStudies.js';
 	// Get the current path
 	import { page } from '$app/stores';
 	import { get } from 'svelte/store';
