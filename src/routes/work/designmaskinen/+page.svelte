@@ -1,7 +1,8 @@
 <script>
 	import WorkBack from '../../../components/WorkBack.svelte';
-	//import WorkNextPrev from '../../../components/WorkNextPrev.svelte';
+	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
+	import WorkFooter from '../../../components/WorkFooter.svelte';
 
 	const links = [
 		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },
@@ -62,7 +63,8 @@
 		</div>
 		<div class="md:flex-2 md:max-w-xl m-4">
 			<div class="flex items-center justify-center h-full">
-				<img class=""
+				<img
+					class=""
 					src="/images/designmaskinen/iMac_FREE.webp"
 					width="927"
 					height="733"
@@ -101,7 +103,7 @@
         </div>
     </section-->
 
-	<section id="first" class="pageSection  bg-grey-800 text-grey-100 pt-32 pb-20">
+	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-32 pb-20">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="text-3xl font-bold mb-4">Understanding the Challenge</h2>
 			<p class="mb-8">
@@ -164,15 +166,15 @@
 
 	<section id="second" class="pageSection pt-40 pb-20">
 		<div class="max-w-2xl mx-auto">
-			<h2 class=" text-xl font-bold">Designing the brand assets toolbox</h2>
-			<h3 class=" text-lg font-medium">The Core of the Admin Area:</h3>
-			<p class=" text-base align-center text-grey-800">
+			<h2 class="pb-4">Designing the brand assets toolbox</h2>
+			<h3 class="">The Core of the Admin Area:</h3>
+			<p class="pb-10">
 				Vertøykassa (the toolbox), is the core of the admin area. Here we decided to gather all
 				brand assets. While I had a few initial sketches to guide me, I mostly relied on my own
-				ideas for the design details.<br />
+				ideas for the design details.
 			</p>
 		</div>
-		<div class="max-w-3xl mx-auto">
+		<div class="max-w-6xl pb-20 mx-auto">
 			<img
 				src="/images/designmaskinen/Skisser_malbygger-1.webp"
 				width="1250"
@@ -181,20 +183,18 @@
 			/>
 		</div>
 		<div class="max-w-2xl mx-auto">
-			<h3 class=" text-lg font-medium">Design Evolution of the Toolbox</h3>
-			<h3 class=" text-lg font-medium">Experimentation and Refinement:</h3>
-			<p class=" text-base">
-				My design journey was a combination of exploration and refinement:
-			</p>
-			<ul class="list-custom">
+			<h2 class="">Design Evolution of the Toolbox</h2>
+			<h3 class="">Experimentation and Refinement:</h3>
+			<p class="">My design journey was a combination of exploration and refinement:</p>
+			<ul class="py-4 list-custom">
 				<li>
 					Explored various left menu designs, from collapsable/docking styles to the most
 					uncomplicated design for user-friendliness and minimised cognitive load.
 				</li>
 				<li>Experimented with different card designs and functionalities.</li>
 			</ul>
-			<p class=" text-base">For the finalized design, I integrated:</p>
-			<ul class="list-custom">
+			<p class="">For the finalized design, I integrated:</p>
+			<ul class="py-4 list-custom">
 				<li>A streamlined menu design for intuitive navigation.</li>
 				<li>Breadcrumbs to improve navigation further.&nbsp;</li>
 				<li>Polished cards design and grid-based layout for visual consistency.&nbsp;</li>
@@ -202,9 +202,7 @@
 		</div>
 	</section>
 
-	<section
-		class="flex flex-col md:flex-row mx-auto justify-between mb-20 text-grey-800 bg-grey-100"
-	>
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
 		<div class="md:flex-1 md:max-w-md m-4">
 			<div>
 				<img
@@ -240,18 +238,18 @@
 		</div>
 	</section>
 
-	<section class=" pt-40 pb-20">
+	<section class=" pt-20 pb-10">
 		<div class="max-w-2xl mx-auto">
-			<h2 class=" text-xl font-bold">Designing the Image Album</h2>
-			<p class=" text-base">
+			<h2 class="pb-2">Designing the Image Album</h2>
+			<p class="pb-4">
 				Some clients have many images so to avoid having hundreds of images in the assets toolbox,
 				we decided to show only the latest three images, and put the rest of the images into an
 				albums area. To figure out how this would look I first created paper sketches, then started
 				to design and prototype in Figma. A key feature wanted was an option to categorise the
-				images.&nbsp;<br />
+				images.
 			</p>
 		</div>
-		<div class="max-w-5xl mx-auto">
+		<div class="max-w-4xl mx-auto">
 			<img
 				src="/images/designmaskinen/IMG_1885_2_2.webp"
 				width="997"
@@ -261,13 +259,13 @@
 		</div>
 	</section>
 
-	<section class=" pt-40 pb-20">
+	<section class="pt-10 pb-20">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="text-xl font-bold">First Iteration of the Albums Area</h2>
-			<p class=" text-base align-center text-grey-800">
+			<h2 class="pb-2">First Iteration of the Albums Area</h2>
+			<p class="pb-5">
 				I worked in iterations, prototyping and testing to getting user feedback. My goal was to
 				"fail fast" and move on to design improved versions. This first version was functional but
-				had several areas for improvement:<br />
+				had several areas for improvement:
 			</p>
 		</div>
 		<div class="max-w-2xl mx-auto">
@@ -286,7 +284,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around mb-20 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_1.webp"
@@ -309,12 +307,12 @@
 		</div>
 	</section>
 
-	<section class="pt-20 pb-20">
+	<section class="pt-24 pb-24">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="text-xl font-bold">Refined Image Albums Layout</h2>
-			<p class="text-base">
+			<h2 class="pb-4">Refined Image Albums Layout</h2>
+			<p class="">
 				After some rounds of prototyping, testing on users, team presentations, and iterations, I
-				had a version that both the team and I were happy with. Highlighted features include:<br />
+				had a version that both the team and I were happy with. Highlighted features include:
 			</p>
 			<ul class="list-custom">
 				<li>
@@ -345,7 +343,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around mb-20 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_Final_1.webp"
@@ -368,18 +366,18 @@
 		</div>
 	</section>
 
-	<section class="pt-20 pb-20">
+	<section class="pt-24 pb-24">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="text-xl font-bold text-grey-800">Designing the Template Management</h2>
-			<h3 class="text-lg font-medium">Repurposing the Image Albums Layout</h3>
-			<p class="text-base align-center text-grey-800">
+			<h2 class="pb-4">Designing the Template Management</h2>
+			<h3 class="">Repurposing the Image Albums Layout</h3>
+			<p class="pb-4">
 				We had a lot of discussions about how this area should look.&nbsp;During a team meeting I
 				proposed reusing the same layout that I developed for the image albums. This suggestion
 				would both ensure consistency, and address other issues we discussed.&nbsp;This ended up
-				being the solution we used.&nbsp;<br />
+				being the solution we used.&nbsp;
 			</p>
-			<h3 class="text-lg font-medium">Print or Post?&nbsp;CMYK or RGB?</h3>
-			<p class="text-base align-center text-grey-800">
+			<h3 class="">Print or Post?&nbsp;CMYK or RGB?</h3>
+			<p class="">
 				One particular challenge that emerged was managing the different color profiles for print
 				(CMYK) versus digital designs for platforms like social media (RGB). This raised interesting
 				questions about the optimal way to present these options within the template settings and if
@@ -388,8 +386,8 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around mb-20 mt-20 bg-grey-100">
-		<div class="md:flex-1 md:max-w-2xl m-4">
+	<section class="flex flex-col md:flex-column mx-auto justify-evenly py-16 bg-grey-100">
+		<div class="md:flex-1 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Maler_Some.webp"
 				width="1440"
@@ -398,7 +396,7 @@
 			/>
 			<p class="text-base">Template management area.&nbsp;</p>
 		</div>
-		<div class="md:flex-2 md:max-w-2xl m-4">
+		<div class="md:flex-2 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Maler_Some_edit.webp"
 				width="1440"
@@ -407,7 +405,7 @@
 			/>
 			<p class="text-base">Edit options.&nbsp;</p>
 		</div>
-		<div class="md:flex-3 md:max-w-2xl m-4">
+		<div class="md:flex-3 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Nymal.webp"
 				width="1440"
@@ -418,10 +416,10 @@
 		</div>
 	</section>
 
-	<section class="pt-20 pb-20">
+	<section class="pt-24 pb-24">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="text-xl font-bold">Building the User Management</h2>
-			<p class="text-base">
+			<h2 class="pb-2">Building the User Management</h2>
+			<p class="">
 				When talking to users, most of them did not think they would be uploading a profile image to
 				their user profile on a design app. so I opted for using the first letter of the user name
 				as a placeholder - A clever trick that I believe designers for Google / Gmail came up with.
@@ -431,7 +429,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around mb-20 mt-20 bg-grey-100">
+	<section class="flex flex-col md:flex-comlumn mx-auto justify-around py-16 bg-grey-100">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/User_areas.webp"
@@ -439,7 +437,7 @@
 				height="645"
 				alt="User areas sketch"
 			/>
-			<p class="text-base">My sketch.</p>
+			<p class="text-base">First sketch.</p>
 		</div>
 		<div class="md:flex-2 md:max-w-2xl m-4">
 			<img
@@ -454,14 +452,14 @@
 
 	<section class="pt-20 pb-20">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="text-xl font-bold">Refining the Template Builder</h2>
-			<p class="text-base">
+			<h2 class="pb-2">Refining the Template Builder</h2>
+			<p class="">
 				Diving deep into the intricacies of the template builder, I dedicated a week to overhauling
 				its modular menu design. My focus was on streamlining the menu, categorizing options in an
 				intuitive manner, and ensuring consistency across the layout.
 			</p>
 		</div>
-		<div class="max-w-3xl my-10 mx-auto">
+		<div class="max-w-4xl my-10 mx-auto">
 			<img
 				src="/images/designmaskinen/Malbygger_Tekst.webp"
 				width="1440"
@@ -469,56 +467,22 @@
 				alt="Template builder"
 			/>
 		</div>
+	</section>
+
+	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-24">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="text-xl font-bold">Test Drive my Final Prototype.&nbsp;</h2>
-			<p class="text-base">
+			<h2 class="pb-4">Test Drive my Final Prototype.</h2>
+			<p class="">
 				My favourite part of any design process is watching the designs come to life in a prototype.
 				It's this stage where the nuances surface, often spotlighting areas that can benefit from
 				further refinement. Dive into the final prototype:<br />
 			</p>
 		</div>
-	</section>
-
-	<!--script>
-		import { onMount } from 'svelte';
-	
-		onMount(() => {
-			const iframeContainer = document.getElementById('iframe-container');
-			const message = document.getElementById('message');
-	
-			// Detect if the device is not mobile
-			if (window.innerWidth > 768) {
-				// Create the iframe element
-				const iframe = document.createElement('iframe');
-				iframe.title = 'Figma prototype';
-				iframe.loading = 'lazy';
-				iframe.style.transform = 'scale(1.1)';
-				iframe.style.border = 'none';
-				iframe.style.width = '75vw';
-				iframe.style.height = '90vh';
-				iframe.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1';
-				iframeContainer.appendChild(iframe);
-			} else {
-				// Display the message
-				message.style.display = 'block';
-			}
-		});
-	</script>
-	
-	<section id="third" class="pageSection bg-grey-900 text-grey-50 py-8">
-		<div class="max-w-7xl mx-auto">
-			<div id="iframe-container" class="justify-center"></div>
-			<div id="message">
-				<p class="text-grey-50">Sorry, the prototype only shows on larger screens.</p>
-			</div>
-		</div>
-	</section-->
-	<section id="third" class="pageSection bg-grey-900 text-grey-50 py-8">
-		<div class="max-w-7xl mx-auto">
+		<div class="max-w-8xl flex justify-center mx-auto">
 			<iframe
 				title="Figma prototype"
-				height="450"
-				width="800"
+				height="850"
+				width="1400"
 				src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1"
 			/>
 		</div>
@@ -557,14 +521,47 @@
 		</div>
 	</section-->
 
+	<!--script>
+		import { onMount } from 'svelte';
+	
+		onMount(() => {
+			const iframeContainer = document.getElementById('iframe-container');
+			const message = document.getElementById('message');
+	
+			// Detect if the device is not mobile
+			if (window.innerWidth > 768) {
+				// Create the iframe element
+				const iframe = document.createElement('iframe');
+				iframe.title = 'Figma prototype';
+				iframe.loading = 'lazy';
+				iframe.style.transform = 'scale(1.1)';
+				iframe.style.border = 'none';
+				iframe.style.width = '75vw';
+				iframe.style.height = '90vh';
+				iframe.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1';
+				iframeContainer.appendChild(iframe);
+			} else {
+				// Display the message
+				message.style.display = 'block';
+			}
+		});
+	</script>
+	
+	<section id="third" class="pageSection bg-grey-900 text-grey-50 py-8">
+		<div class="max-w-7xl mx-auto">
+			<div id="iframe-container" class="justify-center"></div>
+			<div id="message">
+				<p class="text-grey-50">Sorry, the prototype only shows on larger screens.</p>
+			</div>
+		</div>
+	</section-->
+
 	<section
 		id="fourth"
-		class="pageSection max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20"
+		class="pageSection max-w-6xl flex flex-col md:flex-row mx-auto justify-center py-24"
 	>
 		<div class="md:flex-1 md:max-w-lg m-4">
-			<h2 class=" text-xl font-bold text-grey-800">
-				Reflections on My Journey & the Consultancy World
-			</h2>
+			<h2 class="pb-4">Reflections on My Journey & the Consultancy World</h2>
 			<ul class="list-custom">
 				<li>
 					<strong>Challenging my Bias:</strong> Before going into this, I had this perception of consultants
@@ -600,33 +597,22 @@
 				</li>
 			</ul>
 		</div>
-		<div class="md:flex-2 md:max-w-lg m-4">
-			<img src="/images/designmaskinen/Team.webp" width="716" height="538" alt="Team" />
-			<p class=" text-base align-center text-grey-800">
-				My team during a meeting.&nbsp;
-			</p>
+
+		<div class="md:flex-2 md:max-w-xl m-4">
+			<div class=" flex items-center justify-center h-full">
+				<div>
+					<img src="/images/designmaskinen/Team.webp" width="716" height="538" alt="Team" />
+					<p class="">My team during a meeting.</p>
+				</div>
+			</div>
 		</div>
 	</section>
+	
 </article>
 
-<footer>
-	<!--WorkNextPrev /-->
-	<section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20">
-		<div class="md:flex-1 md:max-w-lg m-4">
-			<a href="/work/karrierestart">
-				<span>Prev</span>
-				<span>Karrierestart</span>
-			</a>
-		</div>
 
-		<div class="md:flex-2 md:max-w-lg m-4">
-			<a class="semplice-next np-link" href="/work/smab">
-							<span>Next</span>
-						<div class="np-text-main">
-							<span>Svenska Messkonsult</span>
-						</div>
-					</div>
-	</section>
+<footer>
+	<WorkFooter />
 </footer>
 
 <style>
@@ -634,17 +620,16 @@
 		display: none;
 	}*/
 
-  h2 {
-    @apply  text-[34px] font-euclid font-semibold leading-[48px];
-  }
-  h3 {
-    @apply  text-[24px] font-euclid font-normal leading-[48px];
-  }
-  p {
-    @apply  text-[18px] font-euclid font-light leading-[30px];
-  }
-  .list-custom {
-	@apply  text-[18px] font-euclid font-normal leading-[30px] list-disc;
-  }
-
+	h2 {
+		@apply text-[34px] font-euclid font-semibold leading-[48px];
+	}
+	h3 {
+		@apply text-[24px] font-euclid font-normal leading-[48px];
+	}
+	p {
+		@apply text-[18px] font-euclid font-light leading-[30px];
+	}
+	.list-custom {
+		@apply text-[18px] font-euclid font-normal leading-[30px] list-disc;
+	}
 </style>

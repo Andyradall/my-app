@@ -1,7 +1,8 @@
 <script>
   import CaseStudyCard from './CaseStudyCard.svelte';
-  
-  let caseStudies = [
+  import { caseStudies } from '../lib/caseStudies.js';
+
+  /*let caseStudies = [
   {
     title: 'Designmaskinen',
     href: '/work/designmaskinen',
@@ -34,7 +35,7 @@
     image: '/images/thumbs/KSthumb8005001.webp',
     alt: 'Karrierestart Case Study',
   }
-];
+];*/
 </script>
 
 <section class="text-grey-800 pageSection" id="work">
