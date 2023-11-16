@@ -1,7 +1,11 @@
 <script>
   // If you have any scripts or style imports, they should be here.
-  import '../global.css'; // Make sure this path is correct based on where your global.css file is located.
+  import '../global.css';
+  import { fade } from 'svelte/transition';
+/*   import { page } from '$app/stores';*/
 </script>
 
 <!-- Your page content will be injected inside this slot -->
-<slot></slot>
+<div in:fade={{ duration: 400 }} out:fade={{ duration: 400 }}>
+  <slot></slot>
+</div>

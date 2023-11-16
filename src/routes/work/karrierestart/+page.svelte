@@ -14,20 +14,22 @@
 </script>
 
 <svelte:head>
-	<title>Designmaskinen Case Study</title>
-	<meta name="description" content="Designmaskinen Case Study" />
+	<title>Karrierestart UX Case Study</title>
+	<meta name="description" content="Karrierestart UX Case Study" />
 </svelte:head>
 
 <header class="relative top-0">
 	<WorkBack />
 </header>
 
-<article class="mx-auto text-grey-800">
+<article class="mx-auto font-euclid text-grey-800">
 	<section class="max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
-		<div class="hero">
-                <h1><span class="">Karrierestart</span></h1>
-                <h1><span class="">Improving the Onboarding Experience for Job Portal</span></h1>
-            </div>
+        <div class="hero">
+            <h1 class="text-7xl font-bold text-grey-800 py-4">
+                Karrierestart
+                <span class="text-4xl font-medium text-grey-500 py-4"><br />Improving the Onboarding Experience for Job Portal</span>
+            </h1>
+        </div>
 </section>
 	
 <section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20">
@@ -42,9 +44,6 @@
 
             <div>
                 <h3>Project Snapshot:</h3>
-            </div>
-
-            <div>
                 <ul class="list-custom">
                     <li><strong>Team:</strong> Founder Bjarne Vasset, UI designer Gurveer Dhindsa, and myself.</li>
                     <li><strong>Role:</strong> UX and product designer, responsible for all UX related aspects of the project.</li>

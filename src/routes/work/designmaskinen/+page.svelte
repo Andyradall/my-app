@@ -24,10 +24,10 @@
 <article class="mx-auto text-grey-800">
 	<section class="max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div class="hero">
-			<h1 class=" text-7xl font-bold text-grey-800 py-4">Designmaskinen</h1>
-			<h1 class=" text-4xl font-medium text-grey-600 py-4">
-				Designing an Admin Area & Template Builder
-			</h1>
+			<h1 class="text-7xl font-bold text-grey-800 py-4">
+                Designmaskinen
+                <span class="text-4xl font-medium text-grey-600 py-4"><br />Designing an Admin Area & Template Builder</span>
+            </h1>
 		</div>
 	</section>
 
@@ -429,7 +429,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-comlumn mx-auto justify-around py-16 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/User_areas.webp"
@@ -630,6 +630,6 @@
 		@apply text-[18px] font-euclid font-light leading-[30px];
 	}
 	.list-custom {
-		@apply text-[18px] font-euclid font-normal leading-[30px] list-disc;
+		@apply text-[18px] font-euclid font-normal leading-[30px] list-disc pl-5 space-y-2;
 	}
 </style>
