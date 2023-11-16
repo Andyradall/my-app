@@ -99,7 +99,7 @@
 						<li>Accessibility</li>
 						<li>Responsive Design</li>
 						<li>SEO</li>
-						<li>HTML, CSS, JS, <br />SvelteKit, Tailwind, Git</li>
+						<li>HTML5, CSS, JS, <br />SvelteKit, Tailwind, Git</li>
 					</ul>
 				</article>
 			</div>

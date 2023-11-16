@@ -3,6 +3,7 @@
 	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
+	import { dirty_components } from 'svelte/internal';
 
 	const links = [
 		{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
@@ -25,7 +26,7 @@
 	<section class="max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div class="hero">
 			<h1 class="text-7xl font-euclid font-bold text-grey-800 py-4">
-                Solar Choice
+				Solar Choice
 				<span class="text-4xl font-medium text-grey-400 py-4"
 					><br />Crafting a Premium Brand Identity for Solar Panels</span
 				>
@@ -219,11 +220,10 @@
 				and user perspectives. Throughout our project, the UCDC acted as a dynamic reference point,
 				continually updated to reflect evolving insights.
 			</p>
-			
 		</div>
-        <figure class="mx-auto md:max-w-7xl py-4 md:py-6">
-            <img src="/images/solarchoice/UCDC_Solar_Choice_1.webp" alt="UCDC_Solar_Choice_1" />
-        </figure>
+		<figure class="mx-auto md:max-w-7xl py-4 md:py-6">
+			<img src="/images/solarchoice/UCDC_Solar_Choice_1.webp" alt="UCDC_Solar_Choice_1" />
+		</figure>
 	</section>
 
 	<section id="third" class="pageSection bg-grey-100 pt-20 pb-20">
@@ -274,20 +274,20 @@
 				moodboards and stylescapes. These visual representations offered the client glimpses into
 				potential brand design directions, allowing them to envision Solar Choice's future identity.
 			</p>
-			
 		</div>
-        <div class="py-10">
-            <div class="mx-auto md:max-w-2xl pb-2">
-                <h3>My stylescapes:</h3>
-            </div> 
-            <div class="mx-auto md:max-w-7xl">
-			<figure class="py-4">
-				<img src="/images/solarchoice/Solarblue8_4.webp" alt="Stylescape 1" />
-			</figure>
-			<figure class="py-4">
-                <img src="/images/solarchoice/Solarblue2goldidentity.webp" alt="My stylescape edited" />
-            </figure>
-            </div>
+		<div class="py-10">
+			<div class="mx-auto md:max-w-2xl pb-2">
+				<h3>My stylescapes:</h3>
+			</div>
+			<div class="mx-auto md:max-w-7xl">
+				<figure class="py-4">
+					<img src="/images/solarchoice/Solarblue8_4.webp" alt="Stylescape 1" />
+				</figure>
+				<figure class="py-4">
+					<img src="/images/solarchoice/Solarblue2goldidentity.webp" alt="My stylescape edited" />
+				</figure>
+			</div>
+		</div>
 	</section>
 
 	<section class="py-20">
@@ -306,16 +306,13 @@
 				Choice's logo, representing both their focus on premium products and robustness.
 			</p>
 		</div>
-        <figure class="mx-auto md:max-w-6xl py-4 md:py-6">
+		<figure class="mx-auto md:max-w-6xl py-4 md:py-6">
 			<img src="/images/solarchoice/Logo_exploret_1-scaled.webp" alt="Logo_exploret_1" />
-        </figure>
-		<div class="mx-auto sm:max-w-2xl">
-
-		</div>
+		</figure>
 	</section>
 
-	<section class="">
-		<div class="mx-auto sm:max-w-2xl pb-2">
+	<section class="py-20 bg-grey-100">
+		<div class="mx-auto md:max-w-2xl pb-2">
 			<h3>Logo End Result: Killing Your Darling</h3>
 			<p>
 				Navigating the redesign of a logo always needs a balance between innovation and brand
@@ -325,9 +322,23 @@
 				streamline and contemporize the existing design, culminating in a more flattened and modern
 				look.
 			</p>
-			<h3>Here is the results showing first the old logo, then the new ones:</h3>
-			<img src="/images/solarchoice/solar_choice_logo_30.webp" alt="solar_choice_logo_30" />
-			<img src="/images/solarchoice/solar_choice_logo_31.webp" alt="solar_choice_logo_31" />
+		</div>
+		<div class="max-w-2xl mx-auto">
+			<h3>Here is the results, old and new logo:</h3>
+		</div>
+
+		<div class="flex flex-col md:flex-row mx-auto justify-center md:py-16 bg-color">
+			<figure class="md:flex-1 md:max-w-2xl m-1">
+				<img src="/images/solarchoice/solar_choice_logo_30.webp" alt="solar_choice_logo_30" />
+			</figure>
+			<figure class="md:flex-2 md:max-w-2xl m-1'">
+				<img src="/images/solarchoice/solar_choice_logo_31.webp" alt="solar_choice_logo_31" />
+			</figure>
+		</div>
+	</section>
+
+	<section class="pt-20 pb-16">
+		<div class="mx-auto md:max-w-2xl">
 			<h3>Versatility in Design: Variants and Monochrome</h3>
 			<p>
 				Adapting to diverse applications and ensuring consistent representation is crucial in
@@ -336,20 +347,26 @@
 				black & white printing or lower-resolution, we created monochrome versions. These serve as
 				reliable alternatives, ensuring the logo's integrity across varied contexts.
 			</p>
-			<img
-				src="/images/solarchoice/solar_choice_logo_10_10-scaled.webp"
-				alt="solar_choice_logo_10_10"
-			/>
-			<img
-				src="/images/solarchoice/solar_choice_logo_10_38-scaled.webp"
-				alt="solar_choice_logo_10_38"
-			/>
+		</div>
+		<div class="flex md:max-w-4xl flex-col mx-auto justify-center py-8 md:py-16">
+			<figure class="py-6 p-2 md:max-w-5xl">
+				<img
+					src="/images/solarchoice/solar_choice_logo_10_10-scaled.webp"
+					alt="solar_choice_logo_10_10"
+				/>
+			</figure>
+			<figure class="py-6 p-2 md:max-w-5xl">
+				<img
+					src="/images/solarchoice/solar_choice_logo_10_38-scaled.webp"
+					alt="solar_choice_logo_10_38"
+				/>
+			</figure>
 		</div>
 	</section>
 
-	<section class="">
+	<section class="bg-grey-700 text-grey-50 py-16">
 		<div class="mx-auto sm:max-w-2xl pb-2">
-			<h3>Painting the Brand: The Colour Palette Journey</h3>
+			<h3>Painting the Brand: The Colour Palettes</h3>
 			<p>
 				Colors play a crucial role in brand perception. Initially, we proposed a dark blue and gold
 				palette. However, our client's vision led us elsewhere. Taking their feedback
@@ -359,13 +376,24 @@
 				more fitting. It's not just contemporary and refreshing but also seamlessly aligns with
 				Solar Choice's commitment to sustainability and pioneering spirit.
 			</p>
-			<img src="/images/solarchoice/Deep-Lagoon.webp" alt="Deep-Lagoon" />
-			<img src="/images/solarchoice/Northern-Light.webp" alt="Northern-Light" />
-			<img src="/images/solarchoice/Emerald.webp" alt="Emerald theme" />
+		</div>
+
+		<div class="flex flex-col md:flex-row gap-4 mx-auto p-5 justify-around">
+			<figure class="flex-1/3 py-6 md:max-w-xl">
+				<img src="/images/solarchoice/Deep-Lagoon.webp" alt="Deep-Lagoon" />
+			</figure>
+
+			<figure class="flex-1/3 py-6 md:max-w-xl">
+				<img src="/images/solarchoice/Northern-Light.webp" alt="Northern-Light" />
+			</figure>
+
+			<figure class="flex-1/3 py-6 md:max-w-xl">
+				<img src="/images/solarchoice/Emerald.webp" alt="Emerald theme" />
+			</figure>
 		</div>
 	</section>
 
-	<section class="">
+	<section class="py-16 bg-grey-100">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Webpage Mockups</h2>
 			<p>
@@ -374,34 +402,48 @@
 				transformation of their website with the integration of the fresh design elements. Here
 				comparing old page on the left and mockup on the right side:
 			</p>
-			<img src="/images/solarchoice/oldpage.webp" alt="oldpage" />
-			<img src="/images/solarchoice/mockup.webp" alt="mockup" />
+		</div>
+		<div class="flex md:max-w-7xl flex-row mx-auto justify-center py-4 md:py-8">
+			<figure class="flex-1/2 py-6 p-2 md:max-w-3xl">
+				<img src="/images/solarchoice/oldpage.webp" alt="oldpage" />
+				<figcaption>The old page</figcaption>
+			</figure>
+			<figure class="flex-1/2 py-6 p-2 md:max-w-3xl">
+				<img src="/images/solarchoice/mockup.webp" alt="mockup" />
+				<figcaption>My mockup of the new page</figcaption>
+			</figure>
 		</div>
 	</section>
 
-	<section class="">
+	<section id="fourth" class="pageSection pt-16 pb-8">
 		<div class="mx-auto sm:max-w-2xl pb-2">
-			<h2>Achievements and Insights</h2>
-			<p>Our effort to create a new brand identity for Solar Choice was a success.</p>
-			<p>
-				<strong>Swift Rollout:</strong> three weeks post the unveiling of the final brand book, the client
-				astoundingly rolled out the new branding on every platform, including a revamped Solar Choice
-				website
-			</p>
-			<p>
-				<strong>Effective Collaboration:</strong> This quick implementation is a testament to the effectiveness
-				of our design process and the strong partnership we established with the client.
-			</p>
-			<p>
-				<strong>Effective Hyper Island Methods:</strong> The foundational work we did with Hyper Island
-				methods, creating team alignment and structure, proved to be very valuable. It not only facilitated
-				seamless collaboration but also made sure our workdays were filled with a lot of joy and fun!
-			</p>
-			<p>Screenshot from the new Solar Choice website:</p>
-			<img
-				src="/images/solarchoice/Solar_Choice_Solceller_energi_laddboxar_Stockholms_la_n_www_solarchoice_se-1.webp"
-				alt="Solar_Choice_Solceller_energi_laddboxar_Stockholms_la_n_www_solarchoice_se-1"
-			/>
+			<h2 class="pb-2">Achievements and Insights</h2>
+			<p class="pb-2">Our effort to create a new brand identity for Solar Choice was a success.</p>
+			<ul class="list-custom pb-2">
+				<li>
+					<strong>Swift Rollout:</strong> three weeks post the unveiling of the final brand book, the
+					client astoundingly rolled out the new branding on every platform, including a revamped Solar
+					Choice website
+				</li>
+				<li>
+					<strong>Effective Collaboration:</strong> This quick implementation is a testament to the effectiveness
+					of our design process and the strong partnership we established with the client.
+				</li>
+				<li>
+					<strong>Effective Hyper Island Methods:</strong> The foundational work we did with Hyper Island
+					methods, creating team alignment and structure, proved to be very valuable. It not only facilitated
+					seamless collaboration but also made sure our workdays were filled with a lot of joy and fun!
+				</li>
+			</ul>
+		</div>
+		<div class="mx-auto md:max-w-7xl py-12">
+			<figure>
+				<img
+					src="/images/solarchoice/Solar_Choice_Solceller_energi.webp"
+					alt="A screenshot from the page"
+				/>
+				<figcaption>A screenshot from the page</figcaption>
+			</figure>
 		</div>
 	</section>
 </article>
