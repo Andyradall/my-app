@@ -307,44 +307,6 @@
 		</div>
 	</section>
 
-	<!--section class="bg-grey-800 text-grey-100 md:pt-12 md:pb-14">
-		<div class="max-w-4xl mx-auto">
-			<h2>Final Prototype:</h2>
-			<p>Dive into our final prototype:</p>
-        </div>
-        <figure class="flex justify-center w-full">
-            <iframe
-                title="Figma prototype"
-                class="w-full aspect-video"
-                width="1500"
-                height="1000"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fcd1Vf8F7kOnH79RX5yvTTq%2FPrototype-for-portfolio%3Fkind%3D%26node-id%3D1-335%26page-id%3D0%253A1%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A335%26t%3DLmekNtL5CCmEdEjF-1%26type%3Ddesign%26viewport%3D1141%252C951%252C0.26%26mode%3Ddesign%26hide-ui%3D1"
-        />
-    </figure>
-</section-->
-	<!--script>
-				const iframeContainer = document.getElementById('iframe-container');
-				const message = document.getElementById('message');
-
-				// Detect if the device is mobile
-				if (window.innerWidth > 768) {
-					// Create the iframe element
-					const iframe = document.createElement('iframe');
-					iframe.title = 'Figma prototype';
-					iframe.loading = 'lazy';
-					iframe.style = 'transform: scale(1.1); border: none;';
-					iframe.style.width = '75vw';
-					iframe.style.height = '90vh';
-					iframe.src =
-						'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fcd1Vf8F7kOnH79RX5yvTTq%2FPrototype-for-portfolio%3Fkind%3D%26node-id%3D1-335%26page-id%3D0%253A1%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A335%26t%3DLmekNtL5CCmEdEjF-1%26type%3Ddesign%26viewport%3D1141%252C951%252C0.26%26mode%3Ddesign%26hide-ui%3D1';
-					// Append the iframe to the container
-					iframeContainer.appendChild(iframe);
-				} else {
-					// Display the message
-					message.style.display = 'block';
-				}
-			</script-->
-
 	<section id="fifth" class="pageSection md:max-w-2xl mx-auto py-28">
 		<h2 class="pb-2">Reflections & Learnings.</h2>
 		<div class="mx-auto sm:max-w-2xl">

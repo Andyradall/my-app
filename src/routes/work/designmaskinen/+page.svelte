@@ -386,8 +386,8 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-column mx-auto justify-evenly py-16 bg-grey-100">
-		<div class="md:flex-1 md:max-w-xl m-4">
+	<section class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-grey-100">
+		<div class="md:flex-1/3 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Maler_Some.webp"
 				width="1440"
@@ -396,7 +396,7 @@
 			/>
 			<p class="text-base">Template management area.&nbsp;</p>
 		</div>
-		<div class="md:flex-2 md:max-w-xl m-4">
+		<div class="md:flex-1/3 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Maler_Some_edit.webp"
 				width="1440"
@@ -405,7 +405,7 @@
 			/>
 			<p class="text-base">Edit options.&nbsp;</p>
 		</div>
-		<div class="md:flex-3 md:max-w-xl m-4">
+		<div class="md:flex-1/3 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Nymal.webp"
 				width="1440"
@@ -471,90 +471,29 @@
 
 	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-24">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="pb-4">Test Drive my Final Prototype.</h2>
-			<p class="">
-				My favourite part of any design process is watching the designs come to life in a prototype.
+			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
+			<p>	My favourite part of any design process is watching the designs come to life in a prototype.
 				It's this stage where the nuances surface, often spotlighting areas that can benefit from
-				further refinement. Dive into the final prototype:<br />
-			</p>
+				further refinement. Dive into the final prototype:</p>
 		</div>
-		<div class="max-w-8xl flex justify-center mx-auto">
+
+		<!-- Prototype for large screens -->
+		<figure class="hidden lg:block flex justify-center w-full">
 			<iframe
 				title="Figma prototype"
-				height="850"
-				width="1400"
+				class="w-full aspect-video"
+				width="900"
+				height="1200"
+				loading="lazy"
 				src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1"
 			/>
+		</figure>
+
+		<!-- Message for small screens -->
+		<div class="lg:hidden mx-auto text-center p-4">
+			<p>Prototype only shown on desktop.</p>
 		</div>
 	</section>
-
-	<!--section id="third" class="pageSection bg-grey-900 text-grey-50 py-8">
-		<div class="max-w-7xl mx-auto">
-			<div id="iframe-container" class="justify-center" />
-			<div id="message">
-				<p class="text-grey-50">Sorry, the prototype only shows on larger screens.</p>
-			</div>
-
-			<script>
-				const iframeContainer = document.getElementById('iframe-container');
-				const message = document.getElementById('message');
-
-				// Detect if the device is mobile
-				if (window.innerWidth > 768) {
-					// Create the iframe element
-					const iframe = document.createElement('iframe');
-					iframe.title = 'Figma prototype';
-					iframe.loading = 'lazy';
-					iframe.style.transform = 'scale(1.1)';
-			        iframe.style.border = 'none';
-					iframe.style.width = '75vw';
-					iframe.style.height = '90vh';
-					iframe.src =
-						'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1';
-					// Append the iframe to the container
-					iframeContainer.appendChild(iframe);
-				} else {
-					// Display the message
-					message.style.display = 'block';
-				}
-			</script>
-		</div>
-	</section-->
-
-	<!--script>
-		import { onMount } from 'svelte';
-	
-		onMount(() => {
-			const iframeContainer = document.getElementById('iframe-container');
-			const message = document.getElementById('message');
-	
-			// Detect if the device is not mobile
-			if (window.innerWidth > 768) {
-				// Create the iframe element
-				const iframe = document.createElement('iframe');
-				iframe.title = 'Figma prototype';
-				iframe.loading = 'lazy';
-				iframe.style.transform = 'scale(1.1)';
-				iframe.style.border = 'none';
-				iframe.style.width = '75vw';
-				iframe.style.height = '90vh';
-				iframe.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1';
-				iframeContainer.appendChild(iframe);
-			} else {
-				// Display the message
-				message.style.display = 'block';
-			}
-		});
-	</script>
-	
-	<section id="third" class="pageSection bg-grey-900 text-grey-50 py-8">
-		<div class="max-w-7xl mx-auto">
-			<div id="iframe-container" class="justify-center"></div>
-			<div id="message">
-				<p class="text-grey-50">Sorry, the prototype only shows on larger screens.</p>
-			</div>
-		</div>
-	</section-->
 
 	<section
 		id="fourth"
