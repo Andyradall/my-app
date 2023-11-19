@@ -19,16 +19,16 @@
 	const nextCaseStudy = caseStudies[nextIndex];
 </script>
 
-<section class="bg-grey-100 font-euclid">
-	<div class="max-w-2xl mx-auto flex justify-between items-stretch px-2 py-4">
-		<div class="first-div flex-1 flex flex-col justify-between p-8">
-			<a href={prevCaseStudy.href} class="flex flex-col items-start">
+<section class="bg-grey-100 font-euclid pt-6 pb-8">
+	<div class="max-w-full mx-auto flex justify-between items-stretch px-5 md:px-8 py-4">
+		<div class="first-div flex-1 flex flex-col justify-between">
+			<a href={prevCaseStudy.href} class="flex flex-col items-start" aria-label="Previous case Study">
 				<ul>
 					<li
-						class="flex items-center uppercase text-lg text-grey-700 hover:text-grey-700 font-medium"
+						class="flex items-center uppercase text-lg text-grey-600 hover:text-grey-600 font-medium"
 					>
 						<svg
-							class="prev-arrow fill-current mr-2"
+							class="prev-arrow fill-current mr-1"
 							xmlns="http://www.w3.org/2000/svg"
 							height="24"
 							viewBox="0 -960 960 960"
@@ -47,15 +47,13 @@
 			</a>
 		</div>
 
-		<div class="second-div flex-1 flex flex-col justify-between p-8">
-			<a href={nextCaseStudy.href} class="flex flex-col items-end">
-				<ul>
-					<li
-						class="flex items-center uppercase text-lg text-grey-700 hover:text-grey-700 font-medium"
-					>
+		<div class="second-div flex-1 flex flex-col justify-between">
+			<a href={nextCaseStudy.href} class="flex flex-col text-right items-end" aria-label="Next case Study">
+				<ul class="w-full">
+					<li class="flex justify-end items-center uppercase text-lg text-grey-600 hover:text-grey-600 font-medium">
 						Next
 						<svg
-							class="next-arrow fill-current ml-2"
+							class="next-arrow text-right fill-current ml-1"
 							xmlns="http://www.w3.org/2000/svg"
 							height="24"
 							viewBox="0 -960 960 960"

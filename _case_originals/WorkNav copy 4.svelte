@@ -1,101 +1,97 @@
 <script>
-	import { onMount, afterUpdate } from 'svelte';
-	import anime from 'animejs';
-	export let links = [];
+  import { onMount, afterUpdate } from 'svelte';
+  import anime from 'animejs';
+  export let links = [];
 
-	let sticky = false;
-	let currentActiveId;
-	let navigationLinks;
-	let sections;
-	let isActive = false;
-	let effectX = 0; // Initial position
-	let effectWidth = 0; // Initial size
+  let sticky = false;
+  let currentActiveId;
+  let navigationLinks;
+  let sections;
+  let isActive = false;
+  let effectX = 0; // Initial position
+  let effectWidth = 0; // Initial size
 
-	function throttle(fn, interval) {
-		var lastCall = 0;
-		var timeoutId = null;
-		return function () {
-			var now = new Date().getTime();
-			if (lastCall && now < lastCall + interval) {
-				clearTimeout(timeoutId);
-				timeoutId = setTimeout(function () {
-					lastCall = now;
-					fn.call();
-				}, interval - (now - lastCall));
-			} else {
-				lastCall = now;
-				fn.call();
-			}
-		};
-	}
+  onMount(() => {
+    const stickyMenu = document.getElementById('sub-navigation');
+    const stickyNavTop = stickyMenu.offsetTop;
+    navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
+    sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
 
-	function updateActiveLink() {
-		const offset = 155; // Offset for activating the section
-		let foundMatch = false; // Flag to indicate if we've found our match
-		let activeSection = sections.find((section) => {
-			const sectionTop = section.offsetTop - offset;
-			if (foundMatch) return false;
-			if (window.scrollY >= sectionTop) {
-				foundMatch = true;
-				return true;
-			}
-			return false;
-		});
+    // Check if the current window location hash is "#hero"
+    if (window.location.hash === '#hero') {
+      isActive = false;
+    }
 
-		currentActiveId = activeSection ? activeSection.id : sections[0].id;
-		animateIndicator();
-	}
+    const handleScroll = () => {
+      sticky = window.scrollY > stickyNavTop;
+      updateActiveLink();
+    };
 
-	function animateIndicator() {
-		anime({
-			targets: '.effect',
-			left: effectX,
-			width: effectWidth,
-			duration: 600,
-			easing: 'easeOutElastic(1, 0.4)' // Adjust for a bouncy effect
-		});
-	}
+    window.addEventListener('scroll', handleScroll);
 
-	function scrollToSection(event) {
-		const href = event.currentTarget.getAttribute('href');
-		const id = href.replace('#', '');
-		const section = document.getElementById(id);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 
-		if (section) {
-			event.preventDefault();
-			section.scrollIntoView({ behavior: 'smooth' });
-		}
-	}
+  afterUpdate(() => {
+    const activeLink = document.querySelector('#sub-navigation > ul > li > a.active');
+    if (activeLink instanceof HTMLElement) {
+      effectX = activeLink.offsetLeft - 16; // Subtracted 8 for the left padding
+      effectWidth = activeLink.offsetWidth + 32; // Added 16 for total padding (8 on each side)
+    }
+  });
 
-	onMount(() => {
-		const stickyMenu = document.getElementById('sub-navigation');
-		const stickyNavTop = stickyMenu.offsetTop;
-		navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
-		sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
+  function throttle(fn, interval) {
+    var lastCall = 0;
+    var timeoutId = null;
+    return function () {
+      var now = new Date().getTime();
+      if (lastCall && now < lastCall + interval) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          lastCall = now;
+          fn.call();
+        }, interval - (now - lastCall));
+      } else {
+        lastCall = now;
+        fn.call();
+      }
+    };
+  }
 
-		if (window.location.hash === '#hero') {
-			isActive = false;
-		}
+  function updateActiveLink() {
+    const offset = 155; // Offset for activating the section
+    let activeSection = sections.find(section => {
+      const sectionTop = section.offsetTop;
+      return window.scrollY >= sectionTop - offset;
+    });
 
-		const handleScroll = throttle(() => {
-			sticky = window.scrollY > stickyNavTop;
-			updateActiveLink();
-		}, 20); // Throttle every 20ms
+    currentActiveId = activeSection ? activeSection.id : sections[0].id;
+    animateIndicator();
+  }
 
-		window.addEventListener('scroll', handleScroll);
+  function animateIndicator() {
+    anime({
+      targets: '.effect',
+      left: effectX,
+      width: effectWidth,
+      duration: 600,
+      endDelay: 1000
+    });
+  }
 
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
+  function scrollToSection(event) {
+    const href = event.currentTarget.getAttribute('href');
+    const id = href.replace('#', '');
+    const section = document.getElementById(id);
 
-	afterUpdate(() => {
-		const activeLink = document.querySelector('#sub-navigation > ul > li > a.active');
-		if (activeLink instanceof HTMLElement) {
-			effectX = activeLink.offsetLeft - 16; // Subtracted 8 for the left padding
-			effectWidth = activeLink.offsetWidth + 32; // Added 16 for total padding (8 on each side)
-		}
-	});
+    if (section) {
+      event.preventDefault();
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
 </script>
 
 <!----------->
@@ -117,8 +113,7 @@
 		<ul>
 			{#each links as link}
 				<li>
-					<a
-						class="font-euclid text-base"
+					<a class="font-euclid text-base"
 						href={link.id}
 						aria-label={link.ariaLabel}
 						class:active={link.id === `#${currentActiveId}`}
@@ -133,6 +128,7 @@
 </nav>
 
 <style>
+
 	/* main css to refactor -> Tailwind */
 	.header-navbar {
 		border-bottom: 1px solid #ebeef4;
@@ -258,7 +254,7 @@
 		pointer-events: none;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: center; 
 		will-change: transform;
 	}
 

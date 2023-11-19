@@ -14,16 +14,17 @@
 	});
 
 	// set the size correct from starts
-	let effectX = 0; // Initial position. This matches 'left: 0px;'
-	let effectWidth = 0; // Initial size. This matches 'width: 170px;'
+    let effectX = 0; // Initial position. This matches 'left: 0px;'
+    let effectWidth = 0; // Initial size. This matches 'width: 170px;'
 
 	afterUpdate(() => {
 		const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
 		if (activeLink instanceof HTMLElement) {
 			effectX = activeLink.offsetLeft - 8; // Subtracted 8 for the left padding
 			effectWidth = activeLink.offsetWidth + 16; // Added 16 for total padding (8 on each side)
-		} else {
 		}
+        else {
+  }
 	});
 
 	// Cache navigation links and sections
@@ -59,44 +60,44 @@
 		};
 	}
 
-	function highlightPageNavigation() {
-		const scrollPosition = window.scrollY;
-		const offset = 160; // Adjust this offset if needed
-		let foundMatch = false; // Flag to indicate if we've found our match
+    function highlightPageNavigation() {
+  const scrollPosition = window.scrollY;
+  const offset = 160; // Adjust this offset if needed
+  let foundMatch = false; // Flag to indicate if we've found our match
 
-		// We're reversing the pageSections order to start checking from bottom to top
-		pageSections.forEach((section) => {
-			if (foundMatch) return; // Skip the rest of the sections once a match is found
+  // We're reversing the pageSections order to start checking from bottom to top
+  pageSections.forEach((section) => {
+    if (foundMatch) return; // Skip the rest of the sections once a match is found
 
-			const sectionTop = section.offsetTop - offset;
-			const id = section.getAttribute('id');
-			// Check if we've scrolled past the section's top
-			if (scrollPosition >= sectionTop) {
-				foundMatch = true; // We found our match, set the flag to true
+    const sectionTop = section.offsetTop - offset;
+    const id = section.getAttribute('id');
+    // Check if we've scrolled past the section's top
+    if (scrollPosition >= sectionTop) {
+      foundMatch = true; // We found our match, set the flag to true
 
-				const navLink = pageSectionIdToNavigationLink[id];
-				if (navLink && !navLink.classList.contains('active')) {
-					// Remove 'active' class from all navigation links
-					pageNavigationLinks.forEach((link) => link.classList.remove('active'));
-					// Add 'active' class to the matched section's navigation link
-					navLink.classList.add('active');
+      const navLink = pageSectionIdToNavigationLink[id];
+      if (navLink && !navLink.classList.contains('active')) {
+        // Remove 'active' class from all navigation links
+        pageNavigationLinks.forEach((link) => link.classList.remove('active'));
+        // Add 'active' class to the matched section's navigation link
+        navLink.classList.add('active');
+        
+        // Calculate new position and width for the highlight effect
+        const x = navLink.offsetLeft - 8;
+        const width = navLink.offsetWidth + 16;
 
-					// Calculate new position and width for the highlight effect
-					const x = navLink.offsetLeft - 8;
-					const width = navLink.offsetWidth + 16;
-
-					// Animate the highlight effect to the new position and width
-					anime({
-						targets: '.menu-effect',
+        // Animate the highlight effect to the new position and width
+        anime({
+            targets: '.menu-effect',
 						left: `${x}px`,
 						width: `${width}px`,
 						duration: 600,
 						endDelay: 1000
-					});
-				}
-			}
-		});
-	}
+        });
+      }
+    }
+  });
+}
 
 	onMount(() => {
 		// Cache navigation links and sections
@@ -132,7 +133,7 @@
 
 <nav>
 	<div
-		class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-lg"
+		class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-base md:text-lg"
 	>
 		<div
 			id="main-navigation"
@@ -141,10 +142,7 @@
 			aria-label="Main Navigation"
 		>
 			<div class="menu-effect-container">
-				<div
-					class="menu-effect bg-grey-200 min-w-90px rounded-full"
-					style="left: {effectX}px; width: {effectWidth}px;"
-				/>
+				<div class="menu-effect bg-grey-200 min-w-90px rounded-full" style="left: {effectX}px; width: {effectWidth}px;"/>
 			</div>
 
 			<ul>
@@ -211,6 +209,7 @@
 </nav>
 
 <style lang="postcss">
+
 	/* content styles */
 
 	.menu-custom-link {
@@ -298,19 +297,19 @@
 		/*min-width: 90.5677px;*/
 		height: 48px;
 		position: absolute;
-		/*left: 1px; /*old Initial position if code live on Work page */
+		left: 0; /*old Initial position if code live on Work page */
 		/*left: 109.372px; */ /*Initial position if code live on About page */
 		z-index: 101;
 	}
 
 	@media (max-width: 768px) {
 		.nav-container {
-			width: 92%;
+			width: 96%;
 			margin: 0 auto;
 		}
 
 		.menu-custom-link {
-			display: none; /* Hide custom links */
+			display: none;
 		}
 
 		.menu-effect {
@@ -318,31 +317,33 @@
 		}
 
 		.main-navbar {
-			width: 92%;
+			width: 96%;
 			margin: 0 auto;
-			top: 12px;
-			padding: 0px 4px;
+			top: 8px;
+			padding: 4px 4px;
 			max-height: 48px;
 		}
 
 		.main-navbar a {
-			/*	font-size: calc(0.9em); */
+		/*	font-size: calc(0.9em); */
 			padding: 3px 4px;
 			white-space: nowrap;
 		}
 
 		.main-navbar ul {
 			padding: 4px 16px;
-			margin: 4px;
+			margin: 2px;
 			gap: 0;
 			display: flex; /* Use flexbox */
-			justify-content: space-between;
+			justify-content: space-around;
 			margin-block-start: 0;
 			margin-block-end: 0;
 			padding-inline-start: 40px;
 		}
+	
 		.menu-effect {
 			max-height: 32px;
 		}
 	}
+
 </style>

@@ -1,7 +1,7 @@
 <script></script>
 
-<article class="text-grey-800 pb-24 md:pb-56">
-	<div class="max-w-[1297px] mx-4 md:mx-16 mt-40 mb-30 gap-y-10">
+<article class="text-grey-800 pb-56">
+	<div class="max-w-[1297px] mx-5 md:mx-16 mt-40 mb-30 gap-y-10">
 		<section id="about" class="pageSection">
 			<h2 class="font-euclid text-xl font-semibold pl-6 my-4">ABOUT ME:</h2>
 		</section>
@@ -209,7 +209,7 @@
 			</div>
 		</section>
 
-		<section class="card-one-two grid grid-cols-12 gap-y-10">
+		<section class="card-one-two grid grid-cols-12 gap-10">
 			<!-- Text Card -->
 			<div
 				class="text-card card-one shadow-custom md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10"

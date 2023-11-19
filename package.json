@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@builder.io/partytown": "^0.8.1",
 		"animejs": "^3.2.1"
 	}
 }

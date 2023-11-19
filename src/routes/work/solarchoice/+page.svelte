@@ -23,11 +23,11 @@
 </header>
 
 <article class="mx-auto font-euclid text-grey-800">
-	<section class="max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
-		<div class="hero">
+	<section id="first" class="pageSection max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
+		<div>
 			<h1 class="text-7xl font-euclid font-bold text-grey-800 py-4">
 				Solar Choice
-				<span class="text-4xl font-medium text-grey-400 py-4"
+				<span class="text-4xl leading-2 md:leading-5 font-euclid font-medium text-grey-400 py-4"
 					><br />Crafting a Premium Brand Identity for Solar Panels</span
 				>
 			</h1>
@@ -35,9 +35,9 @@
 	</section>
 
 	<section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20">
-		<div class="md:flex-1 md:max-w-xl pr-8 m-4">
+		<div class="md:flex-1 md:max-w-xl md:pr-8 py-2 md:m-4">
 			<h2 class="pb-2">Project Overview</h2>
-			<ul class="text-[18px] font-euclid font-light leading-[30px] pr-2 space-y-5">
+			<ul class="text-[18px] font-euclid font-light leading-[30px] md:pr-2 px-4 md:space-y-5">
 				<li>
 					<strong class="font-semibold">Brief:</strong> Create a visual brand document that presents
 					the company in a understandable and appealing way to their target audience through the main
@@ -94,7 +94,7 @@
     </div>
 </section-->
 
-	<section id="first" class="pageSection bg-grey-100 pt-32 pb-20">
+	<section id="first" class="pageSection bg-grey-100 pt-6 md:pt-32 pb-8 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Team Dynamics and Initial Steps</h2>
 			<p>
@@ -109,7 +109,7 @@
 	</section>
 
 	<section class="bg-grey-100">
-		<div class="mx-auto sm:max-w-2xl">
+		<div class="mx-auto sm:max-w-2xl px-4">
 			<h2 class="pb-2">Team Canvas</h2>
 			<p>
 				This tool facilitated our alignment on individual strengths, shared values, overarching
@@ -117,13 +117,13 @@
 				everything on the table so that we can avoid misunderstandings later on.
 			</p>
 		</div>
-		<figure class="mx-auto md:max-w-5xl py-4 md:py-8">
+		<figure class="mx-auto md:max-w-5xl py-4 px-4 md:py-8">
 			<img src="/images/solarchoice/Team-canvas.webp" alt="Team-canvas" />
 		</figure>
 	</section>
 
-	<section class="bg-grey-100">
-		<div class="mx-auto sm:max-w-2xl pb-2">
+	<section class="bg-grey-100 px-4">
+		<div class="mx-auto sm:max-w-2xl pb-4">
 			<h2 class="pb-2">Time Management with Figjam</h2>
 			<p>
 				To stay on track and ensure everyone was synced, we structured our timeline on Figjam. This
@@ -131,12 +131,12 @@
 				each day with a transparent and focused roadmap.
 			</p>
 		</div>
-		<figure class="mx-auto md:max-w-5xl py-4 md:pt-8 md:pb-20">
+		<figure class="mx-auto md:max-w-5xl py-4 md:pt-8 pb-8 md:pb-20">
 			<img src="/images/solarchoice/Agenda.webp" alt="Agenda" />
 		</figure>
 	</section>
 
-	<section id="second" class="pageSection pt-20 pb-20">
+	<section id="second" class="pageSection pt-12 md:pt-20 pb-12 md:pb-20 px-4">
 		<div class="mx-auto sm:max-w-2xl">
 			<h2 class="pb-2">Customer Insight, our Approach to Research</h2>
 			<p class="pb-2">
@@ -180,7 +180,7 @@
 		</figure>
 	</section>
 
-	<section class="md:py-20 bg-grey-800 text-grey-50">
+	<section class="py-12 md:py-20 px-4 bg-grey-800 text-grey-50">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">Establishing Brand Identity</h2>
 			<p>
@@ -211,7 +211,7 @@
 		</div>
 	</section>
 
-	<section class="py-20">
+	<section class="py-12 px-4 md:py-20">
 		<div class="mx-auto sm:max-w-2xl">
 			<h3>UCDC - User-Centered Design Canvas</h3>
 			<p>
@@ -226,7 +226,7 @@
 		</figure>
 	</section>
 
-	<section id="third" class="pageSection bg-grey-100 pt-20 pb-20">
+	<section id="third" class="pageSection bg-grey-100 py-12 md:py-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2 class="pb-2">Crafting a Brand's Visual DNA</h2>
 			<p class="pb-2">
@@ -265,7 +265,7 @@
 		</div>
 	</section>
 
-	<section class="md:py-20 bg-grey-800 text-grey-50">
+	<section class="py-12 md:py-20 px-4 bg-grey-800 text-grey-50">
 		<div class="mx-auto md:max-w-2xl">
 			<h3>The Birth of Stylescapes</h3>
 			<p class="pb-8">
@@ -290,7 +290,7 @@
 		</div>
 	</section>
 
-	<section class="py-20">
+	<section class="py-12 md:py-20 px-4">
 		<div class="mx-auto md:max-w-2xl pb-2">
 			<h2 class="pb-2">Our Color and Logo Process</h2>
 			<p class="pb-2">
@@ -311,7 +311,7 @@
 		</figure>
 	</section>
 
-	<section class="py-20 bg-grey-100">
+	<section class="py-12 md:py-20 px-4 bg-grey-100">
 		<div class="mx-auto md:max-w-2xl pb-2">
 			<h3>Logo End Result: Killing Your Darling</h3>
 			<p>
@@ -337,7 +337,7 @@
 		</div>
 	</section>
 
-	<section class="pt-20 pb-16">
+	<section class="py-12 md:py-20 px-4">
 		<div class="mx-auto md:max-w-2xl">
 			<h3>Versatility in Design: Variants and Monochrome</h3>
 			<p>
@@ -364,7 +364,7 @@
 		</div>
 	</section>
 
-	<section class="bg-grey-700 text-grey-50 py-16">
+	<section class="bg-grey-700 text-grey-50 py-12 md:py-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h3>Painting the Brand: The Colour Palettes</h3>
 			<p>
@@ -393,7 +393,7 @@
 		</div>
 	</section>
 
-	<section class="py-16 bg-grey-100">
+	<section class="py-12 md:py-20 px-4 bg-grey-100">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Webpage Mockups</h2>
 			<p>
@@ -415,7 +415,7 @@
 		</div>
 	</section>
 
-	<section id="fourth" class="pageSection pt-16 pb-8">
+	<section id="fourth" class="pageSection pt-12 md:pt-16 pb-8 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2 class="pb-2">Achievements and Insights</h2>
 			<p class="pb-2">Our effort to create a new brand identity for Solar Choice was a success.</p>

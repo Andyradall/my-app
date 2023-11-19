@@ -23,12 +23,12 @@
 </header>
 
 <article class="mx-auto font-euclid text-grey-800">
-	<section class="max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
-		<div class="hero">
-			<h1 class="text-7xl font-bold text-grey-800 py-4">
+	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
+		<div>
+			<h1 class="text-[2.75rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
 				Karrierestart
-				<span class="text-4xl font-medium text-grey-500 py-4"
-					><br />Improving the Onboarding Experience for Job Portal</span
+				<span class="text-[2rem] md:text-4xl font-euclid font-medium text-grey-400 py-4">
+					<br />Improving the Onboarding Experience for Job Portal</span
 				>
 			</h1>
 		</div>
@@ -279,7 +279,7 @@
 		</figure>
 	</section>
 
-	<section id="fifth" class="pageSection py-8 md:pt-24 md:pb-28">
+	<section id="fifth" class="pageSection py-8 md:mt-8 md:pt-28 md:pb-40">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Summary and Outcome</h2>
 			<p class="pb-2">
@@ -317,6 +317,8 @@
 			</ul>
 		</div>
 	</section>
+
+    
 </article>
 
 <footer>

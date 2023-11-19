@@ -22,12 +22,12 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-grey-800">
-	<section class="max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
-		<div class="hero">
-            <h1 class="text-7xl font-bold text-grey-800 py-4">
+<article class="mx-auto font-euclid  text-grey-800">
+	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
+		<div>
+			<h1 class="text-[3rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
                 Svenska Mässkonsult
-                <span class="text-4xl font-medium text-grey-500 py-4"><br />A Rebrand Journey with Hyper Island</span>
+                <span class="text-[2rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"><br />A Rebrand Journey with Hyper Island</span>
             </h1>
 		</div>
 	</section>
@@ -83,7 +83,7 @@
                 </ul>
             </section-->
 
-	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-32 pb-20">
+	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-32 pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2>Double Diamond: Our Methodological Approach</h2>
 		</div>
@@ -106,7 +106,7 @@
 		</figure>
 	</section>
 
-	<section id="second" class="pageSection my-24">
+	<section id="second" class="pageSection py-12 md:py-24 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>The Discovery Phase: Understanding Our Client</h2>
 		</div>
@@ -133,7 +133,7 @@
 		</figure>
 	</section>
 
-	<section class="mb-8 md:mb-12">
+	<section class="mb-8 md:mb-12 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Customer Journey: From Empathy to Insight</h2>
 		</div>
@@ -165,7 +165,7 @@
 		</figure>
 	</section>
 
-	<section class="my-4 md:py-20 bg-grey-800 text-grey-50">
+	<section class="my-4 py-10 md:py-20 bg-grey-800 text-grey-50 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Crafting the Brand: Workshops to Final Choices</h2>
 		</div>
@@ -191,7 +191,7 @@
 		</figure>
 	</section>
 
-	<section id="third" class="pageSection my-24">
+	<section id="third" class="pageSection py-12 md:py-24 px-4">
 		<div class="mx-auto sm:max-w-2xl">
 			<h2 class="pb-2">Defining, Planning & Structuring</h2>
 			<h3>Defining Content and Structure</h3>
@@ -203,7 +203,7 @@
 		</figure>
 	</section>
 
-	<section class="my-10">
+	<section class="my-10 px-4">
 		<div class="mx-auto sm:max-w-2xl">
 			<h3>SEO-driven Sitemap Creation</h3>
 			<p>
@@ -217,7 +217,7 @@
 		</figure>
 	</section>
 
-	<section class="my-8 md:my-14 md:py-20 bg-grey-100">
+	<section class="my-8 py-12 md:my-14 md:py-20 bg-grey-100 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Design Process</h2>
 		</div>
@@ -241,7 +241,7 @@
 		</figure>
 	</section>
 
-	<section class="pb-16">
+	<section class="pb-16 px-4">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">User Experience Testing</h2>
 			<h3>Testing Methodology</h3>
@@ -267,7 +267,7 @@
 		</div>
 	</section>
 
-	<section id="fourth" class="pageSection md:py-20 bg-grey-800 text-grey-50">
+	<section id="fourth" class="pageSection py-12 md:py-20 bg-grey-800 text-grey-50 px-4">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">Final Deliverables</h2>
 			<h3>Frontpage Evolution</h3>
@@ -283,7 +283,7 @@
 		</div>
 	</section>
 
-	<section class="bg-grey-800 text-grey-100 md:pt-12 md:pb-14">
+	<section class="bg-grey-800 text-grey-100 py-12 md:pt-12 md:pb-14 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2>Final Prototype:</h2>
 			<p>Dive into our final prototype:</p>
@@ -307,7 +307,7 @@
 		</div>
 	</section>
 
-	<section id="fifth" class="pageSection md:max-w-2xl mx-auto py-28">
+	<section id="fifth" class="pageSection md:max-w-2xl mx-auto py-12 md:py-28 px-4">
 		<h2 class="pb-2">Reflections & Learnings.</h2>
 		<div class="mx-auto sm:max-w-2xl">
 			<p class="pb-2">

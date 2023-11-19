@@ -21,18 +21,18 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto text-grey-800">
-	<section class="max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
-		<div class="hero">
-			<h1 class="text-7xl font-bold text-grey-800 py-4">
+<article class="mx-auto font-euclid text-grey-800">
+	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
+		<div>
+			<h1 class="text-[2.75rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
                 Designmaskinen
-                <span class="text-4xl font-medium text-grey-600 py-4"><br />Designing an Admin Area & Template Builder</span>
+                <span class="text-[2rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"><br />Designing an Admin Area & Template Builder</span>
             </h1>
 		</div>
 	</section>
 
-	<section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20">
-		<div class="md:flex-1 md:max-w-lg m-4">
+	<section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20 px-4">
+		<div class="md:flex-1 md:max-w-lg my-4">
 			<h2 class=" text-xl font-bold text-grey-800">Case Overview</h2>
 			<p class=" text-base align-center text-grey-800">
 				In Spring 2023, during my three-month internship at Netlife Design, I contributed to the
@@ -74,7 +74,7 @@
 		</div>
 	</section>
 
-	<section class="mt-20 hidden sm:block">
+	<section class="mt-20 hidden sm:block px-4">
 		<div>
 			<h1 class="text-3xl font-medium text-grey-800 text-center">Process overview</h1>
 		</div>
@@ -84,26 +84,7 @@
 		<WorkNav {links} />
 	</section>
 
-	<!-- display only on mobile, fix this later-->
-	<!--section class="justify-center grid grid-cols-12 xl:col-span-12">
-        <div class="xl:col-span-12">
-            <h3 class=" text-lg font-medium text-center">Case study overview</h3>
-        </div>
-        <div class="xl:col-span-3">
-            <p class=" text-base align-center text-grey-800"><a href="#first" class="font-bold">1. The challenge</a></p>
-        </div>
-        <div class="xl:col-span-3">
-            <p class=" text-base align-center text-grey-800"><a href="#second" title="Research" class="font-bold">2. Design process</a></p>
-        </div>
-        <div class="xl:col-span-3">
-            <p class=" text-base align-center text-grey-800"><a href="#third" title="3. Redesigned sign up flow" class="font-bold">3. Final prototype</a></p>
-        </div>
-        <div class="xl:col-span-3">
-            <p class=" text-base align-center text-grey-800"><a href="#fourth" class="font-bold">4. Insights</a></p>
-        </div>
-    </section-->
-
-	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-32 pb-20">
+	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-32 pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="text-3xl font-bold mb-4">Understanding the Challenge</h2>
 			<p class="mb-8">
@@ -164,7 +145,7 @@
 		</div>
 	</section>
 
-	<section id="second" class="pageSection pt-40 pb-20">
+	<section id="second" class="pageSection pt-40 pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-4">Designing the brand assets toolbox</h2>
 			<h3 class="">The Core of the Admin Area:</h3>
@@ -174,7 +155,7 @@
 				ideas for the design details.
 			</p>
 		</div>
-		<div class="max-w-6xl pb-20 mx-auto">
+		<div class="max-w-6xl pb-20 mx-auto px-4">
 			<img
 				src="/images/designmaskinen/Skisser_malbygger-1.webp"
 				width="1250"
@@ -202,7 +183,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
 		<div class="md:flex-1 md:max-w-md m-4">
 			<div>
 				<img
@@ -238,7 +219,7 @@
 		</div>
 	</section>
 
-	<section class=" pt-20 pb-10">
+	<section class=" pt-20 pb-10 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Designing the Image Album</h2>
 			<p class="pb-4">
@@ -259,7 +240,7 @@
 		</div>
 	</section>
 
-	<section class="pt-10 pb-20">
+	<section class="pt-10 pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">First Iteration of the Albums Area</h2>
 			<p class="pb-5">
@@ -284,7 +265,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_1.webp"
@@ -307,7 +288,7 @@
 		</div>
 	</section>
 
-	<section class="pt-24 pb-24">
+	<section class="pt-24 pb-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-4">Refined Image Albums Layout</h2>
 			<p class="">
@@ -343,7 +324,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_Final_1.webp"
@@ -366,7 +347,7 @@
 		</div>
 	</section>
 
-	<section class="pt-24 pb-24">
+	<section class="pt-24 pb-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-4">Designing the Template Management</h2>
 			<h3 class="">Repurposing the Image Albums Layout</h3>
@@ -386,7 +367,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-grey-100 px-4">
 		<div class="md:flex-1/3 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Maler_Some.webp"
@@ -416,7 +397,7 @@
 		</div>
 	</section>
 
-	<section class="pt-24 pb-24">
+	<section class="pt-24 pb-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Building the User Management</h2>
 			<p class="">
@@ -429,7 +410,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/User_areas.webp"
@@ -450,7 +431,7 @@
 		</div>
 	</section>
 
-	<section class="pt-20 pb-20">
+	<section class="pt-20 pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Refining the Template Builder</h2>
 			<p class="">
@@ -469,7 +450,7 @@
 		</div>
 	</section>
 
-	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-24">
+	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
 			<p>	My favourite part of any design process is watching the designs come to life in a prototype.
@@ -497,9 +478,9 @@
 
 	<section
 		id="fourth"
-		class="pageSection max-w-6xl flex flex-col md:flex-row mx-auto justify-center py-24"
+		class="pageSection max-w-6xl flex flex-col md:flex-row mx-auto justify-center py-24 px-4"
 	>
-		<div class="md:flex-1 md:max-w-lg m-4">
+		<div class="md:flex-1 md:max-w-lg md:m-4">
 			<h2 class="pb-4">Reflections on My Journey & the Consultancy World</h2>
 			<ul class="list-custom">
 				<li>
@@ -555,12 +536,9 @@
 </footer>
 
 <style>
-	/*#message {
-		display: none;
-	}*/
 
 	h2 {
-		@apply text-[34px] font-euclid font-semibold leading-[48px];
+		@apply text-[34px] font-euclid font-medium leading-[48px];
 	}
 	h3 {
 		@apply text-[24px] font-euclid font-normal leading-[48px];
