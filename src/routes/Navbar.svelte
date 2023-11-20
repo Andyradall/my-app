@@ -160,7 +160,7 @@
 						href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label="Read more in my resume, opens in a new window"
+						aria-label="Resumé - opens in a new window"
 						class="menu-custom-link"
 					>
 						Resumé

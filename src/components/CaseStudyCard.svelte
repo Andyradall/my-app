@@ -10,7 +10,7 @@
 <div class="case-card">
 	<div class="case-card-bg shadow-custom py-4 rounded-3xl bg-grey-50 max-w-[800px] max-h-[600px]">
 		<a href={link} aria-label="hidden" class="case-card-image">
-			<img class="card-thumbnail" src={image} {alt} />
+			<img class="card-thumbnail" src={image} {alt} width="800" height="500" />
 		</a>
 	</div>
 	<div class="case-card-text pl-2">
