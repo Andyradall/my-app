@@ -132,7 +132,7 @@
 	</div>
 </nav>
 
-<style>
+<style lang="postcss">
 	/* main css to refactor -> Tailwind */
 	.header-navbar {
 		border-bottom: 1px solid #ebeef4;

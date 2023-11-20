@@ -56,19 +56,19 @@
       />
     {/each}
 </svg>
-  <style lang="postcss">
+  <style>
     @keyframes moveAnimation {
       0%, 100% {
         transform: translate3d(0, 0, 0);
       }
       25% {
-        transform: translate3d(var(--transformX), var(--transformY), 0);
+        transform: translate3d(var(--transformX), var(--transformY), 0) rotate(10deg);
       }
       50% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0) scale(1.1);
       }
       75% {
-        transform: translate3d(var(--transformX), var(--transformY), 0);
+        transform: translate3d(var(--transformX), var(--transformY), 0) rotate(10deg);
       }
     }
   

@@ -26,12 +26,12 @@
 		<div>
 			<h1 class="text-[2.75rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
                 Designmaskinen
-                <span class="text-[2rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"><br />Designing an Admin Area & Template Builder</span>
+                <span class="text-[1.8rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"><br />Designing an Admin Area & Template Builder</span>
             </h1>
 		</div>
 	</section>
 
-	<section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20 px-4">
+	<section class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20 px-4">
 		<div class="md:flex-1 md:max-w-lg my-4">
 			<h2 class=" text-xl font-bold text-grey-800">Case Overview</h2>
 			<p class=" text-base align-center text-grey-800">
@@ -84,7 +84,7 @@
 		<WorkNav {links} />
 	</section>
 
-	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-32 pb-20 px-4">
+	<section id="first" class="pageSection bg-grey-800 text-grey-100 py-10 md:pt-32 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="text-3xl font-bold mb-4">Understanding the Challenge</h2>
 			<p class="mb-8">
@@ -145,7 +145,7 @@
 		</div>
 	</section>
 
-	<section id="second" class="pageSection pt-40 pb-20 px-4">
+	<section id="second" class="pageSection py-10 md:pt-40 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-4">Designing the brand assets toolbox</h2>
 			<h3 class="">The Core of the Admin Area:</h3>
@@ -219,7 +219,7 @@
 		</div>
 	</section>
 
-	<section class=" pt-20 pb-10 px-4">
+	<section class=" py-10 md:pt-20 md:pb-10 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Designing the Image Album</h2>
 			<p class="pb-4">
@@ -288,7 +288,7 @@
 		</div>
 	</section>
 
-	<section class="pt-24 pb-24 px-4">
+	<section class="py-10 md:pt-24 md:pb-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-4">Refined Image Albums Layout</h2>
 			<p class="">
@@ -347,7 +347,7 @@
 		</div>
 	</section>
 
-	<section class="pt-24 pb-24 px-4">
+	<section class="py-10 md:pt-24 md:pb-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-4">Designing the Template Management</h2>
 			<h3 class="">Repurposing the Image Albums Layout</h3>
@@ -397,7 +397,7 @@
 		</div>
 	</section>
 
-	<section class="pt-24 pb-24 px-4">
+	<section class="py-10 md:pt-24 md:pb-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Building the User Management</h2>
 			<p class="">
@@ -431,7 +431,7 @@
 		</div>
 	</section>
 
-	<section class="pt-20 pb-20 px-4">
+	<section class="py-10 md:pt-20 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Refining the Template Builder</h2>
 			<p class="">
@@ -450,7 +450,7 @@
 		</div>
 	</section>
 
-	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-24 px-4">
+	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-10 md:py-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
 			<p>	My favourite part of any design process is watching the designs come to life in a prototype.
@@ -459,7 +459,7 @@
 		</div>
 
 		<!-- Prototype for large screens -->
-		<figure class="hidden lg:block flex justify-center w-full">
+		<figure class="hidden md:flex justify-center w-full">
 			<iframe
 				title="Figma prototype"
 				class="w-full aspect-video"
@@ -471,18 +471,20 @@
 		</figure>
 
 		<!-- Message for small screens -->
-		<div class="lg:hidden mx-auto text-center p-4">
-			<p>Prototype only shown on desktop.</p>
+		<div class="lg:hidden text-2xl mx-auto text-center p-8">
+			<var>Prototype only shown on desktop.</var>
 		</div>
 	</section>
 
 	<section
 		id="fourth"
-		class="pageSection max-w-6xl flex flex-col md:flex-row mx-auto justify-center py-24 px-4"
+		class="pageSection max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center py-10 md:py-24 px-4"
 	>
+	
 		<div class="md:flex-1 md:max-w-lg md:m-4">
 			<h2 class="pb-4">Reflections on My Journey & the Consultancy World</h2>
 			<ul class="list-custom">
+				
 				<li>
 					<strong>Challenging my Bias:</strong> Before going into this, I had this perception of consultants
 					as conformist individuals, always in suits and perhaps a bit sharp elbowed. However, the team
@@ -518,7 +520,7 @@
 			</ul>
 		</div>
 
-		<div class="md:flex-2 md:max-w-xl m-4">
+		<div class="md:flex-2 md:max-w-xl px-0 py-5 md:p-4">
 			<div class=" flex items-center justify-center h-full">
 				<div>
 					<img src="/images/designmaskinen/Team.webp" width="716" height="538" alt="Team" />
@@ -535,7 +537,7 @@
 	<WorkFooter />
 </footer>
 
-<style>
+<style lang="postcss" >
 
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];

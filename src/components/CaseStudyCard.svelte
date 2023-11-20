@@ -13,7 +13,7 @@
 			<img class="card-thumbnail" src={image} {alt} />
 		</a>
 	</div>
-	<div class="case-card-text">
+	<div class="case-card-text pl-2">
 		<h3 class="font-euclid font-medium text-gray-800 text-base pt-2 pb-1 leading-9">{category}</h3>
 		<a
 			href={link}

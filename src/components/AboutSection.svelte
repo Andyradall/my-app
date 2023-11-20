@@ -1,61 +1,36 @@
 <script></script>
 
-<article class="text-grey-800 pb-24 md:pb-56">
-	<div class="max-w-[1297px] mx-4 md:mx-16 mt-40 mb-30 gap-y-10">
-		<section id="about" class="pageSection">
-			<h2 class="font-euclid text-xl font-semibold pl-6 my-4">ABOUT ME:</h2>
-		</section>
+<article id="about" class="pageSection text-grey-800 pb-24 md:pb-56 mx-auto">
+	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-40 mb-30">
+	  <section  class="">
+		<h2 class="font-euclid text-xl font-semibold pl-6 my-4">ABOUT ME:</h2>
+	  </section>
 
-		<section class="grid grid-cols-12 gap-y-10 mb-10">
+	  <section class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
 			<!-- Text Card -->
-			<div
-				class="text-card card-one shadow-custom md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10"
-			>
+			<div class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-grey-50 p-10">
 				<h2 class="font-euclid text-3xl font-semibold mb-4">
 					Designing Impact: From Pixel to Performance
 				</h2>
 				<p class="font-euclid font-normal pb-5 text-lg">
-					My love for product & interaction design began when I realized I could mix coding,
-					creative design, and business strategy all into one. For me, it's not just about making
-					things look good. I pride myself on design that delivers real-world results.
-				</p>
-				<p class="font-euclid font-normal pb-5 text-lg">
-					My love for product design & user experience began when I realized I could mix user research,
-					creative design, and business strategy all into one. For me, it's not just about making
+					My love for product design & UX began when I realized I could mix creative design,
+					user research, and business strategy all into one. For me, it's not just about making
 					things look good. I pride myself on design that delivers real-world results.
 				</p>
 				<h2 class="font-euclid text-3xl font-semibold mb-4">
 					Interaction Design & Frontend Development
 				</h2>
 				<p class="font-euclid font-normal pb-5 text-lg">
-				    Embracing front-end development has transformed my approach to UX/Digital Product Design.
-					As a designers I find it helpful to know front-end 
-					botht to communicate well cross-functionally and to design with implementation in mind. 
-					Making use of things like components, re. 
-					I hand coded this portfolio using the latest technologies. 
-					HTML5, SvelteKit and Tailwind CSS, hosting it on Vercel for maximum performance.
-				</p>
-				<h2 class="font-euclid text-3xl font-semibold mb-4">
-					Bridging Design and Code for Enhanced Digital Products
-				</h2>
-				<p class="font-euclid font-normal pb-5 text-lg">
-					Embracing front-end development has transformed my approach to UX/Digital Product Design.
-					 By understanding the nuances of coding, 
-					 I ensure my designs are not only visually appealing but also technically feasible,
-					  aligning closely with the latest web practices for optimal performance. 
-					  This knowledge empowers me to create designs that are accessible, 
-					  interactive, and easily translated into live experiences, 
-					  enhancing collaboration with developers and streamlining the design-to-development process. 
-					  Staying current with front-end technologies fuels my creativity, 
-					  enabling me to deliver user-centric, 
-					  inclusive, and impactful digital solutions.
+				    Knowing front-end has transformed my approach to Design.
+					As a designers I find it helpful to know code
+					botht to communicate cross-functionally, to use the latest solutions in my designs 
+					and to ensure a smooth design-to-development process. 
+					I hand coded this portfolio using HTML5, SvelteKit and Tailwind CSS.
 				</p>
 			</div>
 
 			<!-- Image Card -->
-			<div
-				class="image-card card-two shadow-custom md:col-span-6 col-span-12 flex justify-center items-center overflow-hidden bg-grey-800 rounded-3xl"
-			>
+			<div class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden bg-grey-800 rounded-3xl">
 				<img class="object-cover w-full h-full" alt="Profile" src="/images/about/profil-1.webp" />
 			</div>
 		</section>
@@ -209,10 +184,10 @@
 			</div>
 		</section>
 
-		<section class="card-one-two grid grid-cols-12 gap-y-10">
+		<section class="card-one-two grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
 			<!-- Text Card -->
 			<div
-				class="text-card card-one shadow-custom md:col-span-6 col-span-12 rounded-3xl bg-grey-50 p-10"
+				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-grey-50 p-10"
 			>
 				<h2 class="font-euclid text-3xl font-semibold mb-4">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-2">
@@ -224,18 +199,19 @@
 					I have a longstanding commitment to selv development, 
 					and have studied yoga and meditation for 20 years.
 					Learning from teachers like Eirik Balavoine, Dag Furuholmen, 
-					Christian Scheel, Alexander Medin, Kajsa Finnström & Moumina Jeffs. 
-					I mainly practice Ashtanga yoga in the Pattabi Jois tradition, 
+					Christian Scheel, Alexander Medin, Kajsa Finnström and Moumina Jeffs. 
+					I practice Ashtanga yoga in the Pattabi Jois tradition, 
 					and Shamata meditation as taught by Alan Wallace. 
-					But I also have experience working with Osho meditation, 
-					Non dualaism, Breathwork & Wim Hof method, Metta, 
-					Kundalini, Inner child work, Dzongchen and Advaita Vedanta.
+					I also have experience working with Osho meditation, 
+					Non-dualism, Breathwork & Wim Hof method, Metta, 
+					Kundalini, Dzogchen and Advaita Vedanta. 
+					All in all these practices both fuel my creativity and help me focus. 
 				</p>
 			</div>
 
 			<!-- Image Card -->
 			<div
-				class="image-card card-two shadow-custom md:col-span-6 col-span-12 flex justify-center overflow-hidden bg-grey-800 rounded-3xl"
+				class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center overflow-hidden bg-grey-800 rounded-3xl"
 			>
 				<img
 					class="image-to-stretch skibilde bg-grey-800"

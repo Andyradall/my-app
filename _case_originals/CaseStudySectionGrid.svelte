@@ -1,13 +1,13 @@
 <script>
-  import CaseStudyCard from '../components/CaseStudyCard.svelte';
-  import { caseStudies } from '../lib/caseStudies.js';
+  import CaseStudyCard from '../src/components/CaseStudyCard.svelte';
+  import { caseStudies } from '../src/lib/caseStudies.js';
 
 </script>
 
 <section class="text-grey-800 pageSection" id="work">
   <div class="max-w-[1297px] mx-5 md:mx-16 px-16 mt-40 mb-30">
     <section>
-      <h2 class="font-euclid text-xl pl-6 font-semibold my-4">CASE STUDIES:</h2>
+      <h2 class="font-euclid text-xl pl-2 md:pl-4 font-semibold my-4">CASE STUDIES:</h2>
     </section>
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-10">
       {#each caseStudies as study}

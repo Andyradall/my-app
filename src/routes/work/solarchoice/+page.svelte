@@ -34,10 +34,10 @@
 		</div>
 	</section>
 
-	<section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20">
-		<div class="md:flex-1 md:max-w-xl md:pr-8 py-2 md:m-4">
+	<section class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center mb-20">
+		<div class="md:flex-1 md:max-w-xl md:pr-8 px-4 py-2 md:m-4">
 			<h2 class="pb-2">Project Overview</h2>
-			<ul class="text-[18px] font-euclid font-light leading-[30px] md:pr-2 px-4 md:space-y-5">
+			<ul class="text-[18px] font-euclid font-light leading-[30px] md:pr-2 px-4 pl-0 space-y-4 md:space-y-5">
 				<li>
 					<strong class="font-semibold">Brief:</strong> Create a visual brand document that presents
 					the company in a understandable and appealing way to their target audience through the main
@@ -452,7 +452,7 @@
 	<WorkFooter />
 </footer>
 
-<style>
+<style lang="postcss">
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];
 	}

@@ -1,7 +1,7 @@
 <script>
-	import WorkBack from '../src/components/WorkBack.svelte';
+	import WorkBack from '../../src/components/WorkBack.svelte';
 	//import WorkNextPrev from '../../../components/WorkNextPrev.svelte';
-	import WorkNav from '../src/components/WorkNav.svelte';
+	import WorkNav from '../../src/components/WorkNav.svelte';
 
 	const links = [
 		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },

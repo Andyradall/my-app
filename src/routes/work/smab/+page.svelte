@@ -32,8 +32,8 @@
 		</div>
 	</section>
 
-	<section class="max-w-6xl flex flex-col md:flex-row mx-auto justify-center mb-20">
-		<div class="md:flex-1 md:max-w-xl m-4">
+	<section class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20">
+		<div class="md:flex-1 md:max-w-xl p-4">
 			<h2 class="pb-2">Introducing Svenska Mässkonsult</h2>
             <ul class="text-[18px] font-euclid font-light leading-[30px] pr-1 space-y-5 ">
                 <li class="">Svenska Mässkonsult build exhibition spaces. They reached out to Hyper Island for a
@@ -83,7 +83,7 @@
                 </ul>
             </section-->
 
-	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-32 pb-20 px-4">
+	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-10 md:pt-32 pb-10 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2>Double Diamond: Our Methodological Approach</h2>
 		</div>
@@ -101,12 +101,12 @@
 				website.
 			</p>
 		</div>
-		<figure class="mx-auto md:max-w-7xl md:py-14">
+		<figure class="mx-auto md:max-w-7xl py-10 md:py-14">
 			<img src="/images/smab/DD2-scaled.webp" alt="Double diamond process" />
 		</figure>
 	</section>
 
-	<section id="second" class="pageSection py-12 md:py-24 px-4">
+	<section id="second" class="pageSection py-10 md:py-24 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>The Discovery Phase: Understanding Our Client</h2>
 		</div>
@@ -159,7 +159,7 @@
 				</li>
 			</ul>
 		</div>
-		<figure class="mx-auto md:max-w-3xl md:py-4">
+		<figure class="mx-auto md:max-w-3xl py-4 md:py-4">
 			<img src="/images/smab/Customer_journey.webp" alt="Customer journey" />
 			<figcaption class="">Customer journey map.</figcaption>
 		</figure>
@@ -186,12 +186,12 @@
 			</p>
 		</div>
 
-		<figure class="mx-auto md:w-full md:p-8">
+		<figure class="mx-auto md:w-full py-4 md:p-8">
 			<img src="/images/smab/Stylescapes-scaled.webp" alt="Stylescapes" />
 		</figure>
 	</section>
 
-	<section id="third" class="pageSection py-12 md:py-24 px-4">
+	<section id="third" class="pageSection py-10 md:py-24 px-4">
 		<div class="mx-auto sm:max-w-2xl">
 			<h2 class="pb-2">Defining, Planning & Structuring</h2>
 			<h3>Defining Content and Structure</h3>
@@ -217,7 +217,7 @@
 		</figure>
 	</section>
 
-	<section class="my-8 py-12 md:my-14 md:py-20 bg-grey-100 px-4">
+	<section class="py-10 md:my-14 md:py-20 bg-grey-100 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Design Process</h2>
 		</div>
@@ -241,7 +241,7 @@
 		</figure>
 	</section>
 
-	<section class="pb-16 px-4">
+	<section class="py-10 md:pb-16 px-4">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">User Experience Testing</h2>
 			<h3>Testing Methodology</h3>
@@ -257,17 +257,17 @@
 				navigating to home.
 			</p>
 		</div>
-		<div class="flex flex-row mx-auto justify-center py-10">
-			<figure class="max-w-2xl m-4">
+		<div class="flex flex-row mx-auto justify-evenly md:justify-center py-10">
+			<figure class="max-w-2xl p-1 md:p-4">
 				<img class="w-full" src="/images/smab/user_test_2.webp" alt="user test 2" />
 			</figure>
-			<figure class="max-w-2xl m-4">
+			<figure class="max-w-2xl p-1 md:p-4">
 				<img class="w-full" src="/images/smab/User_testb.webp" alt="User test" />
 			</figure>
 		</div>
 	</section>
 
-	<section id="fourth" class="pageSection py-12 md:py-20 bg-grey-800 text-grey-50 px-4">
+	<section id="fourth" class="pageSection py-10 md:py-20 bg-grey-800 text-grey-50 px-4">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">Final Deliverables</h2>
 			<h3>Frontpage Evolution</h3>
@@ -290,7 +290,7 @@
 		</div>
 
 		<!-- Prototype for large screens -->
-		<figure class="hidden lg:block flex justify-center w-full">
+		<figure class="hidden lg:flex justify-center w-full">
 			<iframe
 				title="Figma prototype"
 				class="w-full aspect-video"
@@ -303,11 +303,11 @@
 
 		<!-- Message for small screens -->
 		<div class="lg:hidden mx-auto text-center p-4">
-			<p>Prototype only shown on desktop.</p>
+			<var>Prototype only shown on desktop.</var>
 		</div>
 	</section>
 
-	<section id="fifth" class="pageSection md:max-w-2xl mx-auto py-12 md:py-28 px-4">
+	<section id="fifth" class="pageSection md:max-w-2xl mx-auto py-10 md:py-28 px-4">
 		<h2 class="pb-2">Reflections & Learnings.</h2>
 		<div class="mx-auto sm:max-w-2xl">
 			<p class="pb-2">
@@ -356,7 +356,7 @@
 	<WorkFooter />
 </footer>
 
-<style>
+<style lang="postcss">
 	/*#message {
 		display: none;
 	}*/
