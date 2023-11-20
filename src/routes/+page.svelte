@@ -1,9 +1,10 @@
 <script>
+	import Navbar from './Navbar.svelte';
 	import BgAnimated from '../components/BgAnimated.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
-	import CaseStudySection from '../components/CaseStudySection.svelte';
+	import CaseStudySection from '../components/CaseStudySectionFlex.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
-	import Navbar from './Navbar.svelte';
+	
 </script>
 
 <svelte:head>
@@ -11,8 +12,9 @@
 	<meta name="description" content="Anders Rådal UX Portfolio site" />
 </svelte:head>
 
+    <Navbar />
     <BgAnimated />
 	<HeroSection />
 	<CaseStudySection />
 	<AboutSection />
-	<Navbar />
+	

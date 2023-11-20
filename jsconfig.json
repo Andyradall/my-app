@@ -8,7 +8,13 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"importsNotUsedAsValues": "error",
+		"ignoreDeprecations": "5.0",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"target": "es2017",
+		"jsx": "preserve",
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

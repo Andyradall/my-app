@@ -133,7 +133,7 @@
 
 <nav>
 	<div
-		class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-lg"
+		class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-base md:text-lg"
 	>
 		<div
 			id="main-navigation"
@@ -297,19 +297,19 @@
 		/*min-width: 90.5677px;*/
 		height: 48px;
 		position: absolute;
-		/*left: 1px; /*old Initial position if code live on Work page */
+		left: 0; /*old Initial position if code live on Work page */
 		/*left: 109.372px; */ /*Initial position if code live on About page */
 		z-index: 101;
 	}
 
 	@media (max-width: 768px) {
 		.nav-container {
-			width: 92%;
+			width: 96%;
 			margin: 0 auto;
 		}
 
 		.menu-custom-link {
-			display: none; /* Hide custom links */
+			display: none;
 		}
 
 		.menu-effect {
@@ -317,10 +317,10 @@
 		}
 
 		.main-navbar {
-			width: 92%;
+			width: 96%;
 			margin: 0 auto;
-			top: 12px;
-			padding: 0px 4px;
+			top: 8px;
+			padding: 4px 4px;
 			max-height: 48px;
 		}
 
@@ -332,14 +332,15 @@
 
 		.main-navbar ul {
 			padding: 4px 16px;
-			margin: 4px;
+			margin: 2px;
 			gap: 0;
 			display: flex; /* Use flexbox */
-			justify-content: space-between;
+			justify-content: space-around;
 			margin-block-start: 0;
 			margin-block-end: 0;
 			padding-inline-start: 40px;
 		}
+	
 		.menu-effect {
 			max-height: 32px;
 		}
