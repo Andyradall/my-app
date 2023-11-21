@@ -24,6 +24,30 @@
 </div>
 
 <svelte:head>
+  <script>
+    partytown = {
+      forward: ['dataLayer.push'],
+      resolveUrl: (url) => {
+        const siteUrl = 'https://svelteportfolio-six.vercel.app//proxytown'
+  
+        if (url.hostname === 'www.googletagmanager.com') {
+          const proxyUrl = new URL(`${siteUrl}/gtm`)
+  
+          const gtmId = new URL(url).searchParams.get('id')
+          gtmId && proxyUrl.searchParams.append('id', gtmId)
+  
+          return proxyUrl
+        } else if (url.hostname === 'www.google-analytics.com') {
+          const proxyUrl = new URL(`${siteUrl}/ga`)
+  
+          return proxyUrl
+        }
+  
+        return url
+      }
+    }
+  </script>
+
   <!-- Config options -->
   <script>
     // Forward the necessary functions to the web worker layer
@@ -32,9 +56,29 @@
     }
   </script>
 
-  <!-- `partytownSnippet` is inserted here -->
+
   <script bind:this={scriptEl}></script>
-  <script lang="text/partytown">
+
+   <!-- Insert `partytownSnippet` here -->
+
+   <!-- GTM script + config -->
+   <script
+     type="text/partytown"
+     src="https://www.googletagmanager.com/gtag/js?id=G-D0STFGWW5L"></script>
+   <script type="text/partytown">
+     window.dataLayer = window.dataLayer || []
+ 
+     function gtag() {
+       dataLayer.push(arguments)
+     }
+ 
+     gtag('js', new Date())
+     gtag('config', 'G-D0STFGWW5L', {
+       page_path: window.location.pathname
+     })
+   </script>
+
+  <script>
     (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
       h._hjSettings={hjid:3744201,hjsv:6};
@@ -44,5 +88,4 @@
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
-
 </svelte:head>

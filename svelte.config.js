@@ -1,9 +1,15 @@
 import adapter from '@sveltejs/adapter-vercel';
-
+import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: { adapter: adapter() },
-
-};
+	kit: {
+	  adapter: adapter(),
+	},
+	preprocess: preprocess({
+	  preserve: ['partytown']
+	}),
+  };
+  
 export default config;
+  
