@@ -18,14 +18,15 @@
 					things look good. I pride myself on design that delivers real-world results.
 				</p>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">
-					Interaction Design & Frontend Development
+					Interaction Design & Frontend
 				</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
-					Getting into front-end development really shifted my perspective on design.
-					As a designers I find it helpful to know code
-					botht to communicate cross-functionally, to use the latest solutions in my designs 
+					I find knowing code to be incredibly valuable. 
+					It helps me communicate well cross-functionally, 
+					inspires my designs with new technology,
 					and to ensure a smooth design-to-development process. 
-					I hand coded this portfolio using HTML5, SvelteKit and Tailwind CSS.
+					This portfolio is a direct result of that approach, 
+					handcoded using HTML5, SvelteKit, and Tailwind CSS.
 				</p>
 			</div>
 
@@ -221,21 +222,14 @@
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
 					I love nature, and enjoy going skiing and cycling in Nordmarka, or running with our
-					greyhound. I have a personal record of 2.59 for Marathon disctance, 
-					but these days focus more on maintaining a balanced lifestyle.</p>
-					<h3 class="font-euclid text-3xl font-semibold pb-3">My Practice</h3>
+					greyhound. These activities help me stay grounded and maintain a balanced lifestyle.</p>
+					<h3 class="font-euclid text-3xl font-semibold pb-3">Yoga</h3>
 					<p class="font-euclid font-normal text-lg">
-					I have a longstanding commitment to selv development, 
-					and have studied yoga and meditation for 20 years.
-					Learning from teachers like Eirik Balavoine, Dag Furuholmen, 
-					Christian Scheel, Alexander Medin, Kajsa Finnström and Moumina Jeffs. 
-					I practice Ashtanga yoga in the K. Pattabhi Jois tradition, 
-					and Shamata meditation as taught by Alan Wallace. 
-					I also have experience working with Osho meditation,
-					Breathwork & Wim Hof method, Metta meditation, 
-					Kundalini, and various practices based on Non-dualism, 
-					Dzogchen and Advaita Vedanta. 
-					All in all these practices both fuel my creativity and help me focus. 
+						My journey in self-development spans over 20 years, 
+						with a focus on yoga and meditation. 
+						I've been inspired by various teachers and traditions, 
+						but at its core, my practice is about blending Ashtanga yoga and 
+						Shamata meditation to enhance my creativity and sharpen my focus.
 				</p>
 			</div>
 
