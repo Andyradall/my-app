@@ -38,6 +38,6 @@
 	"dependencies": {
 		"@builder.io/partytown": "^0.8.1",
 		"animejs": "^3.2.1",
-		"vercel": "^32.5.5"
+		"vercel": "^32.3.0"
 	}
 }
