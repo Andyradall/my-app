@@ -23,7 +23,14 @@
 	openGraph={{
 	  title: "Karrierestart UX Design Case Study by Anders Rådal",
 	  description: "Karrierestart UX Design Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/KSthumb8005001.webp",
+	  images: [
+				{
+					url: 'https://www.andersra.com/images/thumbs/KSthumb8005001.webp',
+					width: 800,
+					height: 500,
+					alt: 'Karrierestart Thumb'
+				}
+			],
 	  url: "https://www.andersra.com/work/karrierestart",
 	  type: "website",
 	}}

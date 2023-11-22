@@ -34,7 +34,13 @@ keywords="Anders Rådal, UX-Design, Product designer, Oslo, Norway, UX, UI, Desi
 openGraph={{
   title: "Anders Rådal UX Portfolio",
   description: "Portfolio for Anders Rådal - Product & UX Designer",
-  image: "https://www.andersra.com/PageThumb.webp",
+  images: [
+    {
+      url: "https://www.andersra.com/PageThumb.webp",
+      width: 700,
+      height: 493,
+      alt: "Page Thumbnail", 
+    }  ],
   url: "https://www.andersra.com",
   type: "website",
 }}

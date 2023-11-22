@@ -23,7 +23,14 @@
 	openGraph={{
 	  title: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
 	  description: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/Smabthumb800500.webp",
+	  images: [
+				{
+					url: 'https://www.andersra.com/images/thumbs/Smabthumb800500.webp',
+					width: 800,
+					height: 500,
+					alt: 'Svenska Mässkonsult Thumb'
+				}
+			],
 	  url: "https://www.andersra.com/work/smab",
 	  type: "website",
 	}}

@@ -4,7 +4,7 @@
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import { dirty_components } from 'svelte/internal';
-	import SvelteSeo from "svelte-seo";
+	import SvelteSeo from 'svelte-seo';
 
 	const links = [
 		{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
@@ -16,31 +16,38 @@
 
 <svelte:head>
 	<SvelteSeo
-	title="Solar Choice Brand Design Case Study by Anders Rådal"
-	description="Solar Choice Brand Design Case Study by Anders Rådal"
-	canonical="https://www.andersra.com/work/solarchoice"
-	keywords="Anders Rådal, Solar Choice, Brand-design, Solar-Choice, Branding, Hyper-Island, Hyper Island, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
-	openGraph={{
-	  title: "Solar Choice Brand Design Case Study by Anders Rådal",
-	  description: "Solar Choice Brand Design Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/Solarthumblg-1.webp",
-	  url: "https://www.andersra.com/work/solarchoice",
-	  type: "website",
-	}}
-	twitter={{
-	  card: "summary_large_image",
-	  site: "@AndersRadal",
-	  title: "Solar Choice Brand Design Case Study by Anders Rådal",
-	  description: "Solar Choice Brand Design Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/Solarthumblg-1.webp",
-	}}
-	jsonLd={{
-	  "@context": "https://schema.org",
-	  "@type": "WebSite",
-	  name: "Solar Choice Brand Design Case Study by Anders Rådal",
-	  description: "Solar Choice Brand Design Case Study by Anders Rådal",
-	  url: "https://www.andersra.com/work/solarchoice",
-	}}
+		title="Solar Choice Brand Design Case Study by Anders Rådal"
+		description="Solar Choice Brand Design Case Study by Anders Rådal"
+		canonical="https://www.andersra.com/work/solarchoice"
+		keywords="Anders Rådal, Solar Choice, Brand-design, Solar-Choice, Branding, Hyper-Island, Hyper Island, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+		openGraph={{
+			title: 'Solar Choice Brand Design Case Study by Anders Rådal',
+			description: 'Solar Choice Brand Design Case Study by Anders Rådal',
+			images: [
+				{
+					url: 'https://www.andersra.com/images/thumbs/Solarthumblg-1.webp',
+					width: 900,
+					height: 560,
+					alt: 'Solar Choice Thumb'
+				}
+			],
+			url: 'https://www.andersra.com/work/solarchoice',
+			type: 'website'
+		}}
+		twitter={{
+			card: 'summary_large_image',
+			site: '@AndersRadal',
+			title: 'Solar Choice Brand Design Case Study by Anders Rådal',
+			description: 'Solar Choice Brand Design Case Study by Anders Rådal',
+			image: 'https://www.andersra.com/images/thumbs/Solarthumblg-1.webp'
+		}}
+		jsonLd={{
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'Solar Choice Brand Design Case Study by Anders Rådal',
+			description: 'Solar Choice Brand Design Case Study by Anders Rådal',
+			url: 'https://www.andersra.com/work/solarchoice'
+		}}
 	/>
 </svelte:head>
 
@@ -63,7 +70,9 @@
 	<section class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center mb-20">
 		<div class="md:flex-1 md:max-w-xl md:pr-8 px-4 py-2 md:m-4">
 			<h2 class="pb-2">Project Overview</h2>
-			<ul class="text-[18px] font-euclid font-light leading-[30px] md:pr-2 px-4 pl-0 space-y-4 md:space-y-5">
+			<ul
+				class="text-[18px] font-euclid font-light leading-[30px] md:pr-2 px-4 pl-0 space-y-4 md:space-y-5"
+			>
 				<li>
 					<strong class="font-semibold">Brief:</strong> Create a visual brand document that presents
 					the company in a understandable and appealing way to their target audience through the main

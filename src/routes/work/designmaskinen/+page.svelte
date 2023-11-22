@@ -22,7 +22,14 @@
 	openGraph={{
 	  title: "Designmaskinen Product Design Case Study by Anders Rådal",
 	  description: "Designmaskinen Product Design Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/DMthumb800500.webp",
+	  images: [
+				{
+					url: 'https://www.andersra.com/images/thumbs/DMthumb800500.webp',
+					width: 800,
+					height: 500,
+					alt: 'Designmaskinen Thumb'
+				}
+			],
 	  url: "https://www.andersra.com/work/designmaskinen",
 	  type: "website",
 	}}
