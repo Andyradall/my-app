@@ -171,14 +171,15 @@
 		</div>
 		<div class="mx-auto sm:max-w-2xl">
 			<h3>Interactive Brand Exploration</h3>
-			<p>
+			<p class="pb-2">
 				We held a workshop with the client where we used some exercises to explore their brand. This
 				helped us identify how the company saw themself and how customers saw them.
 			</p>
 			<h3>The Evolution of Stylescapes</h3>
-			<p>From our insights we did three rounds of stylescapes that we presented to the client.</p>
+			<p class="pb-2">
+				From our insights we did three rounds of stylescapes that we presented to the client.</p>
 			<h3>Navigating Diverse Opinions</h3>
-			<p>
+			<p class="pb-2">
 				In the end the founders of the company wanted to keep their colour and logo but add a
 				secondary colour, graphical elements based on their existing logo, adding a new font. This
 				was a interesting part of the process to navigate because the different people in the
@@ -186,9 +187,33 @@
 			</p>
 		</div>
 
-		<figure class="mx-auto md:w-full py-4 md:p-8">
-			<img src="/images/smab/Stylescapes-scaled.webp" alt="Stylescapes" />
+		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
+			<img src="/images/smab/Stylescapes1.webp" alt="Stylescapes first" width="1600" height="1703"/>
+			<figcaption class="text-grey-50">
+				<strong class="font-semibold"> Stylescapes round one:</strong> 
+				We showcased very different directions for the branding, 
+				we did this in order to get a feel for the clients taste, 
+				and make it easy to narrow down towards one direction. 
+			</figcaption>
+		</figure>		
+		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
+			<img src="/images/smab/Stylescapes2.webp" alt="Stylescapes second" width="1600" height="1487"/>
+			<figcaption class="text-grey-50">
+				<strong class="font-semibold">Stylescapes round 2:</strong> 
+				We narrowed down the direction, aiming for a clean and modern look. 
+				I participated in this round with the third stylescape. 
+				My intention was to steer the direction by having us focusing on styles that could easily translate into UI elements.
+			</figcaption>
+		</figure>		
+		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
+			<img src="/images/smab/Stylescapes3.webp" alt="Stylescapes third" width="1600" height="738"/>
+			<figcaption class="text-grey-50">
+				<strong class="font-semibold">Final Stylescape:</strong> 
+				In the third and final stylescape we had to allow the client to be specific about elements in order to reach a final decision.
+			</figcaption>
 		</figure>
+
+
 	</section>
 
 	<section id="third" class="pageSection py-10 md:py-24 px-4">
@@ -371,7 +396,7 @@
 		@apply text-[18px] font-euclid font-light leading-[30px];
 	}
 	figcaption {
-		@apply font-euclid font-light text-grey-600 text-base mt-2;
+		@apply font-euclid font-light text-base mt-2;
 	}
 	.list-custom {
 		@apply text-[18px] font-euclid font-normal leading-[30px] list-disc pl-5 space-y-2;
