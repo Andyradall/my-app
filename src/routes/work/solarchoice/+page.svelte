@@ -4,6 +4,7 @@
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import { dirty_components } from 'svelte/internal';
+	import SvelteSeo from "svelte-seo";
 
 	const links = [
 		{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
@@ -14,8 +15,33 @@
 </script>
 
 <svelte:head>
-	<title>Solar Choice Case Study</title>
-	<meta name="description" content="Solar Choice Case Study" />
+	<SvelteSeo
+	title="Solar Choice Brand Design Case Study by Anders Rådal"
+	description="Solar Choice Brand Design Case Study by Anders Rådal"
+	canonical="https://www.andersra.com/work/solarchoice"
+	keywords="Anders Rådal, Solar Choice, Brand-design, Solar-Choice, Branding, Hyper-Island, Hyper Island, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+	openGraph={{
+	  title: "Solar Choice Brand Design Case Study by Anders Rådal",
+	  description: "Solar Choice Brand Design Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/Solarthumblg-1.webp",
+	  url: "https://www.andersra.com/work/solarchoice",
+	  type: "website",
+	}}
+	twitter={{
+	  card: "summary_large_image",
+	  site: "@AndersRadal",
+	  title: "Solar Choice Brand Design Case Study by Anders Rådal",
+	  description: "Solar Choice Brand Design Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/Solarthumblg-1.webp",
+	}}
+	jsonLd={{
+	  "@context": "https://schema.org",
+	  "@type": "WebSite",
+	  name: "Solar Choice Brand Design Case Study by Anders Rådal",
+	  description: "Solar Choice Brand Design Case Study by Anders Rådal",
+	  url: "https://www.andersra.com/work/solarchoice",
+	}}
+	/>
 </svelte:head>
 
 <header class="relative top-0">

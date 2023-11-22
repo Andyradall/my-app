@@ -3,6 +3,7 @@
 	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
+	import SvelteSeo from "svelte-seo";
 
 	const links = [
 		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },
@@ -13,8 +14,33 @@
 </script>
 
 <svelte:head>
-	<title>Designmaskinen Case Study</title>
-	<meta name="description" content="Designmaskinen Case Study" />
+	<SvelteSeo
+	title="Designmaskinen Product Design Case Study by Anders Rådal"
+	description="Designmaskinen Product Design Case Study by Anders Rådal"
+	canonical="https://www.andersra.com/work/designmaskinen"
+	keywords="Anders Rådal, UX-Design, Product designer, Netlife, Designmaskinen, Internship, Hyper-Island, Hyper Island, Product-design, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+	openGraph={{
+	  title: "Designmaskinen Product Design Case Study by Anders Rådal",
+	  description: "Designmaskinen Product Design Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/DMthumb800500.webp",
+	  url: "https://www.andersra.com/work/designmaskinen",
+	  type: "website",
+	}}
+	twitter={{
+	  card: "summary_large_image",
+	  site: "@AndersRadal",
+	  title: "Designmaskinen Product Design Case Study by Anders Rådal",
+	  description: "Designmaskinen Product Design Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/DMthumb800500.webp",
+	}}
+	jsonLd={{
+	  "@context": "https://schema.org",
+	  "@type": "WebSite",
+	  name: "Designmaskinen Product Design Case Study by Anders Rådal",
+	  description: "Designmaskinen Product Design Case Study by Anders Rådal",
+	  url: "https://www.andersra.com/work/designmaskinen",
+	}}
+	/>
 </svelte:head>
 
 <header class="relative top-0">

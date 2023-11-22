@@ -3,6 +3,7 @@
 	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
+	import SvelteSeo from "svelte-seo";
 
 	const links = [
 		{ id: '#first', title: 'Research & Hooked', ariaLabel: 'Research & Hooked' },
@@ -14,8 +15,33 @@
 </script>
 
 <svelte:head>
-	<title>Karrierestart UX Case Study</title>
-	<meta name="description" content="Karrierestart UX Case Study" />
+	<SvelteSeo
+	title="Karrierestart UX Design Case Study by Anders Rådal"
+	description="Karrierestart UX Design Case Study by Anders Rådal"
+	canonical="https://www.andersra.com/work/karrierestart"
+	keywords="Anders Rådal, Karrierestart, Karrierestart UX, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+	openGraph={{
+	  title: "Karrierestart UX Design Case Study by Anders Rådal",
+	  description: "Karrierestart UX Design Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/KSthumb8005001.webp",
+	  url: "https://www.andersra.com/work/karrierestart",
+	  type: "website",
+	}}
+	twitter={{
+	  card: "summary_large_image",
+	  site: "@AndersRadal",
+	  title: "Karrierestart UX Design Case Study by Anders Rådal",
+	  description: "Karrierestart UX Design Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/KSthumb8005001.webp",
+	}}
+	jsonLd={{
+	  "@context": "https://schema.org",
+	  "@type": "WebSite",
+	  name: "Karrierestart UX Design Case Study by Anders Rådal",
+	  description: "Karrierestart UX Design Case Study by Anders Rådal",
+	  url: "https://www.andersra.com/work/karrierestart",
+	}}
+	/>
 </svelte:head>
 
 <header class="relative top-0">

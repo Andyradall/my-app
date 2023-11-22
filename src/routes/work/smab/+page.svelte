@@ -3,6 +3,7 @@
 	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
+	import SvelteSeo from "svelte-seo";
 
 	const links = [
 		{ id: '#first', title: 'Our Process', ariaLabel: 'Our process' },
@@ -14,8 +15,33 @@
 </script>
 
 <svelte:head>
-	<title>Svenska Mässkonsult Case Study</title>
-	<meta name="description" content="Svenska Mässkonsult Case Study" />
+	<SvelteSeo
+	title="Svenska Mässkonsult UX Lead Case Study by Anders Rådal"
+	description="Svenska Mässkonsult UX Lead Case Study by Anders Rådal"
+	canonical="https://www.andersra.com/work/smab"
+	keywords="Anders Rådal, Svenska Mässkonsult, Svenska Mässkonsult UX, Ux-Lead, Hyper-Island, Hyper Island, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+	openGraph={{
+	  title: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
+	  description: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/Smabthumb800500.webp",
+	  url: "https://www.andersra.com/work/smab",
+	  type: "website",
+	}}
+	twitter={{
+	  card: "summary_large_image",
+	  site: "@AndersRadal",
+	  title: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
+	  description: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
+	  image: "https://www.andersra.com/images/thumbs/Smabthumb800500.webp",
+	}}
+	jsonLd={{
+	  "@context": "https://schema.org",
+	  "@type": "WebSite",
+	  name: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
+	  description: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
+	  url: "https://www.andersra.com/work/smab",
+	}}
+	/>
 </svelte:head>
 
 <header class="relative top-0">

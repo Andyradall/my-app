@@ -4,6 +4,7 @@
   import { fade } from 'svelte/transition';
   import { partytownSnippet } from '@builder.io/partytown/integration'
   import { onMount } from 'svelte'
+  import SvelteSeo from "svelte-seo";
 /*   import { page } from '$app/stores';*/
 
   // Add the Partytown script to the DOM head
@@ -24,6 +25,35 @@
 </div>
 
 <svelte:head>
+
+<SvelteSeo
+title="Anders Rådal Portfolio"
+description="Portfolio for Anders Rådal - Product & UX Designer"
+canonical="https://www.andersra.com"
+keywords="Anders Rådal, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Hyper Island, Hyper-Island, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+openGraph={{
+  title: "Anders Rådal UX Portfolio",
+  description: "Portfolio for Anders Rådal - Product & UX Designer",
+  image: "https://www.andersra.com/PageThumb.webp",
+  url: "https://www.andersra.com",
+  type: "website",
+}}
+twitter={{
+  card: "summary_large_image",
+  site: "@AndersRadal",
+  title: "Portfolio for Anders Rådal - Product & UX Designer",
+  description: "Portfolio for Anders Rådal - Product & UX Designer",
+  image: "https://www.andersra.com/PageThumb.webp",
+}}
+jsonLd={{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Anders Rådal Portfolio",
+  description: "Portfolio for Anders Rådal - Product & UX Designer",
+  url: "https://www.andersra.com/",
+}}
+/>
+
   <script>
     partytown = {
       forward: ['dataLayer.push'],
