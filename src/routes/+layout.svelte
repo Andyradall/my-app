@@ -1,10 +1,15 @@
 <script>
   // If you have any scripts or style imports, they should be here.
   import '../global.css';
-  import { fade } from 'svelte/transition';
   import { partytownSnippet } from '@builder.io/partytown/integration'
   import { onMount } from 'svelte'
   import SvelteSeo from "svelte-seo";
+  import { fly } from 'svelte/transition';
+  import { cubicIn, cubicOut } from 'svelte/easing';
+  export let data;
+  import Navbar from './Navbar.svelte';
+  import { page } from '$app/stores';
+
 /*   import { page } from '$app/stores';*/
 
   // Add the Partytown script to the DOM head
@@ -17,12 +22,23 @@
     }
   )
 
-</script>
+/* Check if the current route is the landing page */
+$: isLandingPage = $page.url.pathname === '/';
 
+</script>
 <!-- Your page content will be injected inside this slot -->
-<div in:fade={{ duration: 400 }} out:fade={{ duration: 400 }}>
-  <slot></slot>
-</div>
+{#if isLandingPage}
+<Navbar />
+{/if}
+
+{#key data.pathname}
+	<div
+		in:fly={{ easing: cubicOut, y: 50, duration: 300, delay: 400 }}
+		out:fly={{ easing: cubicIn, y: -60, duration: 300 }}
+	>
+		<slot />
+	</div>
+{/key}
 
 <svelte:head>
 

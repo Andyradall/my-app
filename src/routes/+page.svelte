@@ -7,12 +7,7 @@
 	
 </script>
 
-<svelte:head>
-	<title>Anders Rådal UX Portfolio</title>
-	<meta name="description" content="Anders Rådal UX Portfolio site" />
-</svelte:head>
-
-    <Navbar />
+    <!--Navbar /-->
     <BgAnimated />
 	<HeroSection />
 	<CaseStudySection />
