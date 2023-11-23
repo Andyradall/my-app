@@ -7,7 +7,7 @@
 	
 </script>
 
-    <!--Navbar /-->
+    <Navbar />
     <BgAnimated />
 	<HeroSection />
 	<CaseStudySection />

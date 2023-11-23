@@ -14,12 +14,12 @@
         circles.push({
           cx: getRandom(70, 700),
           cy: getRandom(0, 900),
-          rx: getRandom(220, 390),
-          ry: getRandom(120, 190),
+          rx: getRandom(200, 390),
+          ry: getRandom(100, 190),
           fill: `url(#gradient${index})`, // Use gradient ID
           transformX: getRandom(-250, 250),
           transformY: getRandom(-250, 250),
-          duration: getRandom(15, 30),
+          duration: getRandom(15, 25),
           delay: getRandom(0, 5),
         });
       });

@@ -124,6 +124,7 @@
 			<h2 class="text-3xl font-medium text-grey-800 text-center">Process overview</h2>
 		</div>
 	</section>
+	
 	<section class="hidden sm:block">
 		<WorkNav {links} />
 	</section>
