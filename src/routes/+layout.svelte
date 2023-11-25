@@ -4,6 +4,7 @@
   import { partytownSnippet } from '@builder.io/partytown/integration'
   import { onMount } from 'svelte'
   import SvelteSeo from "svelte-seo";
+
 /*   import { page } from '$app/stores';*/
 
   // Add the Partytown script to the DOM head
@@ -15,11 +16,10 @@
       }
     }
   )
-
 </script>
 
 <!-- Your page content will be injected inside this slot -->
-  <slot></slot>
+    <slot />
 
 <svelte:head>
 
@@ -88,7 +88,6 @@ jsonLd={{
       forward: ['dataLayer.push']
     }
   </script>
-
 
   <script bind:this={scriptEl}></script>
 
