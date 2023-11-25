@@ -4,7 +4,12 @@
   import { partytownSnippet } from '@builder.io/partytown/integration'
   import { onMount } from 'svelte'
   import SvelteSeo from "svelte-seo";
-/*   import { page } from '$app/stores';*/
+  
+  import { fly } from 'svelte/transition';
+  import { cubicIn, cubicOut } from 'svelte/easing';
+  export let data;
+  import Navbar from './Navbar.svelte';
+  import { goto } from '$app/navigation';
 
   // Add the Partytown script to the DOM head
   let scriptEl
@@ -16,11 +21,41 @@
     }
   )
 
+
+  function isCaseStudyPage(url) {
+    return url.startsWith('/work/');
+  }
+
+  let previousPathname = ''; // Initialize previous pathname
+  let transitionIn = { easing: cubicOut, y: 50, duration: 300, delay: 400 };
+  let transitionOut = { easing: cubicIn, y: -50, duration: 300 };
+
+  // Navigation guard to manage transitions
+  async function navigate(url) {
+    if (isCaseStudyPage(previousPathname) && isCaseStudyPage(url)) {
+      // Disable transitions when navigating between case studies
+      transitionIn = undefined;
+      transitionOut = undefined;
+    } else {
+      // Enable transitions for other navigations
+      transitionIn = { easing: cubicOut, y: 50, duration: 300, delay: 400 };
+      transitionOut = { easing: cubicIn, y: -50, duration: 300 };
+    }
+
+    previousPathname = url; // Update previous pathname
+    await goto(url); // Perform the navigation
+  }
 </script>
 
-<!-- Your page content will be injected inside this slot -->
-  <slot></slot>
+{#if data.pathname === '/'}
+  <Navbar />
+{/if}
 
+{#key data.pathname}
+  <div in:fly={transitionIn} out:fly={transitionOut}>
+    <slot />
+  </div>
+{/key}
 <svelte:head>
 
 <SvelteSeo
@@ -111,7 +146,7 @@ jsonLd={{
      })
    </script>
 
-  <!--script>
+  <!--script // add this if party dont start>
     (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
       h._hjSettings={hjid:3744201,hjsv:6};
