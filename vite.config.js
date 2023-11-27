@@ -1,6 +1,6 @@
-import { join } from 'path'
+import { join } from 'path';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { partytownVite } from '@builder.io/partytown/utils'
+import { partytownVite } from '@builder.io/partytown/utils';
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -10,9 +10,14 @@ const config = {
       // `dest` specifies where files are copied to in production
       dest: join(process.cwd(), 'static', '~partytown')
     })
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      external: ['lightgallery/plugins/MediumZoom']
+    }
+  }
 }
 
-
 export default config;
+
 
