@@ -3,7 +3,7 @@
     import lightGallery from 'lightgallery';
     import 'lightgallery/css/lightgallery.css';  
     import 'lightgallery/css/lg-medium-zoom.css';
-    import lgMediumZoom from 'lightgallery/plugins/MediumZoom';
+    import lgMediumZoom from 'lightgallery/plugins/mediumZoom';
 
     /* Note to future self. How to use lightgallery (this how to I will remove and add to my app documentation) */
     /* Script adds lightgallery to any <article> containing class="attachLightGallery" */
