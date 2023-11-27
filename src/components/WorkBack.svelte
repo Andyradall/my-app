@@ -29,13 +29,13 @@ onMount(() => {
     <button
       class="back text-grey-700 bg-grey-200 hover:text-grey-600 rounded-full font-euclid text-[16px] font-normal flex items-center justify-center w-28 h-10"
       on:click={() => (window.location.href = '/')}
-      aria-label="Back to frontpage"
+      aria-label="Home to frontpage"
       type="button"
     >
         <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" height="24" viewBox="0 -960 960 960" width="24">
             <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"> </path>
         </svg>
-        Back
+        Home
     </button>
 </div>
 
