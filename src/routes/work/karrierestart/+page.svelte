@@ -4,6 +4,7 @@
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from "svelte-seo";
+	import LightGallery from '../../../components/LightGallery.svelte'
 
 	const links = [
 		{ id: '#first', title: 'Research & Hooked', ariaLabel: 'Research & Hooked' },
@@ -55,7 +56,8 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-grey-800">
+<LightGallery />
+<article class="mx-auto font-euclid text-grey-800 attachLightGallery">
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
 			<h1 class="text-[2.95rem] md:text-7xl font-euclid font-black text-grey-800 md:py-4">
@@ -114,7 +116,7 @@
 		</div>
 		<figure class="md:flex-2 md:max-w-xl md:m-4">
 			<div class="flex items-center justify-center h-full">
-				<div><img src="/images/karrierestart/MacBook_Pro_16_01_FREE.webp" alt="KS mockup" /></div>
+				<div><img src="/images/karrierestart/MacBook_Pro_16_01_FREE.webp" class="zooming-white-bg" alt="KS mockup" /></div>
 			</div>
 		</figure>
 	</section>
@@ -157,7 +159,7 @@
 		</div>
 
 		<figure class="md:max-w-5xl py-5 md:py-8 mx-auto">
-			<img src="/images/karrierestart/Screenshot_2023_02_10_at_17_08_2.webp" alt="Hotjar Module" />
+			<img src="/images/karrierestart/Screenshot_2023_02_10_at_17_08_2.webp" class="zooming-white-bg" alt="Hotjar Module" />
 			<figcaption>
 				Hotjar feedback module gave me a lot of actionable feedback that I used to improve user
 				exerience! Here on the whitelabled Aleris Company profile.
@@ -207,7 +209,7 @@
 
 	<section class="bg-[#111111]">
 		<figure class="sm:max-w-6xl mx-auto py-20">
-			<img src="/images/karrierestart/Frame_10.webp" alt="Nir Eyal summary" />
+			<img src="/images/karrierestart/Frame_10.webp" class="zooming-dark-bg" alt="Nir Eyal summary" />
 		</figure>
 	</section>
 
@@ -240,16 +242,16 @@
 			</ul>
 		</div>
 		<figure class="max-w-6xl mx-auto py-5">
-			<img src="/images/karrierestart/Aleris23.webp" alt="Onboarding guide step 1" />
+			<img src="/images/karrierestart/Aleris23.webp" class="zooming-white-bg" alt="Onboarding guide step 1" />
 			<figcaption>First step of onboarding guide.</figcaption>
 		</figure>
 		<figure class="max-w-6xl mx-auto py-5">
-			<img class="is-content" src="/images/karrierestart/onb33.webp" alt="onboarding step 3" />
+			<img src="/images/karrierestart/onb33.webp" class="zooming-white-bg" alt="onboarding step 3" />
 			<figcaption>Step 3 of onboarding guide.</figcaption>
 		</figure>
 
 		<figure class="max-w-6xl mx-auto py-5">
-			<img src="/images/karrierestart/onb4w3.webp" alt="Onboarding alternative" />
+			<img src="/images/karrierestart/onb4w3.webp" class="zooming-white-bg" alt="Onboarding alternative" />
 
 			<figcaption>
 				Alternative more tactile view of step 3. I explored and discarded many different solutions
@@ -270,7 +272,7 @@
 			</p>
 		</div>
 		<figure class="max-w-6xl py-5 mx-auto">
-			<img src="/images/karrierestart/Freelance2.webp" alt="Freelance congrats message" />
+			<img src="/images/karrierestart/Freelance2.webp" class="zooming-white-bg" alt="Freelance congrats message" />
 			<figcaption>Motivational message from freelancer profile.</figcaption>
 		</figure>
 	</section>
@@ -286,8 +288,8 @@
 			</p>
 		</div>
 		<figure class="max-w-5xl py-5 mx-auto">
-			<img src="/images/karrierestart/Congratulatory.webp" alt="Freelance user profile" />
-			<figcaption><p>Here showing Likes and Followers in a user profile.</p></figcaption>
+			<img src="/images/karrierestart/Congratulatory.webp" class="zooming-white-bg" alt="Freelance user profile" />
+			<figcaption>Here showing Likes and Followers in a user profile.</figcaption>
 		</figure>
 	</section>
 
@@ -307,17 +309,18 @@
 			<img
 				src="/images/karrierestart/Candidate_test_with_illustrations_20pct_smaller_-scaled.webp"
 				alt="Stories sketch"
+				class="zooming-white-bg"
 			/>
 			<figcaption><p>From story ideation process</p></figcaption>
 		</figure>
 
 		<figure class="max-w-6xl mx-auto py-4 md:py-10">
-			<img src="/images/karrierestart/ksscreent_.webp" alt="Screenshot" />
+			<img src="/images/karrierestart/ksscreent_.webp" alt="Screenshot" class="zooming-white-bg" />
 			<figcaption><p>Screenshot from live page.</p></figcaption>
 		</figure>
 
 		<figure class="max-w-6xl mx-auto py-4 md:py-10">
-			<img src="/images/karrierestart/Storyedit.webp" alt="Storyedit CMS" />
+			<img src="/images/karrierestart/Storyedit.webp" class="zooming-white-bg" alt="Storyedit CMS" />
 			<figcaption>
 				<p>
 					Some designs from CMS of stories, we created many customisation options for the stories.

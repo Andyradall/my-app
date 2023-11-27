@@ -5,6 +5,7 @@
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import { dirty_components } from 'svelte/internal';
 	import SvelteSeo from 'svelte-seo';
+	import LightGallery from '../../../components/LightGallery.svelte'
 
 	const links = [
 		{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
@@ -55,7 +56,8 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-grey-800">
+<LightGallery />
+<article class="mx-auto font-euclid text-grey-800 attachLightGallery">
 	<section id="first" class="pageSection max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
 			<h1 class="text-7xl font-euclid font-bold text-grey-800 py-4">
@@ -103,7 +105,7 @@
 
 		<figure class="md:flex-2 md:max-w-2xl md:pr-5 m-4">
 			<div class="flex items-center justify-center h-full">
-				<img src="/images/solarchoice/Crew.webp" alt="Crew" />
+				<img src="/images/solarchoice/Crew.webp" class="zooming-white-bg" alt="Crew" />
 			</div>
 		</figure>
 	</section>
@@ -139,7 +141,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-4xl py-4 md:py-8">
-			<img src="/images/solarchoice/Zoom.webp" alt="First Meeting" />
+			<img src="/images/solarchoice/Zoom.webp" class="zooming-white-bg" alt="First Meeting" />
 		</figure>
 	</section>
 
@@ -153,7 +155,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-5xl py-4 px-4 md:py-8">
-			<img src="/images/solarchoice/Team-canvas.webp" alt="Team-canvas" />
+			<img src="/images/solarchoice/Team-canvas.webp" class="zooming-white-bg" alt="Team-canvas" />
 		</figure>
 	</section>
 
@@ -167,7 +169,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-5xl py-4 md:pt-8 pb-8 md:pb-20">
-			<img src="/images/solarchoice/Agenda.webp" alt="Agenda" />
+			<img src="/images/solarchoice/Agenda.webp" class="zooming-white-bg" alt="Agenda" />
 		</figure>
 	</section>
 
@@ -230,10 +232,11 @@
 			</p>
 		</div>
 
-		<figure class="mx-auto md:max-w-7xl py-4 md:py-6">
+		<figure class="mx-auto md:max-w-7xl py-4 md:py-6 ">
 			<img
 				src="/images/solarchoice/Screenshot_2023_01_20_at_15_15_1.webp"
 				alt="Workshop insights"
+				class="zooming-dark-bg"
 			/>
 		</figure>
 		<div class="mx-auto md:max-w-2xl">
@@ -257,7 +260,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-7xl py-4 md:py-6">
-			<img src="/images/solarchoice/UCDC_Solar_Choice_1.webp" alt="UCDC_Solar_Choice_1" />
+			<img src="/images/solarchoice/UCDC_Solar_Choice_1.webp" class="zooming-white-bg" alt="UCDC_Solar_Choice_1" />
 		</figure>
 	</section>
 
@@ -316,10 +319,10 @@
 			</div>
 			<div class="mx-auto md:max-w-7xl">
 				<figure class="py-4">
-					<img src="/images/solarchoice/Solarblue8_4.webp" alt="Stylescape 1" />
+					<img src="/images/solarchoice/Solarblue8_4.webp" class="zooming-dark-bg" alt="Stylescape 1" />
 				</figure>
 				<figure class="py-4">
-					<img src="/images/solarchoice/Solarblue2goldidentity.webp" alt="My stylescape edited" />
+					<img src="/images/solarchoice/Solarblue2goldidentity.webp" class="zooming-dark-bg" alt="My stylescape edited" />
 				</figure>
 			</div>
 		</div>
@@ -342,7 +345,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-6xl py-4 md:py-6">
-			<img src="/images/solarchoice/Logo_exploret_1-scaled.webp" alt="Logo_exploret_1" />
+			<img src="/images/solarchoice/Logo_exploret_1-scaled.webp" class="zooming-white-bg" alt="Logo_exploret_1" />
 		</figure>
 	</section>
 
@@ -364,10 +367,10 @@
 
 		<div class="flex flex-col md:flex-row mx-auto justify-center md:py-16 bg-color">
 			<figure class="md:flex-1 md:max-w-2xl m-1">
-				<img src="/images/solarchoice/solar_choice_logo_30.webp" alt="solar_choice_logo_30" />
+				<img src="/images/solarchoice/solar_choice_logo_30.webp" class="zooming-white-bg" alt="solar_choice_logo_30" />
 			</figure>
 			<figure class="md:flex-2 md:max-w-2xl m-1'">
-				<img src="/images/solarchoice/solar_choice_logo_31.webp" alt="solar_choice_logo_31" />
+				<img src="/images/solarchoice/solar_choice_logo_31.webp" class="zooming-white-bg" alt="solar_choice_logo_31" />
 			</figure>
 		</div>
 	</section>
@@ -388,12 +391,14 @@
 				<img
 					src="/images/solarchoice/solar_choice_logo_10_10-scaled.webp"
 					alt="solar_choice_logo_10_10"
+					class="zooming-white-bg"
 				/>
 			</figure>
 			<figure class="py-6 p-2 md:max-w-5xl">
 				<img
 					src="/images/solarchoice/solar_choice_logo_10_38-scaled.webp"
 					alt="solar_choice_logo_10_38"
+					class="zooming-white-bg"
 				/>
 			</figure>
 		</div>
@@ -415,15 +420,15 @@
 
 		<div class="flex flex-col md:flex-row gap-4 mx-auto p-5 justify-around">
 			<figure class="flex-1/3 py-6 md:max-w-xl">
-				<img src="/images/solarchoice/Deep-Lagoon.webp" alt="Deep-Lagoon" />
+				<img src="/images/solarchoice/Deep-Lagoon.webp" class="zooming-dark-bg" alt="Deep-Lagoon" />
 			</figure>
 
 			<figure class="flex-1/3 py-6 md:max-w-xl">
-				<img src="/images/solarchoice/Northern-Light.webp" alt="Northern-Light" />
+				<img src="/images/solarchoice/Northern-Light.webp" class="zooming-dark-bg" alt="Northern-Light" />
 			</figure>
 
 			<figure class="flex-1/3 py-6 md:max-w-xl">
-				<img src="/images/solarchoice/Emerald.webp" alt="Emerald theme" />
+				<img src="/images/solarchoice/Emerald.webp" class="zooming-dark-bg" alt="Emerald theme" />
 			</figure>
 		</div>
 	</section>
@@ -440,11 +445,11 @@
 		</div>
 		<div class="flex md:max-w-7xl flex-row mx-auto justify-center py-4 md:py-8">
 			<figure class="flex-1/2 py-6 p-2 md:max-w-3xl">
-				<img src="/images/solarchoice/oldpage.webp" alt="oldpage" />
+				<img src="/images/solarchoice/oldpage.webp" class="zooming-white-bg" alt="oldpage" />
 				<figcaption>The old page</figcaption>
 			</figure>
 			<figure class="flex-1/2 py-6 p-2 md:max-w-3xl">
-				<img src="/images/solarchoice/mockup.webp" alt="mockup" />
+				<img src="/images/solarchoice/mockup.webp" class="zooming-white-bg" alt="mockup" />
 				<figcaption>My mockup of the new page</figcaption>
 			</figure>
 		</div>
@@ -476,6 +481,7 @@
 				<img
 					src="/images/solarchoice/Solar_Choice_Solceller_energi.webp"
 					alt="A screenshot from the page"
+					class="zooming-white-bg"
 				/>
 				<figcaption>A screenshot from the page</figcaption>
 			</figure>

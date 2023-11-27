@@ -4,6 +4,7 @@
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from "svelte-seo";
+	import LightGallery from '../../../components/LightGallery.svelte'
 
 	const links = [
 		{ id: '#first', title: 'Our Process', ariaLabel: 'Our process' },
@@ -55,7 +56,8 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid  text-grey-800">
+<LightGallery />
+<article class="mx-auto font-euclid  text-grey-800 attachLightGallery">
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
 			<h1 class="text-[3rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
@@ -90,7 +92,7 @@
 		</div>
 		<figure class="md:flex-2 md:max-w-xl m-4">
 			<div class="flex items-center justify-center h-full">
-				<img src="/images/smab/Smabmockup.webp" alt="Smabmockup" />
+				<img src="/images/smab/Smabmockup.webp" class="zooming-white-bg" alt="Smabmockup" />
 			</div>
 		</figure>
 	</section>
@@ -135,7 +137,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-7xl py-10 md:py-14">
-			<img src="/images/smab/DD2-scaled.webp" alt="Double diamond process" />
+			<img src="/images/smab/DD2-scaled.webp" class="zooming-dark-bg" alt="Double diamond process" />
 		</figure>
 	</section>
 
@@ -158,7 +160,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-3xl md:py-4">
-			<img src="/images/smab/Team3.webp" alt="Team_Picture" />
+			<img src="/images/smab/Team3.webp" class="zooming-white-bg" alt="Team_Picture" />
 			<figcaption class="text-grey-600 text-md mt-2">
 				One of our meetings where we presented stylescapes, font choices and sketches of the
 				webpage. Between our meetings, we stayed in touch with the client on Slack.
@@ -193,7 +195,7 @@
 			</ul>
 		</div>
 		<figure class="mx-auto md:max-w-3xl py-4 md:py-4">
-			<img src="/images/smab/Customer_journey.webp" alt="Customer journey" />
+			<img src="/images/smab/Customer_journey.webp" class="zooming-white-bg" alt="Customer journey" />
 			<figcaption class="">Customer journey map.</figcaption>
 		</figure>
 	</section>
@@ -221,7 +223,7 @@
 		</div>
 
 		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
-			<img src="/images/smab/Stylescapes1.webp" alt="Stylescapes first" width="1600" height="1703"/>
+			<img src="/images/smab/Stylescapes1.webp" class="zooming-dark-bg" alt="Stylescapes first" width="1600" height="1703"/>
 			<figcaption class="text-grey-50">
 				<strong class="font-semibold"> Stylescapes round one:</strong> 
 				We showcased very different directions for the branding, 
@@ -230,7 +232,7 @@
 			</figcaption>
 		</figure>		
 		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
-			<img src="/images/smab/Stylescapes2.webp" alt="Stylescapes second" width="1600" height="1487"/>
+			<img src="/images/smab/Stylescapes2.webp" class="zooming-dark-bg" alt="Stylescapes second" width="1600" height="1487"/>
 			<figcaption class="text-grey-50">
 				<strong class="font-semibold">Stylescapes round 2:</strong> 
 				We narrowed down the direction, aiming for a clean and modern look. 
@@ -239,7 +241,7 @@
 			</figcaption>
 		</figure>		
 		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
-			<img src="/images/smab/Stylescapes3.webp" alt="Stylescapes third" width="1600" height="738"/>
+			<img src="/images/smab/Stylescapes3.webp" class="zooming-dark-bg" alt="Stylescapes third" width="1600" height="738"/>
 			<figcaption class="text-grey-50">
 				<strong class="font-semibold">Final Stylescape:</strong> 
 				In the third and final stylescape we had to allow the client to be specific about elements in order to reach a final decision.
@@ -256,7 +258,7 @@
 			<p>We defined what to include, then sketched out each page.</p>
 		</div>
 		<figure class="mx-auto md:max-w-3xl md:py-4">
-			<img src="/images/smab/Discussing4.webp" alt="team discussing" />
+			<img src="/images/smab/Discussing4.webp" class="zooming-white-bg" alt="team discussing" />
 			<figcaption>Sketching and discussing webpage elements.</figcaption>
 		</figure>
 	</section>
@@ -271,7 +273,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-4xl py-4">
-			<img src="/images/smab/Site_map_alt-1.webp" alt="Site map" />
+			<img src="/images/smab/Site_map_alt-1.webp" class="zooming-white-bg" alt="Site map" />
 		</figure>
 	</section>
 
@@ -294,7 +296,7 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-7xl py-8">
-			<img src="/images/smab/Wireframes1x-scaled.webp" alt="Wireframes" />
+			<img src="/images/smab/Wireframes1x-scaled.webp" class="zooming-white-bg" alt="Wireframes" />
 			<figcaption>We used Figma to create wireframes and high fidelity designs.</figcaption>
 		</figure>
 	</section>
@@ -317,10 +319,10 @@
 		</div>
 		<div class="flex flex-row mx-auto justify-evenly md:justify-center py-10">
 			<figure class="max-w-2xl p-1 md:p-4">
-				<img class="w-full" src="/images/smab/user_test_2.webp" alt="user test 2" />
+				<img class="w-full zooming-white-bg" src="/images/smab/user_test_2.webp" alt="user test 2" />
 			</figure>
 			<figure class="max-w-2xl p-1 md:p-4">
-				<img class="w-full" src="/images/smab/User_testb.webp" alt="User test" />
+				<img class="w-full zooming-white-bg" src="/images/smab/User_testb.webp" alt="User test" />
 			</figure>
 		</div>
 	</section>
@@ -333,10 +335,10 @@
 		</div>
 		<div class="flex mx-auto flex-col md:flex-row md:w-fulljustify-center py-10">
 			<figure class="max-w-2xl p-4 md:p-6">
-				<img src="/images/smab/Front-scaled.webp" alt="Frontpage of Svenska Masskonsult" />
+				<img src="/images/smab/Front-scaled.webp" class="zooming-dark-bg" alt="Frontpage of Svenska Masskonsult" />
 			</figure>
 			<figure class="max-w-2xl p-4 md:p-6">
-				<img src="/images/smab/Front2-scaled.webp" alt="Frontpage of Svenska Masskonsult 2" />
+				<img src="/images/smab/Front2-scaled.webp" class="zooming-dark-bg" alt="Frontpage of Svenska Masskonsult 2" />
 			</figure>
 		</div>
 	</section>

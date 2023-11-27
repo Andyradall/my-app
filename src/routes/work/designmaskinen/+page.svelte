@@ -3,7 +3,8 @@
 	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
-	import SvelteSeo from "svelte-seo";
+	import SvelteSeo from 'svelte-seo';
+	import LightGallery from '../../../components/LightGallery.svelte'
 
 	const links = [
 		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },
@@ -15,14 +16,14 @@
 
 <svelte:head>
 	<SvelteSeo
-	title="Designmaskinen Product Design Case Study by Anders Rådal"
-	description="Designmaskinen Product Design Case Study by Anders Rådal"
-	canonical="https://www.andersra.com/work/designmaskinen"
-	keywords="Anders Rådal, UX-Design, Product designer, Netlife, Designmaskinen, Internship, Hyper-Island, Hyper Island, Product-design, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
-	openGraph={{
-	  title: "Designmaskinen Product Design Case Study by Anders Rådal",
-	  description: "Designmaskinen Product Design Case Study by Anders Rådal",
-	  images: [
+		title="Designmaskinen Product Design Case Study by Anders Rådal"
+		description="Designmaskinen Product Design Case Study by Anders Rådal"
+		canonical="https://www.andersra.com/work/designmaskinen"
+		keywords="Anders Rådal, UX-Design, Product designer, Netlife, Designmaskinen, Internship, Hyper-Island, Hyper Island, Product-design, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+		openGraph={{
+			title: 'Designmaskinen Product Design Case Study by Anders Rådal',
+			description: 'Designmaskinen Product Design Case Study by Anders Rådal',
+			images: [
 				{
 					url: 'https://www.andersra.com/images/thumbs/DMthumb800500.webp',
 					width: 800,
@@ -30,41 +31,45 @@
 					alt: 'Designmaskinen Thumb'
 				}
 			],
-	  url: "https://www.andersra.com/work/designmaskinen",
-	  type: "website",
-	}}
-	twitter={{
-	  card: "summary_large_image",
-	  site: "@AndersRadal",
-	  title: "Designmaskinen Product Design Case Study by Anders Rådal",
-	  description: "Designmaskinen Product Design Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/DMthumb800500.webp",
-	}}
-	jsonLd={{
-	  "@context": "https://schema.org",
-	  "@type": "WebSite",
-	  name: "Designmaskinen Product Design Case Study by Anders Rådal",
-	  description: "Designmaskinen Product Design Case Study by Anders Rådal",
-	  url: "https://www.andersra.com/work/designmaskinen",
-	}}
+			url: 'https://www.andersra.com/work/designmaskinen',
+			type: 'website'
+		}}
+		twitter={{
+			card: 'summary_large_image',
+			site: '@AndersRadal',
+			title: 'Designmaskinen Product Design Case Study by Anders Rådal',
+			description: 'Designmaskinen Product Design Case Study by Anders Rådal',
+			image: 'https://www.andersra.com/images/thumbs/DMthumb800500.webp'
+		}}
+		jsonLd={{
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'Designmaskinen Product Design Case Study by Anders Rådal',
+			description: 'Designmaskinen Product Design Case Study by Anders Rådal',
+			url: 'https://www.andersra.com/work/designmaskinen'
+		}}
 	/>
 </svelte:head>
-
+<LightGallery />
 <header class="relative top-0">
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-grey-800">
+<article class="mx-auto font-euclid text-grey-800 attachLightGallery" >
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
 			<h1 class="text-[2.75rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
-                Designmaskinen
-                <span class="text-[1.8rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"><br />Designing an Admin Area & Template Builder</span>
-            </h1>
+				Designmaskinen
+				<span class="text-[1.8rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"
+					><br />Designing an Admin Area & Template Builder</span
+				>
+			</h1>
 		</div>
 	</section>
 
-	<section class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20 px-4">
+	<section
+		class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20 px-4"
+	>
 		<div class="md:flex-1 md:max-w-lg my-4">
 			<h2 class=" text-xl font-bold text-grey-800">Case Overview</h2>
 			<p class=" text-base align-center text-grey-800">
@@ -97,7 +102,7 @@
 		<div class="md:flex-2 md:max-w-xl m-4">
 			<div class="flex items-center justify-center h-full">
 				<img
-					class=""
+					class="zooming-white-bg"
 					src="/images/designmaskinen/iMac_FREE.webp"
 					width="927"
 					height="733"
@@ -138,7 +143,7 @@
 		<div class="max-w-4xl mx-auto">
 			<img
 				src="/images/designmaskinen/Designmaskinenscale.webp"
-				class="w-full h-auto mb-4"
+				class="w-full h-auto mb-4 zooming-dark-bg"
 				width="1200"
 				height="948"
 				alt="Designmaskinenscale"
@@ -157,6 +162,7 @@
 		</div>
 		<div class="max-w-7xl pt-8 pb-10 mx-auto">
 			<img
+			    class="zooming-dark-bg"
 				src="/images/designmaskinen/User_journey_Designmaskinen.webp"
 				width="2455"
 				height="494"
@@ -174,7 +180,7 @@
 			</p>
 		</div>
 		<div class="max-w-4xl py-8 mx-auto">
-			<img src="/images/designmaskinen/Sitemap.webp" width="1020" height="413" alt="Sitemap" />
+			<img src="/images/designmaskinen/Sitemap.webp" width="1020" height="413" class="zooming-dark-bg" alt="Sitemap" />
 		</div>
 	</section>
 
@@ -194,6 +200,7 @@
 				width="1250"
 				height="552"
 				alt="Skisser_malbygger-1"
+				class="zooming-white-bg"
 			/>
 		</div>
 		<div class="max-w-2xl mx-auto">
@@ -224,6 +231,7 @@
 					width="1106"
 					height="1382"
 					alt="brand assets v 1"
+					class="zooming-white-bg"
 				/>
 				<p class=" text-base">Version 1.</p>
 			</div>
@@ -235,6 +243,7 @@
 					width="1440"
 					height="1800"
 					alt="Admin_Verkt_ykasse"
+					class="zooming-white-bg"
 				/>
 				<p class=" text-base">Version 2.&nbsp;</p>
 			</div>
@@ -246,6 +255,7 @@
 					width="1440"
 					height="1800"
 					alt="Admin Verktøykasse final"
+					class="zooming-white-bg"
 				/>
 				<p class=" text-base">Version 3 - final</p>
 			</div>
@@ -269,6 +279,7 @@
 				width="997"
 				height="558"
 				alt="Sketch of an image_album"
+				class="zooming-white-bg"
 			/>
 		</div>
 	</section>
@@ -305,6 +316,7 @@
 				width="1440"
 				height="1000"
 				alt="Image_albums 1"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">Version 1.</p>
 		</div>
@@ -314,6 +326,7 @@
 				width="1440"
 				height="1000"
 				alt="Image_albums iteration 1 with lightbox"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">
 				Version 1. Edit and change image description in input field in a modal window.&nbsp;
@@ -364,6 +377,7 @@
 				width="1440"
 				height="1000"
 				alt="Image_albums iteration 2"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">Final version of image albums.&nbsp;</p>
 		</div>
@@ -373,6 +387,7 @@
 				width="1440"
 				height="1000"
 				alt="Image_albums iteration 2 with menu"
+				class="zooming-white-bg"
 			/>
 			<p class=" text-base align-center text-grey-800">
 				Final version with slide in edit field showing.&nbsp;
@@ -407,6 +422,7 @@
 				width="1440"
 				height="1000"
 				alt="Admin_Maler_Some"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">Template management area.&nbsp;</p>
 		</div>
@@ -416,6 +432,7 @@
 				width="1440"
 				height="1000"
 				alt="Admin_Maler_Some_edit"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">Edit options.&nbsp;</p>
 		</div>
@@ -425,6 +442,7 @@
 				width="1440"
 				height="1000"
 				alt="Admin New template"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">New template, choosing format changes colour profile (RGB/CMYK)</p>
 		</div>
@@ -450,6 +468,7 @@
 				width="915"
 				height="645"
 				alt="User areas sketch"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">First sketch.</p>
 		</div>
@@ -459,6 +478,7 @@
 				width="1440"
 				height="1000"
 				alt="User area management"
+				class="zooming-white-bg"
 			/>
 			<p class="text-base">User management final.</p>
 		</div>
@@ -479,6 +499,7 @@
 				width="1440"
 				height="1000"
 				alt="Template builder"
+				class="zooming-white-bg"
 			/>
 		</div>
 	</section>
@@ -486,9 +507,11 @@
 	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-10 md:py-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
-			<p>	My favourite part of any design process is watching the designs come to life in a prototype.
+			<p>
+				My favourite part of any design process is watching the designs come to life in a prototype.
 				It's this stage where the nuances surface, often spotlighting areas that can benefit from
-				further refinement. Dive into the final prototype:</p>
+				further refinement. Dive into the final prototype:
+			</p>
 		</div>
 
 		<!-- Prototype for large screens -->
@@ -513,11 +536,9 @@
 		id="fourth"
 		class="pageSection max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center py-10 md:py-24 px-4"
 	>
-	
 		<div class="md:flex-1 md:max-w-lg md:m-4">
 			<h2 class="pb-4">Reflections on My Journey & the Consultancy World</h2>
 			<ul class="list-custom">
-				
 				<li>
 					<strong>Challenging my Bias:</strong> Before going into this, I had this perception of consultants
 					as conformist individuals, always in suits and perhaps a bit sharp elbowed. However, the team
@@ -556,22 +577,19 @@
 		<div class="md:flex-2 md:max-w-xl px-0 py-5 md:p-4">
 			<div class=" flex items-center justify-center h-full">
 				<div>
-					<img src="/images/designmaskinen/Team.webp" width="716" height="538" alt="Team" />
+					<img src="/images/designmaskinen/Team.webp" width="716" height="538" class="zooming-white-bg" alt="Team" />
 					<p class="">My team during a meeting.</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	
 </article>
-
 
 <footer>
 	<WorkFooter />
 </footer>
 
-<style lang="postcss" >
-
+<style lang="postcss">
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];
 	}

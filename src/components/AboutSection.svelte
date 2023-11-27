@@ -22,9 +22,9 @@
 				</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
 					I find knowing code to be incredibly valuable. 
-					It helps me communicate well cross-functionally, 
-					inspires my designs with new technology,
-					and to ensure a smooth design-to-development process. 
+					It inspires my designs with new technology, 
+					helps me communicate well cross-functionally, 
+					and ensures a smooth design-to-development process. 
 					This portfolio is a direct result of that approach, 
 					handcoded using HTML5, SvelteKit, and Tailwind CSS.
 				</p>
