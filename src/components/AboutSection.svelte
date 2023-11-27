@@ -8,7 +8,7 @@
 
 	  <section class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
 			<!-- Text Card -->
-			<div class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-grey-50 p-10">
+			<div class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-grey-50 p-6 md:p-10">
 				<h2 class="font-euclid text-3xl font-semibold pb-3">
 					Designing Impact: From Pixel to Performance
 				</h2>
@@ -35,7 +35,7 @@
 				<img class="object-cover w-full h-full" alt="Profile" src="/images/about/profil-1.webp" height=620px width="622.55"/>
 			</div>
 		</section>
-		<section class="skills-card shadow-custom text-grey-50 bg-grey-800 rounded-3xl p-10">
+		<section class="skills-card shadow-custom text-grey-50 bg-grey-800 rounded-3xl p-6 md:p-10">
 			<!-- Card Header -->
 			<header class="text-left">
 				<h2 class="font-euclid text-3xl font-semibold pb-2">Services</h2>
@@ -143,7 +143,7 @@
 			</div>
 		</section>
 
-		<section class="pt-10">
+		<section class="p-6 md:p-10">
 			<h2 class="font-euclid text-xl pl-6 font-semibold my-4">BACKGROUND:</h2>
 		</section>
 
@@ -163,7 +163,7 @@
 			</div>
 
 			<!-- Text Section -->
-			<div class="split-card-text w-full md:w-1/2 py-4 px-8">
+			<div class="split-card-text w-full md:w-1/2 py-4 px-6 md:px-8">
 				<h2 class="font-euclid text-3xl font-semibold my-4">Education</h2>
 				<p class="font-euclid font-normal text-lg">
 					I finished my <strong>Interaction Design</strong> studies in 2019. Here I learned both
@@ -217,7 +217,7 @@
 		<section class="card-one-two grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
 			<!-- Text Card -->
 			<div
-				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-grey-50 p-10"
+				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-grey-50 p-6 md:p-10"
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
