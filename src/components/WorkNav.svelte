@@ -156,9 +156,9 @@
 		top: 0;
 		z-index: 100;
 		opacity: 1;
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.06),
+		/*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.06),
 			0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.06),
-			0 32px 64px rgba(0, 0, 0, 0.06);
+			0 32px 64px rgba(0, 0, 0, 0.06);*/
 	}
 
 	.header-navbar.sticky .effect {

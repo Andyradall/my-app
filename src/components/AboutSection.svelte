@@ -143,15 +143,14 @@
 			</div>
 		</section>
 
-		<section class="p-6 md:p-10">
-			<h2 class="font-euclid text-xl pl-6 font-semibold my-4">BACKGROUND:</h2>
+		<section class="mt-6 md:mt-10">
+			<h2 class="font-euclid text-xl pl-6 font-semibold py-4">BACKGROUND:</h2>
 		</section>
 
 		<section
 			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-grey-50"
 		>
-			<div
-				class="split-card-image w-full md:w-1/2 bg-grey-800 flex justify-center items-center overflow-hidden"
+			<div class="split-card-image w-full md:w-1/2 bg-grey-800 flex justify-center items-center overflow-hidden"
 			>
 				<img
 					alt="bildeholder"
