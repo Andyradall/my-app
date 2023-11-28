@@ -73,7 +73,7 @@
 		navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
 		sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
 
-		if (window.location.hash === '#hero') {
+		if (window.location.hash === '#first') {
 			isActive = false;
 		}
 

@@ -537,19 +537,14 @@
 		class="pageSection max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center py-10 md:py-24 px-4"
 	>
 		<div class="md:flex-1 md:max-w-lg md:m-4">
-			<h2 class="pb-4">Reflections on My Journey & the Consultancy World</h2>
+			<h2 class="pb-4">Reflections on My Internship</h2>
 			<ul class="list-custom">
 				<li>
 					<strong>Challenging my Bias:</strong> Before going into this, I had this perception of consultants
-					as conformist individuals, always in suits and perhaps a bit sharp elbowed. However, the team
-					at Netlife completely defied this image – they were actually super cool and down to earth!
-					At the same time there were a lot of skilled and very collaborative people gathered in one
+					as conform and perhaps a bit sharp elbowed. However, the team
+					at Netlife completely defied this image – they were actually very down to earth!
+					There were a lot of skilled and very collaborative people gathered in one
 					environment and that was amazing. I learned a lot from my internship!
-				</li>
-				<li>
-					<strong>Social Workplace:</strong> There were a lot of social activities to join, we went grilling
-					and playing in the park, we went to a design award, we went swimming and doing saunas. I even
-					joined their running team for a race - it was a lot of fun there!
 				</li>
 				<li>
 					<strong>Collaboration:</strong> Working in a cross-functional team with developers, having
@@ -570,6 +565,11 @@
 					than before Hyper, I am aware of where in the double diamond process we are, and allow myself
 					more freedom and am less strict on myself in the divergent phases - this makes it easier for
 					me to be more creative!
+				</li>
+				<li>
+					<strong>Social Workplace:</strong> There were a lot of social activities to join, we went grilling
+					and playing in the park, we went to a design award, we went swimming and doing saunas. I even
+					joined their running team for a race - it was a lot of fun there!
 				</li>
 			</ul>
 		</div>
