@@ -3,7 +3,7 @@
 	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
-	import { dirty_components } from 'svelte/internal';
+	// import { dirty_components } from 'svelte/internal';
 	import SvelteSeo from 'svelte-seo';
 	import LightGallery from '../../../components/LightGallery.svelte'
 

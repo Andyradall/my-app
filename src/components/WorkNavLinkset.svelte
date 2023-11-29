@@ -1,7 +1,7 @@
 <script>
 	import { onMount, afterUpdate } from 'svelte';
 	import anime from 'animejs';
-	export let links = [];
+	// export let links = [];
 
 	let sticky = false;
 	let currentActiveId;
@@ -96,8 +96,60 @@
 			effectWidth = activeLink.offsetWidth + 32; // Added 16 for total padding (8 on each side)
 		}
 	});
+
+    // Extract the relevant part of the path
+    // For example, if the URL is '/work/karrierestart', you get 'karrierestart'
+    const currentPage = derived(page, $page => {
+    const pathSegments = $page.url.pathname.split('/');
+    return pathSegments[pathSegments.length - 1]; // Adjust this if necessary
+  });
+
+  	// Imports for page and links functionality
+	import { page } from '$app/stores';
+    import { derived } from 'svelte/store';
+
+// Links
+	const linkSets = {
+    'designmaskinen': [
+		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },
+		{ id: '#second', title: 'Design Process', ariaLabel: 'Navigate to "Design Process" section' },
+		{ id: '#third', title: 'Final prototype', ariaLabel: 'Navigate to "Final prototype" section' },
+		{ id: '#fourth', title: 'Insights', ariaLabel: 'Navigate to "Insights" section' }
+	],
+    'karrierestart': [ 
+		{ id: '#first', title: 'Research & Hooked', ariaLabel: 'Research & Hooked' },
+		{ id: '#second', title: 'Onboarding Guide', ariaLabel: 'Onboarding Guide' },
+		{ id: '#third', title: 'Psychological Hacks', ariaLabel: 'Psychological Hacks' },
+		{ id: '#fourth', title: 'Onboarding Stories', ariaLabel: 'Onboarding Stories' },
+		{ id: '#fifth', title: 'Results', ariaLabel: 'Results' }
+	],
+    'smab': [ 
+		{ id: '#first', title: 'Our Process', ariaLabel: 'Our process' },
+		{ id: '#second', title: 'Discovery Phase', ariaLabel: 'Discovery Phase' },
+		{ id: '#third', title: 'Planning & Structuring', ariaLabel: 'Planning & Structuring' },
+		{ id: '#fourth', title: 'Final Deliverables', ariaLabel: 'Final Deliverables' },
+		{ id: '#fifth', title: 'Reflections', ariaLabel: 'Reflections' }
+	],
+	'solarchoice': [ 
+	{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
+		{ id: '#second', title: 'Customer Research', ariaLabel: 'Customer Research' },
+		{ id: '#third', title: 'Design Process', ariaLabel: 'Design Process' },
+		{ id: '#fourth', title: 'Results', ariaLabel: 'Results' }
+	],
+};
+
+// use current page path to use the correct link set
+
+ let links;
+  currentPage.subscribe(value => {
+    links = linkSets[value] || [];
+  });
+
+    // Use current page path to use the correct link with Reactive assignment of links
+	//$: links = linkSets[$currentPage] || [];
 </script>
 
+<!----------->
 <nav>
 	<div id="sub-navigation" class="header-navbar font-euclid font-normal text-base" class:sticky>
 		<button
