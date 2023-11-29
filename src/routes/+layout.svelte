@@ -5,7 +5,7 @@
   import { onMount } from 'svelte'
   import SvelteSeo from "svelte-seo";
 
-  import { fade } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
   import { cubicIn, cubicOut } from 'svelte/easing';
   export let data;
   import Navbar from './Navbar.svelte';
@@ -25,7 +25,7 @@
   )
 
   let transitionParams = {
-    in: { easing: cubicOut, y: 50, duration: 600},
+    in: { easing: cubicIn, y: 50, duration: 500},
     //out: { easing: cubicIn, y: -50, duration: 300 }
   };
 </script>
@@ -35,7 +35,7 @@
 {/if}
 
 {#key data.pathname}
-  <div in:fade={transitionParams.in}>
+  <div in:fly={transitionParams.in}>
     <slot />
   </div>
 {/key}
