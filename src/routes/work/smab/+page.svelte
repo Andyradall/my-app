@@ -333,7 +333,7 @@
 			<h3>Frontpage Evolution</h3>
 			<p>A deep dive into the design decisions behind our front page:</p>
 		</div>
-		<div class="flex mx-auto flex-col md:flex-row md:w-fulljustify-center py-10">
+		<div class="flex mx-auto flex-col md:flex-row md:w-full justify-center py-10">
 			<figure class="max-w-2xl p-4 md:p-6">
 				<img src="/images/smab/Front-scaled.webp" class="zooming-dark-bg" alt="Frontpage of Svenska Masskonsult" />
 			</figure>

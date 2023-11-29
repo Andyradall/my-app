@@ -3,7 +3,7 @@
 	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
-	// import { dirty_components } from 'svelte/internal';
+	//import { dirty_components } from 'svelte/internal';
 	import SvelteSeo from 'svelte-seo';
 	import LightGallery from '../../../components/LightGallery.svelte'
 
@@ -70,7 +70,7 @@
 	</section>
 
 	<section class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center mb-20">
-		<div class="md:flex-1 md:max-w-xl md:pr-8 px-4 py-2 md:m-4">
+		<div class="md:flex-1 md:max-w-xl md:pr-8 px-0 py-2 md:my-4">
 			<h2 class="pb-2">Project Overview</h2>
 			<ul
 				class="text-[18px] font-euclid font-light leading-[30px] md:pr-2 px-4 pl-0 space-y-4 md:space-y-5"
