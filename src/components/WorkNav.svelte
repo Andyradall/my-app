@@ -144,7 +144,7 @@
 		background: #fff;
 		height: 96px;
 		padding: 2px 0;
-		transition: all 200ms ease;
+		transition: all 220ms ease;
 	}
 
 	.header-navbar.sticky {

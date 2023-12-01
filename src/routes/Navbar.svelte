@@ -248,6 +248,7 @@
 		border: 1px solid #dde0e6;
 		z-index: 100;
 		overflow: visible;
+		transition: 0.2s;
 	}
 
 	.main-navbar ul {
