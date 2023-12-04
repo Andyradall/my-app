@@ -44,6 +44,6 @@
 		"animejs": "^3.2.1",
 		"gsap": "^3.12.2",
 		"lightgallery": "^2.7.2",
-		"vercel": "^32.3.0"
+		"vercel": "^32.6.0"
 	}
 }

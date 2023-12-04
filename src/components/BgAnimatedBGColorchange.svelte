@@ -36,12 +36,42 @@
           <stop offset="100%" stop-color="${color}" stop-opacity="0" />
       </radialGradient>
     `).join('');
+
+  import { onMount } from 'svelte';
+  
+  onMount(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  function handleScroll() {
+    const aboutMeElement = document.getElementById('about');
+    const svgBackground = document.querySelector('.full-svg-bg rect');
+
+    if (aboutMeElement) {
+      const aboutMePosition = aboutMeElement.getBoundingClientRect();
+
+      if (aboutMePosition.top <= window.innerHeight && aboutMePosition.bottom >= 0) {
+        // Inside 'About Me' section
+        svgBackground.setAttribute('fill', '#E9C46A'); // Replace with your desired color
+      } else {
+        // Outside 'About Me' section
+        svgBackground.setAttribute('fill', '#E4F2FF'); // Original color
+      }
+    }
+  }
+
 </script>
 
+<!--svelte:element bind:this={AboutSection} /-->
+<!--div class="noize"></div-->
 <svg class="full-svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="none">
     <rect width="100%" height="100%" fill="#E4F2FF" />
     <defs>
-      {@html gradients} <!-- Insert the gradient definitions --> 
+      {@html gradients} <!-- Insert the gradient definitions -->
+
     </defs>
 
     {#each circles as circle, index (index)}
@@ -54,8 +84,9 @@
         fill={circle.fill} 
         style={`--transformX: ${circle.transformX}px; --transformY: ${circle.transformY}px; --duration: ${circle.duration}s; --delay: ${circle.delay}s;`}
       />
-    {/each}
+    {/each}  
 </svg>
+
   <style lang="postcss">
     @keyframes moveAnimation {
       0%, 100% {
@@ -86,5 +117,18 @@
       z-index: -1;
       opacity: 1;
     }
+
+  /*  .noize {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-image: url('/images/backgrounds/txt.png');
+  background-repeat: repeat;
+  opacity: 0.7; 
+  z-index: 1;
+}*/
   </style>
   

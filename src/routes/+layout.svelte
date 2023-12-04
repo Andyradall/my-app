@@ -139,7 +139,7 @@ jsonLd={{
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script-->
-  <script type="text/partytown">
+  <script type="text/javascript">
     (function (h, o, t, j, a, r) {
       h.hj =
         h.hj ||
@@ -155,7 +155,7 @@ jsonLd={{
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
-  <script type="text/partytown">
+  <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
