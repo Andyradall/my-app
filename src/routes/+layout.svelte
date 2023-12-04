@@ -3,16 +3,10 @@
   import '../global.css';
   import { partytownSnippet } from '@builder.io/partytown/integration'
   import { onMount } from 'svelte'
-  import SvelteSeo from "svelte-seo";
-
   import { fly } from 'svelte/transition';
   import { cubicIn, cubicOut } from 'svelte/easing';
-  export let data;
-  import Navbar from './Navbar.svelte';
   import { page } from '$app/stores';
-
-
-/*   import { page } from '$app/stores';*/
+  export let data;
 
   // Add the Partytown script to the DOM head
   let scriptEl
@@ -30,10 +24,6 @@
   };
 </script>
 
-{#if data.pathname === '/'}
-  <Navbar />
-{/if}
-
 {#key data.pathname}
   <div in:fly={transitionParams.in}>
     <slot />
@@ -41,41 +31,6 @@
 {/key}
 
 <svelte:head>
-
-<SvelteSeo
-title="Anders Rådal Portfolio"
-description="Portfolio for Anders Rådal - Product & UX Designer"
-canonical="https://www.andersra.com"
-keywords="Anders Rådal, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Hyper Island, Hyper-Island, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
-openGraph={{
-  title: "Anders Rådal UX Portfolio",
-  description: "Portfolio for Anders Rådal - Product & UX Designer",
-  images: [
-    {
-      url: "https://www.andersra.com/PageThumb.webp",
-      width: 700,
-      height: 493,
-      alt: "Page Thumbnail", 
-    }  ],
-  url: "https://www.andersra.com",
-  type: "website",
-}}
-twitter={{
-  card: "summary_large_image",
-  site: "@AndersRadal",
-  title: "Portfolio for Anders Rådal - Product & UX Designer",
-  description: "Portfolio for Anders Rådal - Product & UX Designer",
-  image: "https://www.andersra.com/PageThumb.webp",
-}}
-jsonLd={{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Anders Rådal Portfolio",
-  description: "Portfolio for Anders Rådal - Product & UX Designer",
-  url: "https://www.andersra.com/",
-}}
-/>
-
   <script>
     partytown = {
       forward: ['dataLayer.push'],
