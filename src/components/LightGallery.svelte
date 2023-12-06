@@ -5,7 +5,7 @@
     import 'lightgallery/css/lg-medium-zoom.css';
     import lgMediumZoom from 'lightgallery/plugins/mediumZoom';
 
-    /* Note to future self. How to use lightgallery (this how to I will remove and add to my app documentation) */
+    /* Note to self. How to use lightgallery */
     /* Script adds lightgallery to any <article> containing class="attachLightGallery" */
     /* Import with script: "import LightGallery from '../../../components/LightGallery.svelte'" html: "<LightGallery />" ; */ 
     /* Use it by adding to specific images with .zooming-white-bg or .zooming-dark-bg */ 
