@@ -224,11 +224,10 @@
 					greyhound. These activities help me stay grounded and maintain a balanced lifestyle.</p>
 					<h3 class="font-euclid text-3xl font-semibold pb-3">Yoga</h3>
 					<p class="font-euclid font-normal text-lg">
-						My journey in self-development spans over 20 years, 
-						with a focus on yoga and meditation. 
-						I've been inspired by various teachers and traditions, 
-						but at its core, my practice is about blending Ashtanga yoga and 
-						Shamata meditation to enhance my creativity and sharpen my focus.
+						For years, I've studied meditation and yoga, guided by various teachers.
+                        My go-to methods are Ashtanga yoga, with its disciplined flow,
+                        and the calm focus of Shamata meditation.
+                        This practice both fuels my creativity and sharpens my focus.
 				</p>
 			</div>
 

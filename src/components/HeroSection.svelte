@@ -5,7 +5,7 @@
 	let inView = false;
 
 	const options = {
-    threshold: 0.7, // 1 means the whole element must be visible, 0 means any part
+    threshold: 0.2, // 1 means the whole element must be visible, 0 means any part
   };
   function handleInViewChange(isInView) {
     inView = isInView;
