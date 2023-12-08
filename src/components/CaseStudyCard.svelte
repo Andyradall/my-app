@@ -44,7 +44,7 @@
 
 	.case-card:hover .case-card-image img {
 		transform: scale(1.02);
-		transition: transform 0.3s ease-out;
+		transition: transform 0.17s ease-out;
 		opacity: 0.94;
 	}
 
@@ -69,7 +69,7 @@
 	.svg-icon-right {
 		margin-left: 4px;
 		transform: translateX(4px) translateY(2px);
-		transition: transform 0.09s;
+		transition: transform 0.08s;
 		transition-timing-function: ease-out;
 	}
 

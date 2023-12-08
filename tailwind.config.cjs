@@ -22,7 +22,16 @@ module.exports = {
 
     extend: {    
       fontFamily: {
-      'euclid': ['Euclid Circular B', 'sans-serif'],
+      'euclid': ['Euclid Circular B', 
+      'system-ui',
+      '-apple-system', 
+      'BlinkMacSystemFont', 
+      '"Segoe UI"', 
+      'Roboto', 
+      '"Helvetica Neue"', 
+      'Arial', 
+      '"Noto Sans"', 
+      'sans-serif']
     },
 
     boxShadow: {

@@ -26,7 +26,7 @@
 					helps me communicate well cross-functionally, 
 					and ensures a smooth design-to-development process. 
 					This portfolio is a direct result of that approach, 
-					handcoded using HTML5, SvelteKit, and Tailwind CSS.
+					developed using HTML5, SvelteKit JS, and Tailwind CSS.
 				</p>
 			</div>
 
@@ -220,7 +220,7 @@
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
-					I love nature, and enjoy going skiing and cycling in Nordmarka, or running with our
+					I love nature, and enjoy going skiing and cycling in the Nordmarka forest, or running with our
 					greyhound. These activities help me stay grounded and maintain a balanced lifestyle.</p>
 					<h3 class="font-euclid text-3xl font-semibold pb-3">Yoga</h3>
 					<p class="font-euclid font-normal text-lg">
@@ -251,12 +251,12 @@
 <style lang="postcss">
 	/* Custom CSS for hover effect */
 	.resume-btn-custom-link:hover .resume-btn-svg-icon {
-		transform: translateY(-2px) translateX(2px); /* Adjust values as needed for the hover effect */
+		transform: translateY(-2.5px) translateX(2px); /* Adjust values as needed for the hover effect */
 	}
 
 	/* Ensures the SVG icon is slightly lowered to align with the text */
 	.resume-btn-svg-icon {
 		transform: translateY(-1px);
-		transition: transform 0.1s;
+		transition: transform 0.08s;
 	}
 </style>
