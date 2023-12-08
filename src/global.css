@@ -49,9 +49,9 @@ body {
 
 @font-face {
   font-family: 'Euclid Circular B';
-  src: url('/fonts/euclid-circular-b/EuclidCircularB-RegularItalic.woff2') format('woff2'),
-       url('/fonts/euclid-circular-b/EuclidCircularB-RegularItalic.woff') format('woff'),
-       url('/fonts/euclid-circular-b/EuclidCircularB-RegularItalic.ttf') format('truetype');
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-Italic.woff2') format('woff2'),
+       url('/fonts/euclid-circular-b/EuclidCircularB-Italic.woff') format('woff'),
+       url('/fonts/euclid-circular-b/EuclidCircularB-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;

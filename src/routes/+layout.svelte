@@ -10,8 +10,8 @@
 	export let data;
 
 	// Initialize Hotjar
-	const siteId = 3744201; // Replace with your actual site ID
-	const hotjarVersion = 6; // Hotjar version
+	const siteId = 1949695;
+	const hotjarVersion = 6;
 
 	Hotjar.init(siteId, hotjarVersion);
 
