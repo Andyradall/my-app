@@ -2,7 +2,7 @@
 	import Navbar from './Navbar.svelte';
 	import BgAnimated from '../components/BgAnimated.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
-	import CaseStudySection from '../components/CaseStudySection.svelte';
+	import CaseStudySectionScale from '../components/CaseStudySectionScale.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
 	import SvelteSeo from 'svelte-seo';
 </script>
@@ -47,6 +47,6 @@
     <Navbar />
     <BgAnimated />
 	<HeroSection />
-	<CaseStudySection />
+	<CaseStudySectionScale />
 	<AboutSection />
 	
