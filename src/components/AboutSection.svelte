@@ -18,7 +18,7 @@
 					things look good. I pride myself on design that delivers real-world results.
 				</p>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">
-					Interaction Design & Frontend
+					Interaction Design & Front-end
 				</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
 					I find knowing code to be incredibly valuable. 
@@ -32,7 +32,7 @@
 
 			<!-- Image Card -->
 			<div class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden bg-grey-800 rounded-3xl">
-				<img class="object-cover w-full h-full" alt="Profile" src="/images/about/profil-1.webp" height=620px width="622.55"/>
+				<img class="object-cover w-full h-full max-w-[520px]" alt="Profile" src="/images/about/profil-1.webp" height=620px width="622.55"/>
 			</div>
 		</section>
 		<section class="skills-card shadow-custom text-grey-50 bg-grey-800 rounded-3xl p-6 md:p-10">
