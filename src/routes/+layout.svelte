@@ -9,18 +9,23 @@
 
 	export let data;
 
-	// Initialize Hotjar
-	const siteId = 1949695;
-	const hotjarVersion = 6;
-
-	Hotjar.init(siteId, hotjarVersion);
-
 	// Add Partytown script -> DOM head
 	let scriptEl;
 	onMount(() => {
-		if (scriptEl) {
+
+    if (scriptEl) {
 			scriptEl.textContent = partytownSnippet();
 		}
+
+    // Initialize Hotjar
+    const siteId = 1949695;
+    const hotjarVersion = 6; 
+
+  try {
+    Hotjar.init(siteId, hotjarVersion);
+  } catch (error) {
+    console.error('Failed to initialize Hotjar:', error);
+  }
 	});
 
 	// Fly transition -->
