@@ -1,9 +1,9 @@
 <script></script>
 
-<article id="about" class="pageSection text-grey-800 pb-24 md:pb-56 mx-auto">
+<article id="about" class="pageSection text-grey-800 pb-24 md:pb-56 md:pt-10 mx-auto">
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-40 mb-30">
 	  <section  class="">
-		<h2 class="font-euclid text-xl font-semibold pl-6 my-4">ABOUT ME:</h2>
+		<h2 class="font-euclid text-2xl font-semibold pl-6 my-4">ABOUT ME:</h2>
 	  </section>
 
 	  <section class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
@@ -144,7 +144,7 @@
 		</section>
 
 		<section class="mt-6 md:mt-10">
-			<h2 class="font-euclid text-xl pl-6 font-semibold py-4">BACKGROUND:</h2>
+			<h2 class="font-euclid text-2xl pl-6 font-semibold py-4">BACKGROUND:</h2>
 		</section>
 
 		<section
