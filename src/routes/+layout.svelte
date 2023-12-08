@@ -1,101 +1,110 @@
 <script>
-  import '../global.css';
-  import { partytownSnippet } from '@builder.io/partytown/integration'
-  import { onMount } from 'svelte'
-  import { fly } from 'svelte/transition';
-  import { cubicIn, cubicOut } from 'svelte/easing';
-  import { page } from '$app/stores';
-  export let data;
+	import '../global.css';
+	import { partytownSnippet } from '@builder.io/partytown/integration';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { page } from '$app/stores';
+	import Hotjar from '@hotjar/browser';
 
-  // Add Partytown script -> DOM head
-  let scriptEl
-  onMount(
-    () => {
-      if (scriptEl) {
-        scriptEl.textContent = partytownSnippet()
-      }
-    }
-  )
+	export let data;
 
-// Fly transition -->
-  let transitionParams = {
-    in: { easing: cubicIn, y: 50, duration: 500},
-    // out: { easing: cubicIn, y: -50, duration: 300 }
-  };
+	// Initialize Hotjar
+	const siteId = 3744201; // Replace with your actual site ID
+	const hotjarVersion = 6; // Hotjar version
+
+	Hotjar.init(siteId, hotjarVersion);
+
+	// Add Partytown script -> DOM head
+	let scriptEl;
+	onMount(() => {
+		if (scriptEl) {
+			scriptEl.textContent = partytownSnippet();
+		}
+	});
+
+	// Fly transition -->
+	let transitionParams = {
+		in: { easing: cubicIn, y: 50, duration: 500 }
+		// out: { easing: cubicIn, y: -50, duration: 300 }
+	};
 </script>
 
 <!-- Fly transition -->
 {#key data.pathname}
-  <div in:fly={transitionParams.in}>
-    <slot />
-  </div>
+	<div in:fly={transitionParams.in}>
+		<slot />
+	</div>
 {/key}
 
 <svelte:head>
-  <script>
-    partytown = {
-      forward: ['dataLayer.push'],
-      resolveUrl: (url) => {
-        const siteUrl = 'https://www.andersra.com//proxytown'
-  
-        if (url.hostname === 'www.googletagmanager.com') {
-          const proxyUrl = new URL(`${siteUrl}/gtm`)
-  
-          const gtmId = new URL(url).searchParams.get('id')
-          gtmId && proxyUrl.searchParams.append('id', gtmId)
-  
-          return proxyUrl
-        } else if (url.hostname === 'www.google-analytics.com') {
-          const proxyUrl = new URL(`${siteUrl}/ga`)
-  
-          return proxyUrl
-        }
+	<script>
+		partytown = {
+			forward: ['dataLayer.push'],
+			resolveUrl: (url) => {
+				const siteUrl = 'https://www.andersra.com//proxytown';
 
-        return url
-      }
-    }
-  </script>
+				if (url.hostname === 'www.googletagmanager.com') {
+					const proxyUrl = new URL(`${siteUrl}/gtm`);
 
-  <!-- Config options -->
-  <script>
-    // Forward the necessary functions to the web worker layer
-    partytown = {
-      forward: ['dataLayer.push']
-    }
-  </script>
+					const gtmId = new URL(url).searchParams.get('id');
+					gtmId && proxyUrl.searchParams.append('id', gtmId);
 
-  <script bind:this={scriptEl}></script>
+					return proxyUrl;
+				} else if (url.hostname === 'www.google-analytics.com') {
+					const proxyUrl = new URL(`${siteUrl}/ga`);
 
-   <!-- Insert `partytownSnippet` here -->
+					return proxyUrl;
+				}
 
-  <!-- GTM script + config -->
-  <script
-     type="text/partytown"
-     src="https://www.googletagmanager.com/gtag/js?id=G-D0STFGWW5L"></script>
-   <script type="text/partytown">
-     window.dataLayer = window.dataLayer || []
- 
-     function gtag() {
-       dataLayer.push(arguments)
-     }
- 
-     gtag('js', new Date())
-     gtag('config', 'G-D0STFGWW5L', {
-       page_path: window.location.pathname
-     })
-  </script>
+				return url;
+			}
+		};
+	</script>
 
-  <!-- Clarity script -->
-  <!--script type="text/javascript">
+	<!-- Config options -->
+	<!-- Config options -->
+	<script>
+		// Forward the necessary functions to the web worker layer
+		partytown = {
+			forward: ['dataLayer.push']
+		};
+	</script>
+
+	<script bind:this={scriptEl}></script>
+
+	<!-- Insert `partytownSnippet` here -->
+
+	<!-- GTM script + config -->
+	<!-- GTM script + config -->
+	<script
+		type="text/partytown"
+		src="https://www.googletagmanager.com/gtag/js?id=G-D0STFGWW5L"
+	></script>
+	<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+
+		gtag('js', new Date());
+		gtag('config', 'G-D0STFGWW5L', {
+			page_path: window.location.pathname
+		});
+	</script>
+
+	<!-- Clarity script -->
+	<!--script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "jyzjmwnkmx");
-  </script-->
+  </script->
 
   <!-- Hotjar script -->
-  <!--script type="text/javascript">
+	<!--script type="text/javascript">
     (function (h, o, t, j, a, r) {
       h.hj =
         h.hj ||
@@ -110,7 +119,4 @@
       a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script-->
-
 </svelte:head>
-
-
