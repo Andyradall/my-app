@@ -18,7 +18,7 @@
 					things look good. I pride myself on design that delivers real-world results.
 				</p>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">
-					Interaction Design & Front-end
+					Interaction Design
 				</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
 					I find knowing code to be incredibly valuable. 
