@@ -41,6 +41,7 @@
 		"@builder.io/partytown": "^0.8.1",
 		"@hotjar/browser": "^1.0.9",
 		"animejs": "^3.2.1",
+		"fractils": "^3.1.2",
 		"gsap": "^3.12.2",
 		"lightgallery": "^2.7.2",
 		"svelte-inview": "^4.0.1",

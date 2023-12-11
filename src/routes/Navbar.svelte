@@ -18,6 +18,7 @@
 	let effectWidth = 0; // Initial size. This matches 'width: 170px;'
 
 	afterUpdate(() => {
+
 		const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
 		if (activeLink instanceof HTMLElement) {
 			effectX = activeLink.offsetLeft - 8; // Subtracted 8 for the left padding
@@ -130,7 +131,7 @@
 	});
 </script>
 
-<nav>
+<nav class="flyIn">
 	<div
 		class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-base md:text-lg"
 	>
