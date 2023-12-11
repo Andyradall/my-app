@@ -7,7 +7,7 @@
 	import SvelteSeo from 'svelte-seo';
 	import { OnMount } from 'fractils'
 	import { fly } from 'svelte/transition';
-	import { quintOut, cubicOut } from 'svelte/easing'
+	import { cubicOut } from 'svelte/easing'
 </script>
 
 <svelte:head>
@@ -49,10 +49,10 @@
 
 <OnMount>
 	<BgAnimated />
-	<div in:fly={{ y: -100, opacity: 0, duration: 700 }}>
+	<div in:fly={{ y: -100, opacity: 0, duration: 600, easing: cubicOut }}>
 		<Navbar />
 	</div>
-	<div in:fly={{ y: 100, opacity: 0, duration: 700 }}>
+	<div in:fly={{ y: 100, opacity: 0, duration: 600, easing: cubicOut }}>
 		<HeroSection />
 	</div>
 	<CaseStudySectionScale />

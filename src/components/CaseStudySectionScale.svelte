@@ -11,8 +11,8 @@
 
     gsap.from('.case-card', {
       duration: 0.35,
-      opacity: 0.0,
-      scale: 0.90,
+      opacity: 0.2,
+      scale: 0.92,
       y: 18,
       stagger: 0,
       ease: "power1.out",
