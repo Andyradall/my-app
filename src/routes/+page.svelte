@@ -5,6 +5,9 @@
 	import CaseStudySectionScale from '../components/CaseStudySectionScale.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
 	import SvelteSeo from 'svelte-seo';
+	import { OnMount } from 'fractils'
+	import { fly } from 'svelte/transition';
+	import { quintOut, cubicOut } from 'svelte/easing'
 </script>
 
 <svelte:head>
@@ -44,9 +47,17 @@
 
 </svelte:head>
 
-	<Navbar />
-	<HeroSection />
+<OnMount>
 	<BgAnimated />
+	<div in:fly={{ y: -100, opacity: 0, duration: 700 }}>
+		<Navbar />
+	</div>
+	<div in:fly={{ y: 100, opacity: 0, duration: 700 }}>
+		<HeroSection />
+	</div>
 	<CaseStudySectionScale />
 	<AboutSection />
+</OnMount>
+
+
 	
