@@ -2,17 +2,6 @@
 	import anime from 'animejs';
 	import { onMount, afterUpdate } from 'svelte';
 
-	// set #hero as active
-	let isActive = false;
-
-	// On component mount, we'll check the condition
-	onMount(() => {
-		// If the current window location hash is "#hero", set isActive to true
-		if (window.location.hash === '#hero') {
-			isActive = true;
-		}
-	});
-
 	// set the size correct from starts
 	let effectX = 0; // Initial position. This matches 'left: 0px;'
 	let effectWidth = 0; // Initial size. This matches 'width: 170px;'
@@ -129,6 +118,17 @@
 		// Add scroll listener
 		window.addEventListener('scroll', throttle(highlightPageNavigation, 50));
 	});
+
+		// set #hero as active
+		let isActive = false;
+
+// On component mount, we'll check the condition
+onMount(() => {
+	// If the current window location hash is "#hero", set isActive to true
+	if (window.location.hash === '#hero') {
+		isActive = true;
+	}
+});
 </script>
 
 <nav class="flyIn">
@@ -216,7 +216,7 @@
 
 	.menu-custom-link {
 		display: inline-flex;
-		align-items: baseline;
+		align-items: center;
 	}
 
 	.menu-custom-link:hover,
@@ -226,12 +226,12 @@
 
 	.menu-svg-icon {
 		margin-left: 2px;
-		transform: translateY(3px);
+		transform: translateY(-1px);
 		transition: transform 0.1s;
 	}
 
 	.menu-custom-link:hover .menu-svg-icon {
-		transform: translateY(1px) translateX(2px);
+		transform: translateY(-3px) translateX(2px);
 	}
 
 	.menu-svg-icon svg path {
@@ -276,6 +276,7 @@
 		text-decoration: none;
 		position: relative;
 		padding: 0 20px;
+		margin-top: 2px; 
 	}
 
 	.main-navbar a:hover {

@@ -11,6 +11,8 @@
 </script>
 
 <svelte:head>
+	<link rel="preload" href="/fonts/euclid-circular-b/EuclidCircularB-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/euclid-circular-b/EuclidCircularB-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<SvelteSeo
 	title="Anders Rådal Portfolio"
 	description="Portfolio for Anders Rådal - Product & UX Designer"
@@ -49,10 +51,10 @@
 
 <OnMount>
 	<BgAnimated />
-	<div in:fly={{ y: -100, opacity: 0, duration: 600, easing: cubicOut }}>
+	<div in:fly={{ y: -100, opacity: 0.5, duration: 600, easing: cubicOut }}>
 		<Navbar />
 	</div>
-	<div in:fly={{ y: 100, opacity: 0, duration: 600, easing: cubicOut }}>
+	<div in:fly={{ y: 100, opacity: 0.4, duration: 600, easing: cubicOut }}>
 		<HeroSection />
 	</div>
 	<CaseStudySectionScale />
