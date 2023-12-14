@@ -1,7 +1,6 @@
 <script>
 	import CaseStudyCard from './CaseStudyCard.svelte';
 	import { caseStudies } from '../lib/caseStudies.js';
-
   import { onMount } from 'svelte';
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/dist/ScrollTrigger';

@@ -10,7 +10,6 @@
     /* Import with script: "import LightGallery from '../../../components/LightGallery.svelte'" html: "<LightGallery />" ; */ 
     /* Use it by adding to specific images with .zooming-white-bg or .zooming-dark-bg */ 
   
-
     onMount(() => {
     const articleElement = document.querySelector('.attachLightGallery');
         

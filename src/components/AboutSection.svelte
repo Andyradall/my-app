@@ -1,5 +1,3 @@
-<script></script>
-
 <article id="about" class="pageSection text-grey-800 pb-24 md:pb-56 md:pt-10 mx-auto">
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-40 mb-30">
 	  <section  class="">
