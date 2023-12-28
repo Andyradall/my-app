@@ -11,21 +11,32 @@
 
 	// Add Partytown script -> DOM head
 	let scriptEl;
-	onMount(() => {
 
-    if (scriptEl) {
+	onMount(() => {
+		//partytown
+		if (scriptEl) {
 			scriptEl.textContent = partytownSnippet();
 		}
 
-    // Initialize Hotjar
-    const siteId = 1949695;
-    const hotjarVersion = 6; 
+		// Function to initialize Hotjar after user interaction
+		const initHotjar = () => {
+			const siteId = 1949695;
+			const hotjarVersion = 6;
 
-  try {
-    Hotjar.init(siteId, hotjarVersion);
-  } catch (error) {
-    console.error('Failed to initialize Hotjar:', error);
-  }
+			try {
+				Hotjar.init(siteId, hotjarVersion);
+			} catch (error) {
+				console.error('Failed to initialize Hotjar:', error);
+			}
+
+			// Remove the event listeners after Hotjar has been initialized
+			window.removeEventListener('click', initHotjar);
+			window.removeEventListener('scroll', initHotjar);
+		};
+
+		// Add event listeners for the click and scroll events
+		window.addEventListener('click', initHotjar);
+		window.addEventListener('scroll', initHotjar);
 	});
 
 	// Fly transition for all except landingpage:
@@ -65,6 +76,7 @@
 		};
 	</script>
 	<!-- Config options -->
+	<!-- Config options -->
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
@@ -72,6 +84,7 @@
 		};
 	</script>
 	<script bind:this={scriptEl}></script>
+	<!-- GTM script + config -->
 	<!-- GTM script + config -->
 	<script
 		type="text/partytown"

@@ -30,9 +30,10 @@
 
 			<!-- Image Card -->
 			<div class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden bg-grey-800 rounded-3xl">
-				<img class="object-cover w-full h-full max-w-[520px]" alt="Profile" src="/images/about/profil-1.webp" height=620px width="622.55"/>
+				<img class="object-cover w-full max-h-[540px] h-full" alt="Profile" src="/images/about/profil-1.webp" height=620px width="622.55" style="object-position: center top;"/>
 			</div>
 		</section>
+
 		<section class="skills-card shadow-custom text-grey-50 bg-grey-800 rounded-3xl p-6 md:p-10">
 			<!-- Card Header -->
 			<header class="text-left">
@@ -41,7 +42,7 @@
 			</header>
 
 			<!-- Skills List -->
-			<div class="skills flex flex-wrap justify-around gap-2">
+			<div class="skills flex md:pt-16 md:pb-10 flex-wrap justify-around gap-2">
 				<!-- Skill: Customer Research -->
 				<article class="skill flex-1 min-w-[180px] m-1 p-4">
 					<div class="skill-image flex justify-center py-2 my-2">
@@ -146,7 +147,7 @@
 		</section>
 
 		<section
-			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-grey-50"
+			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-grey-50 md:max-h-[690px]"
 		>
 			<div class="split-card-image w-full md:w-1/2 bg-grey-800 flex justify-center items-center overflow-hidden"
 			>
@@ -156,6 +157,7 @@
 					class="object-contain md:object-scale-down h-auto"
 					width="640" 
 					height="723.6"
+					style="object-position: center bottom;"
 				/>
 			</div>
 
@@ -234,12 +236,12 @@
 			    class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center overflow-hidden bg-grey-800 rounded-3xl"
 			>
 				<img
-					class="image-to-stretch skibilde bg-grey-800"
+					class="object-cover max-h-[520px] w-full h-full bg-grey-800"
 					alt="Skibilde"
-					src="/images/about/Skibilde.webp"
 					width="627"
 					height="487"
-					style="max-width: 100%; height: auto;"
+					src="/images/about/Skibilde5.webp"
+					style="object-position: center top;"
 				/>
 			</div>
 		</section>
