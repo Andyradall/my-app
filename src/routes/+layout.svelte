@@ -47,7 +47,7 @@
 
 <!-- Fly transition -->
 {#key data.pathname}
-	<div in:fly={transitionParams.in}>
+	<div in:fly|global={transitionParams.in}>
 		<slot />
 	</div>
 {/key}

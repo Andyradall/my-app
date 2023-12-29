@@ -51,10 +51,10 @@
 
 <OnMount>
 	<BgAnimated />
-	<div in:fly={{ y: -100, opacity: 0.5, duration: 600, easing: cubicOut }}>
+	<div in:fly|global={{ y: -100, opacity: 0.5, duration: 600, easing: cubicOut }}>
 		<Navbar />
 	</div>
-	<div in:fly={{ y: 100, opacity: 0.4, duration: 600, easing: cubicOut }}>
+	<div in:fly|global={{ y: 100, opacity: 0.4, duration: 600, easing: cubicOut }}>
 		<HeroSection />
 	</div>
 	<CaseStudySectionScale />
