@@ -367,6 +367,6 @@
 	}
 
     :root {
-        --swiper-theme-color: #242527; /* Or any other color you prefer */
+        --swiper-theme-color: #303133; /* Or any other color you prefer */
     }
 </style>
