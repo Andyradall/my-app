@@ -13,6 +13,7 @@
     onMount(() => {
     const articleElement = document.querySelector('.attachLightGallery');
         
+    if (articleElement instanceof HTMLElement) {
         lightGallery(articleElement, {
         plugins: [lgMediumZoom,],
         selector: '.zooming-white-bg',
@@ -44,6 +45,6 @@
       //  getCaptionFromTitleOrAlt: false, 
       //  subHtmlSelectorRelative: true,
       //  subHtmlSelector: 'figcaption' 
-    });
+    });}
     });
 </script>   

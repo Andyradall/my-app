@@ -5,8 +5,13 @@
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	//import { dirty_components } from 'svelte/internal';
 	import SvelteSeo from 'svelte-seo';
-	import LightGallery from '../../../components/LightGallery.svelte'
 
+	import { onMount } from 'svelte';
+    let LightGallery;
+    onMount(() => {
+        LightGallery = import('../../../components/LightGallery.svelte');
+    });
+	
 	const links = [
 		{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
 		{ id: '#second', title: 'Customer Research', ariaLabel: 'Customer Research' },
@@ -52,11 +57,14 @@
 	/>
 </svelte:head>
 
+{#if LightGallery}
+    <svelte:component this={LightGallery} />
+{/if}
+
 <header class="relative top-0">
 	<WorkBack />
 </header>
 
-<LightGallery />
 <article class="mx-auto font-euclid text-grey-800 attachLightGallery">
 	<section id="first" class="pageSection max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>

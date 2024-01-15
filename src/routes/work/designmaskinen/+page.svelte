@@ -4,7 +4,12 @@
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from 'svelte-seo';
-	import LightGallery from '../../../components/LightGallery.svelte'
+   
+	import { onMount } from 'svelte';
+    let LightGallery;
+    onMount(() => {
+        LightGallery = import('../../../components/LightGallery.svelte');
+    });
 
 	const links = [
 		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },
@@ -50,7 +55,11 @@
 		}}
 	/>
 </svelte:head>
-<LightGallery />
+
+{#if LightGallery}
+    <svelte:component this={LightGallery} />
+{/if}
+
 <header class="relative top-0">
 	<WorkBack />
 </header>
