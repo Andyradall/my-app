@@ -321,17 +321,17 @@
 					<!-- Slide 1 -->
 					<div class="swiper-slide">
 						<img
-							class=" max-h-[520px] h-full bg-grey-800"
+							class=" max-h-[520px] w-full bg-grey-800"
 							src="/images/about/Skibilde5.webp"
 							alt="Skibilde"
-							width="627"
+							width="473"
 							height="487"
 						/>
 					</div>
 					<!-- Slide 2 -->
 					<div class="swiper-slide">
 						<img
-							class=" max-h-[520px] h-full"
+							class=" max-h-[520px] w-full"
 							src="/images/about/Buddha.webp"
 							alt="Buddha"
 							width="620"
@@ -367,6 +367,6 @@
 	}
 
     :root {
-        --swiper-theme-color: #303133; /* Or any other color you prefer */
+        --swiper-theme-color: #515255; /* Or any other color you prefer */
     }
 </style>

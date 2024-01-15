@@ -1,8 +1,10 @@
 <script>
     const colors = [
       "#A8DADC", "#F4A261", "#457B9D", "#E9C46A", 
-      "#F1FAEE", "#B6B9BD", "#2A9D8F", "#FAFAFA",
+      "#F1FAEE", "#A8DADC", "#2A9D8F", "#FeFeFe",
     ];
+
+
 
     function getRandom(min, max) {
       return Math.random() * (max - min) + min;
