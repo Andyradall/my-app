@@ -6,10 +6,13 @@
 	import SvelteSeo from 'svelte-seo';
    
 	import { onMount } from 'svelte';
-    let LightGallery;
-    onMount(() => {
-        LightGallery = import('../../../components/LightGallery.svelte');
-    });
+
+	let LightGallery;
+	if (typeof window !== 'undefined') {
+        import('../../../components/LightGallery.svelte').then(module => {
+            LightGallery = module.default;
+        });
+    }
 
 	const links = [
 		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },
@@ -59,6 +62,7 @@
 {#if LightGallery}
     <svelte:component this={LightGallery} />
 {/if}
+
 
 <header class="relative top-0">
 	<WorkBack />

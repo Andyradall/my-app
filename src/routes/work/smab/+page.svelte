@@ -5,11 +5,12 @@
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from "svelte-seo";
 
-	import { onMount } from 'svelte';
-    let LightGallery;
-    onMount(() => {
-        LightGallery = import('../../../components/LightGallery.svelte');
-    });
+	let LightGallery;
+	if (typeof window !== 'undefined') {
+        import('../../../components/LightGallery.svelte').then(module => {
+            LightGallery = module.default;
+        });
+    }
 
 	const links = [
 		{ id: '#first', title: 'Our Process', ariaLabel: 'Our process' },

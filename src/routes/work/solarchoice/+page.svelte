@@ -6,11 +6,12 @@
 	//import { dirty_components } from 'svelte/internal';
 	import SvelteSeo from 'svelte-seo';
 
-	import { onMount } from 'svelte';
-    let LightGallery;
-    onMount(() => {
-        LightGallery = import('../../../components/LightGallery.svelte');
-    });
+	let LightGallery;
+	if (typeof window !== 'undefined') {
+        import('../../../components/LightGallery.svelte').then(module => {
+            LightGallery = module.default;
+        });
+    }
 	
 	const links = [
 		{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
