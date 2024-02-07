@@ -221,6 +221,12 @@ onMount(() => {
 		transition-timing-function: ease-out;
 	}
 
+
+	/*.main-navbar a:hover {
+		 color: #2A363B;
+		 
+	}*/
+
 	.menu-custom-link {
 		display: inline-flex;
 		align-items: center;
@@ -288,9 +294,6 @@ onMount(() => {
 		
 	}
 
-	.main-navbar a:hover {
-		 color: #2A363B;
-	}
 
 	.menu-effect-container {
 		width: 163px;

@@ -264,7 +264,7 @@
 				<div class="flex justify-center">
 					<!-- This is the containing div that centers the button -->
 					<button
-						class="inline-flex items-center bg-red-500 bg-opacity-85 font-euclid font-medium text-zinc-100 hover:text-zinc-150 my-10 py-2.5 px-6 rounded-lg transition-all mx-auto"
+						class="inline-flex items-center bg-red-500 bg-opacity-85 font-euclid font-medium text-zinc-100 hover:text-zinc-100 my-10 py-2.5 px-6 rounded-xl transition-all mx-auto"
 					>
 						<a
 							href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing"
@@ -273,7 +273,7 @@
 							aria-label="View my Full Resumé"
 							class="resume-btn-custom-link flex items-center"
 						>
-							My Full Resumé
+							View my Full Resumé
 							<span class="resume-btn-svg-icon ml-0.5 transition-transform">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
