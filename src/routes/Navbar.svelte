@@ -133,17 +133,17 @@ onMount(() => {
 
 <nav class="flyIn">
 	<div
-		class="nav-container flex justify-center align-middle font-euclid font-medium text-grey-800 text-base md:text-lg"
+		class="nav-container flex justify-center align-middle font-euclid font-medium text-slate-500 text-base md:text-lg"
 	>
 		<div
 			id="main-navigation"
-			class="main-navbar shadow-custom rounded-full bg-white"
+			class="main-navbar shadow-custom rounded-2xl bg-zinc-100 bg-opacity-80 backdrop-blur border-2 border-zinc-350 border-opacity-30"
 			role="navigation"
 			aria-label="Main Navigation"
 		>
 			<div class="menu-effect-container">
 				<div
-					class="menu-effect bg-grey-200 min-w-90px rounded-full"
+					class="menu-effect bg-red-500 bg-opacity-80 min-w-90px rounded-xl"
 					style="left: {effectX}px; width: {effectWidth}px;"
 				/>
 			</div>
@@ -214,6 +214,13 @@ onMount(() => {
 <style lang="postcss">
 	/* content styles */
 
+	a.active {
+		color: #F5F6F7;
+		opacity: 0.96;
+		transition: 0.1s;
+		transition-timing-function: ease-out;
+	}
+
 	.menu-custom-link {
 		display: inline-flex;
 		align-items: center;
@@ -221,7 +228,7 @@ onMount(() => {
 
 	.menu-custom-link:hover,
 	.menu-custom-link:focus {
-		color: #616366;
+		color: #2A363B;
 	}
 
 	.menu-svg-icon {
@@ -243,18 +250,19 @@ onMount(() => {
 	.main-navbar {
 		position: fixed;
 		top: 24px;
-		padding: 0px 8px;
+		padding: 0 4px;
 		align-items: center;
-		height: 64px;
-		border: 1px solid #dde0e6;
+		height: 56px;
+		//border: 2px solid #B2B7C0;
 		z-index: 100;
 		overflow: visible;
 		transition: 0.2s;
+		//transition-timing-function: ease-out;
 	}
 
 	.main-navbar ul {
 		list-style-type: none;
-		padding: 16px 0;
+		padding: 12px 0;
 		margin: 0;
 		display: flex;
 		position: relative;
@@ -276,11 +284,12 @@ onMount(() => {
 		text-decoration: none;
 		position: relative;
 		padding: 0 20px;
-		margin-top: 2px; 
+		margin-top: 1.5px; 
+		
 	}
 
 	.main-navbar a:hover {
-		color: #616366;
+		 color: #2A363B;
 	}
 
 	.menu-effect-container {

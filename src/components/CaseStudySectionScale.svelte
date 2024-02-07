@@ -28,7 +28,7 @@
 <section id="work" class="text-grey-800 pageSection mt-40 mb-30 md:mt-50 md:mb50 mx-auto">
   <div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
     <section>
-      <h2 class="font-euclid text-2xl pl-2 md:pl-4 font-semibold my-4">CASE STUDIES:</h2>
+      <h2 class="font-euclid text-4xl pl-2 md:pl-4 text-slate-600 font-semibold my-4">CASE STUDIES</h2>
     </section>
     <section class="flex flex-wrap gap-10">
       {#each caseStudies as study}

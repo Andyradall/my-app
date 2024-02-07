@@ -1,10 +1,8 @@
 <script>
     const colors = [
-      "#CF381C", "#909BA1", "#CF381C", "#909BA1", 
-      "#CF381C", "#909BA1", "#CF381C", "#909BA1",
+      "#A8DADC", "#F4A261", "#457B9D", "#E9C46A", 
+      "#F1FAEE", "#B6B9BD", "#2A9D8F", "#FAFAFA",
     ];
-
-
 
     function getRandom(min, max) {
       return Math.random() * (max - min) + min;
@@ -14,7 +12,7 @@
     for (let i = 0; i < 2; i++) {
       colors.forEach((color, index) => {
         circles.push({
-          cx: getRandom(90, 700),
+          cx: getRandom(70, 700),
           cy: getRandom(0, 900),
           rx: getRandom(200, 390),
           ry: getRandom(100, 190),
@@ -38,10 +36,42 @@
           <stop offset="100%" stop-color="${color}" stop-opacity="0" />
       </radialGradient>
     `).join('');
+
+
+    import { onMount } from 'svelte';
+  
+  onMount(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  function handleScroll() {
+    const aboutMeElement = document.getElementById('about');
+    const svgBackground = document.querySelector('.full-svg-bg rect');
+    const solidBackground = document.querySelector('.solidBackground');
+
+    if (aboutMeElement) {
+      const aboutMePosition = aboutMeElement.getBoundingClientRect();
+
+      if (aboutMePosition.top <= window.innerHeight && aboutMePosition.bottom >= 0) {
+        // Inside 'About Me' section
+        svgBackground.setAttribute('fill', '#fefefe'); // Replace with your desired color
+        solidBackground.setAttribute('style', 'position: absolute;');
+      } else {
+        // Outside 'About Me' section
+        svgBackground.setAttribute('fill', '#E4F2FF'); // Original color
+        solidBackground.setAttribute('style', 'position: none;');
+      }
+    }
+  }
+
 </script>
-<div class="grain"></div>
+
+<div class="solidBackground"></div>
 <svg class="full-svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="none">
-    <rect width="100%" height="100%" fill="#F5F6F7" />
+    <rect width="100%" height="100%" fill="#E4F2FF" />
     <defs>
       {@html gradients} <!-- Insert the gradient definitions --> 
     </defs>
@@ -78,7 +108,7 @@
       animation: moveAnimation var(--duration) infinite ease-in-out var(--delay);
     }
   
-    .full-svg-bg {
+   .full-svg-bg {
       position: absolute;
       overflow: hidden;
       top: 0;
@@ -86,20 +116,19 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      opacity: 0.86;
+      opacity: 1;
+      transition: background-color 2.65s ease-in-out;
     }
 
-    .grain {
-  content: "";
-  position: absolute;
+  .solidBackground {
+  background-color: #0B0D0F;
+  z-index: 1;
+  overflow: hidden ;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background-image: url('/images/backgrounds/bg_grain.webp');
-  background-repeat: repeat;
-  opacity: 0.54;
-  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 2.65s ease-in-out;
 }
   </style>
   

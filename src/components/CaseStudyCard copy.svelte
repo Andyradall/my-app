@@ -8,17 +8,17 @@
 </script>
 
 <div class="case-card">
-	<div class="case-card-bg shadow-custom py-4 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm border-2 border-zinc-350/30 max-w-[800px] max-h-[600px]">
+	<div class="case-card-bg shadow-custom py-4 rounded-3xl bg-grey-50 max-w-[800px] max-h-[600px]">
 		<a href={link} aria-label="hidden" class="case-card-image">
 			<img class="card-thumbnail" src={image} {alt} width="900" height="560" />
 		</a>
 	</div>
 	<div class="case-card-text pl-2">
-		<h3 class="font-euclid font-medium text-slate-550 text-lg pt-2 pb-1 leading-9">{category}</h3>
+		<h3 class="font-euclid font-medium text-gray-800 text-lg pt-2 pb-1 leading-9">{category}</h3>
 		<a
 			href={link}
 			aria-label={ariaLabel}
-			class="custom-link-front font-euclid text-slate-600 text-2xl leading-11 pb-1 font-semibold"
+			class="custom-link-front font-euclid text-gray-800 text-2xl leading-11 pb-1 font-semibold"
 		>
 			<h2>{title}</h2>
 			<span class="svg-icon-right">
@@ -39,7 +39,7 @@
      /* max-width: 800px;
         max-height: 500px; */
 		padding: 16px 0;
-		//border: 1px solid #f6faff;
+		border: 1px solid #f6faff;
 	}
 
 	.case-card:hover .case-card-image img {
@@ -52,7 +52,7 @@
 	.case-card:hover h2,
 	.case-card:hover h3,
 	.case-card:hover span {
-		color: #2A363B !important;
+		color: #404244 !important;
 	}
 
 	/* style for the custom links under cards */
@@ -62,7 +62,7 @@
 
 	.custom-link-front:hover,
 	.custom-link-front:focus {
-		color: #2A363B !important;
+		color: #404244 !important;
 	}
 
 	/* move the arrow icon on hover */
