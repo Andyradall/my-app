@@ -24,7 +24,7 @@
 <article id="about" class="pageSection text-slate-600 pb-24 md:pb-56 md:pt-10 mx-auto">
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-40 mb-30">
 		<section class="">
-			<h2 class="font-euclid text-4xl text-slate-550 font-semibold pl-6 my-4">ABOUT ME</h2>
+			<h2 class="font-euclid text-3xl text-slate-550 font-semibold pl-6 my-4">ABOUT ME</h2>
 		</section>
 
 		<section class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
@@ -222,14 +222,14 @@
 		</section>
 
 		<section class="mt-6 md:mt-10">
-			<h2 class="font-euclid text-4xl pl-6 font-semibold py-4">BACKGROUND</h2>
+			<h2 class="font-euclid text-3xl pl-6 font-semibold py-4">BACKGROUND</h2>
 		</section>
 
 		<section
 			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm border-2 border-zinc-350/30 md:max-h-[690px]"
 		>
 			<div
-				class="split-card-image w-full md:w-1/2 bg-grey-800 flex justify-center items-center overflow-hidden"
+				class="split-card-image w-full md:w-1/2 bg-slate-950 flex justify-center items-center overflow-hidden"
 			>
 				<img
 					alt="bildeholder"
@@ -313,7 +313,7 @@
 
 			<!-- Swiper -->
 			<div
-				class="swiper mySwiper image-card card-two shadow-custom col-span-1 md:col-span-6 justify-center overflow-hidden  border-2 border-zinc-350/30 rounded-3xl"
+				class="swiper mySwiper image-card card-two shadow-custom col-span-1 md:col-span-6 justify-center overflow-hidden bg-opacity-90 backdrop-blur-sm border-2 border-zinc-350/30 rounded-3xl"
 			>
 				<div class="swiper-wrapper">
 					<!-- Slide 1 -->
