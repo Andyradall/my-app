@@ -17,8 +17,8 @@
 		"node": "18.x"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/adapter-vercel": "^4.0.0",
+		"@sveltejs/adapter-auto": "^3.1.1",
+		"@sveltejs/adapter-vercel": "^5.1.0",
 		"@sveltejs/kit": "^2.5.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/animejs": "^3.1.11",
@@ -44,7 +44,7 @@
 		"fractils": "^3.1.2",
 		"gsap": "^3.12.2",
 		"lightgallery": "^2.8.0-beta.1",
-		"svelte": "^4.0.0",
+		"svelte": "^4.2.10",
 		"svelte-inview": "^4.0.1",
 		"swiper": "^11.0.5",
 		"vercel": "^32.3.0"
