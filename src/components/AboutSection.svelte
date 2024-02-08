@@ -320,10 +320,10 @@
 					<div class="swiper-slide">
 						<img
 							class=" max-h-[520px] w-full "
-							src="/images/about/Skibilde5.webp"
+							src="/images/about/ulleval2.webp"
 							alt="Skibilde"
-							width="473"
-							height="487"
+							width="620"
+							height="520"
 						/>
 					</div>
 					<!-- Slide 2 -->
