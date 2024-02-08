@@ -86,7 +86,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      opacity: 0.86;
+      opacity: 0.85;
     }
 
     .grain {
@@ -98,7 +98,7 @@
   left: 0;
   background-image: url('/images/backgrounds/bg_grain.webp');
   background-repeat: repeat;
-  opacity: 0.54;
+  opacity: 0.53;
   z-index: 0;
 }
   </style>

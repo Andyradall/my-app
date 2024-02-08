@@ -300,8 +300,8 @@
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
-					I live in Oslo close to nature, and enjoy to go skiing and cycling in the Nordmarka forest, 
-					or starting the day with a jog in Frognerparken with our dog.
+					I live in Oslo close to nature, and enjoy to go skiing in the Nordmarka forest, 
+					or starting the day with a jog in the park with our dog.
 				</p>
 				<p class="font-euclid font-normal text-lg">
 					I am also very interested in meditation and yoga. 
