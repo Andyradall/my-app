@@ -329,20 +329,20 @@ onMount(() => {
 		}
 
 		.menu-effect {
-			transform: translateX(4px);
+			transform: translateX(1px);
 		}
 
 		.main-navbar {
 			width: 96%;
 			margin: 0 auto;
 			top: 8px;
-			padding: 4px 4px;
+			padding: 3px 4px;
 			max-height: 48px;
 		}
 
 		.main-navbar a {
 			/*	font-size: calc(0.9em); */
-			padding: 3px 4px;
+			padding: 3px 5px;
 			white-space: nowrap;
 		}
 
@@ -358,7 +358,8 @@ onMount(() => {
 		}
 
 		.menu-effect {
-			max-height: 32px;
+			left: 0;
+			max-height: 38px;
 		}
 	}
 </style>
