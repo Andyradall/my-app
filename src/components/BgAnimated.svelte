@@ -1,7 +1,7 @@
 <script>
     const colors = [
-      "#CF381C", "#909BA1", "#CF381C", "#909BA1", 
-      "#CF381C", "#909BA1", "#CF381C", "#909BA1",
+      "#CF381C", "#909BA1", "#CF381C", "#717E84", 
+      "#CF381C", "#909BA1", "#D96049", "#717E84",
     ];
 
 
@@ -14,13 +14,13 @@
     for (let i = 0; i < 2; i++) {
       colors.forEach((color, index) => {
         circles.push({
-          cx: getRandom(90, 700),
+          cx: getRandom(75, 700),
           cy: getRandom(0, 900),
-          rx: getRandom(200, 390),
+          rx: getRandom(230, 380),
           ry: getRandom(100, 190),
           fill: `url(#gradient${index})`, // Use gradient ID
-          transformX: getRandom(-250, 250),
-          transformY: getRandom(-250, 250),
+          transformX: getRandom(-250, 245),
+          transformY: getRandom(-250, 245),
           duration: getRandom(15, 25),
           delay: getRandom(0, 5),
         });
