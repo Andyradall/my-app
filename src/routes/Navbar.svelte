@@ -274,7 +274,7 @@ onMount(() => {
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  border: 1px solid rgba(178, 183, 192,0.3); /* transparent border */
+  border: 1.2px solid rgba(178, 183, 192,0.3); /* transparent border */
   pointer-events: none; /* to allow interaction with the content underneath */
 }
 

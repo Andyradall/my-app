@@ -41,7 +41,7 @@
 					after pulling a network cable across my parents lawn to access the web. 
 					I have always been interested in art and design and even graffiti and subcultures.
 				</p>
-				<h2 class="font-euclid text-3xl font-semibold pb-3">Designin with Impact</h2>
+				<h2 class="font-euclid text-3xl font-semibold pb-3">Design with Impact</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
 					I fell in love with Interaction design when I realised it allowed me to mix coding, creativity, 
 					and business strategy all into one, it was like the stars aligned and it just made sense. 
@@ -72,7 +72,7 @@
 			</header>
 
 			<!-- Skills List -->
-			<div class="skills flex md:pt-16 md:pb-10 flex-wrap justify-around gap-2">
+			<div class="skills flex md:pt-12 md:pb-7 flex-wrap justify-around gap-2">
 				<!-- Skill: Customer Research -->
 				<article class="skill flex-1 min-w-[180px] m-1 p-4">
 					<div class="skill-image flex justify-center py-2 my-2">
@@ -233,7 +233,7 @@
 			>
 				<img
 					alt="bildeholder"
-					src="/images/about/bildeholder.webp"
+					src="/images/about/hypergang.webp"
 					class="object-contain md:object-scale-down h-auto"
 					width="640"
 					height="723.6"
@@ -356,7 +356,7 @@
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  border: 1.2px solid rgba(178, 183, 192,0.3); /* transparent border */
+  border: 1.3px solid rgba(178, 183, 192,0.3); /* transparent border */
   z-index: 1;
   pointer-events: none; /* to allow interaction with the content underneath */
 }

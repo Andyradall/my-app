@@ -53,7 +53,7 @@
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  border: 1.2px solid rgba(178, 183, 192,0.3); /* transparent border */
+  border: 1.3px solid rgba(178, 183, 192,0.3); /* transparent border */
   z-index: 1;
   pointer-events: none; /* to allow interaction with the content underneath */
 }
