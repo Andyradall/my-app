@@ -30,7 +30,7 @@
 		<section class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
 			<!-- Text Card -->
 			<div
-				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm border-2 border-zinc-350/30 p-6 md:p-10"
+				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm outline-4 outline-offset-[-4px] outline-zinc-350/30 p-6 md:p-10"
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">
 					Anders Rådal
@@ -51,12 +51,12 @@
 
 			<!-- Image Card -->
 			<div
-				class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden box-border border-2 border-zinc-350/30 rounded-3xl"
+				class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden outline-2 outline-offset-[-4px] outline-zinc-350/30 rounded-3xl"
 			>
 				<img
 					class="object-cover w-full max-h-[540px] h-full"
 					alt="Profile"
-					src="/images/about/profil-1.webp"
+					src="/images/about/profil.webp"
 					height="620px"
 					width="622.55"
 					style="object-position: center top;"
@@ -64,7 +64,7 @@
 			</div>
 		</section>
 
-		<section class="skills-card shadow-custom text-slate-600 bg-zinc-100 backdrop-blur-sm bg-opacity-75 border-2 border-zinc-350/30 rounded-3xl p-6 md:p-10">
+		<section class="skills-card shadow-custom text-slate-600 bg-zinc-100 backdrop-blur-sm bg-opacity-75 rounded-3xl p-6 md:p-10">
 			<!-- Card Header -->
 			<header class="text-left">
 				<h2 class="font-euclid text-3xl font-semibold pb-2">Skills</h2>
@@ -226,7 +226,7 @@
 		</section>
 
 		<section
-			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm border-2 border-zinc-350/30 md:max-h-[690px]"
+			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm -2 md:max-h-[690px]"
 		>
 			<div
 				class="split-card-image w-full md:w-1/2 bg-slate-950 flex justify-center items-center overflow-hidden"
@@ -296,7 +296,7 @@
 		<section class="card-one-two grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
 			<!-- Text Card -->
 			<div
-				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm border-2 border-zinc-350/30 p-6 md:p-10"
+				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm p-6 md:p-10"
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
@@ -313,13 +313,13 @@
 
 			<!-- Swiper -->
 			<div
-				class="swiper mySwiper image-card card-two shadow-custom col-span-1 md:col-span-6 justify-center overflow-hidden bg-opacity-90 backdrop-blur-sm border-2 border-zinc-350/30 rounded-3xl"
+				class="swiper mySwiper image-card card-two shadow-custom col-span-1 md:col-span-6 justify-center overflow-hidden bg-opacity-90 backdrop-blur-sm rounded-3xl"
 			>
-				<div class="swiper-wrapper">
+				<div class="swiper-wrapper rounded-3xl image-card">
 					<!-- Slide 1 -->
-					<div class="swiper-slide">
+					<div class="swiper-slide  image-card">
 						<img
-							class=" max-h-[520px] w-full "
+							class="max-h-[520px] w-full rounded-3xl"
 							src="/images/about/ulleval2.webp"
 							alt="Skibilde"
 							width="620"
@@ -327,9 +327,9 @@
 						/>
 					</div>
 					<!-- Slide 2 -->
-					<div class="swiper-slide">
+					<div class="swiper-slide image-card rounded-3xl">
 						<img
-							class=" max-h-[520px] w-full"
+							class="max-h-[520px] w-full"
 							src="/images/about/Buddha.webp"
 							alt="Buddha"
 							width="620"
@@ -345,6 +345,22 @@
 </article>
 
 <style lang="postcss">
+.image-card, .text-card, .skills-card, .split-card {
+		position: relative;
+	}
+.image-card::before, .text-card::before, .skills-card::before, .split-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  border: 1.2px solid rgba(178, 183, 192,0.3); /* transparent border */
+  z-index: 1;
+  pointer-events: none; /* to allow interaction with the content underneath */
+}
+
 	/* Custom CSS for hover effect */
 	.resume-btn-custom-link:hover .resume-btn-svg-icon {
 		transform: translateY(-2.5px) translateX(2px); /* Adjust values as needed for the hover effect */

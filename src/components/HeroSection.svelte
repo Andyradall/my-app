@@ -11,10 +11,10 @@
             <span
                 class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-[8.75rem] leading-[4rem] md:leading-[9.5rem] pb-4 md:pb-10"
             >
-                FROM PIXEL TO PERFORMANCE.
+                FROM PIXEL TO PERFORMANCE
             </span>
             <span class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-xl leading-[2.875rem] text-slate-550">
-                Interaction design for growth and usability.
+                Interaction design for growth and usability
             </span>
         </h1>	
     </div>	

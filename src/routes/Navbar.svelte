@@ -137,7 +137,7 @@ onMount(() => {
 	>
 		<div
 			id="main-navigation"
-			class="main-navbar shadow-custom rounded-2xl bg-zinc-100 bg-opacity-80 backdrop-blur border-2 border-zinc-350 border-opacity-30"
+			class="main-navbar shadow-custom rounded-2xl bg-zinc-100 bg-opacity-80 backdrop-blur"
 			role="navigation"
 			aria-label="Main Navigation"
 		>
@@ -266,6 +266,18 @@ onMount(() => {
 		//transition-timing-function: ease-out;
 	}
 
+	.main-navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(178, 183, 192,0.3); /* transparent border */
+  pointer-events: none; /* to allow interaction with the content underneath */
+}
+
 	.main-navbar ul {
 		list-style-type: none;
 		padding: 12px 0;
@@ -279,7 +291,7 @@ onMount(() => {
 
 	.main-navbar li {
 		display: flex;
-		padding: 0 8px;
+		padding: 1px 8px;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
@@ -320,7 +332,7 @@ onMount(() => {
 
 	@media (max-width: 768px) {
 		.nav-container {
-			width: 96%;
+			width: 94%;
 			margin: 0 auto;
 		}
 

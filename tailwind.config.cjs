@@ -84,8 +84,9 @@ module.exports = {
     },
 
     boxShadow: {
-      'custom': '0 1px 5px rgba(36, 37, 39, .04), 0 2px 9px rgba(36, 37, 39, .06), 0 4px 14px rgba(36, 37, 39, .04)'
+      'custom': '0 1px 5px rgba(36, 37, 39, .03), 0 2px 9px rgba(36, 37, 39, .05), 0 4px 14px rgba(36, 37, 39, .03)'
     },
+    
   },
   },
   variants: {
