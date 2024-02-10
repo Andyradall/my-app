@@ -1,4 +1,15 @@
 <script>
+
+  import { onMount } from 'svelte';
+
+  let windowWidth;
+  if (typeof window !== 'undefined') {
+    windowWidth = window.innerWidth;
+    window.addEventListener('resize', () => {
+      windowWidth = window.innerWidth;
+    });
+  }
+
     const colors = [
       "#CF381C", "#909BA1", "#CF381C", "#717E84", 
       "#CF381C", "#909BA1", "#D96049", "#717E84",
@@ -10,27 +21,51 @@
       return Math.random() * (max - min) + min;
     }
 
-    let circles = [];
+
+  let circles = [];
+  let durationRange;
+  $: {
+    circles = [];
+    let circleConfig;
+    if (windowWidth <= 768) { // Mobile
+      circleConfig = {
+        cxRange: [370, 500], // X coordinates
+        cyRange: [35, 620], // Y coordinates
+        rxRange: [485, 620], // X sizes
+        ryRange: [33, 64] // Y sizes
+      };
+      durationRange = [20, 30]; // Speed
+    } else { // Desktop
+      circleConfig = {
+        cxRange: [75, 700],
+        cyRange: [0, 900],
+        rxRange: [230, 380],
+        ryRange: [100, 190]
+      };
+      durationRange = [15, 25]; // Speed (smaller = faster)
+    }
+
     for (let i = 0; i < 2; i++) {
       colors.forEach((color, index) => {
         circles.push({
-          cx: getRandom(75, 700),
-          cy: getRandom(0, 900),
-          rx: getRandom(230, 380),
-          ry: getRandom(100, 190),
-          fill: `url(#gradient${index})`, // Use gradient ID
+          cx: getRandom(...circleConfig.cxRange),
+          cy: getRandom(...circleConfig.cyRange),
+          rx: getRandom(...circleConfig.rxRange),
+          ry: getRandom(...circleConfig.ryRange),
+          fill: `url(#gradient${index})`,
           transformX: getRandom(-250, 245),
           transformY: getRandom(-250, 245),
-          duration: getRandom(15, 25),
+          duration: getRandom(...durationRange),
           delay: getRandom(0, 5),
         });
       });
     }
+  }
 
     // Generate gradients for each color
     let gradients = colors.map((color, index) => `
       <radialGradient id="gradient${index}" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="${color}" stop-opacity="0.8" /> 
+          <stop offset="0%" stop-color="${color}" stop-opacity="0.75" /> 
           <stop offset="20%" stop-color="${color}" stop-opacity="0.6" />
           <stop offset="40%" stop-color="${color}" stop-opacity="0.4" />
           <stop offset="60%" stop-color="${color}" stop-opacity="0.2" />

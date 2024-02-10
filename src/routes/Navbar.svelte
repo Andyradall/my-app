@@ -332,7 +332,7 @@ onMount(() => {
 
 	@media (max-width: 768px) {
 		.nav-container {
-			width: 94%;
+			width: 97%;
 			margin: 0 auto;
 		}
 
@@ -345,16 +345,16 @@ onMount(() => {
 		}
 
 		.main-navbar {
-			width: 96%;
+			width: 97%;
 			margin: 0 auto;
-			top: 8px;
+			top: 6px;
 			padding: 3px 4px;
 			max-height: 48px;
 		}
 
 		.main-navbar a {
 			/*	font-size: calc(0.9em); */
-			padding: 3px 5px;
+			padding: 3px 4.5px;
 			white-space: nowrap;
 		}
 
