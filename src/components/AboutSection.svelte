@@ -77,7 +77,7 @@
 				<article class="skill flex-1 min-w-[180px] m-1 p-4">
 					<div class="skill-image flex justify-center py-2 my-2">
 						<svg
-						    class= "w-12 h-12"
+						    
 							width="48"
 							height="48"
 							viewBox="0 0 48 48"
@@ -110,7 +110,7 @@
 				<article class="skill flex-1 min-w-[180px] m-1 p-4">
 					<div class="skill-image flex justify-center py-2 my-2">
 						<svg 
-						    class= "w-12 h-12"
+						    
 							width="48"
 							height="49"
 							viewBox="0 0 48 49"
@@ -136,7 +136,7 @@
 				<article class="skill flex-1 min-w-[180px] m-1 p-4">
 					<div class="skill-image flex justify-center m-2 p-2">
 						<svg
-						    class= "w-12 h-12"
+						    
 							width="58"
 							height="48"
 							viewBox="0 0 58 48"
@@ -168,7 +168,7 @@
 				<article class="skill flex-1 min-w-[180px] m-1 p-4">
 					<div class="skill-image flex justify-center my-2 py-2">
 						<svg
-						    class= "w-12 h-12"
+						    
 							width="44"
 							height="48"
 							viewBox="0 0 44 48"
@@ -192,9 +192,9 @@
 				</article>
 				<!-- Skill: Development -->
 				<article class="skill flex-1 min-w-[180px] m-2 p-4">
-					<div class="skill-image flex justify-center my-2 py-2">
+					<div class="skill-image flex justify-center my-2 pt-1 pb-2">
 						<svg
-						    class= "w-12 h-12"
+						    
 							width="58"
 							height="48"
 							viewBox="0 0 58 48"
