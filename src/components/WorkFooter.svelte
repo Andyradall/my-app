@@ -99,7 +99,7 @@
 		transition: transform 0.1s ease-out;
 	}
 
-	a:hover .text-grey-800 {
-		color: #515255; /* grey-700 */
-	}
+	a:hover .text-slate-600 {
+		color: #35434A;
+	} 
 </style>
