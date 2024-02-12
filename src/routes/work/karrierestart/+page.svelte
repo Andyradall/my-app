@@ -66,13 +66,13 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-grey-800 attachLightGallery">
+<article class="mx-auto font-euclid text-slate-600 attachLightGallery">
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
-			<h1 class="text-[2.95rem] md:text-7xl font-euclid font-black text-grey-800 md:py-4">
+			<h1 class="text-[2.95rem] md:text-7xl font-euclid font-black text-slate-600 md:py-4">
 				Karrierestart
 				<span
-					class="block text-[2rem] leading-[3rem] md: md:text-4xl font-euclid font-medium text-grey-400 md:py-4"
+					class="block text-[2rem] leading-[3rem] md: md:text-4xl font-euclid font-medium text-slate-500 md:py-4"
 				>
 					<br />Improving the Onboarding Experience for Job Portal</span
 				>
@@ -114,7 +114,7 @@
 							href="https://www.karrierestart.no"
 							target="_blank"
 							rel="noopener"
-							class="underline underline-offset-2 text-grey-600"
+							class="underline underline-offset-2 text-slate-500"
 							title="Karrierestart"
 						>
 							Karrierestart</a
@@ -140,7 +140,7 @@
 		<WorkNav {links} />
 	</section>
 
-	<section id="first" class="pageSection bg-grey-100 py-10 px-4 md:py-20">
+	<section id="first" class="pageSection bg-slate-100 bg-opacity-20 py-10 px-4 md:py-20">
 		<div class="md:max-w-2xl mx-auto">
 			<h2 class="pb-2">Doing Research in Covid Lockdown</h2>
 			<p>
@@ -216,12 +216,12 @@
 		</div>
 	</section>
 
-	<section class="bg-[#111111]">
+	<section class=" bg-slate-800 bg-opacity-95 text-zinc-150">
 		<figure class="sm:max-w-6xl mx-auto py-20">
-			<img src="/images/karrierestart/Frame_10.webp" class="zooming-dark-bg" alt="Nir Eyal summary" />
+			<img src="/images/karrierestart/hook.webp" class="zooming-dark-bg" alt="Nir Eyal summary" />
 		</figure>
 	</section>
-
+	
 	<section id="second" class="pageSection py-10 md:py-20 px-4">
 		<div class="max-w-2xl py-4 mx-auto">
 			<h2 class="pb-2">Designing the Onboarding Guide</h2>
@@ -269,7 +269,7 @@
 		</figure>
 	</section>
 
-	<section id="third" class="pageSection bg-grey-100 py-10 md:py-16 px-4 mx-auto">
+	<section id="third" class="pageSection bg-slate-100 bg-opacity-20 py-10 md:py-16 px-4 mx-auto">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Variable rewards and nudges. Messages, badges, likes and followers.</h2>
 
@@ -302,7 +302,7 @@
 		</figure>
 	</section>
 
-	<section id="fourth" class="pageSection py-10 md:py-20 mx-auto px-4 bg-grey-100">
+	<section id="fourth" class="pageSection py-10 md:py-20 mx-auto px-4 bg-slate-100 bg-opacity-20">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Stories and Guides</h2>
 			<p class="pb-4 md:pb-2">

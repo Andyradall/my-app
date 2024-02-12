@@ -35,6 +35,7 @@ module.exports = {
           900: '#121316',
         },  
         'slate': {
+          50: '#EDF0F1',
           100: '#CCD6DB',
           150: '#BDC7CD',
           200: '#AEB9BE',

@@ -66,12 +66,12 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-grey-800 attachLightGallery">
+<article class="mx-auto font-euclid text-slate-600 attachLightGallery">
 	<section id="first" class="pageSection max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
-			<h1 class="text-7xl font-euclid font-bold text-grey-800 py-4">
+			<h1 class="text-7xl font-euclid font-bold text-slate-600 py-4">
 				Solar Choice
-				<span class="text-4xl leading-2 md:leading-5 font-euclid font-medium text-grey-400 py-4"
+				<span class="text-4xl leading-2 md:leading-5 font-euclid font-medium text-slate-500 py-4"
 					><br />Crafting a Premium Brand Identity for Solar Panels</span
 				>
 			</h1>
@@ -106,7 +106,7 @@
 					<a
 						href="https://www.solarchoice.se/"
 						title="Solar Choice website."
-						class="underline underline-offset-2 text-grey-600">Solar Choice website.</a
+						class="underline underline-offset-2 text-slate-500">Solar Choice website.</a
 					>
 				</li>
 			</ul>
@@ -121,7 +121,7 @@
 
 	<section class="mt-20 hidden sm:block">
 		<div>
-			<h1 class="text-3xl font-medium text-grey-800 text-center">Process overview</h1>
+			<h1 class="text-3xl font-medium text-slate-600 text-center">Process overview</h1>
 		</div>
 	</section>
 
@@ -140,7 +140,7 @@
     </div>
 </section-->
 
-	<section id="first" class="pageSection bg-grey-100 pt-6 md:pt-32 pb-8 md:pb-20 px-4">
+	<section id="first" class="pageSection bg-slate-100 bg-opacity-20 pt-6 md:pt-32 pb-8 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Team Dynamics and Initial Steps</h2>
 			<p>
@@ -154,7 +154,7 @@
 		</figure>
 	</section>
 
-	<section class="bg-grey-100">
+	<section class="bg-slate-100 bg-opacity-20">
 		<div class="mx-auto sm:max-w-2xl px-4">
 			<h2 class="pb-2">Team Canvas</h2>
 			<p>
@@ -168,7 +168,7 @@
 		</figure>
 	</section>
 
-	<section class="bg-grey-100 px-4">
+	<section class="bg-slate-100 bg-opacity-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-4">
 			<h2 class="pb-2">Time Management with Figjam</h2>
 			<p>
@@ -226,7 +226,7 @@
 		</figure>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bg-grey-800 text-grey-50">
+	<section class="py-12 md:py-20 px-4 bg-slate-800 bg-opacity-95 text-zinc-150">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">Establishing Brand Identity</h2>
 			<p>
@@ -273,7 +273,7 @@
 		</figure>
 	</section>
 
-	<section id="third" class="pageSection bg-grey-100 py-12 md:py-20 px-4">
+	<section id="third" class="pageSection bg-slate-100 bg-opacity-20 py-12 md:py-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2 class="pb-2">Crafting a Brand's Visual DNA</h2>
 			<p class="pb-2">
@@ -312,7 +312,7 @@
 		</div>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bg-grey-800 text-grey-50">
+	<section class="py-12 md:py-20 px-4 bg-slate-800 bg-opacity-95 text-slate-50">
 		<div class="mx-auto md:max-w-2xl">
 			<h3>The Birth of Stylescapes</h3>
 			<p class="pb-8">
@@ -358,7 +358,7 @@
 		</figure>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bg-grey-100">
+	<section class="py-12 md:py-20 px-4 bg-slate-100 bg-opacity-20">
 		<div class="mx-auto md:max-w-2xl pb-2">
 			<h3>Logo End Result: Killing Your Darling</h3>
 			<p>
@@ -413,7 +413,7 @@
 		</div>
 	</section>
 
-	<section class="bg-grey-700 text-grey-50 py-12 md:py-20 px-4">
+	<section class="bg-slate-800 bg-opacity-95 text-zinc-150 py-12 md:py-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h3>Painting the Brand: The Colour Palettes</h3>
 			<p>
@@ -442,7 +442,7 @@
 		</div>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bg-grey-100">
+	<section class="py-12 md:py-20 px-4 bbg-slate-100 bg-opacity-20">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Webpage Mockups</h2>
 			<p>

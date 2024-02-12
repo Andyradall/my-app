@@ -68,12 +68,12 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-grey-800 attachLightGallery" >
+<article class="mx-auto font-euclid text-slate-600 attachLightGallery" >
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
-			<h1 class="text-[2.75rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
+			<h1 class="text-[2.75rem] md:text-7xl font-euclid font-bold text-slate-600 py-4">
 				Designmaskinen
-				<span class="text-[1.8rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"
+				<span class="text-[1.8rem] md:text-4xl font-euclid font-medium text-slate-500 py-4"
 					><br />Designing an Admin Area & Template Builder</span
 				>
 			</h1>
@@ -84,8 +84,8 @@
 		class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20 px-4"
 	>
 		<div class="md:flex-1 md:max-w-lg my-4">
-			<h2 class=" text-xl font-bold text-grey-800">Case Overview</h2>
-			<p class=" text-base align-center text-grey-800">
+			<h2 class=" text-xl font-bold text-slate-600">Case Overview</h2>
+			<p class=" text-base align-center text-slate-600">
 				In Spring 2023, during my three-month internship at Netlife Design, I contributed to the
 				development of Designmaskinen, a specialized design tool for creating print and digital
 				designs. Unlike other design tools like Canva, Designmaskinen is unique in its constraints,
@@ -94,14 +94,14 @@
 				for the tool.
 			</p>
 			<h3 class=" text-lg font-medium">Project Details</h3>
-			<p class=" text-base align-center text-grey-800">
+			<p class=" text-base align-center text-slate-600">
 				<span class="font-bold">Project Brief:</span> Design an intuitive admin area for Designmaskinen.
 			</p>
-			<p class=" text-base align-center text-grey-800">
+			<p class=" text-base align-center text-slate-600">
 				<span class="font-bold">Team Members:</span> Randi Giovertsen, Kaja von Dombug, Michaen Hermansen
 				and Knut Sorknes.
 			</p>
-			<p class=" text-base align-center text-grey-800">
+			<p class=" text-base align-center text-slate-600">
 				<span class="font-bold">My Role:</span> Research, design, prototyping, and testing.<br /><br
 				/><span class="font-bold">Related Link:</span>
 				<a
@@ -127,7 +127,7 @@
 
 	<section class="mt-20 hidden sm:block px-4">
 		<div>
-			<h1 class="text-3xl font-medium text-grey-800 text-center">Process overview</h1>
+			<h1 class="text-3xl font-medium text-slate-600 text-center">Process overview</h1>
 		</div>
 	</section>
 
@@ -135,7 +135,7 @@
 		<WorkNav {links} />
 	</section>
 
-	<section id="first" class="pageSection bg-grey-800 text-grey-100 py-10 md:pt-32 md:pb-20 px-4">
+	<section id="first" class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 py-10 md:pt-32 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="text-3xl font-bold mb-4">Understanding the Challenge</h2>
 			<p class="mb-8">
@@ -236,7 +236,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
 		<div class="md:flex-1 md:max-w-md m-4">
 			<div>
 				<img
@@ -322,7 +322,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_1.webp"
@@ -383,7 +383,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_Final_1.webp"
@@ -402,7 +402,7 @@
 				alt="Image_albums iteration 2 with menu"
 				class="zooming-white-bg"
 			/>
-			<p class=" text-base align-center text-grey-800">
+			<p class=" text-base align-center text-slate-600">
 				Final version with slide in edit field showing.&nbsp;
 			</p>
 		</div>
@@ -428,7 +428,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-grey-100 px-4">
+	<section class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-slate-100 bg-opacity-20 px-4">
 		<div class="md:flex-1/3 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Maler_Some.webp"
@@ -474,7 +474,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-grey-100 px-4">
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/User_areas.webp"
@@ -517,7 +517,7 @@
 		</div>
 	</section>
 
-	<section id="third" class="pageSection bg-grey-800 text-grey-100 py-10 md:py-24 px-4">
+	<section id="third" class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 py-10 md:py-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
 			<p>

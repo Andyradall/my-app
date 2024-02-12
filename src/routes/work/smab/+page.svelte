@@ -66,12 +66,12 @@
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid  text-grey-800 attachLightGallery">
+<article class="mx-auto font-euclid  text-slate-600 attachLightGallery">
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
-			<h1 class="text-[3rem] md:text-7xl font-euclid font-bold text-grey-800 py-4">
+			<h1 class="text-[3rem] md:text-7xl font-euclid font-bold text-slate-600 py-4">
                 Svenska Mässkonsult
-                <span class="text-[2rem] md:text-4xl font-euclid font-medium text-grey-400 py-4"><br />A Rebrand Journey with Hyper Island</span>
+                <span class="text-[2rem] md:text-4xl font-euclid font-medium text-slate-500 py-4"><br />A Rebrand Journey with Hyper Island</span>
             </h1>
 		</div>
 	</section>
@@ -108,7 +108,7 @@
 
 	<section class="mt-20 hidden sm:block">
 		<div>
-			<h1 class="text-3xl font-medium text-grey-800 text-center">Process overview</h1>
+			<h1 class="text-3xl font-medium text-slate-600 text-center">Process overview</h1>
 		</div>
 	</section>
 
@@ -127,7 +127,7 @@
                 </ul>
             </section-->
 
-	<section id="first" class="pageSection bg-grey-800 text-grey-100 pt-10 md:pt-32 pb-10 md:pb-20 px-4">
+	<section id="first" class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 pt-10 md:pt-32 pb-10 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2>Double Diamond: Our Methodological Approach</h2>
 		</div>
@@ -209,7 +209,7 @@
 		</figure>
 	</section>
 
-	<section class="my-4 py-10 md:py-20 bg-grey-800 text-grey-50 px-4">
+	<section class="my-4 py-10 md:py-20 bg-slate-800 bg-opacity-95 text-zinc-150 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Crafting the Brand: Workshops to Final Choices</h2>
 		</div>
@@ -233,7 +233,7 @@
 
 		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
 			<img src="/images/smab/Stylescapes1.webp" class="zooming-dark-bg" alt="Stylescapes first" width="1600" height="1703"/>
-			<figcaption class="text-grey-50">
+			<figcaption class="text-zinc-150">
 				<strong class="font-semibold"> Stylescapes round one:</strong> 
 				We showcased very different directions for the branding, 
 				we did this in order to get a feel for the clients taste, 
@@ -242,7 +242,7 @@
 		</figure>		
 		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
 			<img src="/images/smab/Stylescapes2.webp" class="zooming-dark-bg" alt="Stylescapes second" width="1600" height="1487"/>
-			<figcaption class="text-grey-50">
+			<figcaption class="text-zinc-150">
 				<strong class="font-semibold">Stylescapes round 2:</strong> 
 				We narrowed down the direction, aiming for a clean and modern look. 
 				I participated in this round with the third stylescape. 
@@ -251,7 +251,7 @@
 		</figure>		
 		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
 			<img src="/images/smab/Stylescapes3.webp" class="zooming-dark-bg" alt="Stylescapes third" width="1600" height="738"/>
-			<figcaption class="text-grey-50">
+			<figcaption class="text-zinc-150">
 				<strong class="font-semibold">Final Stylescape:</strong> 
 				In the third and final stylescape we had to allow the client to be specific about elements in order to reach a final decision.
 			</figcaption>
@@ -286,7 +286,7 @@
 		</figure>
 	</section>
 
-	<section class="py-10 md:my-14 md:py-20 bg-grey-100 px-4">
+	<section class="py-10 md:my-14 md:py-20 bg-slate-100 bg-opacity-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Design Process</h2>
 		</div>
@@ -336,7 +336,7 @@
 		</div>
 	</section>
 
-	<section id="fourth" class="pageSection py-10 md:py-20 bg-grey-800 text-grey-50 px-4">
+	<section id="fourth" class="pageSection py-10 md:py-20 bg-slate-800 bg-opacity-95 text-zinc-150 px-4">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">Final Deliverables</h2>
 			<h3>Frontpage Evolution</h3>
@@ -352,7 +352,7 @@
 		</div>
 	</section>
 
-	<section class="bg-grey-800 text-grey-100 py-12 md:pt-12 md:pb-14 px-4">
+	<section class="bg-slate-800 bg-opacity-95 text-zinc-150 py-12 md:pt-12 md:pb-14 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2>Final Prototype:</h2>
 			<p>Dive into our final prototype:</p>

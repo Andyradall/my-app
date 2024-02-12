@@ -19,13 +19,13 @@
 	const nextCaseStudy = caseStudies[nextIndex];
 </script>
 
-<section class="bg-grey-100 font-euclid pt-6 pb-8">
+<section class="bg-slate-100 bg-opacity-50 font-euclid pt-6 pb-8">
 	<div class="max-w-full mx-auto flex justify-between items-stretch px-5 md:px-8 py-4">
 		<div class="first-div flex-1 flex flex-col justify-between">
 			<a href={prevCaseStudy.href} class="flex flex-col items-start" aria-label="Previous case Study">
 				<ul>
 					<li
-						class="flex items-center uppercase text-lg text-grey-600 hover:text-grey-600 font-medium"
+						class="flex items-center uppercase text-lg text-slate-600 hover:text-slate-600 font-medium"
 					>
 						<svg
 							class="prev-arrow fill-current mr-1"
@@ -40,7 +40,7 @@
 						</svg>
 						Prev
 					</li>
-					<li class="font-normal text-grey-800 hover:text-grey-700 text-2xl">
+					<li class="font-normal text-slate-800 hover:text-slate-500 text-2xl">
 						{prevCaseStudy.title}
 					</li>
 				</ul>
@@ -50,7 +50,7 @@
 		<div class="second-div flex-1 flex flex-col justify-between">
 			<a href={nextCaseStudy.href} class="flex flex-col text-right items-end" aria-label="Next case Study">
 				<ul class="w-full">
-					<li class="flex justify-end items-center uppercase text-lg text-grey-600 hover:text-grey-600 font-medium">
+					<li class="flex justify-end items-center uppercase text-lg text-slate-600 hover:text-slate-600 font-medium">
 						Next
 						<svg
 							class="next-arrow text-right fill-current ml-1"
@@ -64,7 +64,7 @@
 							/>
 						</svg>
 					</li>
-					<li class="font-normal text-grey-800 hover:text-grey-700 text-2xl">
+					<li class="font-normal text-slate-800 hover:text-slate-500 text-2xl">
 						{nextCaseStudy.title}
 					</li>
 				</ul>
@@ -85,17 +85,18 @@
 }
 
 	section div {
-		background-color: rgb(235 238 244);
+		/* background-color: rgb(235 238 244); */
+		background-color: #E5EBED;
 	}
 
 	a:hover .prev-arrow {
 		transform: translateX(-3px);
-		transition: transform 0.2s ease-out;
+		transition: transform 0.1s ease-out;
 	}
 
 	a:hover .next-arrow {
 		transform: translateX(3px);
-		transition: transform 0.2s ease-out;
+		transition: transform 0.1s ease-out;
 	}
 
 	a:hover .text-grey-800 {

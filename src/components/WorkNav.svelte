@@ -111,7 +111,7 @@
 			</svg> Home
 		</button>
 		<div class="con-effect">
-			<div class="effect bg-grey-200" />
+			<div class="effect bg-slate-100 bg-opacity-80 rounded-xl" />
 		</div>
 		<ul>
 			{#each links as link}
@@ -134,7 +134,7 @@
 <style lang="postcss">
 	/* main css to refactor -> Tailwind */
 	.header-navbar {
-		border-bottom: 1px solid #ebeef4;
+		border-bottom: 1px solid #EDF0F1;
 		padding: 0;
 		margin: 0;
 		display: flex;
@@ -142,7 +142,7 @@
 		justify-content: space-evenly;
 		width: 100%;
 		background: #fff;
-		height: 96px;
+		height: 88px;
 		padding: 2px 0;
 		transition: all 220ms ease;
 	}
@@ -150,11 +150,12 @@
 	.header-navbar.sticky {
 		padding: 0;
 		margin: 0;
-		height: 52px;
+		height: 50px;
 		position: fixed;
 		top: 0;
 		z-index: 100;
 		opacity: 1;
+	
 		/*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.06),
 			0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.06),
 			0 32px 64px rgba(0, 0, 0, 0.06);*/
@@ -189,7 +190,7 @@
 
 	.header-navbar li {
 		width: 200px;
-		height: 50px;
+		height: 48px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -202,14 +203,19 @@
 
 	.header-navbar a {
 		/*padding: 2px 0 0 0;*/
-		color: #616366;
+		color: #536067;
 		font-size: 16px;
 		text-decoration: none;
 	}
 
 	.header-navbar a.active {
 		z-index: 5 !important;
-		color: #242527 !important;
+		color: #20282C !important;
+	}
+
+	.header-navbar a:hover {
+		z-index: 5 !important;
+		color: #20282C !important;
 	}
 
 	/* :not excludes class for specific use */
@@ -224,8 +230,8 @@
 		border: 0px;
 		outline: none;
 		background: none;
-		color: #303133;
-		height: 52px;
+		color: #20282C;
+		height: 50px;
 		cursor: pointer;
 		transition: all 0.45s ease;
 		display: inline-flex;
@@ -234,13 +240,13 @@
 
 	.header-navbar button.back svg {
 		margin-right: 0.2em;
-		fill: #303133;
+		fill: #20282C;
 	}
 
 	.header-navbar button.back:hover,
 	.header-navbar button.back:hover svg path {
-		color: #616366;
-		fill: #616366;
+		color: #35434A;
+		fill: #35434A;
 	}
 
 	.header-navbar.sticky button.back {
@@ -264,9 +270,9 @@
 	.effect {
 		opacity: 0;
 		width: 164px;
-		height: 40px;
+		height: 38px;
 		position: absolute;
-		border-radius: 104px;
+		//border-radius: 104px;
 		z-index: 102;
 		will-change: transform;
 	}

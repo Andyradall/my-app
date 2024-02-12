@@ -26,7 +26,7 @@ onMount(() => {
 
 <div id="backButton" class="absolute top-0 m-[2vw] z-20" class:hide-backButton={hideButton}>
     <button
-      class="back text-grey-700 bg-grey-200 hover:text-grey-600 rounded-full font-euclid text-[16px] font-normal flex items-center justify-center w-28 h-10"
+      class="back text-slate-700 bg-slate-100 bg-opacity-80 hover:text-slate-550 rounded-xl font-euclid text-[16px] font-normal flex items-center justify-center w-24 h-9"
       on:click={() => (window.location.href = '/')}
       aria-label="Home to frontpage"
       type="button"
@@ -57,18 +57,18 @@ onMount(() => {
 
 .back svg {
     margin-right: 0.2em;
-    fill: #303133;
+    fill: #20282C;
     transition: all .25s ease;
 }
 
 .back:hover {
-  color: #616366;
-  fill: #616366;
+  color: #35434A;
+  fill: #35434A;
 }
 
 .back:hover svg {
-    color: #616366;
-    fill: #616366;
+    color: #35434A;
+    fill: #35434A;
     transform: translateX(-2px);
     transition: all .25s ease;
 }

@@ -133,7 +133,7 @@ onMount(() => {
 
 <nav class="flyIn">
 	<div
-		class="nav-container flex justify-center align-middle font-euclid font-medium text-slate-500 text-base md:text-lg"
+		class="nav-container flex justify-center align-middle font-euclid font-medium text-base md:text-lg"
 	>
 		<div
 			id="main-navigation"
@@ -150,13 +150,13 @@ onMount(() => {
 
 			<ul>
 				<li>
-					<a href="#hero" class:active={isActive} aria-label="Anders Rådal">Anders Rådal</a>
+					<a href="#hero" class:active={isActive} aria-label="Anders Rådal" class="text-slate-500 hover:text-slate-600">Anders Rådal</a>
 				</li>
 				<li>
-					<a href="#work" aria-label="Case Studies">Case Studies</a>
+					<a href="#work" aria-label="Case Studies" class="text-slate-500 hover:text-slate-600">Case Studies</a>
 				</li>
 				<li>
-					<a href="#about" aria-label="About me">About me</a>
+					<a href="#about" aria-label="About me" class="text-slate-500 hover:text-slate-600">About me</a>
 				</li>
 				<li>
 					<a
@@ -164,7 +164,7 @@ onMount(() => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Resumé - opens in a new window"
-						class="menu-custom-link"
+						class="menu-custom-link text-slate-500 hover:text-slate-600"
 					>
 						Resumé
 						<span class="menu-svg-icon">
@@ -188,7 +188,7 @@ onMount(() => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Connect on LinkedIn, opens in a new window"
-						class="menu-custom-link"
+						class="menu-custom-link text-slate-500 hover:text-slate-600"
 					>
 						LinkedIn
 						<span class="menu-svg-icon">
@@ -232,10 +232,10 @@ onMount(() => {
 		align-items: center;
 	}
 
-	.menu-custom-link:hover,
+	/*.menu-custom-link:hover,
 	.menu-custom-link:focus {
 		color: #2A363B;
-	}
+	}*/
 
 	.menu-svg-icon {
 		margin-left: 2px;
