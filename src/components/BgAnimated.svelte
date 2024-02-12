@@ -65,7 +65,7 @@
     /* Generate gradients for each color */
     let gradients = colors.map((color, index) => `
       <radialGradient id="gradient${index}" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="${color}" stop-opacity="0.74" /> 
+          <stop offset="0%" stop-color="${color}" stop-opacity="0.77" /> 
           <stop offset="20%" stop-color="${color}" stop-opacity="0.6" />
           <stop offset="40%" stop-color="${color}" stop-opacity="0.4" />
           <stop offset="60%" stop-color="${color}" stop-opacity="0.2" />
