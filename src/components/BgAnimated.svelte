@@ -27,22 +27,22 @@
   $: {
     circles = [];
     let circleConfig;
-    if (windowWidth <= 768) { // Mobile
+    if (windowWidth <= 768) { /* Mobile */
       circleConfig = {
-        cxRange: [370, 500], // X coordinates
-        cyRange: [35, 620], // Y coordinates
-        rxRange: [485, 620], // X sizes
-        ryRange: [33, 64] // Y sizes
+        cxRange: [370, 500], /* X coordinates */
+        cyRange: [35, 620], /* Y coordinates */
+        rxRange: [485, 620], /* X sizes */
+        ryRange: [33, 64] /* Y sizes */
       };
-      durationRange = [20, 30]; // Speed
-    } else { // Desktop
+      durationRange = [20, 30]; /* Speed */
+    } else { /* Desktop */
       circleConfig = {
         cxRange: [75, 700],
         cyRange: [0, 900],
         rxRange: [250, 350],
         ryRange: [110, 150]
       };
-      durationRange = [16, 25]; // Speed (smaller = faster)
+      durationRange = [16, 25]; /* Speed (smaller = faster) */
     }
 
     for (let i = 0; i < 2; i++) {
@@ -62,7 +62,7 @@
     }
   }
 
-    // Generate gradients for each color
+    /* Generate gradients for each color */
     let gradients = colors.map((color, index) => `
       <radialGradient id="gradient${index}" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="${color}" stop-opacity="0.72" /> 
@@ -78,7 +78,7 @@
 <svg class="full-svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="none">
     <rect width="100%" height="100%" fill="#F5F6F7" />
     <defs>
-      {@html gradients} <!-- Insert the gradient definitions --> 
+      {@html gradients}
     </defs>
 
     {#each circles as circle, index (index)}

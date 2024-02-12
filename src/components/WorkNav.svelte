@@ -132,7 +132,6 @@
 </nav>
 
 <style lang="postcss">
-	/* main css to refactor -> Tailwind */
 	.header-navbar {
 		border-bottom: 1px solid #EDF0F1;
 		padding: 0;
@@ -155,10 +154,6 @@
 		top: 0;
 		z-index: 100;
 		opacity: 1;
-	
-		/*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.06),
-			0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.06),
-			0 32px 64px rgba(0, 0, 0, 0.06);*/
 	}
 
 	.header-navbar.sticky .effect {
@@ -259,7 +254,6 @@
 		height: 100%;
 		top: 0;
 		left: 0px;
-		/*overflow: hidden;*/
 		pointer-events: none;
 		display: flex;
 		align-items: center;
@@ -272,7 +266,6 @@
 		width: 164px;
 		height: 38px;
 		position: absolute;
-		//border-radius: 104px;
 		z-index: 102;
 		will-change: transform;
 	}

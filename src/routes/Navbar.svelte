@@ -224,7 +224,7 @@ onMount(() => {
 
 	/*.main-navbar a:hover {
 		 color: #2A363B;
-		 
+
 	}*/
 
 	.menu-custom-link {
@@ -259,11 +259,9 @@ onMount(() => {
 		padding: 0 4px;
 		align-items: center;
 		height: 56px;
-		//border: 2px solid #B2B7C0;
 		z-index: 100;
 		overflow: visible;
 		transition: 0.2s;
-		//transition-timing-function: ease-out;
 	}
 
 	.main-navbar::before {

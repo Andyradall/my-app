@@ -36,10 +36,7 @@
 <style lang="postcss">
 	/* case card specific css */
 	.case-card-bg {
-     /* max-width: 800px;
-        max-height: 500px; */
 		padding: 16px 0;
-		//border: 1px solid #f6faff;
 	}
 
 .case-card-bg {
