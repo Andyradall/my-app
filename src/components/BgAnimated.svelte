@@ -39,10 +39,10 @@
       circleConfig = {
         cxRange: [75, 700],
         cyRange: [0, 900],
-        rxRange: [230, 380],
-        ryRange: [100, 190]
+        rxRange: [250, 350],
+        ryRange: [110, 150]
       };
-      durationRange = [15, 25]; // Speed (smaller = faster)
+      durationRange = [16, 25]; // Speed (smaller = faster)
     }
 
     for (let i = 0; i < 2; i++) {
@@ -65,11 +65,11 @@
     // Generate gradients for each color
     let gradients = colors.map((color, index) => `
       <radialGradient id="gradient${index}" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="${color}" stop-opacity="0.75" /> 
+          <stop offset="0%" stop-color="${color}" stop-opacity="0.72" /> 
           <stop offset="20%" stop-color="${color}" stop-opacity="0.6" />
           <stop offset="40%" stop-color="${color}" stop-opacity="0.4" />
           <stop offset="60%" stop-color="${color}" stop-opacity="0.2" />
-          <stop offset="80%" stop-color="${color}" stop-opacity="0.1" />
+          <stop offset="80%" stop-color="${color}" stop-opacity="0.09" />
           <stop offset="100%" stop-color="${color}" stop-opacity="0" />
       </radialGradient>
     `).join('');
