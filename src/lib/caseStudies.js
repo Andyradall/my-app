@@ -20,7 +20,7 @@ export const caseStudies = [
       href: '/work/solarchoice',
       ariaLabel: 'Solar Choice Case Study',
       category: 'BRAND DESIGN | 2022',
-      image: '/images/thumbs/Solarthumblg-1.webp',
+      image: '/images/thumbs/Solarthumb800500.webp',
       alt: 'Solar Choice Case Study',
     },
     {
