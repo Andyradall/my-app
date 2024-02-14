@@ -24,7 +24,7 @@
 	  description: "Portfolio for Anders Rådal - Product & UX Designer",
 	  images: [
 		{
-		  url: "https://www.andersra.com/PageThumb.webp",
+		  url: "https://www.andersra.com/images/thumbs/PageThumb.webp",
 		  width: 500,
 		  height: 333,
 		  alt: "Page Thumbnail", 
@@ -37,7 +37,7 @@
 	  site: "@AndersRadal",
 	  title: "Portfolio for Anders Rådal - Product & UX Designer",
 	  description: "Portfolio for Anders Rådal - Product & UX Designer",
-	  image: "https://www.andersra.com/PageThumb.webp",
+	  image: "https://www.andersra.com/images/thumbs/PageThumb.webp",
 	}}
 	jsonLd={{
 	  "@context": "https://schema.org",

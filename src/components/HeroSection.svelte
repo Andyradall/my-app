@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <section
     id="hero"
     class="hero-class pageSection max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-44 md:pt-80 pb-20 md:pb-50 text-gray-800"
@@ -19,5 +15,3 @@
         </h1>	
     </div>	
 </section>
-<style lang="postcss">
-</style>
