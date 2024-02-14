@@ -25,8 +25,8 @@
 	  images: [
 		{
 		  url: "https://www.andersra.com/PageThumb.webp",
-		  width: 700,
-		  height: 493,
+		  width: 500,
+		  height: 333,
 		  alt: "Page Thumbnail", 
 		}  ],
 	  url: "https://www.andersra.com",
