@@ -4,13 +4,19 @@
 	export let ariaLabel = '';
 	export let category = '';
 	export let image = '';
+	export let imageDesktop = '';
+    export let imageMobile = '';
 	export let alt = '';
 </script>
 
 <div class="case-card">
 	<div class="case-card-bg shadow-custom py-4 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm max-w-[800px] max-h-[600px]">
 		<a href={link} aria-label="hidden" class="case-card-image">
-			<img class="card-thumbnail" src={image} {alt} width="800" height="500" />
+			<img class="card-thumbnail" 
+			src={image} 
+			alt={alt} 
+			srcset="{imageMobile} 380w, {imageDesktop} 620w, {image} 800w"
+			sizes="(max-width: 412px) 380px, (max-width: 1350px) 620px, 800px" />
 		</a>
 	</div>
 	<div class="case-card-text pl-2">

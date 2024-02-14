@@ -39,6 +39,8 @@
             ariaLabel={study.ariaLabel}
             category={study.category}
             image={study.image}
+            imageDesktop={study.imageDesktop}
+            imageMobile={study.imageMobile}
             alt={study.alt}
           />
         </div>
