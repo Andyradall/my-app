@@ -7,6 +7,8 @@
 	export let imageDesktop = '';
     export let imageMobile = '';
 	export let alt = '';
+	export let width = '800'; 
+    export let height = '500';
 </script>
 
 <div class="case-card">
@@ -15,6 +17,8 @@
 			<img class="card-thumbnail" 
 			src={image} 
 			alt={alt} 
+			width={width} 
+			height={height}
 			srcset="{imageMobile} 380w, {imageDesktop} 620w, {image} 800w"
 			sizes="(max-width: 412px) 380px, (max-width: 1350px) 620px, 800px" />
 		</a>

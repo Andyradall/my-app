@@ -42,6 +42,8 @@
             imageDesktop={study.imageDesktop}
             imageMobile={study.imageMobile}
             alt={study.alt}
+            width="800"
+            height="500"
           />
         </div>
       {/each}
