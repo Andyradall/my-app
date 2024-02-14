@@ -1,11 +1,11 @@
 # Anders Rådal's Portfolio
 
-Welcome to my UX/Interaction Design Portfolio. This repository showcases my work and projects in the field of user experience and interaction design. It's built using SvelteKit, a powerful framework for building web applications, and uses Tailwind CSS for sleek, responsive designs.
+Welcome to my UX/Interaction Design Portfolio. This repository showcases my work and projects in the field of user experience and interaction design. It's built using SvelteKit, a powerful framework for building web applications.
 
 ### Key features and technologies include:
 - **SvelteKit**: For building highly interactive user interfaces.
 - **Tailwind CSS**: A utility-first CSS framework for rapid custom design development.
-- **Performance Optimization**: Achieved a perfect 100 score in Google PageSpeed while also enabling analytics like GA4 and Hotjar, showing a strong focus on site speed and user experience.
+- **Performance Optimization**: Achieving a perfect 100 score in Google PageSpeed while also enabling analytics like GA4 and Hotjar, demonstrating my focus on site speed and user experience.
 
 This portfolio represents my commitment to creating high-quality, performant web applications and my ability to leverage the latest technologies in web development.
 
