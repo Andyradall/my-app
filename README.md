@@ -1,4 +1,4 @@
-# Anders Rådal's UX/Interaction Design Portfolio
+# Anders Rådal's Portfolio
 
 Welcome to my UX/Interaction Design Portfolio. This repository showcases my work and projects in the field of user experience and interaction design. It's built using SvelteKit, a powerful framework for building web applications, and uses Tailwind CSS for sleek, responsive designs.
 

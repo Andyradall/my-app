@@ -4,6 +4,7 @@
 	import BgAnimated from '../components/BgAnimated.svelte';
 	import CaseStudySectionScale from '../components/CaseStudySectionScale.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
+	import Footer from '../components/Footer.svelte';
 	import SvelteSeo from 'svelte-seo';
 	import { OnMount } from 'fractils'
 	import { fly } from 'svelte/transition';
@@ -59,6 +60,7 @@
 	</div>
 	<CaseStudySectionScale />
 	<AboutSection />
+	<Footer />
 </OnMount>
 
 
