@@ -1,33 +1,49 @@
-# create-svelte
+# Anders Rådal's UX/Interaction Design Portfolio
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Welcome to my UX/Interaction Design Portfolio. This repository showcases my work and projects in the field of user experience and interaction design. It's built using SvelteKit, a powerful framework for building web applications, and uses Tailwind CSS for sleek, responsive designs.
 
-## Creating a project
+### Key features and technologies include:
+- **SvelteKit**: For building highly interactive user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid custom design development.
+- **Performance Optimization**: Achieved a perfect 100 score in Google PageSpeed while also enabling analytics like GA4 and Hotjar, showing a strong focus on site speed and user experience.
 
-If you're seeing this, you've probably already done this step. Congrats!
+This portfolio represents my commitment to creating high-quality, performant web applications and my ability to leverage the latest technologies in web development.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Project Setup
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This section provides instructions on how to set up and run the project locally.
 
-## Developing
+### Prerequisites
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Node.js
+- npm (or yarn/pnpm)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Andyradall/my-app
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   # or if you use yarn
+   yarn install
+   ```
+
+### Developing
+
+To start a development server:
 
 ```bash
 npm run dev
-
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
-To create a production version of your app:
+To create a production version of the app:
 
 ```bash
 npm run build
@@ -35,4 +51,15 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> Note: To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+
+## License
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](./LICENSE).
+
+## Contact
+
+For any inquiries or collaborations, feel free to contact me at hello@andersra.com
+
+Thank you for visiting my portfolio!
