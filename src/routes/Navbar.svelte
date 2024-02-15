@@ -10,8 +10,8 @@
 
 		const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
 		if (activeLink instanceof HTMLElement) {
-			effectX = activeLink.offsetLeft - 8; // Subtracted 8 for the left padding
-			effectWidth = activeLink.offsetWidth + 16; // Added 16 for total padding (8 on each side)
+			effectX = activeLink.offsetLeft - 7; // Subtract 8 for the left padding
+			effectWidth = activeLink.offsetWidth + 14; // Add 16 for total padding (8 on each side)
 		} else {
 		}
 	});
@@ -256,7 +256,7 @@ onMount(() => {
 	.main-navbar {
 		position: fixed;
 		top: 24px;
-		padding: 0 4px;
+		padding: 0 5px;
 		align-items: center;
 		height: 56px;
 		z-index: 100;
@@ -272,8 +272,8 @@ onMount(() => {
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  border: 1.2px solid rgba(178, 183, 192,0.3); /* transparent border */
-  pointer-events: none; /* to allow interaction with the content underneath */
+  border: 1.2px solid rgba(178, 183, 192,0.3); 
+  pointer-events: none; 
 }
 
 	.main-navbar ul {
@@ -321,7 +321,7 @@ onMount(() => {
 	.menu-effect {
 		opacity: 1;
 		/*min-width: 90.5677px;*/
-		height: 48px;
+		height: 46px;
 		position: absolute;
 		left: 0; /*old Initial position if code live on Work page */
 		/*left: 109.372px; */ /*Initial position if code live on About page */
