@@ -194,7 +194,7 @@
 				<h2 class="font-euclid text-3xl font-semibold my-4">Work</h2>
 				<p class="font-euclid font-normal text-lg">
 					I worked at Studenttorget from 2019 with UX and product design. Here, I refined the user
-					experience on <strong>Karrierestart.no</strong>, leading to to a 75% growth in users and increased engagement. I recently did an internship at
+					experience on <strong>Karrierestart.no</strong>, leading to a 75% growth in users and increased engagement. I recently did an internship at
 					<strong>Netlife Design</strong>, where I designed an administrator area for the tool,
 					Designmaskinen.
 				</p>
