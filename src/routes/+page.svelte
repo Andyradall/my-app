@@ -5,6 +5,7 @@
 	import CaseStudySectionScale from '../components/CaseStudySectionScale.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
 	import SvelteSeo from 'svelte-seo';
+	import BlogPosts from '../components/BlogPosts.svelte';
 	import { OnMount } from 'fractils'
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing'
@@ -58,6 +59,7 @@
 		<HeroSection />
 	</div>
 	<CaseStudySectionScale />
+	<BlogPosts />
 	<AboutSection />
 </OnMount>
 
