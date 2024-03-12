@@ -23,9 +23,9 @@
     });
   </script>
   
-
-  <section class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-40 mb-30">
-    <h2 class="font-euclid text-2xl mt-12 md:text-3xl text-slate-550 font-semibold pl-6 my-4">BLOG</h2>
+<article id="blog" class="pageSection text-slate-600">
+    <section  class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-40 mb-30">
+    <h2 class="font-euclid text-2xl mt-12 md:text-3xl text-slate-600 font-semibold pl-6 my-4">BLOG</h2>
   </section>
 
   <section class="flex overflow-x-auto pb-14 mb-2 px-6 space-x-6 z-99">
@@ -40,8 +40,15 @@
       </div>
     {/each}
   </section>
+</article>
+
 
   <style lang="postcss">
+
+#blog {
+  display: none;
+}
+
     .blog-card {
         position: relative;
       }

@@ -6,6 +6,8 @@
 	import AboutSection from '../components/AboutSection.svelte';
 	import SvelteSeo from 'svelte-seo';
 	import BlogPosts from '../components/BlogPosts.svelte';
+	import Testimonials from '../components/Testimonials.svelte';
+	import Background from '../components/Background.svelte';
 	import { OnMount } from 'fractils'
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing'
@@ -61,6 +63,8 @@
 	<CaseStudySectionScale />
 	<BlogPosts />
 	<AboutSection />
+	<Testimonials />
+	<Background />
 </OnMount>
 
 

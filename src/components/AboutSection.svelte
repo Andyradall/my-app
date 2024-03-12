@@ -361,7 +361,7 @@
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  border: 1.3px solid rgba(178, 183, 192,0.3); /* transparent border */
+  border: 1.3px solid rgba(178, 183, 192,0.3);
   z-index: 1;
   pointer-events: none; /* to allow interaction with the content underneath */
 }
@@ -386,6 +386,6 @@
 	}
 
     :root {
-        --swiper-theme-color: #515255; /* Or any other color you prefer */
+        --swiper-theme-color: #515255; 
     }
 </style>
