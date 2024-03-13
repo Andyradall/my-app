@@ -1,26 +1,3 @@
-<script>
-	import { onMount } from 'svelte';
-	import Swiper from 'swiper';
-	import { Autoplay, Pagination } from 'swiper/modules';
-	import 'swiper/css';
-	import 'swiper/css/pagination';
-
-	onMount(() => {
-		const swiper = new Swiper('.mySwiper', {
-			modules: [Autoplay, Pagination],
-			loop: true,
-			autoplay: {
-				delay: 5000
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			
-			}
-		});
-	});
-</script>
-
 <article id="about" class="pageSection text-slate-600 pb-0 md:pb-2 md:pt-10 mx-auto">
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-40 mb-2">
 		<section class="">
