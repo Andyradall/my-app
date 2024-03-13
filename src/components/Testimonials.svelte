@@ -21,7 +21,7 @@
 	});
 </script>
 
-<article id="testimonials" class=" text-slate-600 pb-2 md:pb-0 md:pt-2 mx-auto">
+<article class=" text-slate-600 pb-2 md:pb-0 md:pt-2 mx-auto">
   <div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
       <section>
           <h2 class="font-euclid text-2xl md:text-3xl text-slate-550 font-semibold pl-6 my-4">
@@ -57,9 +57,6 @@
 </article>
 
 <style lang="postcss">
-	#testimonials {
-		/*display: none;*/
-	}
 
 	.testimonial-card,
 	.testimonial-img {
