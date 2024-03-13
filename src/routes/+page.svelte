@@ -11,6 +11,7 @@
 	import { cubicOut } from 'svelte/easing';
 	import Testimonials from '../components/Testimonials.svelte';
 	import BlogPosts from '../components/BlogPosts.svelte';
+	import Background from '../components/Background.svelte';
 </script>
 
 <svelte:head>
@@ -61,9 +62,10 @@
 		<HeroSection />
 	</div>
 	<CaseStudySectionScale />
+	<BlogPosts />
 	<AboutSection />
 	<Testimonials />
-	<BlogPosts />
+	<Background />
 	<Footer />
 </OnMount>
 
