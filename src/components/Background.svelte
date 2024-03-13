@@ -21,7 +21,7 @@
 	});
 </script>
 
-<article id="about" class="pageSection text-slate-600 pb-24 md:pb-56 mx-auto">
+<article id="background" class=" text-slate-600 pb-24 md:pb-56 mx-auto">
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mb-30">
         <section class="mt-4 md:mt-4">
 			<h2 class="font-euclid text-2xl md:text-3xl pl-6 font-semibold py-4">BACKGROUND</h2>
