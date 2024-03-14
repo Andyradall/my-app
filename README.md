@@ -5,7 +5,7 @@ Welcome to my UX/Interaction Design Portfolio. This repository showcases my work
 ### Key features and technologies include:
 - **SvelteKit**: For building highly interactive user interfaces.
 - **Tailwind CSS**: A utility-first CSS framework for rapid custom design development.
-- **Sanity** A flexible, real-time headless CMS that powers the content for testimonials and blog sections. It allows for easy updates and management of site content without compromising on performance, demonstrating a commitment to dynamic content delivery and editorial efficiency.
+- **Sanity**: A flexible, real-time headless CMS that powers the content for testimonials and blog sections. It allows for easy updates and management of site content without compromising on performance, demonstrating a commitment to dynamic content delivery and editorial efficiency.
 - **Performance Optimization**: Achieving a perfect 100 score in Google PageSpeed Insights, while also running analytics like GA4 and Hotjar, demonstrating my focus on site speed and user experience.
 
 This portfolio represents my commitment to creating high-quality, performant web applications and my ability to leverage the latest technologies in web development.
