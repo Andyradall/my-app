@@ -2,16 +2,16 @@
 	import Navbar from './Navbar.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
 	import BgAnimated from '../components/BgAnimated.svelte';
-	import CaseStudySectionScale from '../components/CaseStudySectionScale.svelte';
+	import CaseStudySectionScale from '../components/CaseStudySection.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
 	import Footer from '../components/Footer.svelte';
 	import SvelteSeo from 'svelte-seo';
 	import { OnMount } from 'fractils';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-	import Testimonials from '../components/Testimonials.svelte';
-	import BlogPosts from '../components/BlogPosts.svelte';
-	import Background from '../components/Background.svelte';
+	import Testimonials from '../components/TestimonialsSection.svelte';
+	import BlogPosts from '../components/BlogPostsSection.svelte';
+	import Background from '../components/BackgroundSection.svelte';
 </script>
 
 <svelte:head>

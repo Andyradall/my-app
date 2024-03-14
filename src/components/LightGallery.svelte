@@ -30,7 +30,9 @@
        // subHtmlSelectorRelative: true,
         //subHtmlSelector: 'figcaption', 
       });
-      lightGallery(articleElement, {
+      
+      
+        lightGallery(articleElement, {
         plugins: [lgMediumZoom,],
         selector: '.zooming-dark-bg',
         licenseKey: 'A7D7BC77-424B-4F41-9D39-CC54DE0C34AC',
