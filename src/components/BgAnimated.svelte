@@ -133,7 +133,7 @@
   left: 0;
   background-image: url('/images/backgrounds/bg_grain.webp');
   background-repeat: repeat;
-  opacity: 0.53;
+  opacity: .54;
   z-index: 0;
 }
   </style>
