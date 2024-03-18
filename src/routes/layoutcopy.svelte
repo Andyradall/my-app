@@ -1,3 +1,13 @@
+<!--script>
+	import '../global.css';
+
+</script>
+
+
+
+		<slot /-->
+
+
 <script>
 	import '../global.css';
 	import { partytownSnippet } from '@builder.io/partytown/integration';
