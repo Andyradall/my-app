@@ -25,11 +25,13 @@
     });
   </script>
 
-  <header class="relative top-0 z-10">
+<header class="relative">
+  <div class="absolute top-0 left-0">
     <WorkBack />
-  </header>
+  </div>
+</header>
   
-  <article class="relative mt-40 mb-60 text-slate-600">
+  <article class="mt-40 mb-60 text-slate-600">
     <section class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
       <h1 class="font-euclid text-3xl mt-12 md:text-4xl text-slate-600 font-semibold pl-6 my-4">BLOG ARCHIVE</h1>
     </section>

@@ -42,6 +42,8 @@
 		"@hotjar/browser": "^1.0.9",
 		"@portabletext/svelte": "^2.1.6",
 		"@sanity/client": "^6.15.4",
+		"@sanity/image-url": "^1.0.2",
+		"@sanity/types": "^3.36.4",
 		"animejs": "^3.2.1",
 		"beta": "^0.0.1",
 		"fractils": "^3.1.2",
