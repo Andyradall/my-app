@@ -612,7 +612,10 @@
 	p {
 		@apply text-[18px] font-euclid font-light leading-[30px];
 	}
+	strong {
+		@apply font-euclid font-medium;
+	}
 	.list-custom {
-		@apply text-[18px] font-euclid font-normal leading-[30px] list-disc pl-5 space-y-2;
+		@apply text-[18px] font-euclid font-light leading-[30px] list-disc pl-5 space-y-2;
 	}
 </style>

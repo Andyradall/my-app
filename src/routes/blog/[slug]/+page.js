@@ -10,11 +10,15 @@ export async function load({ params }) {
 }
 */
 export async function load({ params }) {
-//    console.log('load function called with params:', params); // Check if load is called
 
-    // Construct the query to fetch the post by slug
-    const query = `*[_type == "post" && slug.current == $slug][0]`;
-  //  console.log('Sanity query:', query); // Check the query
+  const query = `*[_type == "post" && slug.current == $slug]{
+    title,
+    excerpt,
+    mainImage,
+    body,
+    publishedAt,
+    "categories": categories[]->title
+  }[0]`;
 
     const data = await client.fetch(query, { slug: params.slug });
   //  console.log('Post-Data fetched from Sanity:', data); // Check the fetched post
