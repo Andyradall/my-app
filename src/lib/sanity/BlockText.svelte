@@ -18,7 +18,7 @@
 {:else if style === 'h3'}
   <h3 class="text-[24px] font-euclid font-normal leading-[48px] text-slate-600 py-1"><slot /></h3>
 {:else if style === 'normal'}
-  <p class="text-[18px] font-euclid font-light text-slate-600 leading-[30px] py-2"><slot /></p>
+  <p class="text-[18px] font-euclid font-light text-slate-600 leading-[30px] pt-2 pb-3"><slot /></p>
 {:else}
   <!-- Fallback for unhandled styles -->
   <div class="font-euclid text-base text-red"><slot /></div>

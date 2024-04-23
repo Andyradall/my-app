@@ -47,7 +47,7 @@
 </header>
 
 <article class="mx-auto font-euclid text-lg text-slate-600" >
-  <main class="md:max-w-4xl mx-auto justify-center px-4 pt-40 md:pt50 pb-20">
+  <main class="md:max-w-4xl mx-auto justify-center px-4 pt-40 md:pt50 pb-40">
     <h2 class=" text-slate-500">
       {#each data.posts.categories as category, index (index)}
         #{category} {#if index < data.posts.categories.length - 1} {/if}
@@ -55,7 +55,7 @@
     </h2>
     {#if data.posts}
       <h1 class="text-4xl md:text-6xl font-euclid 
-      font-semibold text-slate-600 py-2">{data.posts.title}</h1>
+      font-bold text-slate-600 pt-2 pb-6">{data.posts.title}</h1>
       <p class="text-3xl">{data.posts.excerpt}</p>
       
       <img src={urlFor(data.posts.mainImage).url()} alt={`Cover Image for ${data.posts.title}`} class="max-w-full h-auto rounded-sm my-4" />

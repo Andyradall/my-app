@@ -20,7 +20,7 @@
 		{ id: '#third', title: 'Final prototype', ariaLabel: 'Navigate to "Final prototype" section' },
 		{ id: '#fourth', title: 'Insights', ariaLabel: 'Navigate to "Insights" section' }
 	];
-</script>
+</script> 
 
 <svelte:head>
 	<SvelteSeo
