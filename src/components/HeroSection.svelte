@@ -10,7 +10,7 @@
                 FROM PIXEL TO PERFORMANCE
             </span>
             <span class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-xl leading-[2.875rem] text-slate-550">
-                Interaction design for growth and usability
+                Hello, I'm Anders. I focus on UX and code for happy users and business success.
             </span>
         </h1>	
     </div>	
