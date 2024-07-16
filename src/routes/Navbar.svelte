@@ -160,7 +160,8 @@ onMount(() => {
 				</li>
 				<li>
 					<a
-						href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing"
+					
+						href="https://drive.google.com/file/d/1VqrsvjfF7dU8N12q_kXG7xupsPX7s64U/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Resumé - opens in a new window"
