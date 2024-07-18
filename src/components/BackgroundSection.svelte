@@ -67,7 +67,7 @@
 						class="inline-flex items-center bg-red-500 bg-opacity-80 font-euclid font-medium text-zinc-100 hover:text-zinc-100 my-10 pt-3 pb-3 px-6 rounded-xl transition-all mx-auto"
 					>
 						<a
-							href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing"
+							href="https://drive.google.com/file/d/1VqrsvjfF7dU8N12q_kXG7xupsPX7s64U/view?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="View my Full Resumé"
