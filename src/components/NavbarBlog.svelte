@@ -53,6 +53,7 @@
 		const scrollPosition = window.scrollY;
 		const offset = 160; // Adjust this offset if needed
 		let foundMatch = false; // Flag to indicate if we've found our match
+		
 
 		// We're reversing the pageSections order to start checking from bottom to top
 		pageSections.forEach((section) => {
@@ -89,6 +90,17 @@
 	}
 
 	onMount(() => {
+		    // If the current window location pathname is "/blog", set isActive to true
+			if (window.location.pathname === '/blog') {
+        isActive = true;
+		
+    }
+	            // Find the "Blog" navigation link and add the 'active' class to it
+				const blogNavLink = document.querySelector('a[href="/#blog"]');
+            if (blogNavLink) {
+                blogNavLink.classList.add('active');
+            }
+        
 		// Cache navigation links and sections
 		pageNavigationLinks = document.querySelectorAll(
 			'#main-navigation > ul > li > a:not(.menu-custom-link)'
@@ -128,7 +140,12 @@ onMount(() => {
 	if (window.location.hash === '#hero') {
 		isActive = true;
 	}
+	if (window.location.pathname === '/blog') {
+            isActive = true;
+	}
 });
+
+
 </script>
 
 <nav class="flyIn">
@@ -159,7 +176,7 @@ onMount(() => {
 					<a href="/#about" aria-label="About me" class="text-slate-500 hover:text-slate-600">About me</a>
 				</li>
 				<li>
-					<a href="/blog" class:active={isActive} aria-label="Blog" class="text-slate-500 hover:text-slate-600">Blog</a>
+					<a href="/#blog" class:active={isActive} aria-label="Blog" class="text-slate-500 hover:text-slate-600">Blog</a>
 				</li>
 				<li>
 					<a

@@ -1,8 +1,9 @@
 <script>
     import { onMount } from 'svelte';
     import client from '../../lib/sanityClient'; 
-    import WorkBack from '../../components/WorkBack.svelte';
+    //import WorkBack from '../../components/WorkBack.svelte';
 	  import NavbarBlog from '../..//components/NavbarBlog.svelte';
+    import BgAnimated from '../../components/BgAnimated.svelte';
 
     let blogPosts = [];
   
@@ -32,15 +33,22 @@
     <!--WorkBack /-->
   </div>
 </header>
-  
 <NavbarBlog />
+<BgAnimated />
 
-  <article class="mt-80 mb-80 text-slate-600">
-    <section id="blog" class="pageSection mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
+<article id="hero">
+  </article>
+  <article id="work">
+  </article>
+  <article id="about">
+  </article>
+
+  <article id="blog" class="mt-80 mb-80 text-slate-600">
+    <section class="pageSection mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
       <h1 class="font-euclid text-3xl mt-12 md:text-4xl text-slate-600 font-semibold pl-6 my-4">BLOG ARCHIVE</h1>
     </section>
 
-    <section id="blog" class="grid grid-cols-1 md:grid-cols-12 items-start gap-10 md:mx-auto md:min-mx-16 md:max-w-7xl pb-20">
+    <section class="grid grid-cols-1 md:grid-cols-12 items-start gap-10 md:mx-auto md:min-mx-16 md:max-w-7xl pb-20">
     {#each blogPosts as post}
     {#if post.slug && post.slug.current}
       <a href={`/blog/${post.slug.current}`} class="blog-card col-span-12 md:col-span-6  rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom pt-10 pb-10">

@@ -1,10 +1,11 @@
 <script>
   import { PortableText } from '@portabletext/svelte'; 
-  import WorkBack from '../../../components/WorkBack.svelte';
+  import BlogBack from '../../../components/BlogBack.svelte';
   import BlockText from '../../../lib/sanity/BlockText.svelte';
   import BlockImage from '../../../lib/sanity/BlockImage.svelte';
   import SvelteSeo from 'svelte-seo';
   import { urlFor } from '../../../lib/sanity/image';
+
 
   export let data;
   
@@ -43,11 +44,11 @@
 </svelte:head>
 
 <header class="relative top-0">
-	<WorkBack />
+	<BlogBack />
 </header>
 
 <article class="mx-auto font-euclid text-lg text-slate-600" >
-  <main class="md:max-w-4xl mx-auto justify-center px-4 pt-40 md:pt50 pb-40">
+  <main class="md:max-w-4xl mx-auto justify-center px-4 pt-40 md:pt50 pb-20">
     <h2 class=" text-slate-500">
       {#each data.posts.categories as category, index (index)}
         #{category} {#if index < data.posts.categories.length - 1} {/if}
@@ -55,7 +56,7 @@
     </h2>
     {#if data.posts}
       <h1 class="text-4xl md:text-6xl font-euclid 
-      font-bold text-slate-600 pt-2 pb-6">{data.posts.title}</h1>
+      font-bold text-slate-600 leading-[198px] pt-2 pb-6">{data.posts.title}</h1>
       <p class="text-3xl">{data.posts.excerpt}</p>
       
       <img src={urlFor(data.posts.mainImage).url()} alt={`Cover Image for ${data.posts.title}`} class="max-w-full h-auto rounded-sm my-4" />
