@@ -9,8 +9,8 @@
             >
                 FROM PIXEL TO PERFORMANCE
             </span>
-            <span class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-xl leading-[2.875rem] text-slate-550">
-                Hello, I'm Anders. I design and code for happy users and business success.
+            <span class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-3xl leading-[3.5rem] text-slate-600">
+                Hello, I'm Anders. I design and code for happy users and business success!
             </span>
         </h1>	
     </div>	
