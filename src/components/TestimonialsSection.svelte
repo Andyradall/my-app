@@ -24,7 +24,7 @@
 <article class="relative z-10 text-slate-600 pb-2 md:pb-0 md:pt-2 mx-auto">
   <div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
       <section class="">
-          <h2 class="font-euclid text-2xl md:text-3xl text-slate-550 font-semibold pl-6 my-4">
+          <h2 class="font-euclid text-2xl md:text-3xl text-zinc-100 font-semibold pl-6 my-4">
               TESTIMONIALS
           </h2>
       </section>
@@ -32,7 +32,7 @@
       <section class="grid grid-cols-1 md:grid-cols-12 items-start gap-10">
           {#each testimonials as testimonial}
               <div
-                  class="testimonial-card md:col-span-4 p-8 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom"
+                  class="testimonial-card md:col-span-4 p-8 rounded-3xl bg-zinc-100 bg-opacity-100 backdrop-blur-sm shadow-custom"
               >
                   <div class="testimonial-content mb-4">
                       <p class="font-euclid text-lg text-slate-500">{testimonial.testimonialText}</p>

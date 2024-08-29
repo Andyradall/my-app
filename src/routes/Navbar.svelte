@@ -156,6 +156,9 @@ onMount(() => {
 					<a href="#work" aria-label="Case Studies" class="text-slate-500 hover:text-slate-600">Case Studies</a>
 				</li>
 				<li>
+					<a href="#services" aria-label="Services" class="text-slate-500 hover:text-slate-600">Services</a>
+				</li>
+				<li>
 					<a href="#about" aria-label="About me" class="text-slate-500 hover:text-slate-600">About me</a>
 				</li>
 				<li>
