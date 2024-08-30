@@ -42,7 +42,7 @@
 <article id="about" />
 <article id="blog" class="mt-20 mb-80 text-slate-600">
 	<section class="pageSection mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
-		<section class=" text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-10">
+		<section class="text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-10">
 			<div class="mx-auto">
 				<h1 class="font-euclid max-w-xs md:max-w-4xl pl-2 text-left">
 					<span
