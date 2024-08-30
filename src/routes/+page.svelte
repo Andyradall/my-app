@@ -1,5 +1,5 @@
 <script>
-	import Navbar from './Navbar.svelte';
+	import Navbar from '../components/Navbar.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
 	import BgAnimated from '../components/BgAnimated.svelte';
 	import CaseStudySectionScale from '../components/CaseStudySection.svelte';
@@ -10,7 +10,6 @@
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import ServicesSection from '../components/ServicesSection.svelte';
-	//import Testimonials from '../components/TestimonialsSection.svelte';
 	//import BlogPosts from '../components/BlogPostsSection.svelte';
 	import Background from '../components/BackgroundSection.svelte';
 </script>
@@ -64,7 +63,6 @@
 	</div>
 	<CaseStudySectionScale />
 	<!--BlogPosts /-->
-	<!--Testimonials /-->
 	<ServicesSection />
 	<AboutSection />
 	<Background />

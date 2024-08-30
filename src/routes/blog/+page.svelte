@@ -78,9 +78,5 @@
       z-index: 1;
       pointer-events: none;
     }
-
-    body {
-background-color: #909BA1;
-    }
   </style>
   

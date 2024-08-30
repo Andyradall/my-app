@@ -4,7 +4,7 @@
 
 <article
 	id="services"
-	class="pageSection text-slate-600 pb-24 md:pb-24 md:pt-4 mx-auto bg-slate-500"
+	class="pageSection text-slate-600 pb-24 md:pb-28 md:pt-4 mx-auto bg-slate-500"
 >
 	<section
 		class="max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-24 md:pt-24 pb-10 md:pb-24 text-gray-800"

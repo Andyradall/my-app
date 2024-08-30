@@ -51,8 +51,8 @@
   <main class="md:max-w-4xl mx-auto justify-center px-4 pt-40 md:pt50 pb-20">
     <h2 class=" text-slate-500">
       {#each data.posts.categories as category, index (index)}
-        #{category} {#if index < data.posts.categories.length - 1} {/if}
-      {/each}
+      #{category}{' '}
+  {/each}
     </h2>
     {#if data.posts}
       <h1 class="text-4xl md:text-6xl font-euclid 
