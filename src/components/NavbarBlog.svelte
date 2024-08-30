@@ -180,16 +180,16 @@ onMount(() => {
 				</li>
 				<li>
 					<a href="/#blog" class:active={isActive} aria-label="Blog" class="menu-custom-link text-slate-500 hover:text-slate-600">Blog
-						<span class="menu-svg-icon">
+						<!--span class="menu-svg-icon-right">
 							<svg xmlns="http://www.w3.org/2000/svg" 								
-							height="24"
-							viewBox="0 -960 960 960"
-							width="24"
+							height="20"
+							viewBox="0 0 32 32"
+							width="20"
 								><path
 									d="M16.1 0.583252L13.2624 2.94794L24.4921 12.3228H0V15.677H24.4921L13.2624 25.0519L16.1 27.4166L32.2 13.9999L16.1 0.583252Z"
 									fill="currentColor"
 								/></svg>
-						</span>
+						</span-->
 					</a>
 				</li>
 				<li>
@@ -277,9 +277,20 @@ onMount(() => {
 		transition: transform 0.1s;
 	}
 
+    /*.menu-svg-icon-right {
+		margin-left: 3px;
+		//transform: translateY(-1px);
+		transition: transform 0.1s;
+	}*/
+
 	.menu-custom-link:hover .menu-svg-icon {
 		transform: translateY(-3px) translateX(2px);
 	}
+
+	/*.menu-custom-link:hover .menu-svg-icon-right {
+		transform: translateX(3px);
+	}*/
+
 
 	.menu-svg-icon svg path {
 		fill: currentColor;
