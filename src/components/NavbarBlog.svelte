@@ -173,13 +173,24 @@ onMount(() => {
 					<a href="/#work" aria-label="Case Studies" class="text-slate-500 hover:text-slate-600">Case Studies</a>
 				</li>
 				<li>
-					<a href="/#about" aria-label="About me" class="text-slate-500 hover:text-slate-600">Services</a>
+					<a href="/#services" aria-label="About me" class="text-slate-500 hover:text-slate-600">Services</a>
 				</li>
 				<li>
 					<a href="/#about" aria-label="About me" class="text-slate-500 hover:text-slate-600">About me</a>
 				</li>
 				<li>
-					<a href="/#blog" class:active={isActive} aria-label="Blog" class="text-slate-500 hover:text-slate-600">Blog</a>
+					<a href="/#blog" class:active={isActive} aria-label="Blog" class="menu-custom-link text-slate-500 hover:text-slate-600">Blog
+						<span class="menu-svg-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" 								
+							height="24"
+							viewBox="0 -960 960 960"
+							width="24"
+								><path
+									d="M16.1 0.583252L13.2624 2.94794L24.4921 12.3228H0V15.677H24.4921L13.2624 25.0519L16.1 27.4166L32.2 13.9999L16.1 0.583252Z"
+									fill="currentColor"
+								/></svg>
+						</span>
+					</a>
 				</li>
 				<li>
 					<a

@@ -1,6 +1,6 @@
 <article id="about" class="pageSection text-slate-600 pb-0 md:pb-2 md:pt-10 mx-auto">
 	<section
-		class="max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-20 text-gray-800"
+		class="max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-20"
 	>
 		<div class="mx-auto">
 			<h1 class="font-euclid text-center">
