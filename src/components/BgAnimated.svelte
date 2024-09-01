@@ -111,7 +111,7 @@
     }
   
     .animatedCircle {
-      opacity: 0.35; /* Control opacity of ellipses */
+      opacity: 0.34;
     }
   
     .full-svg-bg {
@@ -122,7 +122,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      opacity: 0.85;
+      opacity: 0.82;
     }
 
     .grain {
@@ -134,7 +134,7 @@
   left: 0;
   background-image: url('/images/backgrounds/bg_grain.webp');
   background-repeat: repeat;
-  opacity: .20;
+  opacity: .14;
   z-index: 0;
 }
   </style>
