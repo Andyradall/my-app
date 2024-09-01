@@ -3,18 +3,13 @@
 		class="max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-20"
 	>
 		<div class="mx-auto">
-			<h1 class="font-euclid text-center">
+			<h2 class="font-euclid text-center">
 				<span
-					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-[4rem] md:leading-[8.5rem] pb-4 md:pb-6 text-slate-600"
+					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-[4rem] md:leading-[8.2rem] pb-4 md:pb-6 text-slate-600"
 				>
 				A technical creative with years of experience
 				</span>
-				<!--span
-					class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-3xl leading-[3.5rem] text-slate-600"
-				>
-					Who is Anders? 
-				</span-->
-			</h1>
+			</h2>
 		</div>
 	</section>
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mb-2">

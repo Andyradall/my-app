@@ -10,7 +10,7 @@
 		class="max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-24 md:pt-24 pb-10 md:pb-24 text-gray-800"
 	>
 		<div class="mx-auto">
-			<h1 class="font-euclid text-center">
+			<h2 class="font-euclid text-center">
 				<span
 					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-[4rem] md:leading-[8.5rem] pb-4 md:pb-10 text-zinc-100"
 				>
@@ -21,7 +21,7 @@
 				>
 					I create clear and beautiful websites that drive sales and your users love!
 				</span>
-			</h1>
+			</h2>
 		</div>
 	</section>
 
