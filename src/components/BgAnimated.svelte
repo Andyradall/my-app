@@ -11,7 +11,7 @@
   }
 
     const colors = [
-      "#CF381C", "#909BA1", "#CF381C", "#717E84", 
+      "#CF381C", "#909BA1", "#9FAAB0", "#717E84", 
       "#CF381C", "#909BA1", "#D96049", "#717E84",
     ];
 
@@ -68,15 +68,16 @@
           <stop offset="0%" stop-color="${color}" stop-opacity="0.77" /> 
           <stop offset="20%" stop-color="${color}" stop-opacity="0.6" />
           <stop offset="40%" stop-color="${color}" stop-opacity="0.4" />
-          <stop offset="60%" stop-color="${color}" stop-opacity="0.2" />
-          <stop offset="80%" stop-color="${color}" stop-opacity="0.095" />
+          <stop offset="60%" stop-color="${color}" stop-opacity="0.18" />
+          <stop offset="80%" stop-color="${color}" stop-opacity="0.080" />
           <stop offset="100%" stop-color="${color}" stop-opacity="0" />
       </radialGradient>
     `).join('');
 </script>
 <div class="grain"></div>
 <svg class="full-svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="none">
-    <rect width="100%" height="100%" fill="#F5F6F7" />
+    
+    <rect width="100%" height="100%" fill="#ECEDEF" opacity="0.6" />
     <defs>
       {@html gradients}
     </defs>
@@ -110,7 +111,7 @@
     }
   
     .animatedCircle {
-      animation: moveAnimation var(--duration) infinite ease-in-out var(--delay);
+      opacity: 0.35; /* Control opacity of ellipses */
     }
   
     .full-svg-bg {
@@ -121,7 +122,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      opacity: 0.83;
+      opacity: 0.85;
     }
 
     .grain {
@@ -133,7 +134,7 @@
   left: 0;
   background-image: url('/images/backgrounds/bg_grain.webp');
   background-repeat: repeat;
-  opacity: .54;
+  opacity: .20;
   z-index: 0;
 }
   </style>

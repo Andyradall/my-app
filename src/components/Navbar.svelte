@@ -234,12 +234,11 @@
 	</div>
 </nav>
 
+
+
 <!-- Mobile Hamburger Icon -->
 <div class="absolute top-4 z-50 right-4 md:hidden">
 	<button on:click={toggleMobileMenu} class="text-gray-500 focus:outline-none">
-		<!--svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-		</svg-->
 		<svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#20282C"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>	</button>
 </div>
 
@@ -248,9 +247,6 @@
 <div class="fixed inset-0 bg-zinc-100 bg-opacity-90 backdrop-blur z-50 flex flex-col items-center justify-center space-y-8">
 	<!-- Close Button -->
 	<button on:click={toggleMobileMenu} class="absolute top-4 right-4 text-slate-600 focus:outline-none">
-		<!--svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-		</svg-->
 		<svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#20282C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
 	</button>
 
@@ -274,15 +270,15 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Resumé - opens in a new window"
-				class=" text-slate-600"
+				class="flex text-slate-600"
 			>
 				Resumé
-				<!--span class="menu-svg-icon">
+				<!--span class=" mt-1">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						height="24"
+						height="32"
 						viewBox="0 -960 960 960"
-						width="24"
+						width="32"
 					>
 						<path
 							d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
@@ -298,15 +294,15 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Connect on LinkedIn, opens in a new window"
-				class=" text-slate-600"
+				class="flex text-slate-600"
 			>
 				LinkedIn
-				<!--span class="menu-svg-icon">
+				<!--span class=" mt-1">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						height="24"
+						height="32"
 						viewBox="0 -960 960 960"
-						width="24"
+						width="32"
 					>
 						<path
 							d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
