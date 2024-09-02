@@ -77,7 +77,7 @@
 <div class="grain"></div>
 <svg class="full-svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="none">
     
-    <rect width="100%" height="100%" fill="#ECEDEF" opacity="0.6" />
+    <rect width="100%" height="100%" fill="#ECEDEF" opacity="0.61" />
     <defs>
       {@html gradients}
     </defs>
@@ -111,7 +111,8 @@
     }
   
     .animatedCircle {
-      opacity: 0.34;
+      animation: moveAnimation var(--duration) infinite ease-in-out var(--delay);
+      opacity: 0.35;
     }
   
     .full-svg-bg {
@@ -122,7 +123,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      opacity: 0.82;
+      opacity: 0.81;
     }
 
     .grain {
