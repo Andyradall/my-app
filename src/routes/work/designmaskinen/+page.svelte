@@ -84,7 +84,7 @@
 		class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20 px-4"
 	>
 		<div class="md:flex-1 md:max-w-lg my-4">
-			<h2 class=" text-xl font-bold text-slate-600">Case Overview</h2>
+			<h2 class=" text-xl font-bold text-slate-600">Case overview</h2>
 			<p class=" text-base align-center text-slate-600">
 				In Spring 2023, during my three-month internship at Netlife Design, I contributed to the
 				development of Designmaskinen, a specialized design tool for creating print and digital

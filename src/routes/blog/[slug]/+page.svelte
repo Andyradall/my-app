@@ -48,7 +48,7 @@
 </header>
 
 <article class="mx-auto font-euclid text-lg text-slate-600" >
-  <main class="md:max-w-4xl mx-auto justify-center px-4 pt-40 md:pt50 pb-20">
+  <main class="md:max-w-3xl mx-auto justify-center px-4 pt-40 md:pt50 pb-20">
     <h2 class=" text-slate-500">
       {#each data.posts.categories as category, index (index)}
       #{category}{' '}

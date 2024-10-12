@@ -10,7 +10,6 @@
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import ServicesSection from '../components/ServicesSection.svelte';
-	//import BlogPosts from '../components/BlogPostsSection.svelte';
 	import Background from '../components/BackgroundSection.svelte';
 </script>
 
@@ -62,7 +61,6 @@
 		<HeroSection />
 	</div>
 	<CaseStudySectionScale />
-	<!--BlogPosts /-->
 	<ServicesSection />
 	<AboutSection />
 	<Background />

@@ -43,10 +43,10 @@
       numCircles = 12;
     } else { /* Desktop */
       circleConfig = {
-        cxRange: [0, 800],
-        cyRange: [0, 800],
+        cxRange: [55, 750],
+        cyRange: [0, 850],
         rxRange: [240, 400], /* Wide horizontal radius */
-        ryRange: [90, 160]   /* Small vertical radius */
+        ryRange: [90, 170]   /* Small vertical radius */
       };
       durationRange = [16, 25]; /* Speed */
       numCircles = 16;
