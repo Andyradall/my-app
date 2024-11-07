@@ -5,11 +5,11 @@
     <div class="mx-auto">
         <h1 class="font-euclid text-center">
             <span
-                class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-[8.75rem] leading-[4rem] md:leading-[9.5rem] pb-4 md:pb-10"
+                class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-[8.87rem] leading-[4.1rem] md:leading-[9.65rem] pb-4 md:pb-10"
             >
-                FROM PIXEL TO PERFORMANCE
+                From pixel to performance
             </span>
-            <span class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-3xl leading-[3.5rem] text-slate-600">
+            <span class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-3xl leading-[3.6rem] text-slate-600">
                 Hello, I'm Anders. I design and code for happy users and business success!
             </span>
         </h1>	

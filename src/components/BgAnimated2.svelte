@@ -15,10 +15,16 @@
     "#8F949E", // Darker shade of gray-blue
     "#35434A", // Base dark blue-gray
     "#4A5A62", // Lighter shade of dark blue-gray
+    "#4A5A62", // Lighter shade of dark blue-gray (x2)
     "#2E3A40", // Darker shade of dark blue-gray
-    "#CF381C", // Base red-orange
-    "#E05034", // Lighter shade of red-orange
-    "#B32F19", // Darker shade of red-orange
+
+    // 07.11.24 Added this: 
+    "#4A5A62", // Lighter shade of dark blue-gray (x3)
+    "#717E84", // Slate 350
+    // 07.11.24 Removed this: 
+    //"#CF381C", // Base red-orange
+    //"#E05034", // Lighter shade of red-orange
+    //"#B32F19", // Darker shade of red-orange
   ];
 
   function getRandom(min, max) {
@@ -114,7 +120,7 @@
 
   .animatedCircle {
     animation: moveAnimation var(--duration) infinite ease-in-out var(--delay);
-    opacity: 0.35;
+    opacity: 0.40;
     will-change: transform;
   }
 
