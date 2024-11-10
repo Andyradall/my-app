@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import client from '../../lib/sanityClient';
 	//import WorkBack from '../../components/WorkBack.svelte';
-	import NavbarBlog from '../..//components/NavbarBlog.svelte';
+	import Navbar3 from '../..//components/NavbarBlog.svelte';
 	//import BgAnimated2 from '../../components/BgAnimated2.svelte';
 	import { OnMount } from 'fractils';
 	import { fly } from 'svelte/transition';
@@ -40,7 +40,7 @@
 <OnMount>
 	<!--BgAnimated2 /-->
 	<div in:fly|global={{ y: -100, opacity: 0.5, duration: 600, easing: cubicOut }}>
-		<NavbarBlog />
+		<Navbar3 />
 	</div>
 
 	<article id="hero" />
@@ -100,6 +100,7 @@
 			</section>
 		</article>
 	</div>
+
 </OnMount>
 
 <style lang="postcss">

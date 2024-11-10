@@ -7,7 +7,6 @@
 	let effectWidth = 0; // Initial size. This matches 'width: 170px;'
 
 	afterUpdate(() => {
-
 		const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
 		if (activeLink instanceof HTMLElement) {
 			effectX = activeLink.offsetLeft - 7; // Subtract 8 for the left padding
@@ -54,7 +53,6 @@
 		const offset = 160; // Adjust this offset if needed
 		let foundMatch = false; // Flag to indicate if we've found our match
 		
-
 		// We're reversing the pageSections order to start checking from bottom to top
 		pageSections.forEach((section) => {
 			if (foundMatch) return; // Skip the rest of the sections once a match is found
