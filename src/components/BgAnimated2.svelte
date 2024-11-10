@@ -22,8 +22,8 @@
     "#4A5A62", // Lighter shade of dark blue-gray (x3)
     "#717E84", // Slate 350
     // 07.11.24 Removed this: 
-    "#CF381C", // Base red-orange
-    "#E05034", // Lighter shade of red-orange
+    //"#CF381C", // Base red-orange
+    //"#E05034", // Lighter shade of red-orange
     "#B32F19", // Darker shade of red-orange
   ];
 

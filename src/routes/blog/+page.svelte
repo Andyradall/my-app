@@ -3,7 +3,7 @@
 	import client from '../../lib/sanityClient';
 	//import WorkBack from '../../components/WorkBack.svelte';
 	import NavbarBlog from '../..//components/NavbarBlog.svelte';
-	import BgAnimated2 from '../../components/BgAnimated2.svelte';
+	//import BgAnimated2 from '../../components/BgAnimated2.svelte';
 	import { OnMount } from 'fractils';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
@@ -38,7 +38,7 @@
 </header>
 
 <OnMount>
-	<BgAnimated2 />
+	<!--BgAnimated2 /-->
 	<div in:fly|global={{ y: -100, opacity: 0.5, duration: 600, easing: cubicOut }}>
 		<NavbarBlog />
 	</div>
@@ -57,13 +57,12 @@
 							<span
 								class="mx-auto block font-bold text-5xl md:text-6xl leading-[4rem] md:leading-[8.5rem] pb-2 md:pb-2 text-slate-600"
 							>
-								Blog..
+								Blog
 							</span>
 							<span
 								class="mx-auto block font-semibold text-3xl md:text-[2.15rem] leading-[3.5rem] text-slate-600"
 							>
 								Reflections on my journey in design and code. 
-								Developed with Sanity CMS.
 							</span>
 						</h1>
 					</div>
@@ -74,13 +73,13 @@
 			</section>
 
 			<section
-				class="grid grid-cols-1 md:grid-cols-12 items-start gap-10 md:mx-auto md:min-mx-16 md:max-w-7xl pb-20"
+				class="grid grid-cols-1 items-start gap-10 md:mx-auto md:min-mx-16 md:max-w-7xl pb-20"
 			>
 				{#each blogPosts as post}
 					{#if post.slug && post.slug.current}
 						<a
 							href={`/blog/${post.slug.current}`}
-							class="blog-card col-span-12 md:col-span-6 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom pt-10 pb-10"
+							class="blog-card col-span-1 w-full md:w-1/2 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom pt-10 pb-10"
 						>
 							<span class="font-euclid font-medium text-lg text-slate-500 px-10"
 								>{new Date(post.publishedAt).toLocaleDateString(undefined, {
@@ -104,6 +103,10 @@
 </OnMount>
 
 <style lang="postcss">
+    :global(body) {
+        @apply bg-zinc-300;
+    }
+
 	.blog-card::before {
 		content: '';
 		position: absolute;
