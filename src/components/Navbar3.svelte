@@ -258,7 +258,7 @@
 				<div
 					class="menu-effect bg-red-500 bg-opacity-80 min-w-90px rounded-xl"
 					style="left: {effectX}px; width: {effectWidth}px;"
-				/>
+				></div>
 			</div>
 
 			<ul>

@@ -92,8 +92,7 @@
 				<p>
 					The project was particularly complex due to the platform's multi-sided nature, catering to
 					both job-seekers, companies, and freelancers. At the same time covid put a strain on our
-					resources. Our focus? Enhance UX without imposing heavy changes on our developers.<strong
-					/>
+					resources. Our focus? Enhance UX without imposing heavy changes on our developers.
 				</p>
 			</div>
 			<div>

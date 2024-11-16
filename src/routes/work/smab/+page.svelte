@@ -367,7 +367,7 @@
 				height="1000"
 				loading="lazy"
 				src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fcd1Vf8F7kOnH79RX5yvTTq%2FPrototype-for-portfolio%3Fkind%3D%26node-id%3D1-335%26page-id%3D0%253A1%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A335%26t%3DLmekNtL5CCmEdEjF-1%26type%3Ddesign%26viewport%3D1141%252C951%252C0.26%26mode%3Ddesign%26hide-ui%3D1"
-			/>
+			></iframe>
 		</figure>
 
 		<!-- Message for small screens -->
