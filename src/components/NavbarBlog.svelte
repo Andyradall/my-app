@@ -1,3 +1,4 @@
+<!-- Description: Navigation bar component for blogpage -->
 <script>
 	import anime from 'animejs';
 	import { onMount, afterUpdate } from 'svelte';
@@ -52,7 +53,7 @@
 		const scrollPosition = window.scrollY;
 		const offset = 160; // Adjust this offset if needed
 		let foundMatch = false; // Flag to indicate if we've found our match
-		
+
 		// We're reversing the pageSections order to start checking from bottom to top
 		pageSections.forEach((section) => {
 			if (foundMatch) return; // Skip the rest of the sections once a match is found
@@ -88,17 +89,6 @@
 	}
 
 	onMount(() => {
-		    // If the current window location pathname is "/blog", set isActive to true
-			if (window.location.pathname === '/blog') {
-        isActive = true;
-		
-    }
-	            // Find the "Blog" navigation link and add the 'active' class to it
-				const blogNavLink = document.querySelector('a[href="/#blog"]');
-            if (blogNavLink) {
-                blogNavLink.classList.add('active');
-            }
-        
 		// Cache navigation links and sections
 		pageNavigationLinks = document.querySelectorAll(
 			'#main-navigation > ul > li > a:not(.menu-custom-link)'
@@ -129,21 +119,16 @@
 		window.addEventListener('scroll', throttle(highlightPageNavigation, 50));
 	});
 
-		// set #hero as active
-		let isActive = false;
+	// set #hero as active
+	let isActive = false;
 
-// On component mount, we'll check the condition
-onMount(() => {
-	// If the current window location hash is "#hero", set isActive to true
-	if (window.location.hash === '#hero') {
-		isActive = true;
-	}
-	if (window.location.pathname === '/blog') {
-            isActive = true;
-	}
-});
-
-
+	// On component mount, we'll check the condition
+	onMount(() => {
+		// If the current window location hash is "#hero", set isActive to true
+		if (window.location.hash === '#hero') {
+			isActive = true;
+		}
+	});
 </script>
 
 <nav class="flyIn">
@@ -160,39 +145,42 @@ onMount(() => {
 				<div
 					class="menu-effect bg-red-500 bg-opacity-80 min-w-90px rounded-xl"
 					style="left: {effectX}px; width: {effectWidth}px;"
-				/>
+				></div>
 			</div>
 
 			<ul>
 				<li>
-					<a href="/#hero" aria-label="Anders Rådal" class="text-slate-500 hover:text-slate-600">Anders Rådal</a>
+					<a
+						href="/#hero"
+						
+						aria-label="Anders Rådal"
+						class="text-slate-500 hover:text-slate-600">Anders Rådal</a
+					>
 				</li>
 				<li>
-					<a href="/#work" aria-label="Case Studies" class="text-slate-500 hover:text-slate-600">Case Studies</a>
+					<a href="/#work" aria-label="Case Studies" class="text-slate-500 hover:text-slate-600"
+						>Case Studies</a
+					>
 				</li>
 				<li>
-					<a href="/#services" aria-label="About me" class="text-slate-500 hover:text-slate-600">Services</a>
+					<a href="/#services" aria-label="Services" class=" text-slate-500 hover:text-slate-600"
+						>Services</a
+					>
 				</li>
 				<li>
-					<a href="/#about" aria-label="About me" class="text-slate-500 hover:text-slate-600">About me</a>
+					<a href="/#about" aria-label="About me" class="text-slate-500 hover:text-slate-600"
+						>About me</a
+					>
 				</li>
 				<li>
-					<a href="/#blog" class:active={isActive} aria-label="Blog" class="menu-custom-link text-slate-500 hover:text-slate-600">Blog
-						<!--span class="menu-svg-icon-right">
-							<svg xmlns="http://www.w3.org/2000/svg" 								
-							height="20"
-							viewBox="0 0 32 32"
-							width="20"
-								><path
-									d="M16.1 0.583252L13.2624 2.94794L24.4921 12.3228H0V15.677H24.4921L13.2624 25.0519L16.1 27.4166L32.2 13.9999L16.1 0.583252Z"
-									fill="currentColor"
-								/></svg>
-						</span-->
+					<a href="#blog" 
+					class:active={isActive}
+					aria-label="Blog" class="text-slate-500 hover:text-slate-600">Blog
 					</a>
-				</li>
+					</li>
 				<li>
 					<a
-						href="https://drive.google.com/file/d/1W6rt980ZRd3HG_2QqSCYhX3zE7FIRdLl/view?usp=sharing"
+						href="https://drive.google.com/file/d/1VqrsvjfF7dU8N12q_kXG7xupsPX7s64U/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Resumé - opens in a new window"
@@ -247,12 +235,11 @@ onMount(() => {
 	/* content styles */
 
 	a.active {
-		color: #F5F6F7;
+		color: #f5f6f7;
 		opacity: 0.96;
 		transition: 0.1s;
 		transition-timing-function: ease-out;
 	}
-
 
 	/*.main-navbar a:hover {
 		 color: #2A363B;
@@ -275,20 +262,9 @@ onMount(() => {
 		transition: transform 0.1s;
 	}
 
-    /*.menu-svg-icon-right {
-		margin-left: 3px;
-		//transform: translateY(-1px);
-		transition: transform 0.1s;
-	}*/
-
 	.menu-custom-link:hover .menu-svg-icon {
 		transform: translateY(-3px) translateX(2px);
 	}
-
-	/*.menu-custom-link:hover .menu-svg-icon-right {
-		transform: translateX(3px);
-	}*/
-
 
 	.menu-svg-icon svg path {
 		fill: currentColor;
@@ -308,16 +284,16 @@ onMount(() => {
 	}
 
 	.main-navbar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: inherit;
-  border: 1.2px solid rgba(178, 183, 192,0.3); 
-  pointer-events: none; 
-}
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: inherit;
+		border: 1.2px solid rgba(178, 183, 192, 0.3);
+		pointer-events: none;
+	}
 
 	.main-navbar ul {
 		list-style-type: none;
@@ -343,10 +319,8 @@ onMount(() => {
 		text-decoration: none;
 		position: relative;
 		padding: 0 20px;
-		margin-top: 1.5px; 
-		
+		margin-top: 1.5px;
 	}
-
 
 	.menu-effect-container {
 		width: 163px;
@@ -380,7 +354,7 @@ onMount(() => {
 		.menu-custom-link {
 			display: none;
 		}
-
+		
 		.menu-effect {
 			transform: translateX(1px);
 		}

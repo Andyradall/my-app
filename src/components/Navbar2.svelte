@@ -1,3 +1,4 @@
+<!--Working Navbar without the blog link-->
 <script>
 	import anime from 'animejs';
 	import { onMount, afterUpdate } from 'svelte';

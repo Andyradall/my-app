@@ -1,3 +1,4 @@
+<!-- Description: Navigation bar component for frontpage -->
 <script>
 	import anime from 'animejs';
 	import { onMount, afterUpdate } from 'svelte';
@@ -130,120 +131,6 @@
 	});
 </script>
 
-<!--script> // Accounting for the new Blog page ( not working 100%)
-	import anime from 'animejs';
-	import { onMount, afterUpdate } from 'svelte';
-  
-	let isActive = false; // Define the isActive variable
-	let effectX = 0;
-	let effectWidth = 0;
-	let currentPath = ''; // Track the current path
-  
-	let pageNavigationLinks = [];
-	let pageSections = [];
-	let pageSectionIdToNavigationLink = {};
-	let pageInitialX = 0;
-  
-	afterUpdate(() => {
-	  const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
-	  if (activeLink instanceof HTMLElement) {
-		effectX = activeLink.offsetLeft - 7;
-		effectWidth = activeLink.offsetWidth + 14;
-	  }
-	});
-  
-	function throttle(fn, interval) {
-	  let lastCall = 0;
-	  let timeoutId = null;
-	  return function () {
-		const now = new Date().getTime();
-		if (lastCall && now < lastCall + interval) {
-		  clearTimeout(timeoutId);
-		  timeoutId = setTimeout(() => {
-			lastCall = now;
-			fn.call();
-		  }, interval - (now - lastCall));
-		} else {
-		  lastCall = now;
-		  fn.call();
-		}
-	  };
-	}
-  
-	function highlightPageNavigation() {
-	  const scrollPosition = window.scrollY;
-	  const offset = 160;
-	  let foundMatch = false;
-  
-	  pageSections.forEach((section) => {
-		if (foundMatch) return;
-  
-		const sectionTop = section.offsetTop - offset;
-		const id = section.getAttribute('id');
-		if (scrollPosition >= sectionTop) {
-		  foundMatch = true;
-  
-		  const navLink = pageSectionIdToNavigationLink[id];
-		  if (navLink && !navLink.classList.contains('active')) {
-			pageNavigationLinks.forEach((link) => link.classList.remove('active'));
-			navLink.classList.add('active');
-  
-			const x = navLink.offsetLeft - 8;
-			const width = navLink.offsetWidth + 16;
-  
-			anime({
-			  targets: '.menu-effect',
-			  left: `${x}px`,
-			  width: `${width}px`,
-			  duration: 600,
-			  endDelay: 1000,
-			});
-		  }
-		}
-	  });
-	}
-  
-	onMount(() => {
-	  currentPath = window.location.pathname;
-  
-	  pageNavigationLinks = document.querySelectorAll(
-		'#main-navigation > ul > li > a:not(.menu-custom-link)'
-	  );
-  
-	  if (currentPath.startsWith('/blog')) {
-		const blogNavLink = document.querySelector('a[href="/blog"]');
-		if (blogNavLink) {
-		  blogNavLink.classList.add('active');
-		  effectX = blogNavLink.offsetLeft - 7;
-		  effectWidth = blogNavLink.offsetWidth + 14;
-		}
-	  } else {
-		pageSections = Array.from(document.querySelectorAll('.pageSection')).reverse();
-		pageSections.forEach((section) => {
-		  let id = section.getAttribute('id');
-		  let correspondingNavLink = document.querySelector(
-			`#main-navigation > ul > li > a[href="#${id}"]`
-		  );
-		  pageSectionIdToNavigationLink[id] = correspondingNavLink;
-		});
-  
-		const firstNavLink = pageNavigationLinks[0];
-		if (firstNavLink instanceof HTMLElement) {
-		  pageInitialX = firstNavLink.offsetLeft;
-		}
-  
-		const pageEffectElement = document.querySelector('.menu-effect');
-		if (pageEffectElement instanceof HTMLElement) {
-		  pageEffectElement.style.left = `${pageInitialX}px`;
-		}
-  
-		window.addEventListener('scroll', throttle(highlightPageNavigation, 50));
-	  }
-	});
-  </script-->
-  
-
-
 <nav class="flyIn">
 	<div
 		class="nav-container flex justify-center align-middle font-euclid font-medium text-base md:text-lg"
@@ -264,29 +151,29 @@
 			<ul>
 				<li>
 					<a
-						href="/#hero"
+						href="#hero"
 						class:active={isActive}
 						aria-label="Anders Rådal"
 						class="text-slate-500 hover:text-slate-600">Anders Rådal</a
-					>	
+					>
 				</li>
 				<li>
-					<a href="/#work" aria-label="Case Studies" class="text-slate-500 hover:text-slate-600"
+					<a href="#work" aria-label="Case Studies" class="text-slate-500 hover:text-slate-600"
 						>Case Studies</a
 					>
 				</li>
 				<li>
-					<a href="/#services" aria-label="Services" class=" text-slate-500 hover:text-slate-600"
+					<a href="#services" aria-label="Services" class=" text-slate-500 hover:text-slate-600"
 						>Services</a
 					>
 				</li>
 				<li>
-					<a href="/#about" aria-label="About me" class="text-slate-500 hover:text-slate-600"
+					<a href="#about" aria-label="About me" class="text-slate-500 hover:text-slate-600"
 						>About me</a
 					>
 				</li>
 				<li>
-					<a href="/blog/#blog" aria-label="Blog" class="menu-custom-link text-slate-500 hover:text-slate-600">Blog
+					<a href="/blog" aria-label="Blog" class="menu-custom-link text-slate-500 hover:text-slate-600">Blog
 					</a>
 					</li>
 				<li>

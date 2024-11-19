@@ -1,8 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import client from '../../lib/sanityClient';
-	//import WorkBack from '../../components/WorkBack.svelte';
-	import Navbar3 from '../..//components/Navbar3.svelte';
+	import NavbarBlog from '../../components/NavbarBlog.svelte';
 	//import BgAnimated2 from '../../components/BgAnimated2.svelte';
 	import { OnMount } from 'fractils';
 	import { fly } from 'svelte/transition';
@@ -32,14 +31,14 @@
 </script>
 <header class="relative">
 	<div class="absolute top-0 left-0">
-		<!--WorkBack /-->
 	</div>
 </header>
 
 <OnMount>
+	<div class="bg-zinc-300">
 	<!--BgAnimated2 /-->
 	<div in:fly|global={{ y: -100, opacity: 0.5, duration: 600, easing: cubicOut }}>
-		<Navbar3 />
+		<NavbarBlog />
 	</div>
 
 	<article id="hero" class="pageSection"></article>
@@ -48,7 +47,7 @@
 	<article id="about" class="pageSection"></article>
 
 	<div in:fly|global={{ y: 100, opacity: 0.4, duration: 600, easing: cubicOut }}>
-		<article id="blog" class="pageSectionmt-20 mb-80 text-slate-600">
+		<article id="blog" class="pageSection mt-20 pb-80 text-slate-600">
 			<section class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
 				<section class="text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-10">
 					<div class="mx-auto">
@@ -99,15 +98,12 @@
 			</section>
 		</article>
 	</div>
-
+</div>
 </OnMount>
 
 
 <style lang="postcss">
-   /* :global(body) {
-        @apply bg-zinc-300;
-    }*/
-	
+
 	.blog-card::before {
 		content: '';
 		position: absolute;
