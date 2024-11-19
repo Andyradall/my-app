@@ -46,11 +46,19 @@
 				<img
 					class="object-cover w-full max-h-[540px] h-full"
 					alt="Profile"
-					src="/images/about/profil.webp"
+					src="/images/about/profileg2.webp"
 					height="620px"
-					width="622.55"
-					style="object-position: center top;"
+					width="620px"
+					style="object-position: center center;"
 				/>
+				<!--img
+				class="object-cover w-full max-h-[540px] h-full"
+				alt="Profile"
+				src="/images/about/profil.webp"
+				height="620px"
+				width="622.55"
+				style="object-position: center top;"
+			/-->
 			</div>
 		</section>
 	</div>
