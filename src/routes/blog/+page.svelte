@@ -47,7 +47,7 @@
 	<article id="about" class="pageSection"></article>
 
 	<div in:fly|global={{ y: 100, opacity: 0.4, duration: 600, easing: cubicOut }}>
-		<article id="blog" class="pageSection mt-20 pb-80 text-slate-600">
+		<article id="blog" class="pageSection pt-20 pb-80 text-slate-600">
 			<section class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl">
 				<section class="text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-10">
 					<div class="mx-auto">
