@@ -180,7 +180,7 @@
 					</li>
 				<li>
 					<a
-						href="https://drive.google.com/file/d/1VqrsvjfF7dU8N12q_kXG7xupsPX7s64U/view?usp=sharing"
+						href="https://drive.google.com/file/d/1udB9B5oHHMTn1sGQo40UwZkVoUf3THSx/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Resumé - opens in a new window"
