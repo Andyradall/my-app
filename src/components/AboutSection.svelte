@@ -44,11 +44,11 @@
 				class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden outline-2 outline-offset-[-4px] outline-zinc-350/30 rounded-3xl"
 			>
 				<img
-					class="object-cover w-full max-h-[540px] h-full"
+					class="object-cover w-full max-h-[560px] h-full"
 					alt="Profile"
-					src="/images/about/profileg2.webp"
+					src="/images/about/profile0.webp"
 					height="620px"
-					width="620px"
+					width="622.5px"
 					style="object-position: center center;"
 				/>
 				<!--img
