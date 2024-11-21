@@ -5,7 +5,7 @@
   import BlockImage from '../../../lib/sanity/BlockImage.svelte';
   import SvelteSeo from 'svelte-seo';
   import { urlFor } from '../../../lib/sanity/image';
-
+  import BlockLink from '../../../lib/sanity/BlockLink.svelte';
 
   export let data;
   
@@ -56,7 +56,7 @@
     </h2>
     {#if data.posts}
       <h1 class="text-4xl md:text-6xl font-euclid 
-      font-bold text-slate-600 pt-2 pb-6">{data.posts.title}</h1>
+      font-bold text-slate-600 leading-[198px] pt-2 pb-6">{data.posts.title}</h1>
       <p class="text-3xl">{data.posts.excerpt}</p>
       
       <img src={urlFor(data.posts.mainImage).url()} alt={`Cover Image for ${data.posts.title}`} class="max-w-full h-auto rounded-sm my-4" />
@@ -64,20 +64,23 @@
       <p class=" text-slate-500">
         Published at {new Date(data.posts.publishedAt).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })}
       </p>
-      <div class="py-8  text-lg font-light">
+      <div class="py-8 text-lg font-light">
         <PortableText
         value={data.posts.body}
         components={{
-            block: {
-               normal: BlockText, 
-               h2: BlockText,
-               h3: BlockText, 
-            },
-            types: {
+          block: {
+            normal: BlockText,
+            h2: BlockText,
+            h3: BlockText,
+          },
+          marks: {
+            link: BlockLink,
+          },
+          types: {
             image: BlockImage,
-        }
+          }
         }}
-    />
+      />
       </div>
     {:else}
       <p>Post not found.</p>

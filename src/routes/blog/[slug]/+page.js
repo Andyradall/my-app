@@ -15,7 +15,15 @@ export async function load({ params }) {
     title,
     excerpt,
     mainImage,
-    body,
+    body[]{
+      ...,
+      markDefs[]{
+        ...,
+        _type == "link" => {
+          "blank": blank
+        }
+      }
+    },
     publishedAt,
     "categories": categories[]->title
   }[0]`;

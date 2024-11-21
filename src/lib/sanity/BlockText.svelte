@@ -3,7 +3,6 @@
 
   // Accept the portableText prop
   export let portableText: BlockComponentProps;
-
   
   // Destructure needed properties from portableText
   $: ({ value } = portableText);
@@ -19,8 +18,16 @@
   <h3 class="text-[24px] font-euclid font-normal leading-[48px] text-slate-600 py-1"><slot /></h3>
 {:else if style === 'normal'}
   <p class="text-[18px] font-euclid font-light text-slate-600 leading-[30px] pt-2 pb-3"><slot /></p>
+{:else if style === 'link'}
+  <a href={value.href} target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">{children[0]?.text}</a>
 {:else}
+
   <!-- Fallback for unhandled styles -->
   <div class="font-euclid text-base text-red"><slot /></div>
 {/if}
 
+<!-- 
+{:else if style === 'link'}
+  <a href={value.href} target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">{children[0]?.text}</a>
+{:else}
+-->
