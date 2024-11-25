@@ -97,12 +97,12 @@
 					{/if}
 				{/each}
 			</section-->
-			<section class="grid grid-cols-1 items-start gap-10 md:mx-auto md:min-mx-16 md:max-w-7xl pb-20">
+			<section class="grid grid-cols-1 items-start gap-10 mx-2 md:mx-auto md:min-mx-16  md:max-w-7xl pb-20">
 				{#each blogPosts as post}
 				  {#if post.slug && post.slug.current}
 					<a
 					  href={`/blog/${post.slug.current}`}
-					  class="blog-card col-span-1 w-full md:w-1/2 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom"
+					  class="blog-card  col-span-1 w-full md:w-1/2 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom"
 					>
 					  <!-- Image at the top of the card -->
 					  <img
