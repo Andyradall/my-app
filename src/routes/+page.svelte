@@ -1,7 +1,7 @@
 <script>
 	import Navbar from '../components/Navbar.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
-	import BgAnimated3 from '../components/BgAnimated3.svelte';
+	import BgAnimated from '../components/BgAnimated.svelte';
 	import CaseStudySectionScale from '../components/CaseStudySection.svelte';
 	import AboutSection from '../components/AboutSection.svelte';
 	import Footer from '../components/Footer.svelte';
@@ -53,7 +53,7 @@
 </svelte:head>
 
 <OnMount>
-	<BgAnimated3 />
+	<BgAnimated />
 	<div in:fly|global={{ y: -100, opacity: 0.5, duration: 600, easing: cubicOut }}>
 		<Navbar />
 	</div>
