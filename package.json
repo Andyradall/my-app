@@ -52,6 +52,6 @@
 		"svelte": "^4.2.19",
 		"svelte-inview": "^4.0.4",
 		"swiper": "^11.1.14",
-		"vercel": "^39.0.5"
+		"vercel": "^39.1.1"
 	}
 }

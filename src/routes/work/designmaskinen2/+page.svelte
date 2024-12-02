@@ -4,23 +4,23 @@
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from 'svelte-seo';
-
+   
 	import { onMount } from 'svelte';
 
 	let LightGallery;
 	if (typeof window !== 'undefined') {
-		import('../../../components/LightGallery.svelte').then((module) => {
-			LightGallery = module.default;
-		});
-	}
+        import('../../../components/LightGallery.svelte').then(module => {
+            LightGallery = module.default;
+        });
+    }
 
 	const links = [
-		{ id: '#first', title: 'Rebriefing the brief', ariaLabel: 'Navigate to "The brief" section' },
+		{ id: '#first', title: 'The challenge', ariaLabel: 'Navigate to "The challenge" section' },
 		{ id: '#second', title: 'Design Process', ariaLabel: 'Navigate to "Design Process" section' },
 		{ id: '#third', title: 'Final prototype', ariaLabel: 'Navigate to "Final prototype" section' },
 		{ id: '#fourth', title: 'Insights', ariaLabel: 'Navigate to "Insights" section' }
 	];
-</script>
+</script> 
 
 <svelte:head>
 	<SvelteSeo
@@ -60,20 +60,21 @@
 </svelte:head>
 
 {#if LightGallery}
-	<svelte:component this={LightGallery} />
+    <svelte:component this={LightGallery} />
 {/if}
+
 
 <header class="relative top-0">
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid text-slate-600 attachLightGallery">
+<article class="mx-auto font-euclid text-slate-600 attachLightGallery" >
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
 			<h1 class="text-[2.75rem] md:text-7xl font-euclid font-bold text-slate-600 py-4">
 				Designmaskinen
 				<span class="text-[1.8rem] md:text-4xl font-euclid font-medium text-slate-500 py-4"
-					><br />Minimalistic admin area & template builder</span
+					><br />Designing an Admin Area & Template Builder</span
 				>
 			</h1>
 		</div>
@@ -83,31 +84,26 @@
 		class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20 px-4"
 	>
 		<div class="md:flex-1 md:max-w-lg my-4">
-			<h2 class=" text-xl font-bold text-slate-600">What is Designmaskinen?</h2>
+			<h2 class=" text-xl font-bold text-slate-600">Case overview</h2>
 			<p class=" text-base align-center text-slate-600">
-				Designmaskinen is a design tool for both print and digital. <span class="font-semibold"
-					>Unlike tools like Canva,</span
-				>
-				Designmaskinen is unique because of its
-				<span class="font-semibold">constraints and fixed templates.</span>
-				End users are limited to only use predefined brand colors, typeface and images when creating
-				content. This way,
-				<span class="font-semibold"
-					>the output is always looking great, on-brand and consistent!</span
-				> This empowers everyone in the organisation to create stunning designs, and is a total dream
-				for the designers responsible for brand guidelines being followed.
+				In Spring 2023, during my three-month internship at Netlife Design, I contributed to the
+				development of Designmaskinen, a specialized design tool for creating print and digital
+				designs. Unlike other design tools like Canva, Designmaskinen is unique in its constraints,
+				allowing users to edit specific elements like text and color within certain parameters, such
+				as only using brand colors. This approach ensures consistent design, a major selling point
+				for the tool.
 			</p>
-			<h3 class="font-semibold text-lg">Project Details:</h3>
-			<p class="text-base align-center text-slate-600">
-				<span class="font-bold">Brief:</span> Design an admin area.
-			</p>
-			<p class="text-base align-center text-slate-600">
-				<span class="font-bold">Team:</span> Randi Giovertsen, Kaja von Dombug, Michaen Hermansen and
-				Knut Sorknes.
+			<h3 class=" text-lg font-medium">Project Details</h3>
+			<p class=" text-base align-center text-slate-600">
+				<span class="font-bold">Project Brief:</span> Design an intuitive admin area for Designmaskinen.
 			</p>
 			<p class=" text-base align-center text-slate-600">
-				<span class="font-bold">Role:</span> Research, design, prototyping, and testing.<br /><br
-				/><span class="font-bold">Link:</span>
+				<span class="font-bold">Team Members:</span> Randi Giovertsen, Kaja von Dombug, Michaen Hermansen
+				and Knut Sorknes.
+			</p>
+			<p class=" text-base align-center text-slate-600">
+				<span class="font-bold">My Role:</span> Research, design, prototyping, and testing.<br /><br
+				/><span class="font-bold">Related Link:</span>
 				<a
 					href="https://www.netlife.com/designmaskinen"
 					target="_blank"
@@ -139,39 +135,47 @@
 		<WorkNav {links} />
 	</section>
 
-	<section id="first" class="pageSection bg-slate-100 text-slate-600 py-10 md:pt-32 md:pb-20 px-4">
+	<section id="first" class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 py-10 md:pt-32 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="text-3xl font-bold mb-4">
-				Rebriefing the brief: Design an admin area to ease the job of developers.
-			</h2>
+			<h2 class="text-3xl font-bold mb-4">Understanding the Challenge</h2>
 			<p class="mb-8">
-				Designmaskinens user base grew rapidly. Until now, the developers were manually adding brand
-				assets like fonts and colors to the database and hardcoding each design template manually.
-				<span class="font-semibold">
-					Using developers time to handle these typical CMS tasks were starting to affect the
-					business viability,
-				</span>
-				both being expensive and taking up too much time. The solution? Develop an admin area where power-users
-				can manage their templates and assets themself. <br />
+				As Designmaskinen's user base grew, the earlier system of developers manually coding
+				templates and handling CMS tasks became unsustainable. The solution? An admin area
+				empowering customers to build templates and independently manage their brand assets.<br />
 			</p>
 		</div>
-	</section>
-	<section class="bg-slate-800 bg-opacity-95 text-zinc-150 md:pb-20">
+		<div class="max-w-2xl mx-auto">
+			<h2 class="text-3xl font-medium pb-4">Exploring Designmaskinen</h2>
+			<h3 class="text-2xl font-medium">Features Snapshot</h3>
+			<p class="mb-8">
+				Current version of Designmaskinen. Here the users can edit the text, pictures and change
+				between different color themes on this template. The end result will automatically follow
+				the brand guidelines.
+			</p>
+		</div>
+		<div class="max-w-4xl mx-auto">
+			<img
+				src="/images/designmaskinen/Designmaskinenscale.webp"
+				class="w-full h-auto mb-4 zooming-dark-bg"
+				width="1200"
+				height="948"
+				alt="Designmaskinenscale"
+			/>
+		</div>
+
 		<div class="max-w-2xl pt-20 mx-auto">
-			<h2 class="pb-4">Research: Customer journey mapping</h2>
-			<h3 class="">Explore all possible options</h3>
+			<h2 class="pb-4">Mapping the Customer Journey</h2>
+			<h3 class="">Focus on Admin User Experience</h3>
 			<p class="align-center pb-4">
-				To design the best possible experience, I investigated all possible pathways for admin users
-				to set up Desingmaskinen. From considering purchase, to setting it up for their organisation
-				and adding access for their users. I explored multiple potential customer journeys, ensuring
-				my coming design decisions would be <span class="font-semibold text-red-350"
-					>backed by a solid understanding of user's needs
-				</span>and expectations.<br />
+				To create a best possible experience, I decided to visualize the ideal pathway for an admin
+				user, from purchasing Designmaskinen to setting it up for end-users. I explored multiple
+				potential customer journeys, ensuring each design decision would be backed by a solid
+				understanding of the user's flow, needs, and expectations.<br />
 			</p>
 		</div>
 		<div class="max-w-7xl pt-8 pb-10 mx-auto">
 			<img
-				class="zooming-dark-bg"
+			    class="zooming-dark-bg"
 				src="/images/designmaskinen/User_journey_Designmaskinen.webp"
 				width="2455"
 				height="494"
@@ -179,123 +183,228 @@
 			/>
 		</div>
 		<div class="max-w-2xl py-8 mx-auto">
-			<h2 class="pb-4">Defining: Minimalistic Architecture</h2>
-			<h3 class="">Simplicity creates ease-of-use</h3>
+			<h2 class="pb-4">Streamlining the Architecture</h2>
+			<h3 class="">Embracing Simplicity</h3>
 			<p class="">
-				One of the core values of Designmaskinen is simplicity, on the wall hangs the slogan: <span
-					class="font-semibold text-red-350"
-					>"we want to be a Doro phone - but for design"
-				</span>
-				And so I streamlined the admin area with focus on minimalism and simplicity. My goal and objective?
-				Design an <span class="font-semibold text-red-350"> intuitive experience, </span>
-				removing all clutter and “extra” pages, to ensure ease of use! <br />
+				We initially had a bigger sitemap, but as one of the core values of the designmachine was
+				simplicity, with the slogan "we want to be a Doro phone - but for design", I streamlined the
+				admin area. The objective? An intuitive design with no unneded pages, ensuring ease of use.<br
+				/>
 			</p>
 		</div>
 		<div class="max-w-4xl py-8 mx-auto">
-			<img
-				src="/images/designmaskinen/Sitemap.webp"
-				width="1020"
-				height="413"
-				class="zooming-dark-bg"
-				alt="Sitemap"
-			/>
+			<img src="/images/designmaskinen/Sitemap.webp" width="1020" height="413" class="zooming-dark-bg" alt="Sitemap" />
 		</div>
 	</section>
 
-	<section id="second" class="pageSection bg-slate-100 py-10 md:pt-40 md:pb-20 px-4">
+	<section id="second" class="pageSection py-10 md:pt-40 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="pb-2">Dashboard: Iterative process, identifying areas for improvement.</h2>
-			<ul class="pb-10 py-4 list-disc list-inside text-slate-600">
-				<p>
-					<li>
-						The dashboard of the admin area gathers brand assets etc. Playing with the machine
-						lingo, Kaja came up with the great name verktøykassa (the toolbox).
-					</li>
-					<li>
-						Goal: <span class="font-semibold"
-							>Balance ease of access with minimalism to create an intuitive feel,</span
-						> aligning with the brand values.
-					</li>
-					<li>
-						We went from defining <span class="font-semibold">jobs-to-do</span> and functionality requirements,
-						via pencil-sketches, to me designing this first “hi-fi” iteration.
-					</li>
-					<li>
-						This first version was <span class="font-semibold">perfect for gathering feedback</span>
-						from user-testing and heuristic analysis to give ideas for refinement:
-					</li>
-				</p>
-			</ul>
+			<h2 class="pb-4">Designing the brand assets toolbox</h2>
+			<h3 class="">The Core of the Admin Area:</h3>
+			<p class="pb-10">
+				Vertøykassa (the toolbox), is the core of the admin area. Here we decided to gather all
+				brand assets. While I had a few initial sketches to guide me, I mostly relied on my own
+				ideas for the design details.
+			</p>
 		</div>
-
-		<div class="max-w-6xl pb-20 mx-auto px-4 py-8">
+		<div class="max-w-6xl pb-20 mx-auto px-4">
 			<img
-				src="/images/designmaskinen/dashboard_old.webp"
-				width="1100"
-				height="1301"
-				alt="Dashboard_old"
-				class="zooming-dark-bg"
+				src="/images/designmaskinen/Skisser_malbygger-1.webp"
+				width="1250"
+				height="552"
+				alt="Skisser_malbygger-1"
+				class="zooming-white-bg"
 			/>
 		</div>
 		<div class="max-w-2xl mx-auto">
-			<h2 class="">Dashboard: Final design</h2>
+			<h2 class="">Design Evolution of the Toolbox</h2>
+			<h3 class="">Experimentation and Refinement:</h3>
+			<p class="">My design journey was a combination of exploration and refinement:</p>
+			<ul class="py-4 list-custom">
+				<li>
+					Explored various left menu designs, from collapsable/docking styles to the most
+					uncomplicated design for user-friendliness and minimised cognitive load.
+				</li>
+				<li>Experimented with different card designs and functionalities.</li>
+			</ul>
 			<p class="">For the finalized design, I integrated:</p>
 			<ul class="py-4 list-custom">
-				<li>A minimalistic menu design for intuitive navigation.</li>
-				<li>Breadcrumbs to improve navigation.</li>
-				<li>Polished cards design and grid-based layout for visual consistency.</li>
+				<li>A streamlined menu design for intuitive navigation.</li>
+				<li>Breadcrumbs to improve navigation further.&nbsp;</li>
+				<li>Polished cards design and grid-based layout for visual consistency.&nbsp;</li>
 			</ul>
 		</div>
-		<div class="max-w-6xl pb-20 mx-auto px-4 py-8">
-			<img
-				src="/images/designmaskinen/dashboard_new.webp"
-				width="1100"
-				height="1301"
-				alt="Dashboard_new"
-				class="zooming-dark-bg"
-			/>
+	</section>
+
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
+		<div class="md:flex-1 md:max-w-md m-4">
+			<div>
+				<img
+					src="/images/designmaskinen/Itr1_1.webp"
+					width="1106"
+					height="1382"
+					alt="brand assets v 1"
+					class="zooming-dark-bg"
+				/>
+				<p class=" text-base">Version 1.</p>
+			</div>
+		</div>
+		<div class="md:flex-2 md:max-w-md m-4">
+			<div>
+				<img
+					src="/images/designmaskinen/Admin_Verkt_ykasse.webp"
+					width="1440"
+					height="1800"
+					alt="Admin_Verkt_ykasse"
+					class="zooming-dark-bg"
+				/>
+				<p class=" text-base">Version 2.&nbsp;</p>
+			</div>
+		</div>
+		<div class="md:flex-3 md:max-w-md m-4">
+			<div>
+				<img
+					src="/images/designmaskinen/Admin_Verkt_ykasse_final.webp"
+					width="1440"
+					height="1800"
+					alt="Admin Verktøykasse final"
+					class="zooming-dark-bg"
+				/>
+				<p class=" text-base">Version 3 - final</p>
+			</div>
 		</div>
 	</section>
 
-	<section class=" py-10 md:pt-20 bg-slate-50 md:pb-10 px-4">
+	<section class=" py-10 md:pt-20 md:pb-10 px-4">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="pb-2">Image area: First iteration</h2>
+			<h2 class="pb-2">Designing the Image Album</h2>
 			<p class="pb-4">
-				To avoid having hundreds of images on the dashboard, we decided to create a space for them.
-				I started <span class="font-semibold">defining features, then paper sketching.</span> Then, working in iterations of
-				interfaces, aiming to <span class="font-semibold">"fail fast"</span> and move on to design improved
-				versions. My first version held all functionality but could be improved:
+				Some clients have many images so to avoid having hundreds of images in the assets toolbox,
+				we decided to show only the latest three images, and put the rest of the images into an
+				albums area. To figure out how this would look I first created paper sketches, then started
+				to design and prototype in Figma. A key feature wanted was an option to categorise the
+				images.
 			</p>
 		</div>
-		<div class="max-w-6xl py-8 mx-auto">
+		<div class="max-w-4xl mx-auto">
 			<img
-				src="/images/designmaskinen/image_old.webp"
-				width="1250"
-				height="844"
+				src="/images/designmaskinen/IMG_1885_2_2.webp"
+				width="997"
+				height="558"
 				alt="Sketch of an image_album"
 				class="zooming-white-bg"
 			/>
 		</div>
 	</section>
 
-	<section class=" py-10 md:pt-10 bg-slate-50 md:pb-20 px-4">
+	<section class="pt-10 pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="pb-2">Image area: Final</h2>
-			<p class="pb-4">
-					After some rounds of prototyping, testing on users, team presentations, and iterations, I
-					had a version that both the team and I were happy with. 
-					<span class="font-semibold">Highlighted features:</span>
+			<h2 class="pb-2">First Iteration of the Albums Area</h2>
+			<p class="pb-5">
+				I worked in iterations, prototyping and testing to getting user feedback. My goal was to
+				"fail fast" and move on to design improved versions. This first version was functional but
+				had several areas for improvement:
 			</p>
-
 		</div>
-		<div class="max-w-6xl py-8 mx-auto">
+		<div class="max-w-2xl mx-auto">
+			<ul class="list-custom">
+				<li>
+					<strong>Iconography Challenge:</strong> Image edit options (like zoom, edit name, or delete)
+					appeared in a small menu above the selected image on click. But due to the absence of accompanying
+					text for icons, accessibility was compromised. Developer feedback also highlighted potential
+					navigation challenges when navigating using keyboard "tab", prompting me to rethink this approach.
+				</li>
+				<li>
+					<strong>Modal Limitations:</strong> Editing was initially conceptualized in a modal
+					window. But modals can disrupt user flow and pose mobile adaptation challenges.<br />
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
+		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
-				src="/images/designmaskinen/image_new.webp"
-				width="1250"
-				height="844"
-				alt="Sketch of an image_album"
+				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_1.webp"
+				width="1440"
+				height="1000"
+				alt="Image_albums 1"
 				class="zooming-white-bg"
 			/>
+			<p class="text-base">Version 1.</p>
+		</div>
+		<div class="md:flex-1 md:max-w-2xl m-4">
+			<img
+				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_1v2.webp"
+				width="1440"
+				height="1000"
+				alt="Image_albums iteration 1 with lightbox"
+				class="zooming-white-bg"
+			/>
+			<p class="text-base">
+				Version 1. Edit and change image description in input field in a modal window.&nbsp;
+			</p>
+		</div>
+	</section>
+
+	<section class="py-10 md:pt-24 md:pb-24 px-4">
+		<div class="max-w-2xl mx-auto">
+			<h2 class="pb-4">Refined Image Albums Layout</h2>
+			<p class="">
+				After some rounds of prototyping, testing on users, team presentations, and iterations, I
+				had a version that both the team and I were happy with. Highlighted features include:
+			</p>
+			<ul class="list-custom">
+				<li>
+					<strong>Navigation Clarity:</strong> Added breadcrumbs on the top of the page, making navigating
+					and understanding where you are easy. Also added space for a small text about the area.
+				</li>
+				<li>
+					<strong>Material Design:</strong> For image categorization, I transitioned to a Material Design-inspired
+					tagging system.
+				</li>
+				<li>
+					<strong>Copy Optimization:</strong> Copy also improved based on user feedback: We changed wording
+					from "New Gallery" to "New Album".
+				</li>
+				<li>
+					<strong>Menu Transition:</strong> I proposed and implemented a slide-in menu, eliminating the
+					earlier modal window approach. The consensus was in favor of its enhanced user experience.
+				</li>
+				<li>
+					<strong>Simplicity Wins:</strong> After refactoring the sitemap, there was no point in having
+					a hamburger menu, so I removed it.
+				</li>
+				<li>
+					<strong>Keyboard Navigation:</strong> Easy to navigate using a keyboard. Simplified the
+					tab visual que and removed the dropshadow.<br />
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
+		<div class="md:flex-1 md:max-w-2xl m-4">
+			<img
+				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_Final_1.webp"
+				width="1440"
+				height="1000"
+				alt="Image_albums iteration 2"
+				class="zooming-white-bg"
+			/>
+			<p class="text-base">Final version of image albums.&nbsp;</p>
+		</div>
+		<div class="md:flex-2 md:max-w-2xl m-4">
+			<img
+				src="/images/designmaskinen/Admin_Verkt_ykasse_Bilder_Final_Menu.webp"
+				width="1440"
+				height="1000"
+				alt="Image_albums iteration 2 with menu"
+				class="zooming-white-bg"
+			/>
+			<p class=" text-base align-center text-slate-600">
+				Final version with slide in edit field showing.&nbsp;
+			</p>
 		</div>
 	</section>
 
@@ -319,9 +428,7 @@
 		</div>
 	</section>
 
-	<section
-		class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-slate-100 bg-opacity-20 px-4"
-	>
+	<section class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-slate-100 bg-opacity-20 px-4">
 		<div class="md:flex-1/3 md:max-w-xl m-4">
 			<img
 				src="/images/designmaskinen/Admin_Maler_Some.webp"
@@ -367,9 +474,7 @@
 		</div>
 	</section>
 
-	<section
-		class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4"
-	>
+	<section class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4">
 		<div class="md:flex-1 md:max-w-2xl m-4">
 			<img
 				src="/images/designmaskinen/User_areas.webp"
@@ -412,10 +517,7 @@
 		</div>
 	</section>
 
-	<section
-		id="third"
-		class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 py-10 md:py-24 px-4"
-	>
+	<section id="third" class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 py-10 md:py-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
 			<p>
@@ -434,7 +536,7 @@
 				height="1200"
 				loading="lazy"
 				src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1"
-			/>
+			></iframe>
 		</figure>
 
 		<!-- Message for small screens -->
@@ -452,9 +554,10 @@
 			<ul class="list-custom">
 				<li>
 					<strong>Challenging my Bias:</strong> Before going into this, I had this perception of consultants
-					as conform and perhaps a bit sharp elbowed. However, the team at Netlife completely defied
-					this image – they were actually very down to earth! There were a lot of skilled and very collaborative
-					people gathered in one environment and that was amazing. I learned a lot from my internship!
+					as conform and perhaps a bit sharp elbowed. However, the team
+					at Netlife completely defied this image – they were actually very down to earth!
+					There were a lot of skilled and very collaborative people gathered in one
+					environment and that was amazing. I learned a lot from my internship!
 				</li>
 				<li>
 					<strong>Collaboration:</strong> Working in a cross-functional team with developers, having
@@ -487,13 +590,7 @@
 		<div class="md:flex-2 md:max-w-xl px-0 py-5 md:p-4">
 			<div class=" flex items-center justify-center h-full">
 				<div>
-					<img
-						src="/images/designmaskinen/Team.webp"
-						width="716"
-						height="538"
-						class="zooming-white-bg"
-						alt="Team"
-					/>
+					<img src="/images/designmaskinen/Team.webp" width="716" height="538" class="zooming-white-bg" alt="Team" />
 					<p class="">My team during a meeting.</p>
 				</div>
 			</div>
