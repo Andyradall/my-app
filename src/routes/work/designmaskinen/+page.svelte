@@ -262,9 +262,10 @@
 			<h2 class="pb-2">Image area: First iteration</h2>
 			<p class="pb-4">
 				To avoid having hundreds of images on the dashboard, we decided to create a space for them.
-				I started <span class="font-semibold">defining features, then paper sketching.</span> Then, working in iterations of
-				interfaces, aiming to <span class="font-semibold">"fail fast"</span> and move on to design improved
-				versions. My first version held all functionality but could be improved:
+				I started <span class="font-semibold">defining features, then paper sketching.</span> Then,
+				working in iterations of interfaces, aiming to
+				<span class="font-semibold">"fail fast"</span> and move on to design improved versions. My first
+				version held all functionality but could be improved:
 			</p>
 		</div>
 		<div class="max-w-6xl py-8 mx-auto">
@@ -282,11 +283,10 @@
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Image area: Final</h2>
 			<p class="pb-4">
-					After some rounds of prototyping, testing on users, team presentations, and iterations, I
-					had a version that both the team and I were happy with. 
-					<span class="font-semibold">Highlighted features:</span>
+				After some rounds of prototyping, testing on users, team presentations, and iterations, I
+				had a version that both the team and I were happy with.
+				<span class="font-semibold">Highlighted features:</span>
 			</p>
-
 		</div>
 		<div class="max-w-6xl py-8 mx-auto">
 			<img
@@ -297,113 +297,75 @@
 				class="zooming-white-bg"
 			/>
 		</div>
+		<div class="max-w-6xl py-8 mx-auto">
+			<img
+				src="/images/designmaskinen/image_new_edit.webp"
+				width="1250"
+				height="844"
+				alt="Sketch of an image_album"
+				class="zooming-white-bg"
+			/>
+		</div>
 	</section>
 
-	<section class="py-10 md:pt-24 md:pb-24 px-4">
+	<section class="py-4 md:pt-24 md:pb-4 px-4 bg-slate-100 text-slate-600">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="pb-4">Designing the Template Management</h2>
+			<h2 class="pb-4">Template area.</h2>
 			<h3 class="">Repurposing the Image Albums Layout</h3>
 			<p class="pb-4">
-				We had a lot of discussions about how this area should look.&nbsp;During a team meeting I
-				proposed reusing the same layout that I developed for the image albums. This suggestion
-				would both ensure consistency, and address other issues we discussed.&nbsp;This ended up
-				being the solution we used.&nbsp;
+				During a team meeting we were discussion how the templates area should look. I argued for
+				simply reusing the same layout that I developed for the image albums. This suggestion would
+				ensure consistency with an established interaction pattern for the app, and address other
+				issues we discussed about how to categorise the templates. This ended up being the final
+				solution.
 			</p>
-			<h3 class="">Print or Post?&nbsp;CMYK or RGB?</h3>
-			<p class="">
-				One particular challenge that emerged was managing the different color profiles for print
-				(CMYK) versus digital designs for platforms like social media (RGB). This raised interesting
-				questions about the optimal way to present these options within the template settings and if
-				and how color profile could be changeable after the template is created.
-			</p>
+		</div>
+		<div class="max-w-7xl py-8 mx-auto">
+			<img
+				src="/images/designmaskinen/template.webp"
+				width="1250"
+				height="844"
+				alt="Sketch of an image_album"
+				class="zooming-white-bg"
+			/>
 		</div>
 	</section>
 
-	<section
-		class="flex flex-col md:flex-row mx-auto justify-evenly py-16 bg-slate-100 bg-opacity-20 px-4"
-	>
-		<div class="md:flex-1/3 md:max-w-xl m-4">
-			<img
-				src="/images/designmaskinen/Admin_Maler_Some.webp"
-				width="1440"
-				height="1000"
-				alt="Admin_Maler_Some"
-				class="zooming-white-bg"
-			/>
-			<p class="text-base">Template management area.&nbsp;</p>
-		</div>
-		<div class="md:flex-1/3 md:max-w-xl m-4">
-			<img
-				src="/images/designmaskinen/Admin_Maler_Some_edit.webp"
-				width="1440"
-				height="1000"
-				alt="Admin_Maler_Some_edit"
-				class="zooming-white-bg"
-			/>
-			<p class="text-base">Edit options.&nbsp;</p>
-		</div>
-		<div class="md:flex-1/3 md:max-w-xl m-4">
-			<img
-				src="/images/designmaskinen/Admin_Nymal.webp"
-				width="1440"
-				height="1000"
-				alt="Admin New template"
-				class="zooming-white-bg"
-			/>
-			<p class="text-base">New template, choosing format changes colour profile (RGB/CMYK)</p>
-		</div>
-	</section>
-
-	<section class="py-10 md:pt-24 md:pb-24 px-4">
+	<section class="py-10 md:pt-14 md:pb-24 px-4 bg-slate-100 text-slate-600">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="pb-2">Building the User Management</h2>
-			<p class="">
-				When talking to users, most of them did not think they would be uploading a profile image to
-				their user profile on a design app. so I opted for using the first letter of the user name
-				as a placeholder - A clever trick that I believe designers for Google / Gmail came up with.
-				This minimalist approach not only respects user preferences but also adds a touch of
-				personalized elegance.
+			<h2 class="pb-4">User management.</h2>
+			<p class="pb-4">
+				I added all basic user management functionality like invite users and edit their
+				permissions.
 			</p>
 		</div>
-	</section>
-
-	<section
-		class="flex flex-col md:flex-row mx-auto justify-around py-16 bg-slate-100 bg-opacity-20 px-4"
-	>
-		<div class="md:flex-1 md:max-w-2xl m-4">
+		<div class="max-w-7xl py-8 mx-auto">
 			<img
-				src="/images/designmaskinen/User_areas.webp"
-				width="915"
-				height="645"
-				alt="User areas sketch"
+				src="/images/designmaskinen/brukere_webp.webp"
+				width="1250"
+				height="844"
+				alt="Sketch of an image_album"
 				class="zooming-white-bg"
 			/>
-			<p class="text-base">First sketch.</p>
-		</div>
-		<div class="md:flex-2 md:max-w-2xl m-4">
-			<img
-				src="/images/designmaskinen/Brukere.webp"
-				width="1440"
-				height="1000"
-				alt="User area management"
-				class="zooming-white-bg"
-			/>
-			<p class="text-base">User management final.</p>
 		</div>
 	</section>
 
 	<section class="py-10 md:pt-20 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
-			<h2 class="pb-2">Refining the Template Builder</h2>
+			<h2 class="pb-2">The template builder</h2>
 			<p class="">
-				Diving deep into the intricacies of the template builder, I dedicated a week to overhauling
-				its modular menu design. My focus was on streamlining the menu, categorizing options in an
-				intuitive manner, and ensuring consistency across the layout.
+				DMy contribution to the template builder was going over the <span class="font-semibold"
+					>components</span
+				>
+				in the <span class="font-semibold">design system</span>
+				to ensure consistency, also iterating on how options should be organised and shown in the menu.
+				And contributing to the discussion of what options we should give the users and what should be
+				locked.
 			</p>
 		</div>
-		<div class="max-w-4xl my-10 mx-auto">
+		<div class="max-w-7xl my-10 mx-auto">
 			<img
-				src="/images/designmaskinen/Malbygger_Tekst.webp"
+				src="/images/designmaskinen/template_builder.webp"
 				width="1440"
 				height="1000"
 				alt="Template builder"
@@ -451,15 +413,21 @@
 			<h2 class="pb-4">Reflections on My Internship</h2>
 			<ul class="list-custom">
 				<li>
-					<strong>Challenging my Bias:</strong> Before going into this, I had this perception of consultants
-					as conform and perhaps a bit sharp elbowed. However, the team at Netlife completely defied
-					this image – they were actually very down to earth! There were a lot of skilled and very collaborative
-					people gathered in one environment and that was amazing. I learned a lot from my internship!
+					<strong>Repeated patterns:</strong> Using repeated patterns ensures users get a recognisable
+					system that is intuitive and easy to use. Also this makes the developers work easier, because
+					they can reuse components.
 				</li>
 				<li>
-					<strong>Collaboration:</strong> Working in a cross-functional team with developers, having
-					the developers in the same room as me. It made it quick to ideate and shoot ideas back and
-					forth between designers and developers.
+					<strong>Fail fast & test early: </strong> Testing early versions on users to get insights and
+					see how things work in action is a great way to harvest feedback to continually improve!
+				</li>
+				<li>
+					<strong>Pros of Consultancies: </strong> There were lots of skilled people working at Netlife
+					Design, like a knowledge hub, and a great learning opportunity!
+				</li>
+				<li>
+					<strong>Collaboration:</strong> Working in a cross-functional team with designers and developers
+					in the same room, made it quick to ideate and shoot ideas back and forth.
 				</li>
 				<li>
 					<strong>Prioritizing Accessibility:</strong> I learned about designing for the highest accessibility
@@ -467,19 +435,13 @@
 					with a keyboard.
 				</li>
 				<li>
-					<strong>Modern Tech Stack:</strong> It was interesting to design for a cutting-edge stack featuring
-					Next.js, Tailwind CSS, Vercel hosting, and Sanity.io for content management.
-				</li>
-				<li>
-					<strong>Process Awareness Post-Hyper:</strong> I notice that I am much more process aware now
-					than before Hyper, I am aware of where in the double diamond process we are, and allow myself
-					more freedom and am less strict on myself in the divergent phases - this makes it easier for
-					me to be more creative!
-				</li>
-				<li>
 					<strong>Social Workplace:</strong> There were a lot of social activities to join, we went grilling
 					and playing in the park, we went to a design award, we went swimming and doing saunas. I even
 					joined their running team for a race - it was a lot of fun there!
+				</li>
+				<li>
+					<strong>Modern Tech Stack:</strong> It was interesting to design for a cutting-edge stack with
+					Next.js, Tailwind CSS, Vercel hosting, and Sanity.io for content management.
 				</li>
 			</ul>
 		</div>
