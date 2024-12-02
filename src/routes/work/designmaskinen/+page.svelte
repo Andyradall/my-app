@@ -15,7 +15,7 @@
 	}
 
 	const links = [
-		{ id: '#first', title: 'Rebriefing the brief', ariaLabel: 'Navigate to "The brief" section' },
+		{ id: '#first', title: 'The brief', ariaLabel: 'Navigate to "The brief" section' },
 		{ id: '#second', title: 'Design Process', ariaLabel: 'Navigate to "Design Process" section' },
 		{ id: '#third', title: 'Final prototype', ariaLabel: 'Navigate to "Final prototype" section' },
 		{ id: '#fourth', title: 'Insights', ariaLabel: 'Navigate to "Insights" section' }
@@ -102,7 +102,7 @@
 				<span class="font-bold">Brief:</span> Design an admin area.
 			</p>
 			<p class="text-base align-center text-slate-600">
-				<span class="font-bold">Team:</span> Randi Giovertsen, Kaja von Dombug, Michaen Hermansen and
+				<span class="font-bold">Team:</span> Randi Giovertsen, Kaja von Dombug, Michael Hermansen and
 				Knut Sorknes.
 			</p>
 			<p class=" text-base align-center text-slate-600">
@@ -142,7 +142,7 @@
 	<section id="first" class="pageSection bg-slate-100 text-slate-600 py-10 md:pt-32 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="text-3xl font-bold mb-4">
-				Rebriefing the brief: Design an admin area to ease the job of developers.
+				The brief: Design an admin area to ease the job of developers.
 			</h2>
 			<p class="mb-8">
 				Designmaskinens user base grew rapidly. Until now, the developers were manually adding brand
@@ -413,15 +413,6 @@
 			<h2 class="pb-4">Reflections on My Internship</h2>
 			<ul class="list-custom">
 				<li>
-					<strong>Repeated patterns:</strong> Using repeated patterns ensures users get a recognisable
-					system that is intuitive and easy to use. Also this makes the developers work easier, because
-					they can reuse components.
-				</li>
-				<li>
-					<strong>Fail fast & test early: </strong> Testing early versions on users to get insights and
-					see how things work in action is a great way to harvest feedback to continually improve!
-				</li>
-				<li>
 					<strong>Pros of Consultancies: </strong> There were lots of skilled people working at Netlife
 					Design, like a knowledge hub, and a great learning opportunity!
 				</li>
@@ -433,6 +424,15 @@
 					<strong>Prioritizing Accessibility:</strong> I learned about designing for the highest accessibility
 					and WCAG standards. I learned to design interfaces that can be used on screen readers and navigated
 					with a keyboard.
+				</li>
+				<li>
+					<strong>Repeated patterns:</strong> Using repeated patterns ensures users get a recognisable
+					system that is intuitive and easy to use. Also this makes the developers work easier, because
+					they can reuse components.
+				</li>
+				<li>
+					<strong>Fail fast & test early: </strong> Testing early versions on users to get insights and
+					see how things work in action is a great way to harvest feedback to continually improve!
 				</li>
 				<li>
 					<strong>Social Workplace:</strong> There were a lot of social activities to join, we went grilling
