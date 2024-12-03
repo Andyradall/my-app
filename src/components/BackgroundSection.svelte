@@ -4,6 +4,7 @@
 	import { Autoplay, Pagination } from 'swiper/modules';
 	import 'swiper/css';
 	import 'swiper/css/pagination';
+	import { resumeLink } from '../lib/resumeLink.js';
 
 	onMount(() => {
 		const swiper = new Swiper('.mySwiper', {
@@ -67,7 +68,7 @@
 						class="inline-flex items-center bg-red-500 bg-opacity-80 font-euclid font-medium text-zinc-100 hover:text-zinc-100 my-10 pt-3 pb-3 px-6 rounded-xl transition-all mx-auto"
 					>
 						<a
-							href="https://drive.google.com/file/d/1udB9B5oHHMTn1sGQo40UwZkVoUf3THSx/view?usp=sharing"
+							href={ resumeLink }
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="View my Full Resumé"

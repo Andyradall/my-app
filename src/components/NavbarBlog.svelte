@@ -2,6 +2,7 @@
 <script>
 	import anime from 'animejs';
 	import { onMount, afterUpdate } from 'svelte';
+	import { resumeLink } from '../lib/resumeLink.js';
 
 	// Mobile menu
 	let isMobileMenuOpen = false;
@@ -190,7 +191,7 @@
 					</li>
 				<li>
 					<a
-						href="https://drive.google.com/file/d/1udB9B5oHHMTn1sGQo40UwZkVoUf3THSx/view?usp=sharing"
+						href={resumeLink}
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Resumé - opens in a new window"
@@ -280,7 +281,7 @@
 			</li>
 		<li>
 			<a
-				href="https://drive.google.com/file/d/1udB9B5oHHMTn1sGQo40UwZkVoUf3THSx/view?usp=sharing"
+				href={resumeLink}
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Resumé - opens in a new window"
