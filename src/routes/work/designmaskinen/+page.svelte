@@ -413,15 +413,15 @@
 			<h2 class="pb-4">Reflections on My Internship</h2>
 			<ul class="list-custom">
 				<li>
-					<strong>Pros of Consultancies: </strong> There were lots of skilled people working at Netlife
-					Design, like a knowledge hub, and a great learning opportunity!
+					<strong>Pros of Consultancies:</strong> Netlife Design was like a knowledge hub. They had weekly
+					feedback sessions, presentations and skill-sharing and I learned a lot! 
 				</li>
 				<li>
 					<strong>Collaboration:</strong> Working in a cross-functional team with designers and developers
 					in the same room, made it quick to ideate and shoot ideas back and forth.
 				</li>
 				<li>
-					<strong>Prioritizing Accessibility:</strong> I learned about designing for the highest accessibility
+					<strong>Prioritizing Accessibility:</strong> We designed for the highest accessibility
 					and WCAG standards. I learned to design interfaces that can be used on screen readers and navigated
 					with a keyboard.
 				</li>
@@ -431,17 +431,17 @@
 					they can reuse components.
 				</li>
 				<li>
-					<strong>Fail fast & test early: </strong> Testing early versions on users to get insights and
+					<strong>Fail fast & test early: </strong> Testing early versions with users to get insights and
 					see how things work in action is a great way to harvest feedback to continually improve!
 				</li>
 				<li>
 					<strong>Social Workplace:</strong> There were a lot of social activities to join, we went grilling
-					and playing in the park, we went to a design award, we went swimming and doing saunas. I even
+					and playing in the park, to a design award, swimming and doing saunas and on a weekend seminar. I even
 					joined their running team for a race - it was a lot of fun there!
 				</li>
 				<li>
 					<strong>Modern Tech Stack:</strong> It was interesting to design for a cutting-edge stack with
-					Next.js, Tailwind CSS, Vercel hosting, and Sanity.io for content management.
+					Next.js (react), Tailwind CSS, Vercel hosting, and Sanity.io for content management.
 				</li>
 			</ul>
 		</div>
