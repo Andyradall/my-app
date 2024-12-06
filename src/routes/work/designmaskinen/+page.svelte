@@ -97,7 +97,7 @@
 				> This empowers everyone in the organisation to create stunning designs, and is a total dream
 				for the designers responsible for brand guidelines being followed.
 			</p>
-			<h3 class="font-semibold text-lg">Project Details:</h3>
+			<h3 class="pt-2 font-semibold text-lg"><span class="font-medium">Project Details:</span></h3>
 			<p class="text-base align-center text-slate-600">
 				<span class="font-bold">Brief:</span> Design an admin area.
 			</p>
@@ -205,7 +205,7 @@
 	<section id="second" class="pageSection bg-slate-100 py-10 md:pt-40 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Dashboard: Iterative process, identifying areas for improvement.</h2>
-			<ul class="pb-10 py-4 list-custom  text-slate-600">
+			<ul class="pb-10 py-4 list-custom q text-slate-600">
 				
 					<li>
 						The dashboard of the admin area gathers brand assets etc. Playing with the machine
