@@ -205,8 +205,8 @@
 	<section id="second" class="pageSection bg-slate-100 py-10 md:pt-40 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Dashboard: Iterative process, identifying areas for improvement.</h2>
-			<ul class="pb-10 py-4 list-disc list-inside text-slate-600">
-				<p>
+			<ul class="pb-10 py-4 list-custom  text-slate-600">
+				
 					<li>
 						The dashboard of the admin area gathers brand assets etc. Playing with the machine
 						lingo, Kaja came up with the great name verktøykassa (the toolbox).
@@ -224,7 +224,7 @@
 						This first version was <span class="font-semibold">perfect for gathering feedback</span>
 						from user-testing and heuristic analysis to give ideas for refinement:
 					</li>
-				</p>
+			
 			</ul>
 		</div>
 

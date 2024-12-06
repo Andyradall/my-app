@@ -14,7 +14,7 @@
         },
         alt
       },
-      workPlace,
+      workPlace,ß
       testimonialText
     }`;
 		testimonials = await client.fetch(query);
