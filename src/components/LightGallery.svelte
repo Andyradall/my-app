@@ -18,7 +18,7 @@
         plugins: [lgMediumZoom,],
         selector: '.zooming-white-bg',
         licenseKey: 'A7D7BC77-424B-4F41-9D39-CC54DE0C34AC',
-        backgroundColor: 'rgba(255,255,255, .985)',
+        backgroundColor: 'rgba(245,246,247  , .972)',
         margin: 104,
         scale: 2,
         zoom: true,
