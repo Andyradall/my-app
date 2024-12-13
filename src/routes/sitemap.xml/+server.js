@@ -5,6 +5,7 @@ export async function GET() {
         '/work/karrierestart',
         '/work/smab',
         '/work/solarchoice',
+        '/blog',
         // Add more pages as your site grows
     ];
 
