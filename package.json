@@ -14,7 +14,7 @@
 		"partytown": "partytown copylib static/~partytown"
 	},
 	"engines": {
-		"node": "18.x"
+		"node": ">=18"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.3.1",
