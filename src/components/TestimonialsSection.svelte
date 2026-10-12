@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import client from '../lib/sanityClient';
 
-	let testimonials = [];
+	let testimonials = $state([]);
 
 	onMount(async () => {
 		const query = `*[_type == "testimonial"]{

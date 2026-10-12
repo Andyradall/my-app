@@ -1,15 +1,12 @@
 import adapter from '@sveltejs/adapter-vercel';
-import preprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-	  adapter: adapter(),
+		adapter: adapter()
 	},
-	preprocess: preprocess({
-	  preserve: ['partytown']
-	}),
-  };
-  
+	preprocess: vitePreprocess()
+};
+
 export default config;
-  

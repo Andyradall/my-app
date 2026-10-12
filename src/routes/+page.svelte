@@ -6,7 +6,7 @@
 	import AboutSection from '../components/AboutSection.svelte';
 	import Footer from '../components/Footer.svelte';
 	import SvelteSeo from 'svelte-seo';
-	import { OnMount } from 'fractils';
+	import OnMount from '../components/OnMount.svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import ServicesSection from '../components/ServicesSection.svelte';
@@ -16,7 +16,9 @@
 <svelte:head>
 	<link rel="preload" href="/fonts/euclid-circular-b/EuclidCircularB-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/fonts/euclid-circular-b/EuclidCircularB-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<SvelteSeo
+</svelte:head>
+
+<SvelteSeo
 	title="Anders Rådal Portfolio"
 	description="Portfolio for Anders Rådal - Product & UX Designer"
 	canonical="https://www.andersra.com"
@@ -48,9 +50,7 @@
 	  description: "Portfolio for Anders Rådal - Product & UX Designer",
 	  url: "https://www.andersra.com/",
 	}}
-	/>
-
-</svelte:head>
+/>
 
 <OnMount>
 	<BgAnimated />

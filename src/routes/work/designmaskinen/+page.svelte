@@ -7,7 +7,7 @@
 
 	import { onMount } from 'svelte';
 
-	let LightGallery;
+	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
 		import('../../../components/LightGallery.svelte').then((module) => {
 			LightGallery = module.default;
@@ -22,8 +22,7 @@
 	];
 </script>
 
-<svelte:head>
-	<SvelteSeo
+<SvelteSeo
 		title="Designmaskinen Product Design Case Study by Anders Rådal"
 		description="Designmaskinen Product Design Case Study by Anders Rådal"
 		canonical="https://www.andersra.com/work/designmaskinen"
@@ -56,11 +55,10 @@
 			description: 'Designmaskinen Product Design Case Study by Anders Rådal',
 			url: 'https://www.andersra.com/work/designmaskinen'
 		}}
-	/>
-</svelte:head>
+/>
 
 {#if LightGallery}
-	<svelte:component this={LightGallery} />
+	<LightGallery />
 {/if}
 
 <header class="relative top-0">
@@ -396,7 +394,7 @@
 				height="1200"
 				loading="lazy"
 				src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fty4hVnsBZqFp9ggI5Im7I5%2FDM_Proto%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D0-3171%26viewport%3D2832%252C1130%252C0.26%26t%3DiomRuflbXBPbaP9k-1%26scaling%3Dscale-down%26starting-point-node-id%3D0%253A3171%26show-proto-sidebar%3D1%26mode%3Ddesign%26hide-ui%3D1"
-			/>
+			></iframe>
 		</figure>
 
 		<!-- Message for small screens -->

@@ -7,41 +7,38 @@
   import { urlFor } from '../../../lib/sanity/image';
   import BlockLink from '../../../lib/sanity/BlockLink.svelte';
 
-  export let data;
+  let { data } = $props();
   
-// console.log(data);
+
 // console.log("BlockText imported successfully", BlockText);
 // console.log(JSON.stringify(data.posts.body, null, 2));
 </script>
 
-<svelte:head>
-  <SvelteSeo
-  title={`${data.posts.title} by Anders Rådal`}
-  description={data.posts.excerpt}
-  canonical={`https://www.andersra.com/work/${data.posts.slug}`}
-  openGraph={{
-      title: `${data.posts.title} by Anders Rådal`,
-      description: data.posts.excerpt,
-      images: data.posts.mainImage ? [
-          {
-              url: urlFor(data.posts.mainImage).url(),
-              width: 800,
-              height: 600,
-              alt: data.posts.title,
-          }
-      ] : [],
-      url: `https://www.andersra.com/work/${data.posts.slug}`,
-  }}
-  twitter={{
-      card: 'summary_large_image',
-      site: '@AndersRadal',
-      title: `${data.posts.title} by Anders Rådal`,
-      description: data.posts.excerpt,
-      image: data.posts.mainImage ? urlFor(data.posts.mainImage).url() : undefined,
-  }}
+<SvelteSeo
+	title={`${data.posts.title} by Anders Rådal`}
+	description={data.posts.excerpt}
+	canonical={`https://www.andersra.com/work/${data.posts.slug}`}
+	openGraph={{
+	    title: `${data.posts.title} by Anders Rådal`,
+	    description: data.posts.excerpt,
+	    images: data.posts.mainImage ? [
+	        {
+	            url: urlFor(data.posts.mainImage).url(),
+	            width: 800,
+	            height: 600,
+	            alt: data.posts.title,
+	        }
+	    ] : [],
+	    url: `https://www.andersra.com/work/${data.posts.slug}`,
+	}}
+	twitter={{
+	    card: 'summary_large_image',
+	    site: '@AndersRadal',
+	    title: `${data.posts.title} by Anders Rådal`,
+	    description: data.posts.excerpt,
+	    image: data.posts.mainImage ? urlFor(data.posts.mainImage).url() : undefined,
+	}}
 />
-
-</svelte:head>
 
 <header class="relative top-0">
 	<BlogBack />

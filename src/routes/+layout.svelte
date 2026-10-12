@@ -7,10 +7,10 @@
 	import { page } from '$app/stores';
 	import Hotjar from '@hotjar/browser';
 
-	export let data;
+	let { data, children } = $props();
 
 	// Add Partytown script -> DOM head
-	let scriptEl;
+	let scriptEl = $state();
 
 	onMount(() => {
 		//partytown
@@ -48,7 +48,7 @@
 <!-- Fly transition-->
 {#key data.pathname}
 	<div in:fly|global={transitionParams.in}>
-		<slot />
+		{@render children?.()}
 	</div>
 {/key} 
 

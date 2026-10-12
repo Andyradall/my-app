@@ -2,7 +2,7 @@
 import { onMount } from 'svelte';
 
 let lastScrollTop = 0;
-let hideButton = false;
+let hideButton = $state(false);
 
 onMount(() => {
   window.addEventListener('scroll', () => {
@@ -27,7 +27,7 @@ onMount(() => {
 <div id="backButton" class="absolute top-0 m-[2vw] z-20" class:hide-backButton={hideButton}>
     <button
       class="back text-slate-700 bg-slate-100 bg-opacity-80 hover:text-slate-550 rounded-xl font-euclid text-[16px] font-normal flex items-center justify-center w-24 h-9"
-      on:click={() => (window.location.href = '/')}
+      onclick={() => (window.location.href = '/')}
       aria-label="Home to frontpage"
       type="button"
     >

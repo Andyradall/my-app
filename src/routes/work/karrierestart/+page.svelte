@@ -5,7 +5,7 @@
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from "svelte-seo";
 	
-	let LightGallery;
+	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
         import('../../../components/LightGallery.svelte').then(module => {
             LightGallery = module.default;
@@ -21,8 +21,7 @@
 	];
 </script>
 
-<svelte:head>
-	<SvelteSeo
+<SvelteSeo
 	title="Karrierestart UX Design Case Study by Anders Rådal"
 	description="Karrierestart UX Design Case Study by Anders Rådal"
 	canonical="https://www.andersra.com/work/karrierestart"
@@ -55,11 +54,10 @@
 	  description: "Karrierestart UX Design Case Study by Anders Rådal",
 	  url: "https://www.andersra.com/work/karrierestart",
 	}}
-	/>
-</svelte:head>
+/>
 
 {#if LightGallery}
-    <svelte:component this={LightGallery} />
+    <LightGallery />
 {/if}
 
 <header class="relative top-0">

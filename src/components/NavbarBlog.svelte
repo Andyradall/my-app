@@ -1,7 +1,7 @@
 <!-- Description: Navigation bar component for blogpage -->
 <script>
 	import anime from 'animejs';
-	import { onMount, afterUpdate } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { resumeLink } from '../lib/resumeLink.js';
 
 	// Mobile menu
@@ -17,14 +17,15 @@
 	let effectX = 0; // Initial position. This matches 'left: 0px;'
 	let effectWidth = 0; // Initial size. This matches 'width: 170px;'
 
-	afterUpdate(() => {
+	// Measure the active link and place the highlight behind it
+	async function positionEffect() {
+		await tick(); // wait for class:active to be applied
 		const activeLink = document.querySelector('#main-navigation > ul > li > a.active');
 		if (activeLink instanceof HTMLElement) {
 			effectX = activeLink.offsetLeft - 7; // Subtract 8 for the left padding
 			effectWidth = activeLink.offsetWidth + 14; // Add 16 for total padding (8 on each side)
-		} else {
 		}
-	});
+	}
 
 	// Cache navigation links and sections
 	let pageNavigationLinks = [];
@@ -138,6 +139,9 @@
 		if (window.location.hash === '#hero') {
 			isActive = true;
 		}
+		positionEffect();
+		// Re-measure once the webfont has loaded, since it changes the link widths
+		document.fonts?.ready.then(positionEffect);
 	});
 </script>
 

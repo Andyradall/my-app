@@ -2,7 +2,7 @@
 <script>
   import { onMount } from 'svelte';
 
-  let windowWidth = 800; // Default width
+  let windowWidth = $state(800); // Default width
 
   onMount(() => {
     windowWidth = window.innerWidth;
@@ -35,13 +35,12 @@
     return Math.random() * (max - min) + min;
   }
 
-  let circles = [];
-  let durationRange;
-  let numCircles;
+  // Recomputed whenever windowWidth changes
+  let circles = $derived(buildCircles(windowWidth));
 
-  $: {
-    circles = [];
-    let circleConfig;
+  function buildCircles(windowWidth) {
+    const circles = [];
+    let circleConfig, durationRange, numCircles;
     if (windowWidth <= 768) {
       /* Mobile Configuration */
       circleConfig = {
@@ -95,6 +94,7 @@
         delay: getRandom(0, 5),
       });
     }
+    return circles;
   }
 
   /* Generate gradients for each color */

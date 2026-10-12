@@ -1,14 +1,31 @@
 <script>
-	export let title = '';
-	export let link = '#';
-	export let ariaLabel = '';
-	export let category = '';
-	export let image = '';
-	export let imageDesktop = '';
-    export let imageMobile = '';
-	export let alt = '';
-	export let width = '800'; 
-    export let height = '500';
+	/**
+	 * @typedef {Object} Props
+	 * @property {string} [title]
+	 * @property {string} [link]
+	 * @property {string} [ariaLabel]
+	 * @property {string} [category]
+	 * @property {string} [image]
+	 * @property {string} [imageDesktop]
+	 * @property {string} [imageMobile]
+	 * @property {string} [alt]
+	 * @property {string} [width]
+	 * @property {string} [height]
+	 */
+
+	/** @type {Props} */
+	let {
+		title = '',
+		link = '#',
+		ariaLabel = '',
+		category = '',
+		image = '',
+		imageDesktop = '',
+		imageMobile = '',
+		alt = '',
+		width = '800',
+		height = '500'
+	} = $props();
 </script>
 
 <div class="case-card">

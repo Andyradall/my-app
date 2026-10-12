@@ -3,11 +3,11 @@
 	import client from '../../lib/sanityClient';
 	import NavbarBlog from '../../components/NavbarBlog.svelte';
 	//import BgAnimated2 from '../../components/BgAnimated2.svelte';
-	import { OnMount } from 'fractils';
+	import OnMount from '../../components/OnMount.svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 
-	let blogPosts = [];
+	let blogPosts = $state([]);
 
 	onMount(async () => {
 		const query = `*[_type == "post"] | order(publishedAt desc) {

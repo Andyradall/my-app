@@ -2,7 +2,8 @@
 	import { urlFor } from './image';
 	import type { CustomBlockComponentProps } from '@portabletext/svelte';
 
-	export let portableText: CustomBlockComponentProps<{
+	interface Props {
+		portableText: CustomBlockComponentProps<{
 		image: {
 			extension: string;
 			url: string;
@@ -10,8 +11,11 @@
 		};
 		caption: string;
 	}>;
+	}
 
-	$: ({ value } = portableText);
+	let { portableText }: Props = $props();
+
+	let { value } = $derived(portableText);
 </script>
 
 <figure>

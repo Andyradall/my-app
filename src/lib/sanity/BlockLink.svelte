@@ -9,15 +9,20 @@
 
 <!--This update allows for conditional opening of the links, either in same or new page-->
 <script lang="ts">
-  import type { PortableTextMarkComponentProps } from '@portabletext/svelte';
+  import type { MarkComponentProps } from '@portabletext/svelte';
 
-  export let portableText: PortableTextMarkComponentProps;
+  interface Props {
+    portableText: MarkComponentProps<{ _type: string; _key: string; href?: string; blank?: boolean }>;
+    children?: import('svelte').Snippet;
+  }
 
-  $: href = portableText.value.href;
-  $: blank = portableText.value.blank;
+  let { portableText, children }: Props = $props();
 
-  $: targetAttr = blank ? '_blank' : undefined;
-  $: relAttr = blank ? 'noopener noreferrer' : undefined;
+  let href = $derived(portableText.value.href);
+  let blank = $derived(portableText.value.blank);
+
+  let targetAttr = $derived(blank ? '_blank' : undefined);
+  let relAttr = $derived(blank ? 'noopener noreferrer' : undefined);
 </script>
 
 <a 
@@ -26,5 +31,5 @@
   rel={relAttr} 
   class="text-blue-600 underline"
 >
-  <slot />
+  {@render children?.()}
 </a>

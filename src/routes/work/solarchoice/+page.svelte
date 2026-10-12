@@ -6,7 +6,7 @@
 	//import { dirty_components } from 'svelte/internal';
 	import SvelteSeo from 'svelte-seo';
 
-	let LightGallery;
+	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
         import('../../../components/LightGallery.svelte').then(module => {
             LightGallery = module.default;
@@ -21,8 +21,7 @@
 	];
 </script>
 
-<svelte:head>
-	<SvelteSeo
+<SvelteSeo
 		title="Solar Choice Brand Design Case Study by Anders Rådal"
 		description="Solar Choice Brand Design Case Study by Anders Rådal"
 		canonical="https://www.andersra.com/work/solarchoice"
@@ -55,11 +54,10 @@
 			description: 'Solar Choice Brand Design Case Study by Anders Rådal',
 			url: 'https://www.andersra.com/work/solarchoice'
 		}}
-	/>
-</svelte:head>
+/>
 
 {#if LightGallery}
-    <svelte:component this={LightGallery} />
+    <LightGallery />
 {/if}
 
 <header class="relative top-0">
