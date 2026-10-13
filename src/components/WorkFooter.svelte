@@ -1,5 +1,5 @@
 <script>
-    // Import Case studies arrsy
+	// Import Case studies arrsy
 	import { caseStudies } from '../lib/caseStudies.js';
 	// Get the current path
 	import { page } from '$app/state';
@@ -21,7 +21,11 @@
 <section class="bg-slate-100/50 font-euclid pt-6 pb-8">
 	<div class="max-w-full mx-auto flex justify-between items-stretch px-5 md:px-8 py-4">
 		<div class="first-div flex-1 flex flex-col justify-between">
-			<a href={prevCaseStudy.href} class="flex flex-col items-start" aria-label="Previous case Study">
+			<a
+				href={prevCaseStudy.href}
+				class="flex flex-col items-start"
+				aria-label="Previous case Study"
+			>
 				<ul>
 					<li
 						class="flex items-center uppercase text-lg text-slate-600 hover:text-slate-600 font-medium"
@@ -47,9 +51,15 @@
 		</div>
 
 		<div class="second-div flex-1 flex flex-col justify-between">
-			<a href={nextCaseStudy.href} class="flex flex-col text-right items-end" aria-label="Next case Study">
+			<a
+				href={nextCaseStudy.href}
+				class="flex flex-col text-right items-end"
+				aria-label="Next case Study"
+			>
 				<ul class="w-full">
-					<li class="flex justify-end items-center uppercase text-lg text-slate-600 hover:text-slate-600 font-medium">
+					<li
+						class="flex justify-end items-center uppercase text-lg text-slate-600 hover:text-slate-600 font-medium"
+					>
 						Next
 						<svg
 							class="next-arrow text-right fill-current ml-1"
@@ -73,19 +83,19 @@
 </section>
 
 <style>
-.first-div {
-    left: 0;
-    padding-left: 0; /* or a smaller value */
-}
+	.first-div {
+		left: 0;
+		padding-left: 0; /* or a smaller value */
+	}
 
-.second-div {
-    right: 0;
-    padding-right: 0; /* or a smaller value */
-}
+	.second-div {
+		right: 0;
+		padding-right: 0; /* or a smaller value */
+	}
 
 	section div {
 		/* background-color: rgb(235 238 244); */
-		background-color: #E5EBED;
+		background-color: #e5ebed;
 	}
 
 	a:hover .prev-arrow {
@@ -99,6 +109,6 @@
 	}
 
 	a:hover .text-slate-600 {
-		color: #35434A;
-	} 
+		color: #35434a;
+	}
 </style>

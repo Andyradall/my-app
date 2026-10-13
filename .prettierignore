@@ -12,3 +12,6 @@ _editsAndTests
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+
+# Generated Partytown library (copied by `npm run partytown`)
+static/~partytown

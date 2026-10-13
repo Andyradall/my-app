@@ -50,7 +50,7 @@
 	<div in:fly|global={transitionParams.in}>
 		{@render children?.()}
 	</div>
-{/key} 
+{/key}
 
 <svelte:head>
 	<!-- Config options -->

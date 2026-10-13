@@ -15,8 +15,7 @@
 			},
 			pagination: {
 				el: '.swiper-pagination',
-				clickable: true,
-			
+				clickable: true
 			}
 		});
 	});
@@ -24,7 +23,7 @@
 
 <article class="relative z-10 text-slate-600 pb-24 md:pb-56 mx-auto">
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mb-30">
-        <section class="mt-4 md:mt-2">
+		<section class="mt-4 md:mt-2">
 			<h2 class="font-euclid text-2xl md:text-3xl pl-6 font-semibold py-4">BACKGROUND</h2>
 		</section>
 
@@ -58,7 +57,8 @@
 				<h2 class="font-euclid text-3xl font-semibold my-4">Work</h2>
 				<p class="font-euclid font-normal text-lg">
 					I worked at Studenttorget from 2019 with UX and product design. Here, I refined the user
-					experience on <strong>Karrierestart.no</strong>, leading to a 75% growth in users and increased engagement. I recently did an internship at
+					experience on <strong>Karrierestart.no</strong>, leading to a 75% growth in users and
+					increased engagement. I recently did an internship at
 					<strong>Netlife Design</strong>, where I designed an administrator area for the tool,
 					Designmaskinen.
 				</p>
@@ -68,7 +68,7 @@
 						class="inline-flex items-center bg-red-500/80 font-euclid font-medium text-zinc-100 hover:text-zinc-100 my-10 pt-3 pb-3 px-6 rounded-xl transition-all mx-auto"
 					>
 						<a
-							href={ resumeLink }
+							href={resumeLink}
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="View my Full Resumé"
@@ -101,12 +101,12 @@
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
-					I live in Oslo close to nature, and enjoy to go skiing in the Nordmarka forest, 
-					or starting the day with a jog in the park with our dog.
+					I live in Oslo close to nature, and enjoy to go skiing in the Nordmarka forest, or
+					starting the day with a jog in the park with our dog.
 				</p>
 				<p class="font-euclid font-normal text-lg">
-					I am also very interested in meditation and yoga. 
-					It allows me to step into a very focused state that opens up for creativity and flow.
+					I am also very interested in meditation and yoga. It allows me to step into a very focused
+					state that opens up for creativity and flow.
 				</p>
 			</div>
 
@@ -118,7 +118,7 @@
 			>
 				<div class="swiper-wrapper rounded-3xl image-card">
 					<!-- Slide 1 -->
-					<div class="swiper-slide  image-card">
+					<div class="swiper-slide image-card">
 						<img
 							class="max-h-[520px] w-full rounded-3xl"
 							src="/images/about/ulleval2.webp"
@@ -146,43 +146,46 @@
 </article>
 
 <style lang="postcss">
-    .image-card, .text-card, .split-card {
-            position: relative;
-        }
-    .image-card::before, .text-card::before, .split-card::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      border-radius: inherit;
-      border: 1.3px solid rgba(178, 183, 192,0.3); /* transparent border */
-      z-index: 1;
-      pointer-events: none; /* to allow interaction with the content underneath */
-    }
-    
-        /* Custom CSS for hover effect */
-        .resume-btn-custom-link:hover .resume-btn-svg-icon {
-            transform: translateY(-2.5px) translateX(2px); /* Adjust values as needed for the hover effect */
-        }
-    
-        /* Ensures the SVG icon is slightly lowered to align with the text */
-        .resume-btn-svg-icon {
-            transform: translateY(-1px);
-            transition: transform 0.08s;
-        }
-    
-        .swiper {
-            margin-left: 0;
-            margin-right: 0;
-        }
-        .swiper-pagination {
-            bottom: 12px;
-        }
-    
-        :root {
-            --swiper-theme-color: #515255; /* Or any other color you prefer */
-        }
-    </style>
-    
+	.image-card,
+	.text-card,
+	.split-card {
+		position: relative;
+	}
+	.image-card::before,
+	.text-card::before,
+	.split-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: inherit;
+		border: 1.3px solid rgba(178, 183, 192, 0.3); /* transparent border */
+		z-index: 1;
+		pointer-events: none; /* to allow interaction with the content underneath */
+	}
+
+	/* Custom CSS for hover effect */
+	.resume-btn-custom-link:hover .resume-btn-svg-icon {
+		transform: translateY(-2.5px) translateX(2px); /* Adjust values as needed for the hover effect */
+	}
+
+	/* Ensures the SVG icon is slightly lowered to align with the text */
+	.resume-btn-svg-icon {
+		transform: translateY(-1px);
+		transition: transform 0.08s;
+	}
+
+	.swiper {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.swiper-pagination {
+		bottom: 12px;
+	}
+
+	:root {
+		--swiper-theme-color: #515255; /* Or any other color you prefer */
+	}
+</style>

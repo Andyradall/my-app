@@ -2,14 +2,14 @@
 	import WorkBack from '../../../components/WorkBack.svelte';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
-	import SvelteSeo from "svelte-seo";
+	import SvelteSeo from 'svelte-seo';
 
 	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
-        import('../../../components/LightGallery.svelte').then(module => {
-            LightGallery = module.default;
-        });
-    }
+		import('../../../components/LightGallery.svelte').then((module) => {
+			LightGallery = module.default;
+		});
+	}
 
 	const links = [
 		{ id: '#first', title: 'Our Process', ariaLabel: 'Our process' },
@@ -26,75 +26,84 @@
 	canonical="https://www.andersra.com/work/smab"
 	keywords="Anders Rådal, Svenska Mässkonsult, Svenska Mässkonsult UX, Ux-Lead, Hyper-Island, Hyper Island, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
 	openGraph={{
-	  title: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
-	  description: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
-	  images: [
-				{
-					url: 'https://www.andersra.com/images/thumbs/Smabthumb800500.webp',
-					width: 800,
-					height: 500,
-					alt: 'Svenska Mässkonsult Thumb'
-				}
-			],
-	  url: "https://www.andersra.com/work/smab",
-	  type: "website",
+		title: 'Svenska Mässkonsult UX Lead Case Study by Anders Rådal',
+		description: 'Svenska Mässkonsult UX Lead Case Study by Anders Rådal',
+		images: [
+			{
+				url: 'https://www.andersra.com/images/thumbs/Smabthumb800500.webp',
+				width: 800,
+				height: 500,
+				alt: 'Svenska Mässkonsult Thumb'
+			}
+		],
+		url: 'https://www.andersra.com/work/smab',
+		type: 'website'
 	}}
 	twitter={{
-	  card: "summary_large_image",
-	  site: "@AndersRadal",
-	  title: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
-	  description: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/Smabthumb800500.webp",
+		card: 'summary_large_image',
+		site: '@AndersRadal',
+		title: 'Svenska Mässkonsult UX Lead Case Study by Anders Rådal',
+		description: 'Svenska Mässkonsult UX Lead Case Study by Anders Rådal',
+		image: 'https://www.andersra.com/images/thumbs/Smabthumb800500.webp'
 	}}
 	jsonLd={{
-	  "@context": "https://schema.org",
-	  "@type": "WebSite",
-	  name: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
-	  description: "Svenska Mässkonsult UX Lead Case Study by Anders Rådal",
-	  url: "https://www.andersra.com/work/smab",
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Svenska Mässkonsult UX Lead Case Study by Anders Rådal',
+		description: 'Svenska Mässkonsult UX Lead Case Study by Anders Rådal',
+		url: 'https://www.andersra.com/work/smab'
 	}}
 />
 
 {#if LightGallery}
-    <LightGallery />
+	<LightGallery />
 {/if}
 
 <header class="relative top-0">
 	<WorkBack />
 </header>
 
-<article class="mx-auto font-euclid  text-slate-600 attachLightGallery">
+<article class="mx-auto font-euclid text-slate-600 attachLightGallery">
 	<section id="first" class="pageSection md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
 			<h1 class="text-[3rem] md:text-7xl font-euclid font-bold text-slate-600 py-4">
-                Svenska Mässkonsult
-                <span class="text-[2rem] md:text-4xl font-euclid font-medium text-slate-500 py-4"><br />A Rebrand Journey with Hyper Island</span>
-            </h1>
+				Svenska Mässkonsult
+				<span class="text-[2rem] md:text-4xl font-euclid font-medium text-slate-500 py-4"
+					><br />A Rebrand Journey with Hyper Island</span
+				>
+			</h1>
 		</div>
 	</section>
 
-	<section class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20">
+	<section
+		class="max-w-6xl flex flex-col-reverse md:flex-row mx-auto justify-center pb-10 md:pb-20"
+	>
 		<div class="md:flex-1 md:max-w-xl p-4">
 			<h2 class="pb-2">Introducing Svenska Mässkonsult</h2>
-            <ul class="text-[18px] font-euclid font-light leading-[30px] pr-1 space-y-5 ">
-                <li class="">Svenska Mässkonsult build exhibition spaces. They reached out to Hyper Island for a
-						rebrand. Our design lead class were doing a module where we ran our own design agencies
-						in groups at Hyper Island and took on paying clients.
-                    </li>
-                    <li><strong class="font-semibold">Project Brief & Objectives:</strong> We need help to review/re-invent how we are
-						seen externally, both offline and online. Today we lack a common thread in our communication
-						and that is something we need to be able to develop and implement in printed material, website,
-						mail signatures, invoices, proposals and other profiling.</li>
-                    <li><strong class="font-semibold">Team Composition & My Role:</strong> Our team consisted of five designers. Two focused
-					on branding while the other two, including myself, concentrated on UX. I took the lead in the
-					UX process and collaborated closely with designers Viktoria and Catalina. My responsibilities
-					was leading the UX process, UI/UX/Web-design, prototyping, user testing, handoff and presenting
-					the final design.
-                    </li>
-                    <li><strong class="font-semibold">Key Tools & Project Timeline:</strong> Figma, Figmjam, Adobe CC. We spent around
-						5 weeks on this design process.</li>
-                    </ul>
-
+			<ul class="text-[18px] font-euclid font-light leading-[30px] pr-1 space-y-5">
+				<li class="">
+					Svenska Mässkonsult build exhibition spaces. They reached out to Hyper Island for a
+					rebrand. Our design lead class were doing a module where we ran our own design agencies in
+					groups at Hyper Island and took on paying clients.
+				</li>
+				<li>
+					<strong class="font-semibold">Project Brief & Objectives:</strong> We need help to review/re-invent
+					how we are seen externally, both offline and online. Today we lack a common thread in our communication
+					and that is something we need to be able to develop and implement in printed material, website,
+					mail signatures, invoices, proposals and other profiling.
+				</li>
+				<li>
+					<strong class="font-semibold">Team Composition & My Role:</strong> Our team consisted of five
+					designers. Two focused on branding while the other two, including myself, concentrated on UX.
+					I took the lead in the UX process and collaborated closely with designers Viktoria and Catalina.
+					My responsibilities was leading the UX process, UI/UX/Web-design, prototyping, user testing,
+					handoff and presenting the final design.
+				</li>
+				<li>
+					<strong class="font-semibold">Key Tools & Project Timeline:</strong> Figma, Figmjam, Adobe CC.
+					We spent around 5 weeks on this design process.
+				</li>
+			</ul>
 		</div>
 		<figure class="md:flex-2 md:max-w-xl m-4">
 			<div class="flex items-center justify-center h-full">
@@ -124,7 +133,10 @@
                 </ul>
             </section-->
 
-	<section id="first" class="pageSection bg-slate-800/95 text-zinc-150 pt-10 md:pt-32 pb-10 md:pb-20 px-4">
+	<section
+		id="first"
+		class="pageSection bg-slate-800/95 text-zinc-150 pt-10 md:pt-32 pb-10 md:pb-20 px-4"
+	>
 		<div class="max-w-2xl mx-auto">
 			<h2>Double Diamond: Our Methodological Approach</h2>
 		</div>
@@ -143,7 +155,11 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-7xl py-10 md:py-14">
-			<img src="/images/smab/DD2-scaled.webp" class="zooming-dark-bg" alt="Double diamond process" />
+			<img
+				src="/images/smab/DD2-scaled.webp"
+				class="zooming-dark-bg"
+				alt="Double diamond process"
+			/>
 		</figure>
 	</section>
 
@@ -201,7 +217,11 @@
 			</ul>
 		</div>
 		<figure class="mx-auto md:max-w-3xl py-4 md:py-4">
-			<img src="/images/smab/Customer_journey.webp" class="zooming-white-bg" alt="Customer journey" />
+			<img
+				src="/images/smab/Customer_journey.webp"
+				class="zooming-white-bg"
+				alt="Customer journey"
+			/>
 			<figcaption class="">Customer journey map.</figcaption>
 		</figure>
 	</section>
@@ -218,7 +238,8 @@
 			</p>
 			<h3>The Evolution of Stylescapes</h3>
 			<p class="pb-2">
-				From our insights we did three rounds of stylescapes that we presented to the client.</p>
+				From our insights we did three rounds of stylescapes that we presented to the client.
+			</p>
 			<h3>Navigating Diverse Opinions</h3>
 			<p class="pb-2">
 				In the end the founders of the company wanted to keep their colour and logo but add a
@@ -229,32 +250,48 @@
 		</div>
 
 		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
-			<img src="/images/smab/Stylescapes1.webp" class="zooming-dark-bg" alt="Stylescapes first" width="1600" height="1703"/>
+			<img
+				src="/images/smab/Stylescapes1.webp"
+				class="zooming-dark-bg"
+				alt="Stylescapes first"
+				width="1600"
+				height="1703"
+			/>
 			<figcaption class="text-zinc-150">
-				<strong class="font-semibold"> Stylescapes round one:</strong> 
-				We showcased very different directions for the branding, 
-				we did this in order to get a feel for the clients taste, 
-				and make it easy to narrow down towards one direction. 
-			</figcaption>
-		</figure>		
-		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
-			<img src="/images/smab/Stylescapes2.webp" class="zooming-dark-bg" alt="Stylescapes second" width="1600" height="1487"/>
-			<figcaption class="text-zinc-150">
-				<strong class="font-semibold">Stylescapes round 2:</strong> 
-				We narrowed down the direction, aiming for a clean and modern look. 
-				I participated in this round with the third stylescape. 
-				My intention was to steer the direction by having us focusing on styles that could easily translate into UI elements.
-			</figcaption>
-		</figure>		
-		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
-			<img src="/images/smab/Stylescapes3.webp" class="zooming-dark-bg" alt="Stylescapes third" width="1600" height="738"/>
-			<figcaption class="text-zinc-150">
-				<strong class="font-semibold">Final Stylescape:</strong> 
-				In the third and final stylescape we had to allow the client to be specific about elements in order to reach a final decision.
+				<strong class="font-semibold"> Stylescapes round one:</strong>
+				We showcased very different directions for the branding, we did this in order to get a feel for
+				the clients taste, and make it easy to narrow down towards one direction.
 			</figcaption>
 		</figure>
-
-
+		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
+			<img
+				src="/images/smab/Stylescapes2.webp"
+				class="zooming-dark-bg"
+				alt="Stylescapes second"
+				width="1600"
+				height="1487"
+			/>
+			<figcaption class="text-zinc-150">
+				<strong class="font-semibold">Stylescapes round 2:</strong>
+				We narrowed down the direction, aiming for a clean and modern look. I participated in this round
+				with the third stylescape. My intention was to steer the direction by having us focusing on styles
+				that could easily translate into UI elements.
+			</figcaption>
+		</figure>
+		<figure class="block mx-auto md:max-w-5xl py-4 md:p-8">
+			<img
+				src="/images/smab/Stylescapes3.webp"
+				class="zooming-dark-bg"
+				alt="Stylescapes third"
+				width="1600"
+				height="738"
+			/>
+			<figcaption class="text-zinc-150">
+				<strong class="font-semibold">Final Stylescape:</strong>
+				In the third and final stylescape we had to allow the client to be specific about elements in
+				order to reach a final decision.
+			</figcaption>
+		</figure>
 	</section>
 
 	<section id="third" class="pageSection py-10 md:py-24 px-4">
@@ -325,7 +362,11 @@
 		</div>
 		<div class="flex flex-row mx-auto justify-evenly md:justify-center py-10">
 			<figure class="max-w-2xl p-1 md:p-4">
-				<img class="w-full zooming-white-bg" src="/images/smab/user_test_2.webp" alt="user test 2" />
+				<img
+					class="w-full zooming-white-bg"
+					src="/images/smab/user_test_2.webp"
+					alt="user test 2"
+				/>
 			</figure>
 			<figure class="max-w-2xl p-1 md:p-4">
 				<img class="w-full zooming-white-bg" src="/images/smab/User_testb.webp" alt="User test" />
@@ -341,10 +382,18 @@
 		</div>
 		<div class="flex mx-auto flex-col md:flex-row md:w-full justify-center py-10">
 			<figure class="max-w-2xl p-4 md:p-6">
-				<img src="/images/smab/Front-scaled.webp" class="zooming-dark-bg" alt="Frontpage of Svenska Masskonsult" />
+				<img
+					src="/images/smab/Front-scaled.webp"
+					class="zooming-dark-bg"
+					alt="Frontpage of Svenska Masskonsult"
+				/>
 			</figure>
 			<figure class="max-w-2xl p-4 md:p-6">
-				<img src="/images/smab/Front2-scaled.webp" class="zooming-dark-bg" alt="Frontpage of Svenska Masskonsult 2" />
+				<img
+					src="/images/smab/Front2-scaled.webp"
+					class="zooming-dark-bg"
+					alt="Frontpage of Svenska Masskonsult 2"
+				/>
 			</figure>
 		</div>
 	</section>
@@ -395,9 +444,9 @@
 					was fulfilling.
 				</li>
 				<li>
-					<strong>Client Relations:</strong> Our coursework on stakeholder management was incredibly
-					helpful. It emphasized the importance of setting clear expectations to avoid constant changes
-					and ensure the quality of our deliverables.
+					<strong>Client Relations:</strong> Our coursework on stakeholder management was incredibly helpful.
+					It emphasized the importance of setting clear expectations to avoid constant changes and ensure
+					the quality of our deliverables.
 				</li>
 				<li>
 					<strong>Feedback and Growth:</strong> I learned a lot about my leadership style. In situations
@@ -409,9 +458,9 @@
 					but due to time limits, we chose a design that would work well on all devices.
 				</li>
 				<li>
-					<strong>Client Satisfaction:</strong> A highlight of the project was the client's positive
-					feedback and their decision to bring our designs to life and implement it. It was a testament
-					to the team's effort and commitment.
+					<strong>Client Satisfaction:</strong> A highlight of the project was the client's positive feedback
+					and their decision to bring our designs to life and implement it. It was a testament to the
+					team's effort and commitment.
 				</li>
 			</ul>
 		</div>

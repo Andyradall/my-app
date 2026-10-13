@@ -2,14 +2,14 @@
 	import WorkBack from '../../../components/WorkBack.svelte';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
-	import SvelteSeo from "svelte-seo";
-	
+	import SvelteSeo from 'svelte-seo';
+
 	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
-        import('../../../components/LightGallery.svelte').then(module => {
-            LightGallery = module.default;
-        });
-    }
+		import('../../../components/LightGallery.svelte').then((module) => {
+			LightGallery = module.default;
+		});
+	}
 
 	const links = [
 		{ id: '#first', title: 'Research & Hooked', ariaLabel: 'Research & Hooked' },
@@ -26,37 +26,37 @@
 	canonical="https://www.andersra.com/work/karrierestart"
 	keywords="Anders Rådal, Karrierestart, Karrierestart UX, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
 	openGraph={{
-	  title: "Karrierestart UX Design Case Study by Anders Rådal",
-	  description: "Karrierestart UX Design Case Study by Anders Rådal",
-	  images: [
-				{
-					url: 'https://www.andersra.com/images/thumbs/KSthumb8005001.webp',
-					width: 800,
-					height: 500,
-					alt: 'Karrierestart Thumb'
-				}
-			],
-	  url: "https://www.andersra.com/work/karrierestart",
-	  type: "website",
+		title: 'Karrierestart UX Design Case Study by Anders Rådal',
+		description: 'Karrierestart UX Design Case Study by Anders Rådal',
+		images: [
+			{
+				url: 'https://www.andersra.com/images/thumbs/KSthumb8005001.webp',
+				width: 800,
+				height: 500,
+				alt: 'Karrierestart Thumb'
+			}
+		],
+		url: 'https://www.andersra.com/work/karrierestart',
+		type: 'website'
 	}}
 	twitter={{
-	  card: "summary_large_image",
-	  site: "@AndersRadal",
-	  title: "Karrierestart UX Design Case Study by Anders Rådal",
-	  description: "Karrierestart UX Design Case Study by Anders Rådal",
-	  image: "https://www.andersra.com/images/thumbs/KSthumb8005001.webp",
+		card: 'summary_large_image',
+		site: '@AndersRadal',
+		title: 'Karrierestart UX Design Case Study by Anders Rådal',
+		description: 'Karrierestart UX Design Case Study by Anders Rådal',
+		image: 'https://www.andersra.com/images/thumbs/KSthumb8005001.webp'
 	}}
 	jsonLd={{
-	  "@context": "https://schema.org",
-	  "@type": "WebSite",
-	  name: "Karrierestart UX Design Case Study by Anders Rådal",
-	  description: "Karrierestart UX Design Case Study by Anders Rådal",
-	  url: "https://www.andersra.com/work/karrierestart",
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Karrierestart UX Design Case Study by Anders Rådal',
+		description: 'Karrierestart UX Design Case Study by Anders Rådal',
+		url: 'https://www.andersra.com/work/karrierestart'
 	}}
 />
 
 {#if LightGallery}
-    <LightGallery />
+	<LightGallery />
 {/if}
 
 <header class="relative top-0">
@@ -121,7 +121,13 @@
 		</div>
 		<figure class="md:flex-2 md:max-w-xl md:m-4">
 			<div class="flex items-center justify-center h-full">
-				<div><img src="/images/karrierestart/MacBook_Pro_16_01_FREE.webp" class="zooming-white-bg" alt="KS mockup" /></div>
+				<div>
+					<img
+						src="/images/karrierestart/MacBook_Pro_16_01_FREE.webp"
+						class="zooming-white-bg"
+						alt="KS mockup"
+					/>
+				</div>
 			</div>
 		</figure>
 	</section>
@@ -131,7 +137,7 @@
 			<h2 class="text-3xl font-medium text-grey-800 text-center">Process overview</h2>
 		</div>
 	</section>
-	
+
 	<section class="hidden sm:block">
 		<WorkNav {links} />
 	</section>
@@ -164,7 +170,11 @@
 		</div>
 
 		<figure class="md:max-w-5xl py-5 md:py-8 mx-auto">
-			<img src="/images/karrierestart/Screenshot_2023_02_10_at_17_08_2.webp" class="zooming-white-bg" alt="Hotjar Module" />
+			<img
+				src="/images/karrierestart/Screenshot_2023_02_10_at_17_08_2.webp"
+				class="zooming-white-bg"
+				alt="Hotjar Module"
+			/>
 			<figcaption>
 				Hotjar feedback module gave me a lot of actionable feedback that I used to improve user
 				exerience! Here on the whitelabled Aleris Company profile.
@@ -217,7 +227,7 @@
 			<img src="/images/karrierestart/hook.webp" class="zooming-dark-bg" alt="Nir Eyal summary" />
 		</figure>
 	</section>
-	
+
 	<section id="second" class="pageSection py-10 md:py-20 px-4">
 		<div class="max-w-2xl py-4 mx-auto">
 			<h2 class="pb-2">Designing the Onboarding Guide</h2>
@@ -226,37 +236,50 @@
 			<ul class="list-custom list-disc pl-5">
 				<li>
 					<p>
-						<strong class="font-medium">Company Profile:</strong> In the company profile it was important to make it very
-						simple to get started, and not overwhelm the users with complexity causing them to leave.
+						<strong class="font-medium">Company Profile:</strong> In the company profile it was important
+						to make it very simple to get started, and not overwhelm the users with complexity causing
+						them to leave.
 					</p>
 				</li>
 				<li>
 					<p>
-						<strong class="font-medium">Progressive Unlocking:</strong> I designed the onboarding so that as users earned
-						new badges, new sections and functionalities became accessible, gradually increasing their
-						engagement with the platform.
+						<strong class="font-medium">Progressive Unlocking:</strong> I designed the onboarding so that
+						as users earned new badges, new sections and functionalities became accessible, gradually
+						increasing their engagement with the platform.
 					</p>
 				</li>
 				<li>
 					<p>
-						<strong class="font-medium">Professionalism in Job Ads:</strong> We made certain steps like having a logo and
-						"about us" text mandatory for publishing job ads, this ensured a consistently polished appearance
-						for all published job listings.
+						<strong class="font-medium">Professionalism in Job Ads:</strong> We made certain steps like
+						having a logo and "about us" text mandatory for publishing job ads, this ensured a consistently
+						polished appearance for all published job listings.
 					</p>
 				</li>
 			</ul>
 		</div>
 		<figure class="max-w-6xl mx-auto py-5">
-			<img src="/images/karrierestart/Aleris23.webp" class="zooming-white-bg" alt="Onboarding guide step 1" />
+			<img
+				src="/images/karrierestart/Aleris23.webp"
+				class="zooming-white-bg"
+				alt="Onboarding guide step 1"
+			/>
 			<figcaption>First step of onboarding guide.</figcaption>
 		</figure>
 		<figure class="max-w-6xl mx-auto py-5">
-			<img src="/images/karrierestart/onb33.webp" class="zooming-white-bg" alt="onboarding step 3" />
+			<img
+				src="/images/karrierestart/onb33.webp"
+				class="zooming-white-bg"
+				alt="onboarding step 3"
+			/>
 			<figcaption>Step 3 of onboarding guide.</figcaption>
 		</figure>
 
 		<figure class="max-w-6xl mx-auto py-5">
-			<img src="/images/karrierestart/onb4w3.webp" class="zooming-white-bg" alt="Onboarding alternative" />
+			<img
+				src="/images/karrierestart/onb4w3.webp"
+				class="zooming-white-bg"
+				alt="Onboarding alternative"
+			/>
 
 			<figcaption>
 				Alternative more tactile view of step 3. I explored and discarded many different solutions
@@ -277,7 +300,11 @@
 			</p>
 		</div>
 		<figure class="max-w-6xl py-5 mx-auto">
-			<img src="/images/karrierestart/Freelance2.webp" class="zooming-white-bg" alt="Freelance congrats message" />
+			<img
+				src="/images/karrierestart/Freelance2.webp"
+				class="zooming-white-bg"
+				alt="Freelance congrats message"
+			/>
 			<figcaption>Motivational message from freelancer profile.</figcaption>
 		</figure>
 	</section>
@@ -293,7 +320,11 @@
 			</p>
 		</div>
 		<figure class="max-w-5xl py-5 mx-auto">
-			<img src="/images/karrierestart/Congratulatory.webp" class="zooming-white-bg" alt="Freelance user profile" />
+			<img
+				src="/images/karrierestart/Congratulatory.webp"
+				class="zooming-white-bg"
+				alt="Freelance user profile"
+			/>
 			<figcaption>Here showing Likes and Followers in a user profile.</figcaption>
 		</figure>
 	</section>
@@ -325,7 +356,11 @@
 		</figure>
 
 		<figure class="max-w-6xl mx-auto py-4 md:py-10">
-			<img src="/images/karrierestart/Storyedit.webp" class="zooming-white-bg" alt="Storyedit CMS" />
+			<img
+				src="/images/karrierestart/Storyedit.webp"
+				class="zooming-white-bg"
+				alt="Storyedit CMS"
+			/>
 			<figcaption>
 				<p>
 					Some designs from CMS of stories, we created many customisation options for the stories.

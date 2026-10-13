@@ -7,11 +7,11 @@
 
 	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
-        import('../../../components/LightGallery.svelte').then(module => {
-            LightGallery = module.default;
-        });
-    }
-	
+		import('../../../components/LightGallery.svelte').then((module) => {
+			LightGallery = module.default;
+		});
+	}
+
 	const links = [
 		{ id: '#first', title: 'Team Dynamics', ariaLabel: 'Team Dynamics' },
 		{ id: '#second', title: 'Customer Research', ariaLabel: 'Customer Research' },
@@ -21,42 +21,42 @@
 </script>
 
 <SvelteSeo
-		title="Solar Choice Brand Design Case Study by Anders Rådal"
-		description="Solar Choice Brand Design Case Study by Anders Rådal"
-		canonical="https://www.andersra.com/work/solarchoice"
-		keywords="Anders Rådal, Solar Choice, Brand-design, Solar-Choice, Branding, Hyper-Island, Hyper Island, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
-		openGraph={{
-			title: 'Solar Choice Brand Design Case Study by Anders Rådal',
-			description: 'Solar Choice Brand Design Case Study by Anders Rådal',
-			images: [
-				{
-					url: 'https://www.andersra.com/images/thumbs/Solarthumblg-1.webp',
-					width: 900,
-					height: 560,
-					alt: 'Solar Choice Thumb'
-				}
-			],
-			url: 'https://www.andersra.com/work/solarchoice',
-			type: 'website'
-		}}
-		twitter={{
-			card: 'summary_large_image',
-			site: '@AndersRadal',
-			title: 'Solar Choice Brand Design Case Study by Anders Rådal',
-			description: 'Solar Choice Brand Design Case Study by Anders Rådal',
-			image: 'https://www.andersra.com/images/thumbs/Solarthumblg-1.webp'
-		}}
-		jsonLd={{
-			'@context': 'https://schema.org',
-			'@type': 'WebSite',
-			name: 'Solar Choice Brand Design Case Study by Anders Rådal',
-			description: 'Solar Choice Brand Design Case Study by Anders Rådal',
-			url: 'https://www.andersra.com/work/solarchoice'
-		}}
+	title="Solar Choice Brand Design Case Study by Anders Rådal"
+	description="Solar Choice Brand Design Case Study by Anders Rådal"
+	canonical="https://www.andersra.com/work/solarchoice"
+	keywords="Anders Rådal, Solar Choice, Brand-design, Solar-Choice, Branding, Hyper-Island, Hyper Island, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+	openGraph={{
+		title: 'Solar Choice Brand Design Case Study by Anders Rådal',
+		description: 'Solar Choice Brand Design Case Study by Anders Rådal',
+		images: [
+			{
+				url: 'https://www.andersra.com/images/thumbs/Solarthumblg-1.webp',
+				width: 900,
+				height: 560,
+				alt: 'Solar Choice Thumb'
+			}
+		],
+		url: 'https://www.andersra.com/work/solarchoice',
+		type: 'website'
+	}}
+	twitter={{
+		card: 'summary_large_image',
+		site: '@AndersRadal',
+		title: 'Solar Choice Brand Design Case Study by Anders Rådal',
+		description: 'Solar Choice Brand Design Case Study by Anders Rådal',
+		image: 'https://www.andersra.com/images/thumbs/Solarthumblg-1.webp'
+	}}
+	jsonLd={{
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Solar Choice Brand Design Case Study by Anders Rådal',
+		description: 'Solar Choice Brand Design Case Study by Anders Rådal',
+		url: 'https://www.andersra.com/work/solarchoice'
+	}}
 />
 
 {#if LightGallery}
-    <LightGallery />
+	<LightGallery />
 {/if}
 
 <header class="relative top-0">
@@ -82,9 +82,9 @@
 				class="text-[18px] font-euclid font-light leading-[30px] md:pr-2 px-4 pl-0 space-y-4 md:space-y-5"
 			>
 				<li>
-					<strong class="font-semibold">Brief:</strong> Create a visual brand document that presents
-					the company in a understandable and appealing way to their target audience through the main
-					communication channels.
+					<strong class="font-semibold">Brief:</strong> Create a visual brand document that presents the
+					company in a understandable and appealing way to their target audience through the main communication
+					channels.
 				</li>
 				<li>
 					<strong class="font-semibold">Team:</strong> Patric Iu, Divya Kavadia, Tessa Holgersson, and
@@ -238,7 +238,7 @@
 			</p>
 		</div>
 
-		<figure class="mx-auto md:max-w-7xl py-4 md:py-6 ">
+		<figure class="mx-auto md:max-w-7xl py-4 md:py-6">
 			<img
 				src="/images/solarchoice/Screenshot_2023_01_20_at_15_15_1.webp"
 				alt="Workshop insights"
@@ -266,7 +266,11 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-7xl py-4 md:py-6">
-			<img src="/images/solarchoice/UCDC_Solar_Choice_1.webp" class="zooming-white-bg" alt="UCDC_Solar_Choice_1" />
+			<img
+				src="/images/solarchoice/UCDC_Solar_Choice_1.webp"
+				class="zooming-white-bg"
+				alt="UCDC_Solar_Choice_1"
+			/>
 		</figure>
 	</section>
 
@@ -325,10 +329,18 @@
 			</div>
 			<div class="mx-auto md:max-w-7xl">
 				<figure class="py-4">
-					<img src="/images/solarchoice/Solarblue8_4.webp" class="zooming-dark-bg" alt="Stylescape 1" />
+					<img
+						src="/images/solarchoice/Solarblue8_4.webp"
+						class="zooming-dark-bg"
+						alt="Stylescape 1"
+					/>
 				</figure>
 				<figure class="py-4">
-					<img src="/images/solarchoice/Solarblue2goldidentity.webp" class="zooming-dark-bg" alt="My stylescape edited" />
+					<img
+						src="/images/solarchoice/Solarblue2goldidentity.webp"
+						class="zooming-dark-bg"
+						alt="My stylescape edited"
+					/>
 				</figure>
 			</div>
 		</div>
@@ -351,7 +363,11 @@
 			</p>
 		</div>
 		<figure class="mx-auto md:max-w-6xl py-4 md:py-6">
-			<img src="/images/solarchoice/Logo_exploret_1-scaled.webp" class="zooming-white-bg" alt="Logo_exploret_1" />
+			<img
+				src="/images/solarchoice/Logo_exploret_1-scaled.webp"
+				class="zooming-white-bg"
+				alt="Logo_exploret_1"
+			/>
 		</figure>
 	</section>
 
@@ -373,10 +389,18 @@
 
 		<div class="flex flex-col md:flex-row mx-auto justify-center md:py-16 bg-color">
 			<figure class="md:flex-1 md:max-w-2xl m-1">
-				<img src="/images/solarchoice/solar_choice_logo_30.webp" class="zooming-white-bg" alt="solar_choice_logo_30" />
+				<img
+					src="/images/solarchoice/solar_choice_logo_30.webp"
+					class="zooming-white-bg"
+					alt="solar_choice_logo_30"
+				/>
 			</figure>
 			<figure class="md:flex-2 md:max-w-2xl m-1'">
-				<img src="/images/solarchoice/solar_choice_logo_31.webp" class="zooming-white-bg" alt="solar_choice_logo_31" />
+				<img
+					src="/images/solarchoice/solar_choice_logo_31.webp"
+					class="zooming-white-bg"
+					alt="solar_choice_logo_31"
+				/>
 			</figure>
 		</div>
 	</section>
@@ -430,7 +454,11 @@
 			</figure>
 
 			<figure class="flex-1/3 py-6 md:max-w-xl">
-				<img src="/images/solarchoice/Northern-Light.webp" class="zooming-dark-bg" alt="Northern-Light" />
+				<img
+					src="/images/solarchoice/Northern-Light.webp"
+					class="zooming-dark-bg"
+					alt="Northern-Light"
+				/>
 			</figure>
 
 			<figure class="flex-1/3 py-6 md:max-w-xl">

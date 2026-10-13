@@ -1,97 +1,98 @@
 module.exports = {
-  content: ['./src/**/*.{js,svelte}', './src/app.html'],
-  theme: {
-      colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-        'white': '#F7FBFF',
-        'grey': {
-          50: '#F1F5FE',
-          100: '#EBEEF4',
-          200: '#DDE0E6',
-          250: '#B6B9BD',
-          300: '#9C9EA2',
-          400: '#616366',
-          500: '#515255',
-          600: '#404244',
-          700: '#303133',
-          800: '#242527',
-          900: '#18191B',
-        },         
-         'zinc': {
-          100: '#F5F6F7',
-          150: '#ECEDEF',
-          200: '#E2E4E7',
-          250: '#D9DBDF',
-          300: '#C5C9D0',
-          350: '#B2B7C0',
-          400: '#9FA5B0',
-          500: '#838891',
-          550: '#676B72',
-          600: '#4A4D54',
-          700: '#3C3F44',
-          800: '#2E3035',
-          850: '#202225',
-          900: '#121316',
-        },  
-        'slate': {
-          50: '#EDF0F1',
-          100: '#CCD6DB',
-          150: '#BDC7CD',
-          200: '#AEB9BE',
-          250: '#9FAAB0',
-          300: '#909BA1',
-          350: '#717E84',
-          400: '#536067',
-          500: '#35434A',
-          550: '#2A363B',
-          600: '#20282C',
-          700: '#151B1E',
-          800: '#101416',
-          850: '#0B0D0F',
-          900: '#050707',
-        },  
-        'red': {
-          100: '#FAF2F0',
-          150: '#FAEBE8',
-          200: '#F5D7D2',
-          250: '#F1C3BB',
-          300: '#ECAFA4',
-          350: '#E28877',
-          400: '#D96049',
-          500: '#CF381C',
-          550: '#A62D16',
-          600: '#7C2211',
-          700: '#53160B',
-          800: '#3E1108',
-          850: '#290B06',
-          900: '#150603',
-        },  
+	content: ['./src/**/*.{js,svelte}', './src/app.html'],
+	theme: {
+		colors: {
+			transparent: 'transparent',
+			current: 'currentColor',
+			white: '#F7FBFF',
+			grey: {
+				50: '#F1F5FE',
+				100: '#EBEEF4',
+				200: '#DDE0E6',
+				250: '#B6B9BD',
+				300: '#9C9EA2',
+				400: '#616366',
+				500: '#515255',
+				600: '#404244',
+				700: '#303133',
+				800: '#242527',
+				900: '#18191B'
+			},
+			zinc: {
+				100: '#F5F6F7',
+				150: '#ECEDEF',
+				200: '#E2E4E7',
+				250: '#D9DBDF',
+				300: '#C5C9D0',
+				350: '#B2B7C0',
+				400: '#9FA5B0',
+				500: '#838891',
+				550: '#676B72',
+				600: '#4A4D54',
+				700: '#3C3F44',
+				800: '#2E3035',
+				850: '#202225',
+				900: '#121316'
+			},
+			slate: {
+				50: '#EDF0F1',
+				100: '#CCD6DB',
+				150: '#BDC7CD',
+				200: '#AEB9BE',
+				250: '#9FAAB0',
+				300: '#909BA1',
+				350: '#717E84',
+				400: '#536067',
+				500: '#35434A',
+				550: '#2A363B',
+				600: '#20282C',
+				700: '#151B1E',
+				800: '#101416',
+				850: '#0B0D0F',
+				900: '#050707'
+			},
+			red: {
+				100: '#FAF2F0',
+				150: '#FAEBE8',
+				200: '#F5D7D2',
+				250: '#F1C3BB',
+				300: '#ECAFA4',
+				350: '#E28877',
+				400: '#D96049',
+				500: '#CF381C',
+				550: '#A62D16',
+				600: '#7C2211',
+				700: '#53160B',
+				800: '#3E1108',
+				850: '#290B06',
+				900: '#150603'
+			}
+		},
 
-      },
+		extend: {
+			fontFamily: {
+				euclid: [
+					'Euclid Circular B',
+					'system-ui',
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"Segoe UI"',
+					'Roboto',
+					'"Helvetica Neue"',
+					'Arial',
+					'"Noto Sans"',
+					'sans-serif'
+				]
+			},
 
-    extend: {    
-      fontFamily: {
-      'euclid': ['Euclid Circular B', 
-      'system-ui',
-      '-apple-system', 
-      'BlinkMacSystemFont', 
-      '"Segoe UI"', 
-      'Roboto', 
-      '"Helvetica Neue"', 
-      'Arial', 
-      '"Noto Sans"', 
-      'sans-serif']
-    },
-
-    boxShadow: {
-      'custom': '0 1px 5px rgba(36, 37, 39, .03), 0 2px 9px rgba(36, 37, 39, .05), 0 4px 14px rgba(36, 37, 39, .03)'
-    },
-    
-  },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
+			boxShadow: {
+				custom:
+					'0 1px 5px rgba(36, 37, 39, .03), 0 2px 9px rgba(36, 37, 39, .05), 0 4px 14px rgba(36, 37, 39, .03)'
+			}
+		}
+	},
+	variants: {
+		extend: {}
+	},
+	plugins: []
+};

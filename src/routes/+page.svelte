@@ -14,8 +14,20 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" href="/fonts/euclid-circular-b/EuclidCircularB-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/euclid-circular-b/EuclidCircularB-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link
+		rel="preload"
+		href="/fonts/euclid-circular-b/EuclidCircularB-Regular.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href="/fonts/euclid-circular-b/EuclidCircularB-Bold.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
 </svelte:head>
 
 <SvelteSeo
@@ -24,31 +36,32 @@
 	canonical="https://www.andersra.com"
 	keywords="Anders Rådal, UX-Design, Product designer, Oslo, Norway, UX, UI, Design, Portfolio, Hyper Island, Hyper-Island, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
 	openGraph={{
-	  title: "Anders Rådal UX Portfolio",
-	  description: "Portfolio for Anders Rådal - Product & UX Designer",
-	  images: [
-		{
-		  url: "https://www.andersra.com/images/thumbs/PageThumb.webp",
-		  width: 500,
-		  height: 333,
-		  alt: "Page Thumbnail", 
-		}  ],
-	  url: "https://www.andersra.com",
-	  type: "website",
+		title: 'Anders Rådal UX Portfolio',
+		description: 'Portfolio for Anders Rådal - Product & UX Designer',
+		images: [
+			{
+				url: 'https://www.andersra.com/images/thumbs/PageThumb.webp',
+				width: 500,
+				height: 333,
+				alt: 'Page Thumbnail'
+			}
+		],
+		url: 'https://www.andersra.com',
+		type: 'website'
 	}}
 	twitter={{
-	  card: "summary_large_image",
-	  site: "@AndersRadal",
-	  title: "Portfolio for Anders Rådal - Product & UX Designer",
-	  description: "Portfolio for Anders Rådal - Product & UX Designer",
-	  image: "https://www.andersra.com/images/thumbs/PageThumb.webp",
+		card: 'summary_large_image',
+		site: '@AndersRadal',
+		title: 'Portfolio for Anders Rådal - Product & UX Designer',
+		description: 'Portfolio for Anders Rådal - Product & UX Designer',
+		image: 'https://www.andersra.com/images/thumbs/PageThumb.webp'
 	}}
 	jsonLd={{
-	  "@context": "https://schema.org",
-	  "@type": "WebSite",
-	  name: "Anders Rådal Portfolio",
-	  description: "Portfolio for Anders Rådal - Product & UX Designer",
-	  url: "https://www.andersra.com/",
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Anders Rådal Portfolio',
+		description: 'Portfolio for Anders Rådal - Product & UX Designer',
+		url: 'https://www.andersra.com/'
 	}}
 />
 
@@ -66,6 +79,3 @@
 	<Background />
 	<Footer />
 </OnMount>
-
-
-	

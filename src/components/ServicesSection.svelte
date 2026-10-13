@@ -179,6 +179,7 @@
 
 	<Testimonials />
 </article>
+
 <style lang="postcss">
 	.skills-card {
 		position: relative;

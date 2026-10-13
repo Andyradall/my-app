@@ -4,7 +4,6 @@
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from 'svelte-seo';
 
-
 	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
 		import('../../../components/LightGallery.svelte').then((module) => {
@@ -21,38 +20,38 @@
 </script>
 
 <SvelteSeo
-		title="Designmaskinen Product Design Case Study by Anders Rådal"
-		description="Designmaskinen Product Design Case Study by Anders Rådal"
-		canonical="https://www.andersra.com/work/designmaskinen"
-		keywords="Anders Rådal, UX-Design, Product designer, Netlife, Designmaskinen, Internship, Hyper-Island, Hyper Island, Product-design, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
-		openGraph={{
-			title: 'Designmaskinen Product Design Case Study by Anders Rådal',
-			description: 'Designmaskinen Product Design Case Study by Anders Rådal',
-			images: [
-				{
-					url: 'https://www.andersra.com/images/thumbs/DMthumb800500.webp',
-					width: 800,
-					height: 500,
-					alt: 'Designmaskinen Thumb'
-				}
-			],
-			url: 'https://www.andersra.com/work/designmaskinen',
-			type: 'website'
-		}}
-		twitter={{
-			card: 'summary_large_image',
-			site: '@AndersRadal',
-			title: 'Designmaskinen Product Design Case Study by Anders Rådal',
-			description: 'Designmaskinen Product Design Case Study by Anders Rådal',
-			image: 'https://www.andersra.com/images/thumbs/DMthumb800500.webp'
-		}}
-		jsonLd={{
-			'@context': 'https://schema.org',
-			'@type': 'WebSite',
-			name: 'Designmaskinen Product Design Case Study by Anders Rådal',
-			description: 'Designmaskinen Product Design Case Study by Anders Rådal',
-			url: 'https://www.andersra.com/work/designmaskinen'
-		}}
+	title="Designmaskinen Product Design Case Study by Anders Rådal"
+	description="Designmaskinen Product Design Case Study by Anders Rådal"
+	canonical="https://www.andersra.com/work/designmaskinen"
+	keywords="Anders Rådal, UX-Design, Product designer, Netlife, Designmaskinen, Internship, Hyper-Island, Hyper Island, Product-design, Oslo, Norway, UX, UI, Design, Portfolio, Anders Rådal UX Portfolio, Anders Rådal UX, Anders Rådal Portfolio, Anders Rådal UX-Design, Anders Rådal Product designer, Anders Rådal Oslo, Anders Rådal Norway, Anders Rådal UX, Anders Rådal UI, Anders Rådal Design, Anders Rådal Portfolio"
+	openGraph={{
+		title: 'Designmaskinen Product Design Case Study by Anders Rådal',
+		description: 'Designmaskinen Product Design Case Study by Anders Rådal',
+		images: [
+			{
+				url: 'https://www.andersra.com/images/thumbs/DMthumb800500.webp',
+				width: 800,
+				height: 500,
+				alt: 'Designmaskinen Thumb'
+			}
+		],
+		url: 'https://www.andersra.com/work/designmaskinen',
+		type: 'website'
+	}}
+	twitter={{
+		card: 'summary_large_image',
+		site: '@AndersRadal',
+		title: 'Designmaskinen Product Design Case Study by Anders Rådal',
+		description: 'Designmaskinen Product Design Case Study by Anders Rådal',
+		image: 'https://www.andersra.com/images/thumbs/DMthumb800500.webp'
+	}}
+	jsonLd={{
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Designmaskinen Product Design Case Study by Anders Rådal',
+		description: 'Designmaskinen Product Design Case Study by Anders Rådal',
+		url: 'https://www.andersra.com/work/designmaskinen'
+	}}
 />
 
 {#if LightGallery}
@@ -86,8 +85,8 @@
 				>
 				Designmaskinen is unique because of its
 				<span class="font-semibold">constraints and fixed templates.</span>
-				End users are limited to only use predefined brand colors, typeface and images when creating
-				content. This way,
+				End users are limited to only use predefined brand colors, typeface and images when creating content.
+				This way,
 				<span class="font-semibold"
 					>the output is always looking great, on-brand and consistent!</span
 				> This empowers everyone in the organisation to create stunning designs, and is a total dream
@@ -202,25 +201,23 @@
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Dashboard: Iterative process, identifying areas for improvement.</h2>
 			<ul class="pb-10 py-4 list-custom q text-slate-600">
-				
-					<li>
-						The dashboard of the admin area gathers brand assets etc. Playing with the machine
-						lingo, Kaja came up with the great name verktøykassa (the toolbox).
-					</li>
-					<li>
-						Goal: <span class="font-semibold"
-							>Balance ease of access with minimalism to create an intuitive feel,</span
-						> aligning with the brand values.
-					</li>
-					<li>
-						We went from defining <span class="font-semibold">jobs-to-do</span> and functionality requirements,
-						via pencil-sketches, to me designing this first “hi-fi” iteration.
-					</li>
-					<li>
-						This first version was <span class="font-semibold">perfect for gathering feedback</span>
-						from user-testing and heuristic analysis to give ideas for refinement:
-					</li>
-			
+				<li>
+					The dashboard of the admin area gathers brand assets etc. Playing with the machine lingo,
+					Kaja came up with the great name verktøykassa (the toolbox).
+				</li>
+				<li>
+					Goal: <span class="font-semibold"
+						>Balance ease of access with minimalism to create an intuitive feel,</span
+					> aligning with the brand values.
+				</li>
+				<li>
+					We went from defining <span class="font-semibold">jobs-to-do</span> and functionality requirements,
+					via pencil-sketches, to me designing this first “hi-fi” iteration.
+				</li>
+				<li>
+					This first version was <span class="font-semibold">perfect for gathering feedback</span>
+					from user-testing and heuristic analysis to give ideas for refinement:
+				</li>
 			</ul>
 		</div>
 
@@ -370,10 +367,7 @@
 		</div>
 	</section>
 
-	<section
-		id="third"
-		class="pageSection bg-slate-800/95 text-zinc-150 py-10 md:py-24 px-4"
-	>
+	<section id="third" class="pageSection bg-slate-800/95 text-zinc-150 py-10 md:py-24 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
 			<p>
@@ -410,16 +404,16 @@
 			<ul class="list-custom">
 				<li>
 					<strong>Pros of Consultancies:</strong> Netlife Design was like a knowledge hub. They had weekly
-					feedback sessions, presentations and skill-sharing and I learned a lot! 
+					feedback sessions, presentations and skill-sharing and I learned a lot!
 				</li>
 				<li>
 					<strong>Collaboration:</strong> Working in a cross-functional team with designers and developers
 					in the same room, made it quick to ideate and shoot ideas back and forth.
 				</li>
 				<li>
-					<strong>Prioritizing Accessibility:</strong> We designed for the highest accessibility
-					and WCAG standards. I learned to design interfaces that can be used on screen readers and navigated
-					with a keyboard.
+					<strong>Prioritizing Accessibility:</strong> We designed for the highest accessibility and WCAG
+					standards. I learned to design interfaces that can be used on screen readers and navigated with
+					a keyboard.
 				</li>
 				<li>
 					<strong>Repeated patterns:</strong> Using repeated patterns ensures users get a recognisable
@@ -427,13 +421,13 @@
 					they can reuse components.
 				</li>
 				<li>
-					<strong>Fail fast & test early: </strong> Testing early versions with users to get insights and
-					see how things work in action is a great way to harvest feedback to continually improve!
+					<strong>Fail fast & test early: </strong> Testing early versions with users to get insights
+					and see how things work in action is a great way to harvest feedback to continually improve!
 				</li>
 				<li>
 					<strong>Social Workplace:</strong> There were a lot of social activities to join, we went grilling
-					and playing in the park, to a design award, swimming and doing saunas and on a weekend seminar. I even
-					joined their running team for a race - it was a lot of fun there!
+					and playing in the park, to a design award, swimming and doing saunas and on a weekend seminar.
+					I even joined their running team for a race - it was a lot of fun there!
 				</li>
 				<li>
 					<strong>Modern Tech Stack:</strong> It was interesting to design for a cutting-edge stack with

@@ -1,13 +1,11 @@
 <article id="about" class="pageSection text-slate-600 pb-0 md:pb-2 md:pt-10 mx-auto">
-	<section
-		class="max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-20"
-	>
+	<section class="max-w-3xl md:max-w-6xl text-slate-600 mx-auto pt-24 md:pt-26 pb-10 md:pb-20">
 		<div class="mx-auto">
 			<h2 class="font-euclid text-center">
 				<span
 					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-16 md:leading-[8.2rem] pb-4 md:pb-6 text-slate-600"
 				>
-				A technical creative with years of experience
+					A technical creative with years of experience
 				</span>
 			</h2>
 		</div>

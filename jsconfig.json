@@ -16,7 +16,7 @@
 		"moduleResolution": "bundler",
 		"target": "es2017",
 		"jsx": "preserve",
-		"noImplicitAny": false,
+		"noImplicitAny": false
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

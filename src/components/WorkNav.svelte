@@ -16,10 +16,13 @@
 			var now = new Date().getTime();
 			if (lastCall && now < lastCall + interval) {
 				clearTimeout(timeoutId);
-				timeoutId = setTimeout(function () {
-					lastCall = now;
-					fn.call();
-				}, interval - (now - lastCall));
+				timeoutId = setTimeout(
+					function () {
+						lastCall = now;
+						fn.call();
+					},
+					interval - (now - lastCall)
+				);
 			} else {
 				lastCall = now;
 				fn.call();
@@ -126,7 +129,7 @@
 
 <style lang="postcss">
 	.header-navbar {
-		border-bottom: 1px solid #EDF0F1;
+		border-bottom: 1px solid #edf0f1;
 		padding: 0;
 		margin: 0;
 		display: flex;
@@ -198,12 +201,12 @@
 
 	.header-navbar a.active {
 		z-index: 5 !important;
-		color: #20282C !important;
+		color: #20282c !important;
 	}
 
 	.header-navbar a:hover {
 		z-index: 5 !important;
-		color: #20282C !important;
+		color: #20282c !important;
 	}
 
 	/* :not excludes class for specific use */
@@ -218,7 +221,7 @@
 		border: 0px;
 		outline: none;
 		background: none;
-		color: #20282C;
+		color: #20282c;
 		height: 50px;
 		cursor: pointer;
 		transition: all 0.45s ease;
@@ -228,13 +231,13 @@
 
 	.header-navbar button.back svg {
 		margin-right: 0.2em;
-		fill: #20282C;
+		fill: #20282c;
 	}
 
 	.header-navbar button.back:hover,
 	.header-navbar button.back:hover svg path {
-		color: #35434A;
-		fill: #35434A;
+		color: #35434a;
+		fill: #35434a;
 	}
 
 	.header-navbar.sticky button.back {

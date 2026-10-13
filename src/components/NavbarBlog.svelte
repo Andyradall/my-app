@@ -7,11 +7,10 @@
 	// Mobile menu
 	let isMobileMenuOpen = false;
 
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-	isMobileMenuOpen = !isMobileMenuOpen;	
-    }
-
+	// Toggle mobile menu
+	function toggleMobileMenu() {
+		isMobileMenuOpen = !isMobileMenuOpen;
+	}
 
 	// set the size correct from starts
 	let effectX = 0; // Initial position. This matches 'left: 0px;'
@@ -48,10 +47,13 @@
 			if (lastCall && now < lastCall + interval) {
 				// if we are inside the interval we wait
 				clearTimeout(timeoutId);
-				timeoutId = setTimeout(function () {
-					lastCall = now;
-					fn();
-				}, interval - (now - lastCall));
+				timeoutId = setTimeout(
+					function () {
+						lastCall = now;
+						fn();
+					},
+					interval - (now - lastCall)
+				);
 			} else {
 				// otherwise, we directly call the function
 				lastCall = now;
@@ -100,9 +102,9 @@
 
 	onMount(() => {
 		// Cache navigation links and sections
-		pageNavigationLinks = Array.from(document.querySelectorAll(
-			'#main-navigation > ul > li > a:not(.menu-custom-link)'
-		));
+		pageNavigationLinks = Array.from(
+			document.querySelectorAll('#main-navigation > ul > li > a:not(.menu-custom-link)')
+		);
 		pageSections = Array.from(document.querySelectorAll('.pageSection')).reverse();
 
 		// Map each section id to their corresponding navigation link
@@ -164,11 +166,8 @@
 
 			<ul>
 				<li>
-					<a
-						href="/#hero"
-						
-						aria-label="Anders Rådal"
-						class="text-slate-500 hover:text-slate-600">Anders Rådal</a
+					<a href="/#hero" aria-label="Anders Rådal" class="text-slate-500 hover:text-slate-600"
+						>Anders Rådal</a
 					>
 				</li>
 				<li>
@@ -187,11 +186,14 @@
 					>
 				</li>
 				<li>
-					<a href="#blog" 
-					class:active={isActive}
-					aria-label="Blog" class="text-slate-500 hover:text-slate-600">Blog
+					<a
+						href="#blog"
+						class:active={isActive}
+						aria-label="Blog"
+						class="text-slate-500 hover:text-slate-600"
+						>Blog
 					</a>
-					</li>
+				</li>
 				<li>
 					<a
 						href={resumeLink}
@@ -258,57 +260,77 @@
 		<!--svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
 		</svg-->
-		<svg aria-hidden="true" class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#20282C"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>	</button>
+		<svg
+			aria-hidden="true"
+			class="w-9 h-9"
+			xmlns="http://www.w3.org/2000/svg"
+			height="24px"
+			viewBox="0 -960 960 960"
+			width="24px"
+			fill="#20282C"
+			><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg
+		>
+	</button>
 </div>
 
 <!-- Mobile Menu Overlay -->
 {#if isMobileMenuOpen}
-<div
-	id="mobile-menu"
-	role="navigation"
-	aria-label="Mobile Navigation"
-	class="fixed inset-0 bg-zinc-100/90 backdrop-blur-sm z-50 flex flex-col items-center justify-center space-y-8"
->
-	<!-- Close Button -->
-	<button
-		type="button"
-		on:click={toggleMobileMenu}
-		aria-label="Close menu"
-		class="absolute top-4 right-4 text-slate-600 focus:outline-hidden"
+	<div
+		id="mobile-menu"
+		role="navigation"
+		aria-label="Mobile Navigation"
+		class="fixed inset-0 bg-zinc-100/90 backdrop-blur-sm z-50 flex flex-col items-center justify-center space-y-8"
 	>
-		<!--svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<!-- Close Button -->
+		<button
+			type="button"
+			on:click={toggleMobileMenu}
+			aria-label="Close menu"
+			class="absolute top-4 right-4 text-slate-600 focus:outline-hidden"
+		>
+			<!--svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
 		</svg-->
-		<svg aria-hidden="true" class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#20282C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-	</button>
-	<!-- Mobile Menu Items -->
-	<ul class="flex flex-col items-center space-y-8 text-slate-600 font-normal text-4xl">
-		<li>
-			<a href="/#hero" aria-label="Anders Rådal" on:click={toggleMobileMenu}>Anders Rådal</a>
-		</li>
-		<li>
-			<a href="/#work" aria-label="Case Studies" on:click={toggleMobileMenu}>Case Studies</a>
-		</li>
-		<li>
-			<a href="/#services" aria-label="Services" on:click={toggleMobileMenu}>Services</a>
-		</li>
-		<li>
-			<a href="/#about" aria-label="About Me" on:click={toggleMobileMenu}>About Me</a>
-		</li>
-		<li>
-			<a href="#blog" aria-label="Blog" on:click={toggleMobileMenu}>Blog
-			</a>
+			<svg
+				aria-hidden="true"
+				class="w-9 h-9"
+				xmlns="http://www.w3.org/2000/svg"
+				height="24px"
+				viewBox="0 -960 960 960"
+				width="24px"
+				fill="#20282C"
+				><path
+					d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+				/></svg
+			>
+		</button>
+		<!-- Mobile Menu Items -->
+		<ul class="flex flex-col items-center space-y-8 text-slate-600 font-normal text-4xl">
+			<li>
+				<a href="/#hero" aria-label="Anders Rådal" on:click={toggleMobileMenu}>Anders Rådal</a>
 			</li>
-		<li>
-			<a
-				href={resumeLink}
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="Resumé - opens in a new window"
-				class=" text-slate-600"
-			>
-				Resumé
-				<!--span class="menu-svg-icon">
+			<li>
+				<a href="/#work" aria-label="Case Studies" on:click={toggleMobileMenu}>Case Studies</a>
+			</li>
+			<li>
+				<a href="/#services" aria-label="Services" on:click={toggleMobileMenu}>Services</a>
+			</li>
+			<li>
+				<a href="/#about" aria-label="About Me" on:click={toggleMobileMenu}>About Me</a>
+			</li>
+			<li>
+				<a href="#blog" aria-label="Blog" on:click={toggleMobileMenu}>Blog </a>
+			</li>
+			<li>
+				<a
+					href={resumeLink}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Resumé - opens in a new window"
+					class=" text-slate-600"
+				>
+					Resumé
+					<!--span class="menu-svg-icon">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						height="24"
@@ -321,18 +343,18 @@
 						/>
 					</svg>
 				</span-->
-			</a>
-		</li>
-		<li>
-			<a
-				href="https://www.linkedin.com/in/andersraa/"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="Connect on LinkedIn, opens in a new window"
-				class=" text-slate-600"
-			>
-				LinkedIn
-				<!--span class="menu-svg-icon">
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://www.linkedin.com/in/andersraa/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Connect on LinkedIn, opens in a new window"
+					class=" text-slate-600"
+				>
+					LinkedIn
+					<!--span class="menu-svg-icon">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						height="24"
@@ -345,11 +367,11 @@
 						/>
 					</svg>
 				</span-->
-			</a>
-		</li>
-		<!-- Add more mobile menu items if needed -->
-	</ul>
-</div>
+				</a>
+			</li>
+			<!-- Add more mobile menu items if needed -->
+		</ul>
+	</div>
 {/if}
 
 <style lang="postcss">
@@ -475,7 +497,7 @@
 		.menu-custom-link {
 			display: none;
 		}
-		
+
 		.menu-effect {
 			transform: translateX(1px);
 		}

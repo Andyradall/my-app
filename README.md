@@ -3,6 +3,7 @@
 Welcome to my UX/Interaction Design Portfolio. This repository showcases my work and projects in the field of user experience and interaction design. It's built using SvelteKit, a powerful framework for building web applications.
 
 ### Key features and technologies include:
+
 - **SvelteKit**: For building highly interactive user interfaces.
 - **Tailwind CSS**: A utility-first CSS framework for rapid custom design development.
 - **Sanity**: A flexible, real-time headless CMS that powers the content for testimonials and blog sections. It allows for easy updates and management of site content without compromising on performance, demonstrating a commitment to dynamic content delivery and editorial efficiency.
@@ -53,7 +54,6 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > Note: To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
 
 ## License
 

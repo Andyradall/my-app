@@ -29,15 +29,19 @@
 </script>
 
 <div class="case-card">
-	<div class="case-card-bg shadow-custom py-4 rounded-3xl bg-zinc-100/75 backdrop-blur-xs max-w-[800px] max-h-[600px]">
+	<div
+		class="case-card-bg shadow-custom py-4 rounded-3xl bg-zinc-100/75 backdrop-blur-xs max-w-[800px] max-h-[600px]"
+	>
 		<a href={link} aria-label="hidden" class="case-card-image">
-			<img class="card-thumbnail" 
-			src={image} 
-			alt={alt} 
-			width={width} 
-			height={height}
-			srcset="{imageMobile} 380w, {imageDesktop} 620w, {image} 800w"
-			sizes="(max-width: 412px) 380px, (max-width: 1350px) 620px, 800px" />
+			<img
+				class="card-thumbnail"
+				src={image}
+				{alt}
+				{width}
+				{height}
+				srcset="{imageMobile} 380w, {imageDesktop} 620w, {image} 800w"
+				sizes="(max-width: 412px) 380px, (max-width: 1350px) 620px, 800px"
+			/>
 		</a>
 	</div>
 	<div class="case-card-text pl-2">
@@ -66,22 +70,21 @@
 		padding: 16px 0;
 	}
 
-.case-card-bg {
+	.case-card-bg {
 		position: relative;
 	}
-.case-card-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: inherit;
-  border: 1.3px solid rgba(178, 183, 192,0.3); /* transparent border */
-  z-index: 1;
-  pointer-events: none; /* to allow interaction with the content underneath */
-}
-
+	.case-card-bg::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: inherit;
+		border: 1.3px solid rgba(178, 183, 192, 0.3); /* transparent border */
+		z-index: 1;
+		pointer-events: none; /* to allow interaction with the content underneath */
+	}
 
 	.case-card:hover .case-card-image img {
 		transform: scale(1.02);
@@ -93,7 +96,7 @@
 	.case-card:hover h2,
 	.case-card:hover h3,
 	.case-card:hover span {
-		color: #2A363B !important;
+		color: #2a363b !important;
 	}
 
 	/* style for the custom links under cards */
@@ -103,7 +106,7 @@
 
 	.custom-link-front:hover,
 	.custom-link-front:focus {
-		color: #2A363B !important;
+		color: #2a363b !important;
 	}
 
 	/* move the arrow icon on hover */
