@@ -1,6 +1,6 @@
 <script>
 	import { onMount, afterUpdate } from 'svelte';
-	import anime from 'animejs';
+	import { animate } from 'animejs';
 	export let links = [];
 
 	let sticky = false;
@@ -45,12 +45,11 @@
 	}
 
 	function animateIndicator() {
-		anime({
-			targets: '.effect',
-			left: effectX,
-			width: effectWidth,
+		animate('.effect', {
+			left: `${effectX}px`,
+			width: `${effectWidth}px`,
 			duration: 600,
-			easing: 'easeOutElastic(1, 0.4)' // Adjust for a bouncy effect
+			ease: 'outElastic(1, .4)' // Adjust for a bouncy effect
 		});
 	}
 

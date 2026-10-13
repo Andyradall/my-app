@@ -1,6 +1,6 @@
 <!-- Description: Navigation bar component for frontpage -->
 <script>
-	import anime from 'animejs';
+	import { animate } from 'animejs';
 	import { onMount, tick } from 'svelte';
 	import { resumeLink } from '../lib/resumeLink.js';
 
@@ -86,12 +86,11 @@
 					const width = navLink.offsetWidth + 16;
 
 					// Animate the highlight effect to the new position and width
-					anime({
-						targets: '.menu-effect',
+					animate('.menu-effect', {
 						left: `${x}px`,
 						width: `${width}px`,
 						duration: 600,
-						endDelay: 1000
+						ease: 'outElastic(1, .5)' // animejs v3 default easing
 					});
 				}
 			}
