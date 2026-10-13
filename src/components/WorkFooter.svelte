@@ -2,10 +2,9 @@
     // Import Case studies arrsy
 	import { caseStudies } from '../lib/caseStudies.js';
 	// Get the current path
-	import { page } from '$app/stores';
-	import { get } from 'svelte/store';
+	import { page } from '$app/state';
 
-	const currentPath = get(page).url.pathname;
+	const currentPath = page.url.pathname;
 
 	// Find the current case study index
 	const currentIndex = caseStudies.findIndex((cs) => cs.href === currentPath);

@@ -1,5 +1,7 @@
 import { join } from 'path';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import adapter from '@sveltejs/adapter-vercel';
 import tailwindcss from '@tailwindcss/vite';
 import { partytownVite } from '@qwik.dev/partytown/utils';
 
@@ -7,7 +9,10 @@ import { partytownVite } from '@qwik.dev/partytown/utils';
 const config = {
   plugins: [
     tailwindcss(),
-    sveltekit(),
+    sveltekit({
+      adapter: adapter(),
+      preprocess: vitePreprocess()
+    }),
     partytownVite({
       // `dest` specifies where files are copied to in production
       dest: join(process.cwd(), 'static', '~partytown')
