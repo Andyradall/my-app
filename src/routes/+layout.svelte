@@ -4,7 +4,6 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
-	import { page } from '$app/stores';
 	import Hotjar from '@hotjar/browser';
 
 	let { data, children } = $props();
@@ -15,6 +14,7 @@
 	onMount(() => {
 		//partytown
 		if (scriptEl) {
+			// eslint-disable-next-line svelte/no-dom-manipulating -- Partytown needs its snippet injected
 			scriptEl.textContent = partytownSnippet();
 		}
 

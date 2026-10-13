@@ -1,6 +1,5 @@
 <script>
 	import WorkBack from '../../../components/WorkBack.svelte';
-	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	//import { dirty_components } from 'svelte/internal';

@@ -98,7 +98,7 @@
 				{/each}
 			</section-->
 			<section class="grid grid-cols-1 items-start gap-10 mx-2 md:mx-auto md:min-mx-16  md:max-w-7xl pb-20">
-				{#each blogPosts as post}
+				{#each blogPosts as post (post.slug.current)}
 				  {#if post.slug && post.slug.current}
 					<a
 					  href={`/blog/${post.slug.current}`}

@@ -118,10 +118,11 @@
 <svg class="full-svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="none">
   <rect width="100%" height="100%" fill="#ECEDEF" opacity="0.75" />
   <defs>
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -- built from the constant colors above -->
     {@html gradients}
   </defs>
 
-  {#each circles as circle, index}
+  {#each circles as circle, index (index)}
     <ellipse
       class="animatedCircle"
       cx={circle.cx}

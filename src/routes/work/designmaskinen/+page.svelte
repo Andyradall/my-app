@@ -1,11 +1,9 @@
 <script>
 	import WorkBack from '../../../components/WorkBack.svelte';
-	import { caseStudies } from '../../../lib/caseStudies.js';
 	import WorkNav from '../../../components/WorkNav.svelte';
 	import WorkFooter from '../../../components/WorkFooter.svelte';
 	import SvelteSeo from 'svelte-seo';
 
-	import { onMount } from 'svelte';
 
 	let LightGallery = $state();
 	if (typeof window !== 'undefined') {
@@ -314,7 +312,7 @@
 				During a team meeting we were discussion how the templates area should look. I argued for
 				simply reusing the same layout that I developed for the image albums. This suggestion would
 				ensure consistency with an established interaction pattern for the app, and address other
-				issues we discussed about how to categorise the templates. This ended up being the final
+				issues we discussed about how to categorise the templates. This ended up being the final
 				solution.
 			</p>
 		</div>

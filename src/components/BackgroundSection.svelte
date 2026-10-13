@@ -7,7 +7,7 @@
 	import { resumeLink } from '../lib/resumeLink.js';
 
 	onMount(() => {
-		const swiper = new Swiper('.mySwiper', {
+		new Swiper('.mySwiper', {
 			modules: [Autoplay, Pagination],
 			loop: true,
 			autoplay: {

@@ -30,7 +30,7 @@
       </section>
 
       <section class="grid grid-cols-1 md:grid-cols-12 items-start gap-10">
-          {#each testimonials as testimonial}
+          {#each testimonials as testimonial (testimonial._id)}
               <div
                   class="testimonial-card md:col-span-4 p-8 rounded-3xl bg-zinc-100 bg-opacity-100 backdrop-blur-sm shadow-custom"
               >

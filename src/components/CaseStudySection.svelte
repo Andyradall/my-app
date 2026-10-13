@@ -31,7 +31,7 @@
       <h2 class="font-euclid text-2xl md:text-3xl pl-2 md:pl-4 text-slate-600 font-semibold my-4">CASE STUDIES</h2>
     </section>
     <section class="flex flex-wrap gap-10">
-      {#each caseStudies as study}
+      {#each caseStudies as study (study.href)}
         <div class="w-full md:w-[calc(50%-20px)]">
           <CaseStudyCard
             title={study.title}

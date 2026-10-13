@@ -5,9 +5,7 @@
 
 	let sticky = false;
 	let currentActiveId;
-	let navigationLinks;
 	let sections;
-	let isActive = false;
 	let effectX = 0; // Initial position
 	let effectWidth = 0; // Initial size
 
@@ -70,12 +68,7 @@
 	onMount(() => {
 		const stickyMenu = document.getElementById('sub-navigation');
 		const stickyNavTop = stickyMenu.offsetTop;
-		navigationLinks = Array.from(document.querySelectorAll('#sub-navigation > ul > li > a'));
 		sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
-
-		if (window.location.hash === '#first') {
-			isActive = false;
-		}
 
 		const handleScroll = throttle(() => {
 			sticky = window.scrollY > stickyNavTop;
@@ -114,7 +107,7 @@
 			<div class="effect bg-slate-100 bg-opacity-80 rounded-xl"></div>
 		</div>
 		<ul>
-			{#each links as link}
+			{#each links as link (link.id)}
 				<li>
 					<a
 						class="font-euclid text-base"
