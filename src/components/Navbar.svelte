@@ -49,12 +49,12 @@
 				clearTimeout(timeoutId);
 				timeoutId = setTimeout(function () {
 					lastCall = now;
-					fn.call();
+					fn();
 				}, interval - (now - lastCall));
 			} else {
 				// otherwise, we directly call the function
 				lastCall = now;
-				fn.call();
+				fn();
 			}
 		};
 	}
@@ -100,9 +100,9 @@
 
 	onMount(() => {
 		// Cache navigation links and sections
-		pageNavigationLinks = document.querySelectorAll(
+		pageNavigationLinks = Array.from(document.querySelectorAll(
 			'#main-navigation > ul > li > a:not(.menu-custom-link)'
-		);
+		));
 		pageSections = Array.from(document.querySelectorAll('.pageSection')).reverse();
 
 		// Map each section id to their corresponding navigation link

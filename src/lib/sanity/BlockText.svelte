@@ -13,6 +13,8 @@
   let value = $derived(portableText.value);
   let style = $derived(value.style);
   let spans = $derived(value.children);
+  // Legacy 'link' blocks carry an href directly on the block
+  let href = $derived((value as { href?: string }).href);
 </script>
 <!-- Optimized Render Logic -->
 {#if style === 'h2'}
@@ -22,7 +24,7 @@
 {:else if style === 'normal'}
   <p class="text-[18px] font-euclid font-light text-slate-600 leading-[30px] pt-2 pb-3">{@render children?.()}</p>
 {:else if style === 'link'}
-  <a href={value.href} target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">{spans[0]?.text}</a>
+  <a {href} target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">{spans[0]?.text}</a>
 {:else}
 
   <!-- Fallback for unhandled styles -->

@@ -8,6 +8,22 @@
   import BlockLink from '../../../lib/sanity/BlockLink.svelte';
 
   let { data } = $props();
+
+  // Styles without a component here (h1, h4, blockquote, ...) use the library default.
+  // The cast is needed because the types expect a component for every block style.
+  const components = /** @type {import('@portabletext/svelte').PortableTextComponents} */ ({
+    block: /** @type {any} */ ({
+      normal: BlockText,
+      h2: BlockText,
+      h3: BlockText
+    }),
+    marks: {
+      link: BlockLink
+    },
+    types: {
+      image: BlockImage
+    }
+  });
   
 
 // console.log("BlockText imported successfully", BlockText);
@@ -64,19 +80,7 @@
       <div class="py-8 text-lg font-light">
         <PortableText
         value={data.posts.body}
-        components={{
-          block: {
-            normal: BlockText,
-            h2: BlockText,
-            h3: BlockText,
-          },
-          marks: {
-            link: BlockLink,
-          },
-          types: {
-            image: BlockImage,
-          }
-        }}
+        {components}
       />
       </div>
     {:else}

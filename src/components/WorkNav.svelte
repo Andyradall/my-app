@@ -67,6 +67,7 @@
 
 	onMount(() => {
 		const stickyMenu = document.getElementById('sub-navigation');
+		if (!stickyMenu) return;
 		const stickyNavTop = stickyMenu.offsetTop;
 		sections = Array.from(document.querySelectorAll('.pageSection')).reverse();
 
