@@ -48,7 +48,7 @@
 		"@sanity/image-url": "^2.1.1",
 		"animejs": "^4.5.0",
 		"gsap": "^3.12.2",
-		"lightgallery": "^3.0.0",
+		"lightgallery": "^2.9.0",
 		"svelte-inview": "^4.0.4",
 		"swiper": "^14.3.0"
 	},

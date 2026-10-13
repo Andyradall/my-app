@@ -6,6 +6,7 @@
 
 	onMount(async () => {
 		const query = `*[_type == "testimonial"]{
+      _id,
       userName,
       userImage{
         asset->{
