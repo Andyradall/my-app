@@ -14,7 +14,7 @@
 		"partytown": "partytown copylib static/~partytown"
 	},
 	"engines": {
-		"node": ">=20"
+		"node": "22.x"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^6.0.0",

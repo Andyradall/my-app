@@ -11,6 +11,10 @@ const config = {
       dest: join(process.cwd(), 'static', '~partytown')
     })
   ],
+  ssr: {
+    // gsap's ESM entry lacks "type": "module", so Vercel's runtime can't import it; bundle it instead
+    noExternal: ['gsap']
+  },
   build: {
     rollupOptions: {
       external: ['lightgallery/plugins/MediumZoom']
