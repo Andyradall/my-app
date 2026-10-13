@@ -1,6 +1,6 @@
 <script>
 	import '../global.css';
-	import { partytownSnippet } from '@builder.io/partytown/integration';
+	import { partytownSnippet } from '@qwik.dev/partytown/integration';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';

@@ -1,11 +1,11 @@
-/* Partytown 0.9.2 - MIT builder.io */
+/* Partytown 1.0.0 - MIT QwikDev */
 Object.freeze((obj => {
     const properties = new Set;
     let currentObj = obj;
     do {
-        Object.getOwnPropertyNames(currentObj).forEach((item => {
+        Object.getOwnPropertyNames(currentObj).forEach(item => {
             "function" == typeof currentObj[item] && properties.add(item);
-        }));
+        });
     } while ((currentObj = Object.getPrototypeOf(currentObj)) !== Object.prototype);
     return Array.from(properties);
 })([]));
@@ -17,25 +17,30 @@ const swMessageError = (accessReq, $error$) => ({
     $error$: $error$
 });
 
-const httpRequestFromWebWorker = req => new Promise((async resolve => {
+const httpRequestFromWebWorker = req => new Promise(async resolve => {
     const accessReq = await req.clone().json();
-    const responseData = await (accessReq => new Promise((async resolve => {
+    const responseData = await (accessReq => new Promise(async resolve => {
         const clients = await self.clients.matchAll();
-        const client = [ ...clients ].sort(((a, b) => a.url > b.url ? -1 : a.url < b.url ? 1 : 0))[0];
+        const client = ((clients, msgId) => {
+            const tabId = msgId.split(".").pop();
+            let client = clients.find(a => a.url.endsWith(`?${tabId}`));
+            client || (client = [ ...clients ].sort((a, b) => a.url > b.url ? -1 : a.url < b.url ? 1 : 0)[0]);
+            return client;
+        })([ ...clients ], accessReq.$msgId$);
         if (client) {
             const timeout = 12e4;
-            const msgResolve = [ resolve, setTimeout((() => {
+            const msgResolve = [ resolve, setTimeout(() => {
                 resolves.delete(accessReq.$msgId$);
                 resolve(swMessageError(accessReq, "Timeout"));
-            }), timeout) ];
+            }, timeout) ];
             resolves.set(accessReq.$msgId$, msgResolve);
             client.postMessage(accessReq);
         } else {
             resolve(swMessageError(accessReq, "NoParty"));
         }
-    })))(accessReq);
+    }))(accessReq);
     resolve(response(JSON.stringify(responseData), "application/json"));
-}));
+});
 
 const response = (body, contentType) => new Response(body, {
     headers: {
@@ -63,7 +68,7 @@ self.onfetch = ev => {
     const url = new URL(req.url);
     const pathname = url.pathname;
     if (pathname.endsWith("sw.html")) {
-        ev.respondWith(response('<!DOCTYPE html><html><head><meta charset="utf-8"><script src="./partytown-sandbox-sw.js?v=0.9.2"><\/script></head></html>'));
+        ev.respondWith(response('<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><script src="./partytown-sandbox-sw.js?v=1.0.0"><\/script></head></html>'));
     } else {
         pathname.endsWith("proxytown") && ev.respondWith(httpRequestFromWebWorker(req));
     }

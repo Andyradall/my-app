@@ -1,5 +1,107 @@
-/* Partytown 0.9.2 - MIT builder.io */
+/* Partytown 1.0.0 - MIT QwikDev */
 (self => {
+    var WorkerMessageType;
+    !function(WorkerMessageType) {
+        WorkerMessageType[WorkerMessageType.MainDataRequestFromWorker = 0] = "MainDataRequestFromWorker";
+        WorkerMessageType[WorkerMessageType.MainDataResponseToWorker = 1] = "MainDataResponseToWorker";
+        WorkerMessageType[WorkerMessageType.MainInterfacesRequestFromWorker = 2] = "MainInterfacesRequestFromWorker";
+        WorkerMessageType[WorkerMessageType.MainInterfacesResponseToWorker = 3] = "MainInterfacesResponseToWorker";
+        WorkerMessageType[WorkerMessageType.InitializedWebWorker = 4] = "InitializedWebWorker";
+        WorkerMessageType[WorkerMessageType.InitializeEnvironment = 5] = "InitializeEnvironment";
+        WorkerMessageType[WorkerMessageType.InitializedEnvironmentScript = 6] = "InitializedEnvironmentScript";
+        WorkerMessageType[WorkerMessageType.InitializeNextScript = 7] = "InitializeNextScript";
+        WorkerMessageType[WorkerMessageType.InitializedScripts = 8] = "InitializedScripts";
+        WorkerMessageType[WorkerMessageType.RefHandlerCallback = 9] = "RefHandlerCallback";
+        WorkerMessageType[WorkerMessageType.ForwardMainTrigger = 10] = "ForwardMainTrigger";
+        WorkerMessageType[WorkerMessageType.ForwardWorkerAccessRequest = 11] = "ForwardWorkerAccessRequest";
+        WorkerMessageType[WorkerMessageType.AsyncAccessRequest = 12] = "AsyncAccessRequest";
+        WorkerMessageType[WorkerMessageType.LocationUpdate = 13] = "LocationUpdate";
+        WorkerMessageType[WorkerMessageType.DocumentVisibilityState = 14] = "DocumentVisibilityState";
+        WorkerMessageType[WorkerMessageType.CustomElementCallback = 15] = "CustomElementCallback";
+    }(WorkerMessageType || (WorkerMessageType = {}));
+    var LocationUpdateType;
+    !function(LocationUpdateType) {
+        LocationUpdateType[LocationUpdateType.PushState = 0] = "PushState";
+        LocationUpdateType[LocationUpdateType.ReplaceState = 1] = "ReplaceState";
+        LocationUpdateType[LocationUpdateType.PopState = 2] = "PopState";
+        LocationUpdateType[LocationUpdateType.HashChange = 3] = "HashChange";
+    }(LocationUpdateType || (LocationUpdateType = {}));
+    var InterfaceType;
+    !function(InterfaceType) {
+        InterfaceType[InterfaceType.Window = 0] = "Window";
+        InterfaceType[InterfaceType.Element = 1] = "Element";
+        InterfaceType[InterfaceType.AttributeNode = 2] = "AttributeNode";
+        InterfaceType[InterfaceType.TextNode = 3] = "TextNode";
+        InterfaceType[InterfaceType.CDataSectionNode = 4] = "CDataSectionNode";
+        InterfaceType[InterfaceType.Function = 5] = "Function";
+        InterfaceType[InterfaceType.Property = 6] = "Property";
+        InterfaceType[InterfaceType.ProcessingInstructionNode = 7] = "ProcessingInstructionNode";
+        InterfaceType[InterfaceType.CommentNode = 8] = "CommentNode";
+        InterfaceType[InterfaceType.Document = 9] = "Document";
+        InterfaceType[InterfaceType.DocumentTypeNode = 10] = "DocumentTypeNode";
+        InterfaceType[InterfaceType.DocumentFragmentNode = 11] = "DocumentFragmentNode";
+        InterfaceType[InterfaceType.EnvGlobalConstructor = 12] = "EnvGlobalConstructor";
+    }(InterfaceType || (InterfaceType = {}));
+    var WinDocId;
+    !function(WinDocId) {
+        WinDocId.document = "d";
+        WinDocId.documentElement = "e";
+        WinDocId.head = "h";
+        WinDocId.body = "b";
+    }(WinDocId || (WinDocId = {}));
+    var ApplyPathType;
+    !function(ApplyPathType) {
+        ApplyPathType[ApplyPathType.SetValue = 0] = "SetValue";
+        ApplyPathType[ApplyPathType.GlobalConstructor = 1] = "GlobalConstructor";
+    }(ApplyPathType || (ApplyPathType = {}));
+    var SerializedType;
+    !function(SerializedType) {
+        SerializedType[SerializedType.Primitive = 0] = "Primitive";
+        SerializedType[SerializedType.Array = 1] = "Array";
+        SerializedType[SerializedType.Object = 2] = "Object";
+        SerializedType[SerializedType.Instance = 3] = "Instance";
+        SerializedType[SerializedType.Ref = 4] = "Ref";
+        SerializedType[SerializedType.Event = 5] = "Event";
+        SerializedType[SerializedType.Function = 6] = "Function";
+        SerializedType[SerializedType.NodeList = 7] = "NodeList";
+        SerializedType[SerializedType.ArrayBuffer = 8] = "ArrayBuffer";
+        SerializedType[SerializedType.ArrayBufferView = 9] = "ArrayBufferView";
+        SerializedType[SerializedType.Attr = 10] = "Attr";
+        SerializedType[SerializedType.CSSRule = 11] = "CSSRule";
+        SerializedType[SerializedType.CSSRuleList = 12] = "CSSRuleList";
+        SerializedType[SerializedType.CSSStyleDeclaration = 13] = "CSSStyleDeclaration";
+        SerializedType[SerializedType.Error = 14] = "Error";
+    }(SerializedType || (SerializedType = {}));
+    var NodeName;
+    !function(NodeName) {
+        NodeName.Body = "BODY";
+        NodeName.Comment = "#comment";
+        NodeName.Document = "#document";
+        NodeName.DocumentElement = "HTML";
+        NodeName.DocumentTypeNode = "html";
+        NodeName.DocumentFragment = "#document-fragment";
+        NodeName.IFrame = "IFRAME";
+        NodeName.Head = "HEAD";
+        NodeName.Script = "SCRIPT";
+        NodeName.Text = "#text";
+    }(NodeName || (NodeName = {}));
+    var StateProp;
+    !function(StateProp) {
+        StateProp.errorHandlers = "error";
+        StateProp.loadHandlers = "load";
+        StateProp[StateProp.src = 0] = "src";
+        StateProp[StateProp.loadErrorStatus = 1] = "loadErrorStatus";
+        StateProp[StateProp.cssRules = 2] = "cssRules";
+        StateProp[StateProp.innerHTML = 3] = "innerHTML";
+        StateProp[StateProp.url = 4] = "url";
+        StateProp[StateProp.type = 5] = "type";
+    }(StateProp || (StateProp = {}));
+    var CallType;
+    !function(CallType) {
+        CallType[CallType.Blocking = 1] = "Blocking";
+        CallType[CallType.NonBlocking = 2] = "NonBlocking";
+        CallType[CallType.NonBlockingNoSideEffect = 3] = "NonBlockingNoSideEffect";
+    }(CallType || (CallType = {}));
     const WinIdKey = Symbol();
     const InstanceIdKey = Symbol();
     const InstanceDataKey = Symbol();
@@ -24,10 +126,10 @@
         }
         return url;
     };
-    const getterDimensionPropNames = commaSplit("clientWidth,clientHeight,clientTop,clientLeft,innerWidth,innerHeight,offsetWidth,offsetHeight,offsetTop,offsetLeft,outerWidth,outerHeight,pageXOffset,pageYOffset,scrollWidth,scrollHeight,scrollTop,scrollLeft");
+    const getterDimensionPropNames = commaSplit("clientWidth,clientHeight,clientTop,clientLeft,innerWidth,innerHeight,offsetWidth,offsetHeight,offsetTop,offsetLeft,outerWidth,outerHeight,scrollWidth,scrollHeight");
     const elementStructurePropNames = commaSplit("childElementCount,children,firstElementChild,lastElementChild,nextElementSibling,previousElementSibling");
     const structureChangingMethodNames = commaSplit("insertBefore,remove,removeChild,replaceChild");
-    const dimensionChangingSetterNames = commaSplit("className,width,height,hidden,innerHTML,innerText,textContent");
+    const dimensionChangingSetterNames = commaSplit("className,width,height,hidden,innerHTML,innerText,textContent,text");
     const dimensionChangingMethodNames = commaSplit("setAttribute,setAttributeNS,setProperty");
     const eventTargetMethods = commaSplit("addEventListener,dispatchEvent,removeEventListener");
     const nonBlockingMethods = eventTargetMethods.concat(dimensionChangingMethodNames, commaSplit("add,observe,remove,unobserve"));
@@ -50,6 +152,7 @@
         } catch (e) {}
         return "";
     };
+    const startsWith = (str, val) => str.startsWith(val);
     const EMPTY_ARRAY = [];
     const randomId = () => Math.round(Math.random() * Number.MAX_SAFE_INTEGER).toString(36);
     const SCRIPT_TYPE = "text/partytown";
@@ -66,21 +169,38 @@
         value: value,
         writable: true
     });
-    Object.freeze((obj => {
+    const trustedType = (create, value, g) => {
+        var _a;
+        g = globalThis;
+        if (void 0 === g._pttt) {
+            g._pttt = null;
+            try {
+                g._pttt = (null === (_a = g.trustedTypes) || void 0 === _a ? void 0 : _a.createPolicy("partytown", {
+                    createHTML: s => s,
+                    createScript: s => s,
+                    createScriptURL: s => s
+                })) || null;
+            } catch (e) {}
+        }
+        return g._pttt ? g._pttt[create](value) : value;
+    };
+    const arrayMethods = Object.freeze((obj => {
         const properties = new Set;
         let currentObj = obj;
         do {
-            Object.getOwnPropertyNames(currentObj).forEach((item => {
+            Object.getOwnPropertyNames(currentObj).forEach(item => {
                 "function" == typeof currentObj[item] && properties.add(item);
-            }));
+            });
         } while ((currentObj = Object.getPrototypeOf(currentObj)) !== Object.prototype);
         return Array.from(properties);
     })([]));
+    const emptyObjectValue = propertyName => arrayMethods.includes(propertyName) ? [] : {};
     function testIfMustLoadScriptOnMainThread(config, value) {
-        var _a, _b;
-        return null !== (_b = null === (_a = config.loadScriptsOnMainThread) || void 0 === _a ? void 0 : _a.map((([type, value]) => new RegExp("string" === type ? function(input) {
+        var _a;
+        var _b;
+        return null !== (_b = null === (_a = config.loadScriptsOnMainThread) || void 0 === _a ? void 0 : _a.map(([type, value]) => new RegExp("string" === type ? function(input) {
             return input.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        }(value) : value))).some((regexp => regexp.test(value)))) && void 0 !== _b && _b;
+        }(value) : value)).some(regexp => regexp.test(value))) && void 0 !== _b && _b;
     }
     const hasInstanceStateValue = (instance, stateKey) => stateKey in instance[InstanceStateKey];
     const getInstanceStateValue = (instance, stateKey) => instance[InstanceStateKey][stateKey];
@@ -102,7 +222,7 @@
         return instance;
     };
     const definePrototypeNodeType = (Cstr, nodeType) => definePrototypeValue(Cstr, "nodeType", nodeType);
-    const cachedTreeProps = (Cstr, treeProps) => treeProps.map((propName => definePrototypeProperty(Cstr, propName, {
+    const cachedTreeProps = (Cstr, treeProps) => treeProps.map(propName => definePrototypeProperty(Cstr, propName, {
         get() {
             let cacheKey = getInstanceCacheKey(this, propName);
             let result = cachedStructure.get(cacheKey);
@@ -112,9 +232,9 @@
             }
             return result;
         }
-    })));
-    const getInstanceCacheKey = (instance, memberName, args) => [ instance[WinIdKey], instance[InstanceIdKey], memberName, ...(args || EMPTY_ARRAY).map((arg => String(arg && arg[WinIdKey] ? arg[InstanceIdKey] : arg))) ].join(".");
-    const cachedProps = (Cstr, propNames) => commaSplit(propNames).map((propName => definePrototypeProperty(Cstr, propName, {
+    }));
+    const getInstanceCacheKey = (instance, memberName, args) => [ instance[WinIdKey], instance[InstanceIdKey], memberName, ...(args || EMPTY_ARRAY).map(arg => String(arg && arg[WinIdKey] ? arg[InstanceIdKey] : arg)) ].join(".");
+    const cachedProps = (Cstr, propNames) => commaSplit(propNames).map(propName => definePrototypeProperty(Cstr, propName, {
         get() {
             hasInstanceStateValue(this, propName) || setInstanceStateValue(this, propName, getter(this, [ propName ]));
             return getInstanceStateValue(this, propName);
@@ -123,8 +243,8 @@
             getInstanceStateValue(this, propName) !== val && setter(this, [ propName ], val);
             setInstanceStateValue(this, propName, val);
         }
-    })));
-    const cachedDimensionProps = Cstr => getterDimensionPropNames.map((propName => definePrototypeProperty(Cstr, propName, {
+    }));
+    const cachedDimensionProps = Cstr => getterDimensionPropNames.map(propName => definePrototypeProperty(Cstr, propName, {
         get() {
             const dimension = cachedDimensions.get(getInstanceCacheKey(this, propName));
             if ("number" == typeof dimension) {
@@ -132,13 +252,13 @@
             }
             const groupedDimensions = getter(this, [ propName ], getterDimensionPropNames);
             if (groupedDimensions && "object" == typeof groupedDimensions) {
-                Object.entries(groupedDimensions).map((([dimensionPropName, value]) => cachedDimensions.set(getInstanceCacheKey(this, dimensionPropName), value)));
+                Object.entries(groupedDimensions).map(([dimensionPropName, value]) => cachedDimensions.set(getInstanceCacheKey(this, dimensionPropName), value));
                 return groupedDimensions[propName];
             }
             return groupedDimensions;
         }
-    })));
-    const cachedDimensionMethods = (Cstr, dimensionMethodNames) => dimensionMethodNames.map((methodName => {
+    }));
+    const cachedDimensionMethods = (Cstr, dimensionMethodNames) => dimensionMethodNames.map(methodName => {
         Cstr.prototype[methodName] = function(...args) {
             let cacheKey = getInstanceCacheKey(this, methodName, args);
             let dimensions = cachedDimensions.get(cacheKey);
@@ -148,13 +268,13 @@
             }
             return dimensions;
         };
-    }));
-    const serializeForMain = ($winId$, $instanceId$, value, added, type) => void 0 !== value && (type = typeof value) ? "string" === type || "boolean" === type || "number" === type || null == value ? [ 0, value ] : "function" === type ? [ 4, {
+    });
+    const serializeForMain = ($winId$, $instanceId$, value, added, type) => void 0 !== value && (type = typeof value) ? "string" === type || "boolean" === type || "number" === type || null == value ? [ SerializedType.Primitive, value ] : "function" === type ? [ SerializedType.Ref, {
         $winId$: $winId$,
         $instanceId$: $instanceId$,
         $refId$: setWorkerRef(value)
-    } ] : (added = added || new Set) && Array.isArray(value) ? added.has(value) ? [ 1, [] ] : added.add(value) && [ 1, value.map((v => serializeForMain($winId$, $instanceId$, v, added))) ] : "object" === type ? value[InstanceIdKey] ? [ 3, [ value[WinIdKey], value[InstanceIdKey] ] ] : value instanceof Event ? [ 5, serializeObjectForMain($winId$, $instanceId$, value, false, added) ] : supportsTrustedHTML && value instanceof TrustedHTML ? [ 0, value.toString() ] : value instanceof ArrayBuffer ? [ 8, value ] : ArrayBuffer.isView(value) ? [ 9, value.buffer, getConstructorName(value) ] : [ 2, serializeObjectForMain($winId$, $instanceId$, value, true, added) ] : void 0 : value;
-    const supportsTrustedHTML = "undefined" != typeof TrustedHTML;
+    } ] : (added = added || new Set) && Array.isArray(value) ? added.has(value) ? [ SerializedType.Array, [] ] : added.add(value) && [ SerializedType.Array, value.map(v => serializeForMain($winId$, $instanceId$, v, added)) ] : "object" === type ? value[InstanceIdKey] ? [ SerializedType.Instance, [ value[WinIdKey], value[InstanceIdKey] ] ] : value instanceof Event ? [ SerializedType.Event, serializeObjectForMain($winId$, $instanceId$, value, false, added) ] : supportsTrustedHTML && value instanceof TrustedHTML ? [ SerializedType.Primitive, value.toString() ] : value instanceof ArrayBuffer ? [ SerializedType.ArrayBuffer, value ] : ArrayBuffer.isView(value) ? [ SerializedType.ArrayBufferView, value.buffer, getConstructorName(value) ] : [ SerializedType.Object, serializeObjectForMain($winId$, $instanceId$, value, true, added) ] : void 0 : value;
+    const supportsTrustedHTML = "function" == typeof TrustedHTML;
     const serializeObjectForMain = (winId, instanceId, obj, includeFunctions, added, serializedObj, propName, propValue) => {
         serializedObj = {};
         if (!added.has(obj)) {
@@ -166,46 +286,46 @@
         }
         return serializedObj;
     };
-    const serializeInstanceForMain = (instance, value) => instance ? serializeForMain(instance[WinIdKey], instance[InstanceIdKey], value) : [ 0, value ];
+    const serializeInstanceForMain = (instance, value) => instance ? serializeForMain(instance[WinIdKey], instance[InstanceIdKey], value) : [ SerializedType.Primitive, value ];
     const deserializeFromMain = (winId, instanceId, applyPath, serializedValueTransfer, serializedType, serializedValue, obj, key) => {
         if (serializedValueTransfer) {
             serializedType = serializedValueTransfer[0];
             serializedValue = serializedValueTransfer[1];
-            if (0 === serializedType || 11 === serializedType || 12 === serializedType) {
+            if (serializedType === SerializedType.Primitive || serializedType === SerializedType.CSSRule || serializedType === SerializedType.CSSRuleList) {
                 return serializedValue;
             }
-            if (4 === serializedType) {
+            if (serializedType === SerializedType.Ref) {
                 return deserializeRefFromMain(applyPath, serializedValue);
             }
-            if (6 === serializedType) {
-                return winId && applyPath.length > 0 ? (...args) => callMethod(environments[winId].$window$, applyPath, args, 1) : noop;
+            if (serializedType === SerializedType.Function) {
+                return winId && applyPath.length > 0 ? (...args) => callMethod(environments[winId].$window$, applyPath, args, CallType.Blocking) : noop;
             }
-            if (3 === serializedType) {
+            if (serializedType === SerializedType.Instance) {
                 return getOrCreateSerializedInstance(serializedValue);
             }
-            if (7 === serializedType) {
+            if (serializedType === SerializedType.NodeList) {
                 return new NodeList(serializedValue.map(getOrCreateSerializedInstance));
             }
-            if (10 === serializedType) {
+            if (serializedType === SerializedType.Attr) {
                 return new Attr(serializedValue);
             }
-            if (1 === serializedType) {
-                return serializedValue.map((v => deserializeFromMain(winId, instanceId, applyPath, v)));
+            if (serializedType === SerializedType.Array) {
+                return serializedValue.map(v => deserializeFromMain(winId, instanceId, applyPath, v));
             }
-            if (14 === serializedType) {
+            if (serializedType === SerializedType.Error) {
                 return new CustomError(serializedValue);
             }
             obj = {};
             for (key in serializedValue) {
                 obj[key] = deserializeFromMain(winId, instanceId, [ ...applyPath, key ], serializedValue[key]);
             }
-            if (13 === serializedType) {
+            if (serializedType === SerializedType.CSSStyleDeclaration) {
                 return new environments[winId].$window$.CSSStyleDeclaration(winId, instanceId, applyPath, obj);
             }
-            if (5 === serializedType) {
+            if (serializedType === SerializedType.Event) {
                 if ("message" === obj.type && obj.origin) {
                     let postMessageKey = JSON.stringify(obj.data);
-                    let postMessageData = postMessages.find((pm => pm.$data$ === postMessageKey));
+                    let postMessageData = postMessages.find(pm => pm.$data$ === postMessageKey);
                     let env;
                     if (postMessageData) {
                         env = environments[postMessageData.$winId$];
@@ -215,11 +335,22 @@
                         }
                     }
                 }
+                if ("string" == typeof obj.source && startsWith(obj.source, "_pt_frame_")) {
+                    const frameInstanceId = obj.source.slice(10);
+                    const frame = getOrCreateNodeInstance(winId, frameInstanceId, NodeName.IFrame);
+                    obj.source = environments[frameInstanceId] ? environments[frameInstanceId].$window$ : {
+                        postMessage: (...args) => callMethod(frame, [ "contentWindow", "postMessage" ], args, CallType.NonBlocking)
+                    };
+                }
+                Array.isArray(obj.ports) && (obj.ports = obj.ports.map(port => "string" == typeof port && startsWith(port, "_pt_port_") ? {
+                    postMessage: (...args) => callMethod(environments[winId].$window$, [ port, "postMessage" ], environments[args[0]] ? args.slice(1) : args, CallType.NonBlocking)
+                } : port));
+                "_pt_opener_" === obj.source && (obj.source = environments[winId].$window$.opener);
                 return new Proxy(new Event(obj.type, obj), {
                     get: (target, propName) => propName in obj ? obj[propName] : "function" == typeof target[String(propName)] ? noop : target[String(propName)]
                 });
             }
-            if (2 === serializedType) {
+            if (serializedType === SerializedType.Object) {
                 return obj;
             }
         }
@@ -242,7 +373,7 @@
     }
     class NodeList {
         constructor(nodes) {
-            (this._ = nodes).map(((node, index) => this[index] = node));
+            (this._ = nodes).map((node, index) => this[index] = node);
         }
         entries() {
             return this._.entries();
@@ -284,7 +415,7 @@
             const config = webWorkerCtx.$config$;
             if (config.logStackTraces) {
                 const frames = (new Error).stack.split("\n");
-                const i = frames.findIndex((f => f.includes("logWorker")));
+                const i = frames.findIndex(f => f.includes("logWorker"));
                 msg += "\n" + frames.slice(i + 1).join("\n");
             }
             let prefix;
@@ -320,9 +451,9 @@
                 n = "";
             } else if ("string" == typeof target[InstanceDataKey]) {
                 let nodeName = target[InstanceDataKey];
-                n = "#text" === nodeName ? "textNode." : "#comment" === nodeName ? "commentNode." : "#document" === nodeName ? "document." : "html" === nodeName ? "doctype." : nodeName.toLowerCase() + ".";
+                n = nodeName === NodeName.Text ? "textNode." : nodeName === NodeName.Comment ? "commentNode." : nodeName === NodeName.Document ? "document." : nodeName === NodeName.DocumentTypeNode ? "doctype." : nodeName.toLowerCase() + ".";
             } else {
-                n = "nodeType" in target && 2 === target.nodeType ? "attributes." : "CanvasRenderingContext2D" === cstrName ? "context2D." : "CanvasRenderingContextWebGL" === cstrName ? "contextWebGL." : "CSSStyleDeclaration" === cstrName ? "style." : "MutationObserver" === cstrName ? "mutationObserver." : "NamedNodeMap" === cstrName ? "namedNodeMap." : "ResizeObserver" === cstrName ? "resizeObserver." : cstrName.substring(0, 1).toLowerCase() + cstrName.substring(1) + ".";
+                n = "nodeType" in target && target.nodeType === InterfaceType.AttributeNode ? "attributes." : "CanvasRenderingContext2D" === cstrName ? "context2D." : "CanvasRenderingContextWebGL" === cstrName ? "contextWebGL." : "CSSStyleDeclaration" === cstrName ? "style." : "MutationObserver" === cstrName ? "mutationObserver." : "NamedNodeMap" === cstrName ? "namedNodeMap." : "ResizeObserver" === cstrName ? "resizeObserver." : cstrName.substring(0, 1).toLowerCase() + cstrName.substring(1) + ".";
             }
             target[ApplyPathKey] && target[ApplyPathKey].length && (n += [ ...target[ApplyPathKey] ].join(".") + ".");
         }
@@ -360,16 +491,16 @@
                     if (1 === v.nodeType) {
                         return `<${v[InstanceDataKey].toLowerCase()}>`;
                     }
-                    if (10 === v.nodeType) {
+                    if (v.nodeType === InterfaceType.DocumentTypeNode) {
                         return `<!DOCTYPE ${v[InstanceDataKey]}>`;
                     }
-                    if (v.nodeType <= 11) {
+                    if (v.nodeType <= InterfaceType.DocumentFragmentNode) {
                         return v[InstanceDataKey];
                     }
                 }
                 return "¯\\_(ツ)_/¯ instance obj";
             }
-            return v[Symbol.iterator] ? `[${Array.from(v).map((i => getLogValue(applyPath, i))).join(", ")}]` : "value" in v ? "string" == typeof v.value ? `"${v.value}"` : objToString(v.value) : objToString(v);
+            return v[Symbol.iterator] ? `[${Array.from(v).map(i => getLogValue(applyPath, i)).join(", ")}]` : "value" in v ? "string" == typeof v.value ? `"${v.value}"` : objToString(v.value) : objToString(v);
         }
         return (v => "object" == typeof v && v && v.then)(v) ? "Promise" : "function" === type ? `ƒ() ${v.name || ""}`.trim() : `¯\\_(ツ)_/¯ ${String(v)}`.trim();
     };
@@ -402,17 +533,17 @@
             });
             taskQueue[len(taskQueue) - 1].$debug$ = ((target, applyPath, callType) => {
                 let m = getTargetProp(target, applyPath);
-                1 === callType ? m += " (blocking)" : 2 === callType ? m += " (non-blocking)" : 3 === callType && (m += " (non-blocking, no-side-effect)");
+                callType === CallType.Blocking ? m += " (blocking)" : callType === CallType.NonBlocking ? m += " (non-blocking)" : callType === CallType.NonBlockingNoSideEffect && (m += " (non-blocking, no-side-effect)");
                 return m.trim();
             })(instance, $applyPath$, callType);
-            buffer && 3 !== callType && console.error("buffer must be sent NonBlockingNoSideEffect");
-            if (3 === callType) {
-                webWorkerCtx.$postMessage$([ 12, {
+            buffer && callType !== CallType.NonBlockingNoSideEffect && console.error("buffer must be sent NonBlockingNoSideEffect");
+            if (callType === CallType.NonBlockingNoSideEffect) {
+                webWorkerCtx.$postMessage$([ WorkerMessageType.AsyncAccessRequest, {
                     $msgId$: randomId(),
                     $tasks$: [ ...taskQueue ]
                 } ], buffer ? [ buffer instanceof ArrayBuffer ? buffer : buffer.buffer ] : void 0);
                 taskQueue.length = 0;
-            } else if (1 === callType) {
+            } else if (callType === CallType.Blocking) {
                 return sendToMain(true);
             }
             webWorkerCtx.$asyncMsgTimer$ = setTimeout(sendToMain, 20);
@@ -424,7 +555,7 @@
             webWorkerCtx.$config$.logMainAccess && logWorker(`Main access, tasks sent: ${taskQueue.length}`);
             const endTask = taskQueue[len(taskQueue) - 1];
             const accessReq = {
-                $msgId$: randomId(),
+                $msgId$: `${randomId()}.${webWorkerCtx.$tabId$}`,
                 $tasks$: [ ...taskQueue ]
             };
             taskQueue.length = 0;
@@ -433,7 +564,7 @@
                     const sharedDataBuffer = webWorkerCtx.$sharedDataBuffer$;
                     const sharedData = new Int32Array(sharedDataBuffer);
                     Atomics.store(sharedData, 0, 0);
-                    webWorkerCtx.$postMessage$([ 11, accessReq ]);
+                    webWorkerCtx.$postMessage$([ WorkerMessageType.ForwardWorkerAccessRequest, accessReq ]);
                     Atomics.wait(sharedData, 0, 0);
                     let dataLength = Atomics.load(sharedData, 0);
                     let accessRespStr = "";
@@ -453,7 +584,7 @@
                 }
                 return isPromise ? Promise.resolve(rtnValue) : rtnValue;
             }
-            webWorkerCtx.$postMessage$([ 12, accessReq ]);
+            webWorkerCtx.$postMessage$([ WorkerMessageType.AsyncAccessRequest, accessReq ]);
         }
     };
     const getter = (instance, applyPath, groupedGetters, rtnValue) => {
@@ -463,7 +594,7 @@
                 return rtnValue;
             }
         }
-        rtnValue = queue(instance, applyPath, 1, void 0, groupedGetters);
+        rtnValue = queue(instance, applyPath, CallType.Blocking, void 0, groupedGetters);
         ((target, applyPath, rtnValue, restrictedToWorker = false, groupedGetters = false) => {
             if (webWorkerCtx.$config$.logGetters) {
                 try {
@@ -486,13 +617,13 @@
             }
             hookSetterValue !== HookContinue && (value = hookSetterValue);
         }
-        if (dimensionChangingSetterNames.some((s => applyPath.includes(s)))) {
+        if (dimensionChangingSetterNames.some(s => applyPath.includes(s))) {
             cachedDimensions.clear();
             ((target, propName) => {
                 (webWorkerCtx.$config$.logGetters || webWorkerCtx.$config$.logSetters) && logWorker(`Dimension cache cleared from setter "${propName}"`, target[WinIdKey]);
             })(instance, applyPath[applyPath.length - 1]);
         }
-        applyPath = [ ...applyPath, serializeInstanceForMain(instance, value), 0 ];
+        applyPath = [ ...applyPath, serializeInstanceForMain(instance, value), ApplyPathType.SetValue ];
         ((target, applyPath, value, restrictedToWorker = false) => {
             if (webWorkerCtx.$config$.logSetters) {
                 try {
@@ -501,7 +632,7 @@
                 } catch (e) {}
             }
         })(instance, applyPath, value);
-        queue(instance, applyPath, 2);
+        queue(instance, applyPath, CallType.NonBlocking);
     };
     const callMethod = (instance, applyPath, args, callType, assignInstanceId, buffer, rtnValue, methodName) => {
         if (webWorkerCtx.$config$.apply) {
@@ -515,7 +646,7 @@
         }
         methodName = applyPath[len(applyPath) - 1];
         applyPath = [ ...applyPath, serializeInstanceForMain(instance, args) ];
-        callType = callType || (nonBlockingMethods.includes(methodName) ? 2 : 1);
+        callType = callType || (nonBlockingMethods.includes(methodName) ? CallType.NonBlocking : CallType.Blocking);
         if ("setAttribute" === methodName && hasInstanceStateValue(instance, args[0])) {
             setInstanceStateValue(instance, args[0], args[1]);
         } else if (structureChangingMethodNames.includes(methodName)) {
@@ -525,7 +656,7 @@
                 (webWorkerCtx.$config$.logGetters || webWorkerCtx.$config$.logCalls) && logWorker(`Dimension and DOM structure cache cleared from method call ${methodName}()`, target[WinIdKey]);
             })(instance, methodName);
         } else if (dimensionChangingMethodNames.includes(methodName)) {
-            callType = 2;
+            callType = CallType.NonBlocking;
             cachedDimensions.clear();
             logDimensionCacheClearMethod(instance, methodName);
         }
@@ -534,7 +665,7 @@
             if (webWorkerCtx.$config$.logCalls) {
                 try {
                     applyPath = applyPath.slice(0, applyPath.length - 1);
-                    logWorker(`Call ${getTargetProp(target, applyPath)}(${args.map((v => getLogValue(applyPath, v))).join(", ")}), returned: ${getLogValue(applyPath, rtnValue)}`, target[WinIdKey]);
+                    logWorker(`Call ${getTargetProp(target, applyPath)}(${args.map(v => getLogValue(applyPath, v)).join(", ")}), returned: ${getLogValue(applyPath, rtnValue)}`, target[WinIdKey]);
                 } catch (e) {}
             }
         })(instance, applyPath, args, rtnValue);
@@ -544,11 +675,11 @@
         ((target, cstrName, args) => {
             if (webWorkerCtx.$config$.logCalls) {
                 try {
-                    logWorker(`Construct new ${cstrName}(${args.map((v => getLogValue([], v))).join(", ")})`, target[WinIdKey]);
+                    logWorker(`Construct new ${cstrName}(${args.map(v => getLogValue([], v)).join(", ")})`, target[WinIdKey]);
                 } catch (e) {}
             }
         })(instance, cstrName, args);
-        queue(instance, [ 1, cstrName, serializeInstanceForMain(instance, args) ], 1);
+        queue(instance, [ ApplyPathType.GlobalConstructor, cstrName, serializeInstanceForMain(instance, args) ], CallType.Blocking);
     };
     const createHookOptions = (instance, applyPath) => ({
         name: applyPath.join("."),
@@ -558,31 +689,31 @@
         instance: instance,
         window: environments[instance[WinIdKey]].$window$
     });
-    const addStorageApi = (win, storageName, isSameOrigin, env) => {
+    const addStorageApi = (win, storageName, env) => {
         let storage = {
             getItem(key) {
-                if (isSameOrigin) {
-                    return callMethod(win, [ storageName, "getItem" ], [ key ], 1);
+                if (env.$isSameOrigin$) {
+                    return callMethod(win, [ storageName, "getItem" ], [ key ], CallType.Blocking);
                 }
                 warnCrossOrigin("get", storageName, env);
             },
             setItem(key, value) {
-                isSameOrigin ? callMethod(win, [ storageName, "setItem" ], [ key, value ], 1) : warnCrossOrigin("set", storageName, env);
+                env.$isSameOrigin$ ? callMethod(win, [ storageName, "setItem" ], [ key, value ], CallType.Blocking) : warnCrossOrigin("set", storageName, env);
             },
             removeItem(key) {
-                isSameOrigin ? callMethod(win, [ storageName, "removeItem" ], [ key ], 1) : warnCrossOrigin("remove", storageName, env);
+                env.$isSameOrigin$ ? callMethod(win, [ storageName, "removeItem" ], [ key ], CallType.Blocking) : warnCrossOrigin("remove", storageName, env);
             },
             key(index) {
-                if (isSameOrigin) {
-                    return callMethod(win, [ storageName, "key" ], [ index ], 1);
+                if (env.$isSameOrigin$) {
+                    return callMethod(win, [ storageName, "key" ], [ index ], CallType.Blocking);
                 }
                 warnCrossOrigin("key", storageName, env);
             },
             clear() {
-                isSameOrigin ? callMethod(win, [ storageName, "clear" ], EMPTY_ARRAY, 1) : warnCrossOrigin("clear", storageName, env);
+                env.$isSameOrigin$ ? callMethod(win, [ storageName, "clear" ], EMPTY_ARRAY, CallType.Blocking) : warnCrossOrigin("clear", storageName, env);
             },
             get length() {
-                if (isSameOrigin) {
+                if (env.$isSameOrigin$) {
                     return getter(win, [ storageName, "length" ]);
                 }
                 warnCrossOrigin("length", storageName, env);
@@ -624,7 +755,7 @@
             }
             setProperty(...args) {
                 this[InstanceDataKey][args[0]] = args[1];
-                callMethod(this, [ "setProperty" ], args, 2);
+                callMethod(this, [ "setProperty" ], args, CallType.NonBlocking);
                 logDimensionCacheClearStyle(this, args[0]);
                 cachedDimensions.clear();
             }
@@ -633,7 +764,7 @@
             }
             removeProperty(propName) {
                 let value = this[InstanceDataKey][propName];
-                callMethod(this, [ "removeProperty" ], [ propName ], 2);
+                callMethod(this, [ "removeProperty" ], [ propName ], CallType.NonBlocking);
                 logDimensionCacheClearStyle(this, propName);
                 cachedDimensions.clear();
                 this[InstanceDataKey][propName] = void 0;
@@ -659,7 +790,7 @@
                 const cssRules = getCssRules(this.ownerNode);
                 index = void 0 === index ? 0 : index;
                 if (index >= 0 && index <= cssRules.length) {
-                    callMethod(this.ownerNode, [ "sheet", "insertRule" ], [ ruleText, index ], 2);
+                    callMethod(this.ownerNode, [ "sheet", "insertRule" ], [ ruleText, index ], CallType.NonBlocking);
                     cssRules.splice(index, 0, 0);
                 }
                 logDimensionCacheClearMethod(this.ownerNode, "insertRule");
@@ -667,7 +798,7 @@
                 return index;
             }
             deleteRule(index) {
-                callMethod(this.ownerNode, [ "sheet", "deleteRule" ], [ index ], 2);
+                callMethod(this.ownerNode, [ "sheet", "deleteRule" ], [ index ], CallType.NonBlocking);
                 getCssRules(this.ownerNode).splice(index, 1);
                 logDimensionCacheClearMethod(this.ownerNode, "deleteRule");
                 cachedDimensions.clear();
@@ -686,10 +817,10 @@
         definePrototypePropertyDescriptor(win.HTMLStyleElement, HTMLStyleDescriptorMap);
     };
     const getCssRules = (ownerNode, cssRules) => {
-        cssRules = getInstanceStateValue(ownerNode, 2);
+        cssRules = getInstanceStateValue(ownerNode, StateProp.cssRules);
         if (!cssRules) {
             cssRules = getter(ownerNode, [ "sheet", "cssRules" ]);
-            setInstanceStateValue(ownerNode, 2, cssRules);
+            setInstanceStateValue(ownerNode, StateProp.cssRules, cssRules);
         }
         return cssRules;
     };
@@ -698,9 +829,23 @@
         0 === cssRules[index] && (cssRules[index] = getter(ownerNode, [ "sheet", "cssRules", parseInt(index, 10) ]));
         return cssRules[index];
     };
+    const cssEscape = (...args) => {
+        if (!len(args)) {
+            throw new TypeError("Failed to execute 'escape' on 'CSS': 1 argument required, but only 0 present.");
+        }
+        const str = String(args[0]);
+        const firstCodeUnit = str.charCodeAt(0);
+        let result = "";
+        let codeUnit;
+        for (let index = 0; index < len(str); index++) {
+            codeUnit = str.charCodeAt(index);
+            0 === codeUnit ? result += "�" : codeUnit >= 1 && codeUnit <= 31 || 127 === codeUnit || 0 === index && codeUnit >= 48 && codeUnit <= 57 || 1 === index && codeUnit >= 48 && codeUnit <= 57 && 45 === firstCodeUnit ? result += "\\" + codeUnit.toString(16) + " " : 0 === index && 1 === len(str) && 45 === codeUnit ? result += "\\" + str.charAt(index) : result += codeUnit >= 128 || 45 === codeUnit || 95 === codeUnit || codeUnit >= 48 && codeUnit <= 57 || codeUnit >= 65 && codeUnit <= 90 || codeUnit >= 97 && codeUnit <= 122 ? str.charAt(index) : "\\" + str.charAt(index);
+        }
+        return result;
+    };
     const runScriptContent = (env, instanceId, scriptContent, winId, errorMsg) => {
         try {
-            webWorkerCtx.$config$.logScriptExecution && logWorker(`Execute script: ${scriptContent.substring(0, 100).split("\n").map((l => l.trim())).join(" ").trim().substring(0, 60)}...`, winId);
+            webWorkerCtx.$config$.logScriptExecution && logWorker(`Execute script: ${scriptContent.substring(0, 100).split("\n").map(l => l.trim()).join(" ").trim().substring(0, 60)}...`, winId);
             env.$currentScriptId$ = instanceId;
             run(env, scriptContent);
         } catch (contentError) {
@@ -710,24 +855,83 @@
         env.$currentScriptId$ = "";
         return errorMsg;
     };
+    const replaceThisInSource = (scriptContent, newThis) => {
+        const FIND_THIS = /([a-zA-Z0-9_$\.\'\"\`])?(\.\.\.)?this(?![a-zA-Z0-9_$:])/g;
+        let out = "";
+        let code = "";
+        let i = 0;
+        let c;
+        const stack = [];
+        const flushCode = () => {
+            out += (code => code.replace(FIND_THIS, (_, p1, p2) => {
+                const prefix = (p1 || "") + (p2 || "");
+                return null != p1 ? prefix + "this" : prefix + newThis;
+            }))(code);
+            code = "";
+        };
+        for (;i < len(scriptContent); i++) {
+            c = scriptContent[i];
+            const top = stack[len(stack) - 1];
+            if ("string" == typeof top) {
+                out += c;
+                if ("\\" === c) {
+                    out += scriptContent[++i] || "";
+                } else if (c === top) {
+                    stack.pop();
+                } else if ("`" === top && "$" === c && "{" === scriptContent[i + 1]) {
+                    out += scriptContent[++i];
+                    stack.push(0);
+                }
+            } else if ("'" === c || '"' === c || "`" === c) {
+                flushCode();
+                out += c;
+                stack.push(c);
+            } else if ("/" === c && "/" === scriptContent[i + 1]) {
+                flushCode();
+                const end = scriptContent.indexOf("\n", i);
+                out += scriptContent.slice(i, end < 0 ? void 0 : end);
+                i = end < 0 ? len(scriptContent) : end - 1;
+            } else if ("/" === c && "*" === scriptContent[i + 1]) {
+                flushCode();
+                const end = scriptContent.indexOf("*/", i + 2);
+                out += scriptContent.slice(i, end < 0 ? void 0 : end + 2);
+                i = end < 0 ? len(scriptContent) : end + 1;
+            } else if ("number" != typeof top || "{" !== c && "}" !== c) {
+                code += c;
+            } else if ("{" === c) {
+                stack[len(stack) - 1] = top + 1;
+                code += c;
+            } else if (0 === top) {
+                flushCode();
+                out += c;
+                stack.pop();
+            } else {
+                stack[len(stack) - 1] = top - 1;
+                code += c;
+            }
+        }
+        flushCode();
+        return out;
+    };
     const run = (env, scriptContent, scriptUrl) => {
         env.$runWindowLoadEvent$ = 1;
-        let sourceWithReplacedThis = ((scriptContent, newThis) => scriptContent.replace(/([a-zA-Z0-9_$\.\'\"\`])?(\.\.\.)?this(?![a-zA-Z0-9_$:])/g, ((match, p1, p2) => {
-            const prefix = (p1 || "") + (p2 || "");
-            return null != p1 ? prefix + "this" : prefix + newThis;
-        })))(scriptContent, "(thi$(this)?window:this)");
-        scriptContent = `with(this){${sourceWithReplacedThis.replace(/\/\/# so/g, "//Xso")}\n;function thi$(t){return t===this}};${(webWorkerCtx.$config$.globalFns || []).filter((globalFnName => /[a-zA-Z_$][0-9a-zA-Z_$]*/.test(globalFnName))).map((g => `(typeof ${g}=='function'&&(this.${g}=${g}))`)).join(";")};` + (scriptUrl ? "\n//# sourceURL=" + scriptUrl : "");
+        let sourceWithReplacedThis = replaceThisInSource(scriptContent, "(thi$(this)?window:this)");
+        scriptContent = `with(this){${sourceWithReplacedThis.replace(/\/\/# so/g, "//Xso")}\n;function thi$(t){return t===this}};${(webWorkerCtx.$config$.globalFns || []).filter(globalFnName => /[a-zA-Z_$][0-9a-zA-Z_$]*/.test(globalFnName)).map(g => `(typeof ${g}=='function'&&(this.${g}=${g}))`).join(";")};` + (scriptUrl ? "\n//# sourceURL=" + scriptUrl : "");
         env.$isSameOrigin$ || (scriptContent = scriptContent.replace(/.postMessage\(/g, `.postMessage('${env.$winId$}',`));
-        new Function(scriptContent).call(env.$window$);
+        new Function(trustedType("createScript", scriptContent)).call(env.$window$);
         env.$runWindowLoadEvent$ = 0;
     };
     const runStateLoadHandlers = (instance, type, handlers) => {
         handlers = getInstanceStateValue(instance, type);
-        handlers && setTimeout((() => handlers.map((cb => cb({
+        handlers && setTimeout(() => handlers.map(cb => cb({
             type: type
-        })))));
+        })));
     };
-    const resolveToUrl = (env, url, type, baseLocation, resolvedUrl, configResolvedUrl) => {
+    const forwardLoadEvents = (el, instance) => {
+        callMethod(el, [ "addEventListener" ], [ "load", () => runStateLoadHandlers(instance, StateProp.loadHandlers) ], CallType.NonBlocking);
+        callMethod(el, [ "addEventListener" ], [ "error", () => runStateLoadHandlers(instance, StateProp.errorHandlers) ], CallType.NonBlocking);
+    };
+    const resolveBaseLocation = (env, baseLocation) => {
         baseLocation = env.$location$;
         while (!baseLocation.host) {
             env = environments[env.$parentWinId$];
@@ -736,6 +940,10 @@
                 break;
             }
         }
+        return baseLocation;
+    };
+    const resolveToUrl = (env, url, type, baseLocation, resolvedUrl, configResolvedUrl) => {
+        baseLocation = resolveBaseLocation(env, baseLocation);
         resolvedUrl = new URL(url || "", baseLocation);
         if (type && webWorkerCtx.$config$.resolveUrl) {
             configResolvedUrl = webWorkerCtx.$config$.resolveUrl(resolvedUrl, baseLocation, type);
@@ -746,13 +954,25 @@
         return resolvedUrl;
     };
     const resolveUrl = (env, url, type) => resolveToUrl(env, url, type) + "";
-    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=0.9.2")}"><\/script>`;
+    const resolveSendBeaconRequestParameters = (env, url) => {
+        const baseLocation = resolveBaseLocation(env);
+        const resolvedUrl = new URL(url || "", baseLocation);
+        if (webWorkerCtx.$config$.resolveSendBeaconRequestParameters) {
+            const configResolvedParams = webWorkerCtx.$config$.resolveSendBeaconRequestParameters(resolvedUrl, baseLocation);
+            if (configResolvedParams) {
+                return configResolvedParams;
+            }
+        }
+        return {};
+    };
+    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=1.0.0")}"><\/script>`;
     const createImageConstructor = env => class HTMLImageElement {
         constructor() {
             this.s = "";
             this.l = [];
             this.e = [];
             this.style = {};
+            this.attributes = new Map;
         }
         get src() {
             return this.s;
@@ -764,23 +984,55 @@
                 mode: "no-cors",
                 credentials: "include",
                 keepalive: true
-            }).then((rsp => {
-                rsp.ok || 0 === rsp.status ? this.l.map((cb => cb({
+            }).then(rsp => {
+                rsp.ok || 0 === rsp.status ? this.l.map(cb => cb({
                     type: "load"
-                }))) : this.e.map((cb => cb({
+                })) : this.e.map(cb => cb({
                     type: "error"
-                })));
-            }), (() => this.e.forEach((cb => cb({
+                }));
+            }, () => this.e.forEach(cb => cb({
                 type: "error"
-            })))));
+            })));
+        }
+        getAttribute(name) {
+            const value = this.attributes.get(name.toLowerCase());
+            return void 0 !== value ? value : null;
+        }
+        setAttribute(name, value) {
+            this.attributes.set(name.toLowerCase(), String(value));
+            "src" === name.toLowerCase() && (this.src = value);
+        }
+        hasAttribute(name) {
+            return this.attributes.has(name.toLowerCase());
+        }
+        removeAttribute(name) {
+            this.attributes.delete(name.toLowerCase());
+        }
+        toggleAttribute(name, force) {
+            const normalizedName = name.toLowerCase();
+            const hasAttr = this.attributes.has(normalizedName);
+            if (void 0 !== force) {
+                if (force) {
+                    hasAttr || this.attributes.set(normalizedName, "");
+                    return true;
+                }
+                this.attributes.delete(normalizedName);
+                return false;
+            }
+            if (hasAttr) {
+                this.attributes.delete(normalizedName);
+                return false;
+            }
+            this.attributes.set(normalizedName, "");
+            return true;
         }
         addEventListener(eventName, cb) {
             "load" === eventName && this.l.push(cb);
             "error" === eventName && this.e.push(cb);
         }
         removeEventListener(eventName, cb) {
-            "load" === eventName && (this.l = this.l.filter((fn => fn !== cb)));
-            "error" === eventName && (this.e = this.e.filter((fn => fn !== cb)));
+            "load" === eventName && (this.l = this.l.filter(fn => fn !== cb));
+            "error" === eventName && (this.e = this.e.filter(fn => fn !== cb));
         }
         get onload() {
             return this.l[0];
@@ -814,20 +1066,20 @@
         },
         onload: {
             get() {
-                let callbacks = getInstanceStateValue(this, "load");
+                let callbacks = getInstanceStateValue(this, StateProp.loadHandlers);
                 return callbacks && callbacks[0] || null;
             },
             set(cb) {
-                setInstanceStateValue(this, "load", cb ? [ cb ] : null);
+                setInstanceStateValue(this, StateProp.loadHandlers, cb ? [ cb ] : null);
             }
         },
         onerror: {
             get() {
-                let callbacks = getInstanceStateValue(this, "error");
+                let callbacks = getInstanceStateValue(this, StateProp.errorHandlers);
                 return callbacks && callbacks[0] || null;
             },
             set(cb) {
-                setInstanceStateValue(this, "error", cb ? [ cb ] : null);
+                setInstanceStateValue(this, StateProp.errorHandlers, cb ? [ cb ] : null);
             }
         },
         getAttribute: {
@@ -848,21 +1100,25 @@
             innerText: innerHTMLDescriptor,
             src: {
                 get() {
-                    return getInstanceStateValue(this, 4) || "";
+                    return getInstanceStateValue(this, StateProp.url) || "";
                 },
                 set(url) {
                     const orgUrl = resolveUrl(env, url, null);
                     const config = webWorkerCtx.$config$;
                     url = resolveUrl(env, url, "script");
-                    setInstanceStateValue(this, 4, url);
+                    setInstanceStateValue(this, StateProp.url, url);
                     setter(this, [ "src" ], url);
                     orgUrl !== url && setter(this, [ "dataset", "ptsrc" ], orgUrl);
-                    if (this.type) {
+                    if (!isScriptJsType(this.type)) {
                         const shouldExecuteScriptViaMainThread = testIfMustLoadScriptOnMainThread(config, url);
-                        shouldExecuteScriptViaMainThread && setter(this, [ "type" ], "text/javascript");
+                        if (shouldExecuteScriptViaMainThread) {
+                            setter(this, [ "type" ], "text/javascript");
+                            forwardLoadEvents(this, this);
+                        }
                     }
                 }
             },
+            text: innerHTMLDescriptor,
             textContent: innerHTMLDescriptor,
             type: {
                 get() {
@@ -870,7 +1126,7 @@
                 },
                 set(type) {
                     if (!isScriptJsType(type)) {
-                        setInstanceStateValue(this, 5, type);
+                        setInstanceStateValue(this, StateProp.type, type);
                         setter(this, [ "type" ], type);
                     }
                 }
@@ -882,10 +1138,16 @@
     const innerHTMLDescriptor = {
         get() {
             const type = getter(this, [ "type" ]);
-            return isScriptJsType(type) ? getInstanceStateValue(this, 3) || "" : getter(this, [ "innerHTML" ]);
+            if (isScriptJsType(type)) {
+                const scriptContent = getInstanceStateValue(this, StateProp.innerHTML);
+                if (scriptContent) {
+                    return scriptContent;
+                }
+            }
+            return getter(this, [ "innerHTML" ]) || "";
         },
         set(scriptContent) {
-            setInstanceStateValue(this, 3, scriptContent);
+            setInstanceStateValue(this, StateProp.innerHTML, scriptContent);
         }
     };
     const isScriptJsType = scriptType => !scriptType || "text/javascript" === scriptType;
@@ -901,11 +1163,11 @@
                 const winId = newNode[WinIdKey] = this[WinIdKey];
                 const instanceId = newNode[InstanceIdKey];
                 const nodeName = newNode[InstanceDataKey];
-                const isScript = "SCRIPT" === nodeName;
-                const isIFrame = "IFRAME" === nodeName;
+                const isScript = nodeName === NodeName.Script;
+                const isIFrame = nodeName === NodeName.IFrame;
                 if (isScript) {
-                    const scriptContent = getInstanceStateValue(newNode, 3);
-                    const scriptType = getInstanceStateValue(newNode, 5);
+                    const scriptContent = getInstanceStateValue(newNode, StateProp.innerHTML);
+                    const scriptType = getInstanceStateValue(newNode, StateProp.type);
                     if (scriptContent) {
                         if (isScriptJsType(scriptType)) {
                             const scriptId = newNode.id;
@@ -923,9 +1185,9 @@
                         setter(newNode, [ "innerHTML" ], scriptContent);
                     }
                 }
-                callMethod(this, [ "insertBefore" ], [ newNode, referenceNode ], 2);
+                callMethod(this, [ "insertBefore" ], [ newNode, referenceNode ], CallType.NonBlocking);
                 if (isIFrame) {
-                    const src = getInstanceStateValue(newNode, 0);
+                    const src = getInstanceStateValue(newNode, StateProp.src);
                     if (src && src.startsWith("javascript:")) {
                         const scriptContent = src.split("javascript:")[1];
                         runScriptContent(env, instanceId, scriptContent, winId, "");
@@ -936,16 +1198,16 @@
                         let handlers;
                         let callback = () => {
                             if (environments[winId] && environments[winId].$isInitialized$ && !environments[winId].$isLoading$) {
-                                type = getInstanceStateValue(iframe, 1) ? "error" : "load";
+                                type = getInstanceStateValue(iframe, StateProp.loadErrorStatus) ? StateProp.errorHandlers : StateProp.loadHandlers;
                                 handlers = getInstanceStateValue(iframe, type);
-                                handlers && handlers.map((handler => handler({
+                                handlers && handlers.map(handler => handler({
                                     type: type
-                                })));
+                                }));
                             } else if (i++ > 2e3) {
-                                handlers = getInstanceStateValue(iframe, "error");
-                                handlers && handlers.map((handler => handler({
-                                    type: "error"
-                                })));
+                                handlers = getInstanceStateValue(iframe, StateProp.errorHandlers);
+                                handlers && handlers.map(handler => handler({
+                                    type: StateProp.errorHandlers
+                                }));
                             } else {
                                 setTimeout(callback, 9);
                             }
@@ -955,7 +1217,7 @@
                 }
                 if (isScript) {
                     sendToMain(true);
-                    webWorkerCtx.$postMessage$([ 7, winId ]);
+                    webWorkerCtx.$postMessage$([ WorkerMessageType.InitializeNextScript, winId ]);
                 }
                 return newNode;
             }
@@ -1001,10 +1263,10 @@
                     if (!IS_TAG_REG.test(tagName)) {
                         throw tagName + " not valid";
                     }
-                    const isIframe = "IFRAME" === tagName;
+                    const isIframe = tagName === NodeName.IFrame;
                     const winId = this[WinIdKey];
                     const instanceId = (isIframe ? "f_" : "") + randomId();
-                    callMethod(this, [ "createElement" ], [ tagName ], 2, instanceId);
+                    callMethod(this, [ "createElement" ], [ tagName ], CallType.NonBlocking, instanceId);
                     const elm = getOrCreateNodeInstance(winId, instanceId, tagName);
                     if (isIframe) {
                         const env = createEnvironment({
@@ -1012,10 +1274,16 @@
                             $parentWinId$: winId,
                             $url$: "about:blank"
                         }, true);
-                        env.$window$.fetch = fetch;
+                        const fetchStr = String(fetch);
+                        const resolvedFetch = (input, init) => {
+                            input = "string" == typeof input || input instanceof URL ? String(input) : input.url;
+                            return fetch(resolveUrl(env, input, "fetch"), init);
+                        };
+                        resolvedFetch.toString = () => fetchStr;
+                        env.$window$.fetch = resolvedFetch;
                         setter(elm, [ "srcdoc" ], getPartytownScript());
-                    } else if ("SCRIPT" === tagName) {
-                        const scriptType = getInstanceStateValue(elm, 5);
+                    } else if (tagName === NodeName.Script) {
+                        const scriptType = getInstanceStateValue(elm, StateProp.type);
                         isScriptJsType(scriptType) && setter(elm, [ "type" ], "text/partytown");
                     }
                     return elm;
@@ -1025,7 +1293,7 @@
                 value(namespace, tagName) {
                     const instanceId = randomId();
                     const nsElm = getOrCreateNodeInstance(this[WinIdKey], instanceId, tagName, namespace);
-                    callMethod(this, [ "createElementNS" ], [ namespace, tagName ], 2, instanceId);
+                    callMethod(this, [ "createElementNS" ], [ namespace, tagName ], CallType.NonBlocking, instanceId);
                     return nsElm;
                 }
             },
@@ -1033,17 +1301,41 @@
                 value(text) {
                     const winId = this[WinIdKey];
                     const instanceId = randomId();
-                    const textNode = getOrCreateNodeInstance(winId, instanceId, "#text");
-                    callMethod(this, [ "createTextNode" ], [ text ], 2, instanceId);
+                    const textNode = getOrCreateNodeInstance(winId, instanceId, NodeName.Text);
+                    callMethod(this, [ "createTextNode" ], [ text ], CallType.NonBlocking, instanceId);
                     return textNode;
                 }
             },
             createEvent: {
                 value: type => new Event(type)
             },
+            createRange: {
+                value() {
+                    const doc = this;
+                    const range = callMethod(doc, [ "createRange" ], []);
+                    range.createContextualFragment = html => {
+                        const template = doc.createElement("template");
+                        template.innerHTML = html;
+                        return getter(template, [ "content" ]);
+                    };
+                    return range;
+                }
+            },
+            fonts: {
+                get() {
+                    const doc = this;
+                    return {
+                        load: (...args) => callMethod(doc, [ "fonts", "load" ], args),
+                        check: (...args) => callMethod(doc, [ "fonts", "check" ], args),
+                        get ready() {
+                            return getter(doc, [ "fonts", "ready" ]);
+                        }
+                    };
+                }
+            },
             currentScript: {
                 get() {
-                    return env.$currentScriptId$ ? getOrCreateNodeInstance(this[WinIdKey], env.$currentScriptId$, "SCRIPT") : null;
+                    return env.$currentScriptId$ ? getOrCreateNodeInstance(this[WinIdKey], env.$currentScriptId$, NodeName.Script) : null;
                 }
             },
             defaultView: {
@@ -1055,7 +1347,7 @@
             getElementsByTagName: {
                 value(tagName) {
                     tagName = tagName.toUpperCase();
-                    return "BODY" === tagName ? [ env.$body$ ] : "HEAD" === tagName ? [ env.$head$ ] : callMethod(this, [ "getElementsByTagName" ], [ tagName ]);
+                    return tagName === NodeName.Body ? [ env.$body$ ] : tagName === NodeName.Head ? [ env.$head$ ] : callMethod(this, [ "getElementsByTagName" ], [ tagName ]);
                 }
             },
             head: {
@@ -1071,13 +1363,18 @@
                     return getter(this, [ "scripts" ]);
                 }
             },
+            adoptedStyleSheets: {
+                get() {
+                    return getter(this, [ "adoptedStyleSheets" ]);
+                }
+            },
             implementation: {
                 get() {
                     return {
                         hasFeature: () => true,
                         createHTMLDocument: title => {
                             const $winId$ = randomId();
-                            callMethod(this, [ "implementation", "createHTMLDocument" ], [ title ], 1, {
+                            callMethod(this, [ "implementation", "createHTMLDocument" ], [ title ], CallType.Blocking, {
                                 $winId$: $winId$
                             });
                             const docEnv = createEnvironment({
@@ -1150,6 +1447,17 @@
                 }
             }
         };
+        (webWorkerCtx.$config$.mainElementProperties || []).map(propName => {
+            ElementDescriptorMap[propName] = {
+                get() {
+                    return hasInstanceStateValue(this, propName) ? getInstanceStateValue(this, propName) : getter(this, [ propName ]);
+                },
+                set(value) {
+                    setInstanceStateValue(this, propName, value);
+                    setter(this, [ propName ], value);
+                }
+            };
+        });
         definePrototypePropertyDescriptor(WorkerElement, ElementDescriptorMap);
         cachedTreeProps(WorkerElement, elementStructurePropNames);
         cachedProps(WorkerElement, "id");
@@ -1158,17 +1466,17 @@
     };
     const patchHTMLAnchorElement = (WorkerHTMLAnchorElement, env) => {
         const HTMLAnchorDescriptorMap = {};
-        commaSplit("hash,host,hostname,href,origin,pathname,port,protocol,search").map((anchorProp => {
+        commaSplit("hash,host,hostname,href,origin,pathname,port,protocol,search").map(anchorProp => {
             HTMLAnchorDescriptorMap[anchorProp] = {
                 get() {
-                    let value = getInstanceStateValue(this, 4);
+                    let value = getInstanceStateValue(this, StateProp.url);
                     let href;
                     if ("string" != typeof value) {
                         href = getter(this, [ "href" ]);
                         if ("" === href) {
                             return "protocol" === anchorProp ? ":" : "";
                         }
-                        setInstanceStateValue(this, 4, href);
+                        setInstanceStateValue(this, StateProp.url, href);
                         value = new URL(href)[anchorProp];
                     }
                     return resolveToUrl(env, value, null)[anchorProp];
@@ -1188,17 +1496,19 @@
                         } else {
                             const baseHref = env.$location$.href;
                             url = resolveToUrl(env, baseHref, null);
-                            url.href = new URL(value + "", url.href);
+                            try {
+                                url.href = new URL(value + "", url.href);
+                            } catch (e) {}
                         }
                     } else {
                         url = resolveToUrl(env, this.href, null);
                         url[anchorProp] = value;
                     }
-                    setInstanceStateValue(this, 4, url.href);
+                    setInstanceStateValue(this, StateProp.url, url.href);
                     setter(this, [ "href" ], url.href);
                 }
             };
-        }));
+        });
         definePrototypePropertyDescriptor(WorkerHTMLAnchorElement, HTMLAnchorDescriptorMap);
     };
     const patchHTMLIFrameElement = (WorkerHTMLIFrameElement, env) => {
@@ -1215,7 +1525,7 @@
             },
             src: {
                 get() {
-                    let src = getInstanceStateValue(this, 0);
+                    let src = getInstanceStateValue(this, StateProp.src);
                     if (src && src.startsWith("javascript:")) {
                         return src;
                     }
@@ -1225,39 +1535,55 @@
                 set(src) {
                     if (src) {
                         if (src.startsWith("javascript:")) {
-                            setInstanceStateValue(this, 0, src);
+                            setInstanceStateValue(this, StateProp.src, src);
                         } else if (!src.startsWith("about:")) {
                             let xhr = new XMLHttpRequest;
                             let xhrStatus;
                             let env = getIframeEnv(this);
                             env.$location$.href = src = resolveUrl(env, src, "iframe");
                             env.$isLoading$ = 1;
-                            setInstanceStateValue(this, 1, void 0);
-                            xhr.open("GET", src, false);
-                            xhr.send();
-                            xhrStatus = xhr.status;
-                            if (xhrStatus > 199 && xhrStatus < 300) {
+                            env.$isSameOrigin$ = webWorkerCtx.$origin$ === env.$location$.origin;
+                            setInstanceStateValue(this, StateProp.loadErrorStatus, void 0);
+                            if (testIfMustLoadScriptOnMainThread(webWorkerCtx.$config$, src)) {
+                                xhrStatus = 0;
+                            } else {
+                                try {
+                                    xhr.open("GET", src, false);
+                                    xhr.send();
+                                    xhrStatus = xhr.status;
+                                } catch (e) {
+                                    xhrStatus = 0;
+                                }
+                            }
+                            if (0 === xhrStatus) {
+                                callMethod(this, [ "removeAttribute" ], [ "srcdoc" ], CallType.NonBlocking);
+                                callMethod(this, [ "addEventListener" ], [ "load", () => {
+                                    env.$isLoading$ = 0;
+                                    runStateLoadHandlers(this, StateProp.loadHandlers);
+                                } ], CallType.NonBlocking);
+                                setter(this, [ "src" ], src);
+                            } else if (xhrStatus > 199 && xhrStatus < 300) {
                                 setter(this, [ "srcdoc" ], `<base href="${src}">` + function(text) {
-                                    return text.replace(SCRIPT_TAG_REGEXP, ((_, attrs) => {
+                                    return text.replace(SCRIPT_TAG_REGEXP, (_, attrs) => {
                                         const parts = [];
                                         let hasType = false;
                                         let match;
                                         while (match = ATTR_REGEXP.exec(attrs)) {
                                             let [keyValue] = match;
-                                            if (keyValue.startsWith("type=")) {
+                                            if (keyValue.toLowerCase().startsWith("type=")) {
                                                 hasType = true;
-                                                keyValue = keyValue.replace(/(application|text)\/javascript/, SCRIPT_TYPE);
+                                                keyValue = keyValue.replace(/(application|text)\/javascript/i, SCRIPT_TYPE);
                                             }
                                             parts.push(keyValue);
                                         }
                                         hasType || parts.push('type="text/partytown"');
                                         return `<script ${parts.join(" ")}>`;
-                                    }));
+                                    });
                                 }(xhr.responseText) + getPartytownScript());
                                 sendToMain(true);
-                                webWorkerCtx.$postMessage$([ 7, env.$winId$ ]);
+                                webWorkerCtx.$postMessage$([ WorkerMessageType.InitializeNextScript, env.$winId$ ]);
                             } else {
-                                setInstanceStateValue(this, 1, xhrStatus);
+                                setInstanceStateValue(this, StateProp.loadErrorStatus, xhrStatus);
                                 env.$isLoading$ = 0;
                             }
                         }
@@ -1269,7 +1595,7 @@
         definePrototypePropertyDescriptor(WorkerHTMLIFrameElement, HTMLIFrameDescriptorMap);
     };
     const ATTR_REGEXP_STR = "((?:\\w|-)+(?:=(?:(?:\\w|-)+|'[^']*'|\"[^\"]*\")?)?)";
-    const SCRIPT_TAG_REGEXP = new RegExp(`<script\\s*((${ATTR_REGEXP_STR}\\s*)*)>`, "mg");
+    const SCRIPT_TAG_REGEXP = new RegExp(`<script\\s*((${ATTR_REGEXP_STR}\\s*)*)>`, "mig");
     const ATTR_REGEXP = new RegExp(ATTR_REGEXP_STR, "mg");
     const getIframeEnv = iframe => {
         const $winId$ = iframe[InstanceIdKey];
@@ -1322,7 +1648,7 @@
         }, "NamedNodeMap");
     };
     function method(applyPath, ...args) {
-        return callMethod(this, applyPath, args, 1);
+        return callMethod(this, applyPath, args, CallType.Blocking);
     }
     const NAMED_NODE_MAP_HANDLERS = {
         getNamedItem: method,
@@ -1378,9 +1704,9 @@
             constructor() {
                 super($winId$, $winId$);
                 this.addEventListener = (...args) => {
-                    "load" === args[0] ? env.$runWindowLoadEvent$ && setTimeout((() => args[1]({
+                    "load" === args[0] ? env.$runWindowLoadEvent$ && setTimeout(() => args[1]({
                         type: "load"
-                    }))) : callMethod(this, [ "addEventListener" ], args, 2);
+                    })) : callMethod(this, [ "addEventListener" ], args, CallType.NonBlocking);
                 };
                 let win = this;
                 let value;
@@ -1391,7 +1717,7 @@
                         (() => {
                             if (!webWorkerCtx.$initWindowMedia$) {
                                 self.$bridgeToMedia$ = [ getter, setter, callMethod, constructGlobal, definePrototypePropertyDescriptor, randomId, WinIdKey, InstanceIdKey, ApplyPathKey ];
-                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=0.9.2"));
+                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=1.0.0"));
                                 webWorkerCtx.$initWindowMedia$ = self.$bridgeFromMedia$;
                                 delete self.$bridgeFromMedia$;
                             }
@@ -1414,7 +1740,7 @@
                 win.name = name + `${normalizedWinId($winId$)} (${$winId$})`;
                 createNodeCstr(win, env, WorkerBase);
                 (win => {
-                    win.NodeList = defineConstructorName(NodeList, "NodeList");
+                    win.NodeList = win.HTMLCollection = defineConstructorName(NodeList, "NodeList");
                 })(win);
                 createNamedNodeMapCstr(win, WorkerBase);
                 createCSSStyleDeclarationCstr(win, WorkerBase, "CSSStyleDeclaration");
@@ -1439,32 +1765,32 @@
                         upgrade: elm => callMethod(win, [ "customElements", "upgrade" ], [ elm ])
                     };
                 })(win, nodeCstrs);
-                webWorkerCtx.$interfaces$.map((([cstrName, superCstrName, members, interfaceType, nodeName]) => {
+                webWorkerCtx.$interfaces$.map(([cstrName, superCstrName, members, interfaceType, nodeName]) => {
                     const SuperCstr = TrapConstructors[cstrName] ? WorkerTrapProxy : "EventTarget" === superCstrName ? WorkerEventTargetProxy : "Object" === superCstrName ? WorkerBase : win[superCstrName];
-                    const Cstr = win[cstrName] = defineConstructorName(12 === interfaceType ? class extends WorkerBase {
+                    const Cstr = win[cstrName] = defineConstructorName(interfaceType === InterfaceType.EnvGlobalConstructor ? class extends WorkerBase {
                         constructor(...args) {
                             super();
                             constructGlobal(this, cstrName, args);
                         }
                     } : win[cstrName] || class extends SuperCstr {}, cstrName);
                     nodeName && (nodeCstrs[nodeName] = Cstr);
-                    members.map((([memberName, memberType, staticValue]) => {
+                    members.map(([memberName, memberType, staticValue]) => {
                         memberName in Cstr.prototype || memberName in SuperCstr.prototype || ("string" == typeof memberType ? definePrototypeProperty(Cstr, memberName, {
                             get() {
                                 if (!hasInstanceStateValue(this, memberName)) {
                                     const instanceId = this[InstanceIdKey];
                                     const applyPath = [ ...this[ApplyPathKey], memberName ];
                                     const PropCstr = win[memberType];
-                                    PropCstr && setInstanceStateValue(this, memberName, new PropCstr($winId$, instanceId, applyPath));
+                                    PropCstr && PropCstr.prototype instanceof WorkerBase ? setInstanceStateValue(this, memberName, new PropCstr($winId$, instanceId, applyPath)) : PropCstr && memberName in self && setInstanceStateValue(this, memberName, self[memberName]);
                                 }
                                 return getInstanceStateValue(this, memberName);
                             },
                             set(value) {
                                 setInstanceStateValue(this, memberName, value);
                             }
-                        }) : 5 === memberType ? definePrototypeValue(Cstr, memberName, (function(...args) {
-                            return callMethod(this, [ memberName ], args);
-                        })) : memberType > 0 && (void 0 !== staticValue ? definePrototypeValue(Cstr, memberName, staticValue) : definePrototypeProperty(Cstr, memberName, {
+                        }) : memberType === InterfaceType.Function ? definePrototypeValue(Cstr, memberName, function(...args) {
+                            return callMethod(this || win, [ memberName ], args);
+                        }) : memberType > 0 && (void 0 !== staticValue ? definePrototypeValue(Cstr, memberName, staticValue) : definePrototypeProperty(Cstr, memberName, {
                             get() {
                                 return getter(this, [ memberName ]);
                             },
@@ -1472,24 +1798,24 @@
                                 return setter(this, [ memberName ], value);
                             }
                         })));
-                    }));
-                }));
-                commaSplit("atob,btoa,crypto,indexedDB,setTimeout,setInterval,clearTimeout,clearInterval").map((globalName => {
+                    });
+                });
+                commaSplit("atob,btoa,crypto,indexedDB,setTimeout,setInterval,clearTimeout,clearInterval").map(globalName => {
                     delete WorkerWindow.prototype[globalName];
                     if (!(globalName in win)) {
                         value = self[globalName];
                         null != value && (win[globalName] = "function" != typeof value || value.toString().startsWith("class") ? value : value.bind(self));
                     }
-                }));
-                Object.getOwnPropertyNames(self).map((globalName => {
+                });
+                Object.getOwnPropertyNames(self).map(globalName => {
                     globalName in win || (win[globalName] = self[globalName]);
-                }));
-                windowMediaConstructors.map((cstrName => defineProperty(win, cstrName, {
+                });
+                windowMediaConstructors.map(cstrName => defineProperty(win, cstrName, {
                     get() {
                         initWindowMedia();
                         return win[cstrName];
                     }
-                })));
+                }));
                 "trustedTypes" in self && (win.trustedTypes = self.trustedTypes);
                 patchElement(win.Element, win.HTMLElement);
                 patchDocument(win.Document, env, isDocumentImplementation);
@@ -1498,6 +1824,14 @@
                     cachedTreeProps(WorkerDocumentFragment, elementStructurePropNames);
                 })(win.DocumentFragment);
                 patchHTMLAnchorElement(win.HTMLAnchorElement, env);
+                [ win.HTMLLinkElement, win.HTMLBaseElement ].map(Cstr => Cstr && definePrototypeProperty(Cstr, "href", {
+                    get() {
+                        return getter(this, [ "href" ]);
+                    },
+                    set(value) {
+                        setter(this, [ "href" ], value);
+                    }
+                }));
                 (WorkerHTMLFormElement => {
                     definePrototypePropertyDescriptor(WorkerHTMLFormElement, {});
                     cachedProps(WorkerHTMLFormElement, "elements");
@@ -1519,6 +1853,14 @@
                     definePrototypePropertyDescriptor(WorkerHTMLHtmlElement, DocumentElementDescriptorMap);
                 })(win.HTMLHtmlElement, env);
                 createCSSStyleSheetConstructor(win, "CSSStyleSheet");
+                createCSSStyleSheetConstructor(win, "CSSMediaRule");
+                (win => {
+                    win.CSS = new Proxy({
+                        escape: cssEscape
+                    }, {
+                        get: (target, prop) => Object.prototype.hasOwnProperty.call(target, prop) || "string" != typeof prop ? target[prop] : getter(win, [ "CSS", prop ])
+                    });
+                })(win);
                 definePrototypeNodeType(win.Comment, 8);
                 definePrototypeNodeType(win.DocumentType, 10);
                 Object.assign(env, {
@@ -1527,38 +1869,36 @@
                     $window$: new Proxy(win, {
                         get: (win, propName) => {
                             var _a;
-                            if ("string" != typeof propName || isNaN(propName)) {
-                                return (null === (_a = webWorkerCtx.$config$.mainWindowAccessors) || void 0 === _a ? void 0 : _a.includes(propName)) ? getter(this, [ propName ]) : win[propName];
-                            }
-                            {
+                            if ("string" == typeof propName && /^\d+$/.test(propName)) {
                                 let frame = getChildEnvs()[propName];
                                 return frame ? frame.$window$ : void 0;
                             }
+                            return (null === (_a = webWorkerCtx.$config$.mainWindowAccessors) || void 0 === _a ? void 0 : _a.includes(propName)) ? getter(this, [ propName ]) : win[propName];
                         },
-                        has: () => true
+                        has: (target, prop) => !webWorkerCtx.$config$.strictProxyHas || Reflect.has(target, prop)
                     }),
-                    $document$: $createNode$("#document", $winId$ + ".d"),
-                    $documentElement$: $createNode$("HTML", $winId$ + ".e"),
-                    $head$: $createNode$("HEAD", $winId$ + ".h"),
-                    $body$: $createNode$("BODY", $winId$ + ".b"),
+                    $document$: $createNode$(NodeName.Document, $winId$ + "." + WinDocId.document),
+                    $documentElement$: $createNode$(NodeName.DocumentElement, $winId$ + "." + WinDocId.documentElement),
+                    $head$: $createNode$(NodeName.Head, $winId$ + "." + WinDocId.head),
+                    $body$: $createNode$(NodeName.Body, $winId$ + "." + WinDocId.body),
                     $location$: $location$,
                     $visibilityState$: $visibilityState$,
                     $isSameOrigin$: $isSameOrigin$,
                     $isTopWindow$: $isTopWindow$,
                     $createNode$: $createNode$
                 });
-                win.requestAnimationFrame = cb => setTimeout((() => cb(performance.now())), 9);
+                win.requestAnimationFrame = cb => setTimeout(() => cb(performance.now()), 9);
                 win.cancelAnimationFrame = id => clearTimeout(id);
                 win.requestIdleCallback = (cb, start) => {
                     start = Date.now();
-                    return setTimeout((() => cb({
+                    return setTimeout(() => cb({
                         didTimeout: false,
                         timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
-                    })), 1);
+                    }), 1);
                 };
                 win.cancelIdleCallback = id => clearTimeout(id);
-                addStorageApi(win, "localStorage", $isSameOrigin$, env);
-                addStorageApi(win, "sessionStorage", $isSameOrigin$, env);
+                addStorageApi(win, "localStorage", env);
+                addStorageApi(win, "sessionStorage", env);
                 $isSameOrigin$ || (win.indexeddb = void 0);
                 if (isIframeWindow) {
                     historyState = {};
@@ -1586,6 +1926,31 @@
                     };
                 }
                 win.Worker = void 0;
+                if ($location$.href.includes("gtm_debug=")) {
+                    const queueKey = "google.tagmanager.debugui2.queue";
+                    let localQueue;
+                    let flushTimer;
+                    let flushAttempts = 0;
+                    const forwardItem = item => callMethod(win, [ queueKey, "push" ], [ item ], CallType.NonBlocking);
+                    const flush = () => {
+                        if (++flushAttempts > 100) {
+                            clearInterval(flushTimer);
+                        } else if (null != getter(win, [ queueKey ])) {
+                            clearInterval(flushTimer);
+                            localQueue.splice(0).map(forwardItem);
+                            localQueue.push = item => forwardItem(item);
+                        }
+                    };
+                    defineProperty(win, queueKey, {
+                        get: () => localQueue,
+                        set: v => {
+                            if (!localQueue) {
+                                localQueue = v || [];
+                                flushTimer = setInterval(flush, 100);
+                            }
+                        }
+                    });
+                }
             }
             get body() {
                 return env.$body$;
@@ -1596,15 +1961,39 @@
             get documentElement() {
                 return env.$documentElement$;
             }
+            eval(code) {
+                return "string" == typeof code ? new Function(trustedType("createScript", `with(this){return eval(${JSON.stringify(code)})}`)).call(env.$window$) : code;
+            }
+            get [Symbol.unscopables]() {
+                return {
+                    eval: true
+                };
+            }
             fetch(input, init) {
-                input = "string" == typeof input || input instanceof URL ? String(input) : input.url;
-                return fetch(resolveUrl(env, input, "fetch"), init);
+                if ("string" == typeof input || input instanceof URL) {
+                    return fetch(resolveUrl(env, String(input), "fetch"), init);
+                }
+                const request = input;
+                const url = resolveUrl(env, request.url, "fetch");
+                return (request.body ? request.blob() : Promise.resolve(void 0)).then(body => fetch(url, Object.assign({
+                    method: request.method,
+                    headers: request.headers,
+                    body: body,
+                    mode: request.mode,
+                    credentials: request.credentials,
+                    cache: request.cache,
+                    redirect: request.redirect,
+                    referrerPolicy: request.referrerPolicy,
+                    integrity: request.integrity,
+                    keepalive: request.keepalive,
+                    signal: request.signal
+                }, init)));
             }
             get frames() {
                 return env.$window$;
             }
             get frameElement() {
-                return $isTopWindow$ ? null : getOrCreateNodeInstance($parentWinId$, $winId$, "IFRAME");
+                return $isTopWindow$ ? null : getOrCreateNodeInstance($parentWinId$, $winId$, NodeName.IFrame);
             }
             get globalThis() {
                 return env.$window$;
@@ -1630,17 +2019,18 @@
                         sendBeacon: (url, body) => {
                             if (webWorkerCtx.$config$.logSendBeaconRequests) {
                                 try {
-                                    logWorker(`sendBeacon: ${resolveUrl(env, url, null)}${body ? ", data: " + JSON.stringify(body) : ""}`);
+                                    logWorker(`sendBeacon: ${resolveUrl(env, url, "sendBeacon")}${body ? ", data: " + JSON.stringify(body) : ""}, resolvedParams: ${JSON.stringify(resolveSendBeaconRequestParameters(env, url))}`);
                                 } catch (e) {
                                     console.error(e);
                                 }
                             }
                             try {
-                                fetch(resolveUrl(env, url, null), {
+                                fetch(resolveUrl(env, url, "sendBeacon"), {
                                     method: "POST",
                                     body: body,
                                     mode: "no-cors",
-                                    keepalive: true
+                                    keepalive: true,
+                                    ...resolveSendBeaconRequestParameters(env, url)
                                 });
                                 return true;
                             } catch (e) {
@@ -1662,6 +2052,7 @@
                                 return target[prop];
                             }
                             const value = getter(env.$window$, [ "navigator", prop ]);
+                            "serviceWorker" === prop && value && (value.ready = new Promise(noop));
                             return value;
                         }
                     });
@@ -1671,6 +2062,16 @@
                 return $location$.origin;
             }
             set origin(_) {}
+            get opener() {
+                if (null == getter(this, [ "opener" ])) {
+                    return null;
+                }
+                const win = this;
+                return env.$openerRef$ = env.$openerRef$ || {
+                    closed: false,
+                    postMessage: (...args) => callMethod(win, [ "opener", "postMessage" ], args, CallType.NonBlocking)
+                };
+            }
             get parent() {
                 for (let envWinId in environments) {
                     if (environments[envWinId].$winId$ === $parentWinId$) {
@@ -1688,7 +2089,7 @@
                     });
                     args = args.slice(1);
                 }
-                callMethod(this, [ "postMessage" ], args, 3);
+                $isTopWindow$ ? callMethod(this, [ "postMessage" ], args, CallType.NonBlockingNoSideEffect) : callMethod(getOrCreateNodeInstance($parentWinId$, $winId$, NodeName.IFrame), [ "contentWindow", "postMessage" ], args, CallType.NonBlockingNoSideEffect);
             }
             get self() {
                 return env.$window$;
@@ -1712,7 +2113,9 @@
                         args[1] = resolveUrl(env, args[1], "xhr");
                         super.open(...args);
                     }
-                    set withCredentials(_) {}
+                    set withCredentials(_) {
+                        webWorkerCtx.$config$.allowXhrCredentials && (super.withCredentials = _);
+                    }
                     toString() {
                         return str;
                     }
@@ -1734,9 +2137,9 @@
             }
         };
         const WorkerEventTargetProxy = class extends WorkerBase {};
-        eventTargetMethods.map((methodName => WorkerEventTargetProxy.prototype[methodName] = function(...args) {
-            return callMethod(this, [ methodName ], args, 2);
-        }));
+        eventTargetMethods.map(methodName => WorkerEventTargetProxy.prototype[methodName] = function(...args) {
+            return callMethod(this, [ methodName ], args, CallType.NonBlocking);
+        });
         cachedProps(WorkerWindow, "devicePixelRatio");
         cachedDimensionProps(WorkerWindow);
         cachedDimensionMethods(WorkerWindow, [ "getComputedStyle" ]);
@@ -1755,7 +2158,7 @@
                 logWorker(`Created ${winType} window ${normalizedWinId($winId$)} environment`, $winId$);
             }
         }
-        webWorkerCtx.$postMessage$([ 7, $winId$ ]);
+        webWorkerCtx.$postMessage$([ WorkerMessageType.InitializeNextScript, $winId$ ]);
         return environments[$winId$];
     };
     const queuedEvents = [];
@@ -1764,11 +2167,11 @@
         const msgType = msg[0];
         const msgValue = msg[1];
         if (webWorkerCtx.$isInitialized$) {
-            if (7 === msgType) {
+            if (msgType === WorkerMessageType.InitializeNextScript) {
                 (async initScript => {
                     let winId = initScript.$winId$;
                     let instanceId = initScript.$instanceId$;
-                    let instance = getOrCreateNodeInstance(winId, instanceId, "SCRIPT");
+                    let instance = getOrCreateNodeInstance(winId, instanceId, NodeName.Script);
                     let scriptContent = initScript.$content$;
                     let scriptSrc = initScript.$url$;
                     let scriptOrgSrc = initScript.$orgUrl$;
@@ -1779,37 +2182,40 @@
                     if (scriptSrc) {
                         try {
                             scriptSrc = resolveToUrl(env, scriptSrc, "script") + "";
-                            setInstanceStateValue(instance, 4, scriptSrc);
+                            setInstanceStateValue(instance, StateProp.url, scriptSrc);
                             webWorkerCtx.$config$.logScriptExecution && logWorker(`Execute script src: ${scriptOrgSrc}`, winId);
                             rsp = await fetch(scriptSrc);
                             if (rsp.ok) {
                                 let responseContentType = rsp.headers.get("content-type");
-                                let shouldExecute = javascriptContentTypes.some((ct => {
+                                let shouldExecute = javascriptContentTypes.some(ct => {
                                     var _a, _b, _c;
                                     return null === (_c = null === (_a = null == responseContentType ? void 0 : responseContentType.toLowerCase) || void 0 === _a ? void 0 : (_b = _a.call(responseContentType)).includes) || void 0 === _c ? void 0 : _c.call(_b, ct);
-                                }));
+                                });
                                 if (shouldExecute) {
                                     scriptContent = await rsp.text();
                                     env.$currentScriptId$ = instanceId;
                                     run(env, scriptContent, scriptOrgSrc || scriptSrc);
                                 }
-                                runStateLoadHandlers(instance, "load");
+                                runStateLoadHandlers(instance, StateProp.loadHandlers);
                             } else {
                                 errorMsg = rsp.statusText;
-                                runStateLoadHandlers(instance, "error");
+                                runStateLoadHandlers(instance, StateProp.errorHandlers);
                             }
                         } catch (urlError) {
-                            console.error(urlError);
-                            errorMsg = String(urlError.stack || urlError);
-                            runStateLoadHandlers(instance, "error");
+                            webWorkerCtx.$config$.logScriptExecution && logWorker(`Fallback script to main: ${scriptOrgSrc || scriptSrc}`, winId);
+                            const el = env.$document$.createElement("script");
+                            setter(el, [ "type" ], "text/javascript");
+                            setter(el, [ "src" ], scriptSrc);
+                            forwardLoadEvents(el, instance);
+                            callMethod(env.$body$, [ "appendChild" ], [ el ]);
                         }
                     } else {
                         scriptContent && (errorMsg = runScriptContent(env, instanceId, scriptContent, winId, errorMsg));
                     }
                     env.$currentScriptId$ = "";
-                    webWorkerCtx.$postMessage$([ 6, winId, instanceId, errorMsg ]);
+                    webWorkerCtx.$postMessage$([ WorkerMessageType.InitializedEnvironmentScript, winId, instanceId, errorMsg ]);
                 })(msgValue);
-            } else if (9 === msgType) {
+            } else if (msgType === WorkerMessageType.RefHandlerCallback) {
                 (({$winId$: $winId$, $instanceId$: $instanceId$, $refId$: $refId$, $thisArg$: $thisArg$, $args$: $args$}) => {
                     if (webWorkerRefsByRefId[$refId$]) {
                         try {
@@ -1819,22 +2225,32 @@
                         }
                     }
                 })(msgValue);
-            } else if (10 === msgType) {
+            } else if (msgType === WorkerMessageType.ForwardMainTrigger) {
                 (({$winId$: $winId$, $forward$: $forward$, $args$: $args$}) => {
                     try {
                         let target = environments[$winId$].$window$;
                         let i = 0;
                         let l = len($forward$);
+                        webWorkerCtx.$config$.logForwardedEvents && logWorker(`Forwarded event received: ${$forward$.join(".")}()`, $winId$);
                         for (;i < l; i++) {
-                            i + 1 < l ? target = target[$forward$[i]] : target[$forward$[i]].apply(target, deserializeFromMain(null, $winId$, [], $args$));
+                            if (i + 1 < l) {
+                                target = target[$forward$[i]] = target[$forward$[i]] || emptyObjectValue($forward$[i + 1]);
+                            } else {
+                                const deserializedArgs = deserializeFromMain(null, $winId$, [], $args$);
+                                webWorkerCtx.$config$.logForwardedEvents && logWorker(`Forwarded event execute: ${$forward$.join(".")}(${deserializedArgs.map(a => {
+                                    var _a;
+                                    return "object" == typeof a ? null === (_a = JSON.stringify(a)) || void 0 === _a ? void 0 : _a.slice(0, 60) : String(a);
+                                }).join(", ")})`, $winId$);
+                                target[$forward$[i]].apply(target, deserializedArgs);
+                            }
                         }
                     } catch (e) {
                         console.error(e);
                     }
                 })(msgValue);
-            } else if (5 === msgType) {
+            } else if (msgType === WorkerMessageType.InitializeEnvironment) {
                 createEnvironment(msgValue);
-            } else if (8 === msgType) {
+            } else if (msgType === WorkerMessageType.InitializedScripts) {
                 if (1 !== environments[msgValue].$isInitialized$) {
                     const winId = msgValue;
                     const env = environments[winId];
@@ -1843,16 +2259,16 @@
                 }
                 environments[msgValue].$isInitialized$ = 1;
                 environments[msgValue].$isLoading$ = 0;
-            } else if (14 === msgType) {
+            } else if (msgType === WorkerMessageType.DocumentVisibilityState) {
                 environments[msgValue].$visibilityState$ = msg[2];
-            } else if (13 === msgType) {
+            } else if (msgType === WorkerMessageType.LocationUpdate) {
                 const $winId$ = msgValue.$winId$;
                 const env = environments[$winId$];
                 env.$location$.href = msgValue.url;
                 !function($winId$, env, data) {
                     const history = env.$window$.history;
                     switch (data.type) {
-                      case 0:
+                      case LocationUpdateType.PushState:
                         env.$propagateHistoryChange$ = false;
                         try {
                             history.pushState(data.state, "", data.newUrl);
@@ -1860,7 +2276,7 @@
                         env.$propagateHistoryChange$ = true;
                         break;
 
-                      case 1:
+                      case LocationUpdateType.ReplaceState:
                         env.$propagateHistoryChange$ = false;
                         try {
                             history.replaceState(data.state, "", data.newUrl);
@@ -1869,12 +2285,12 @@
                     }
                 }(msgValue.$winId$, env, msgValue);
             } else {
-                15 === msgType && ((_type, winId, instanceId, callbackName, args) => {
+                msgType === WorkerMessageType.CustomElementCallback && ((_type, winId, instanceId, callbackName, args) => {
                     const elm = getOrCreateNodeInstance(winId, instanceId);
                     elm && "function" == typeof elm[callbackName] && elm[callbackName].apply(elm, args);
                 })(...msg);
             }
-        } else if (1 === msgType) {
+        } else if (msgType === WorkerMessageType.MainDataResponseToWorker) {
             (initWebWorkerData => {
                 const config = webWorkerCtx.$config$ = JSON.parse(initWebWorkerData.$config$);
                 const locOrigin = initWebWorkerData.$origin$;
@@ -1884,19 +2300,20 @@
                 webWorkerCtx.$origin$ = locOrigin;
                 webWorkerCtx.$postMessage$ = postMessage.bind(self);
                 webWorkerCtx.$sharedDataBuffer$ = initWebWorkerData.$sharedDataBuffer$;
+                webWorkerCtx.$tabId$ = initWebWorkerData.$tabId$;
                 self.importScripts = void 0;
                 delete self.postMessage;
                 delete self.WorkerGlobalScope;
-                commaSplit("resolveUrl,get,set,apply").map((configName => {
-                    config[configName] && (config[configName] = new Function("return " + config[configName])());
-                }));
+                commaSplit("resolveUrl,resolveSendBeaconRequestParameters,get,set,apply").map(configName => {
+                    config[configName] && (config[configName] = new Function(trustedType("createScript", "return " + config[configName]))());
+                });
             })(msgValue);
-            webWorkerCtx.$postMessage$([ 2 ]);
-        } else if (3 === msgType) {
+            webWorkerCtx.$postMessage$([ WorkerMessageType.MainInterfacesRequestFromWorker ]);
+        } else if (msgType === WorkerMessageType.MainInterfacesResponseToWorker) {
             webWorkerCtx.$interfaces$ = [ ...webWorkerCtx.$interfaces$, ...msgValue ];
             webWorkerCtx.$isInitialized$ = 1;
             logWorker("Initialized web worker");
-            webWorkerCtx.$postMessage$([ 4 ]);
+            webWorkerCtx.$postMessage$([ WorkerMessageType.InitializedWebWorker ]);
             queuedEvents.length && logWorker(`Queued ready messages: ${queuedEvents.length}`);
             [ ...queuedEvents ].map(receiveMessageFromSandboxToWorker);
             queuedEvents.length = 0;
@@ -1905,5 +2322,5 @@
         }
     };
     self.onmessage = receiveMessageFromSandboxToWorker;
-    postMessage([ 0 ]);
+    postMessage([ WorkerMessageType.MainDataRequestFromWorker ]);
 })(self);

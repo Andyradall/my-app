@@ -37,9 +37,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@builder.io/partytown": "^0.9.2",
 		"@hotjar/browser": "^1.0.9",
 		"@portabletext/svelte": "^4.0.0",
+		"@qwik.dev/partytown": "^1.0.0",
 		"@sanity/client": "^6.22.4",
 		"@sanity/image-url": "^1.1.0",
 		"@sanity/types": "^3.64.1",
