@@ -53,29 +53,7 @@
 {/key} 
 
 <svelte:head>
-	<script>
-		partytown = {
-			forward: ['dataLayer.push'],
-			resolveUrl: (url) => {
-				const siteUrl = 'https://www.andersra.com//proxytown';
-
-				if (url.hostname === 'www.googletagmanager.com') {
-					const proxyUrl = new URL(`${siteUrl}/gtm`);
-
-					const gtmId = new URL(url).searchParams.get('id');
-					gtmId && proxyUrl.searchParams.append('id', gtmId);
-
-					return proxyUrl;
-				} else if (url.hostname === 'www.google-analytics.com') {
-					const proxyUrl = new URL(`${siteUrl}/ga`);
-
-					return proxyUrl;
-				}
-				return url;
-			}
-		};
-	</script>
-	<!-- Config options -->
+	<!-- Config options (GTM allows CORS from our domain, so no proxy is needed) -->
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
