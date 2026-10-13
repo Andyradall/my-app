@@ -29,7 +29,7 @@
 </script>
 
 <div class="case-card">
-	<div class="case-card-bg shadow-custom py-4 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm max-w-[800px] max-h-[600px]">
+	<div class="case-card-bg shadow-custom py-4 rounded-3xl bg-zinc-100/75 backdrop-blur-xs max-w-[800px] max-h-[600px]">
 		<a href={link} aria-label="hidden" class="case-card-image">
 			<img class="card-thumbnail" 
 			src={image} 

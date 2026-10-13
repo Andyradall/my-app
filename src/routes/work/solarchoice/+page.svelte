@@ -137,7 +137,7 @@
     </div>
 </section-->
 
-	<section id="first" class="pageSection bg-slate-100 bg-opacity-20 pt-6 md:pt-32 pb-8 md:pb-20 px-4">
+	<section id="first" class="pageSection bg-slate-100/20 pt-6 md:pt-32 pb-8 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Team Dynamics and Initial Steps</h2>
 			<p>
@@ -151,7 +151,7 @@
 		</figure>
 	</section>
 
-	<section class="bg-slate-100 bg-opacity-20">
+	<section class="bg-slate-100/20">
 		<div class="mx-auto sm:max-w-2xl px-4">
 			<h2 class="pb-2">Team Canvas</h2>
 			<p>
@@ -165,7 +165,7 @@
 		</figure>
 	</section>
 
-	<section class="bg-slate-100 bg-opacity-20 px-4">
+	<section class="bg-slate-100/20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-4">
 			<h2 class="pb-2">Time Management with Figjam</h2>
 			<p>
@@ -223,7 +223,7 @@
 		</figure>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bg-slate-800 bg-opacity-95 text-zinc-150">
+	<section class="py-12 md:py-20 px-4 bg-slate-800/95 text-zinc-150">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">Establishing Brand Identity</h2>
 			<p>
@@ -270,7 +270,7 @@
 		</figure>
 	</section>
 
-	<section id="third" class="pageSection bg-slate-100 bg-opacity-20 py-12 md:py-20 px-4">
+	<section id="third" class="pageSection bg-slate-100/20 py-12 md:py-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2 class="pb-2">Crafting a Brand's Visual DNA</h2>
 			<p class="pb-2">
@@ -309,7 +309,7 @@
 		</div>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bg-slate-800 bg-opacity-95 text-slate-50">
+	<section class="py-12 md:py-20 px-4 bg-slate-800/95 text-slate-50">
 		<div class="mx-auto md:max-w-2xl">
 			<h3>The Birth of Stylescapes</h3>
 			<p class="pb-8">
@@ -355,7 +355,7 @@
 		</figure>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bg-slate-100 bg-opacity-20">
+	<section class="py-12 md:py-20 px-4 bg-slate-100/20">
 		<div class="mx-auto md:max-w-2xl pb-2">
 			<h3>Logo End Result: Killing Your Darling</h3>
 			<p>
@@ -410,7 +410,7 @@
 		</div>
 	</section>
 
-	<section class="bg-slate-800 bg-opacity-95 text-zinc-150 py-12 md:py-20 px-4">
+	<section class="bg-slate-800/95 text-zinc-150 py-12 md:py-20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h3>Painting the Brand: The Colour Palettes</h3>
 			<p>
@@ -439,7 +439,7 @@
 		</div>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bbg-slate-100 bg-opacity-20">
+	<section class="py-12 md:py-20 px-4 bbg-slate-100">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Webpage Mockups</h2>
 			<p>
@@ -500,6 +500,8 @@
 </footer>
 
 <style lang="postcss">
+	@reference "../../../global.css";
+
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];
 	}

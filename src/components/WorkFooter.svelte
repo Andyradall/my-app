@@ -19,7 +19,7 @@
 	const nextCaseStudy = caseStudies[nextIndex];
 </script>
 
-<section class="bg-slate-100 bg-opacity-50 font-euclid pt-6 pb-8">
+<section class="bg-slate-100/50 font-euclid pt-6 pb-8">
 	<div class="max-w-full mx-auto flex justify-between items-stretch px-5 md:px-8 py-4">
 		<div class="first-div flex-1 flex flex-col justify-between">
 			<a href={prevCaseStudy.href} class="flex flex-col items-start" aria-label="Previous case Study">

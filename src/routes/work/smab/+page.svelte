@@ -124,7 +124,7 @@
                 </ul>
             </section-->
 
-	<section id="first" class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 pt-10 md:pt-32 pb-10 md:pb-20 px-4">
+	<section id="first" class="pageSection bg-slate-800/95 text-zinc-150 pt-10 md:pt-32 pb-10 md:pb-20 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2>Double Diamond: Our Methodological Approach</h2>
 		</div>
@@ -206,7 +206,7 @@
 		</figure>
 	</section>
 
-	<section class="my-4 py-10 md:py-20 bg-slate-800 bg-opacity-95 text-zinc-150 px-4">
+	<section class="my-4 py-10 md:py-20 bg-slate-800/95 text-zinc-150 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Crafting the Brand: Workshops to Final Choices</h2>
 		</div>
@@ -283,7 +283,7 @@
 		</figure>
 	</section>
 
-	<section class="py-10 md:my-14 md:py-20 bg-slate-100 bg-opacity-20 px-4">
+	<section class="py-10 md:my-14 md:py-20 bg-slate-100/20 px-4">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Design Process</h2>
 		</div>
@@ -333,7 +333,7 @@
 		</div>
 	</section>
 
-	<section id="fourth" class="pageSection py-10 md:py-20 bg-slate-800 bg-opacity-95 text-zinc-150 px-4">
+	<section id="fourth" class="pageSection py-10 md:py-20 bg-slate-800/95 text-zinc-150 px-4">
 		<div class="mx-auto md:max-w-2xl">
 			<h2 class="pb-2">Final Deliverables</h2>
 			<h3>Frontpage Evolution</h3>
@@ -349,7 +349,7 @@
 		</div>
 	</section>
 
-	<section class="bg-slate-800 bg-opacity-95 text-zinc-150 py-12 md:pt-12 md:pb-14 px-4">
+	<section class="bg-slate-800/95 text-zinc-150 py-12 md:pt-12 md:pb-14 px-4">
 		<div class="max-w-2xl mx-auto">
 			<h2>Final Prototype:</h2>
 			<p>Dive into our final prototype:</p>
@@ -423,6 +423,8 @@
 </footer>
 
 <style lang="postcss">
+	@reference "../../../global.css";
+
 	/*#message {
 		display: none;
 	}*/

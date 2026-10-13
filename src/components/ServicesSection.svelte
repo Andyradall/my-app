@@ -12,12 +12,12 @@
 		<div class="mx-auto">
 			<h2 class="font-euclid text-center">
 				<span
-					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-[4rem] md:leading-[8.5rem] pb-4 md:pb-10 text-zinc-100"
+					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-16 md:leading-34 pb-4 md:pb-10 text-zinc-100"
 				>
 					I will help you grow and perform on the web!
 				</span>
 				<span
-					class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-3xl leading-[3.5rem] text-zinc-100"
+					class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-3xl leading-14 text-zinc-100"
 				>
 					I create clear and beautiful websites that drive sales and your users love!
 				</span>
@@ -27,7 +27,7 @@
 
 	<div class="mx-4 md:mx-auto md:min-mx-16 md:max-w-7xl mt-2 mb-6 md:mb-4">
 		<section
-			class="skills-card shadow-custom text-slate-600 bg-zinc-100 backdrop-blur-sm bg-opacity-100 rounded-3xl p-6 md:p-10"
+			class="skills-card shadow-custom text-slate-600 bg-zinc-100 backdrop-blur-xs rounded-3xl p-6 md:p-10"
 		>
 			<!-- Card Header -->
 			<header class="text-left">

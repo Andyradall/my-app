@@ -72,7 +72,7 @@
       font-bold text-slate-600 pt-2 pb-6">{data.posts.title}</h1>
       <p class="text-3xl">{data.posts.excerpt}</p>
       
-      <img src={urlFor(data.posts.mainImage).url()} alt={`Cover Image for ${data.posts.title}`} class="max-w-full h-auto rounded-sm my-4" />
+      <img src={urlFor(data.posts.mainImage).url()} alt={`Cover Image for ${data.posts.title}`} class="max-w-full h-auto rounded-xs my-4" />
      
       <p class=" text-slate-500">
         Published at {new Date(data.posts.publishedAt).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })}

@@ -29,7 +29,7 @@
 		</section>
 
 		<section
-			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm -2 md:max-h-[690px]"
+			class="split-card flex overflow-clip flex-wrap shadow-custom mb-10 rounded-3xl bg-zinc-100/75 backdrop-blur-xs -2 md:max-h-[690px]"
 		>
 			<div
 				class="split-card-image w-full md:w-1/2 bg-slate-950 flex justify-center items-center overflow-hidden"
@@ -65,14 +65,14 @@
 
 				<div class="flex justify-center">
 					<button
-						class="inline-flex items-center bg-red-500 bg-opacity-80 font-euclid font-medium text-zinc-100 hover:text-zinc-100 my-10 pt-3 pb-3 px-6 rounded-xl transition-all mx-auto"
+						class="inline-flex items-center bg-red-500/80 font-euclid font-medium text-zinc-100 hover:text-zinc-100 my-10 pt-3 pb-3 px-6 rounded-xl transition-all mx-auto"
 					>
 						<a
 							href={ resumeLink }
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="View my Full Resumé"
-							class="resume-btn-custom-link flex items-center translate-y-[0.5px] translate-x-[1px]"
+							class="resume-btn-custom-link flex items-center translate-y-[0.5px] translate-x-px"
 						>
 							View my Full Resumé
 							<span class="resume-btn-svg-icon ml-0.5 transition-transform">
@@ -97,7 +97,7 @@
 		<section class="card-one-two grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
 			<!-- Text Card -->
 			<div
-				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm p-6 md:p-10"
+				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100/75 backdrop-blur-xs p-6 md:p-10"
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
@@ -114,7 +114,7 @@
 
 			<!-- Swiper -->
 			<div
-				class="swiper mySwiper image-card card-two shadow-custom col-span-1 md:col-span-6 justify-center overflow-hidden bg-opacity-90 backdrop-blur-sm rounded-3xl"
+				class="swiper mySwiper image-card card-two shadow-custom col-span-1 md:col-span-6 justify-center overflow-hidden backdrop-blur-xs rounded-3xl"
 			>
 				<div class="swiper-wrapper rounded-3xl image-card">
 					<!-- Slide 1 -->

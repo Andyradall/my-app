@@ -1,10 +1,12 @@
 import { join } from 'path';
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { partytownVite } from '@qwik.dev/partytown/utils';
 
 /** @type {import('vite').UserConfig} */
 const config = {
   plugins: [
+    tailwindcss(),
     sveltekit(),
     partytownVite({
       // `dest` specifies where files are copied to in production

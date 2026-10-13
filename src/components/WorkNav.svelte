@@ -105,7 +105,7 @@
 			</svg> Home
 		</button>
 		<div class="con-effect">
-			<div class="effect bg-slate-100 bg-opacity-80 rounded-xl"></div>
+			<div class="effect bg-slate-100/80 rounded-xl"></div>
 		</div>
 		<ul>
 			{#each links as link (link.id)}

@@ -152,13 +152,13 @@
 	>
 		<div
 			id="main-navigation"
-			class="main-navbar shadow-custom rounded-2xl bg-zinc-100 bg-opacity-80 backdrop-blur"
+			class="main-navbar shadow-custom rounded-2xl bg-zinc-100/80 backdrop-blur-sm"
 			role="navigation"
 			aria-label="Main Navigation"
 		>
 			<div class="menu-effect-container">
 				<div
-					class="menu-effect bg-red-500 bg-opacity-80 min-w-90px rounded-xl"
+					class="menu-effect bg-red-500/80 min-w-90px rounded-xl"
 					style="left: {effectX}px; width: {effectWidth}px;"
 				></div>
 			</div>
@@ -254,7 +254,7 @@
 		aria-label="Open menu"
 		aria-expanded={isMobileMenuOpen}
 		aria-controls="mobile-menu"
-		class="text-gray-500 focus:outline-none"
+		class="text-gray-500 focus:outline-hidden"
 	>
 		<!--svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -268,14 +268,14 @@
 	id="mobile-menu"
 	role="navigation"
 	aria-label="Mobile Navigation"
-	class="fixed inset-0 bg-zinc-100 bg-opacity-90 backdrop-blur z-50 flex flex-col items-center justify-center space-y-8"
+	class="fixed inset-0 bg-zinc-100/90 backdrop-blur-sm z-50 flex flex-col items-center justify-center space-y-8"
 >
 	<!-- Close Button -->
 	<button
 		type="button"
 		on:click={toggleMobileMenu}
 		aria-label="Close menu"
-		class="absolute top-4 right-4 text-slate-600 focus:outline-none"
+		class="absolute top-4 right-4 text-slate-600 focus:outline-hidden"
 	>
 		<!--svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>

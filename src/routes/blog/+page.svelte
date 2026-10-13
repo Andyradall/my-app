@@ -53,12 +53,12 @@
 					<div class="mx-auto">
 						<h1 class="font-euclid max-w-xs md:max-w-4xl pl-2 text-left">
 							<span
-								class="mx-auto block font-bold text-5xl md:text-6xl leading-[4rem] md:leading-[8.5rem] pb-2 md:pb-2 text-slate-600"
+								class="mx-auto block font-bold text-5xl md:text-6xl leading-16 md:leading-34 pb-2 md:pb-2 text-slate-600"
 							>
 								Blog
 							</span>
 							<span
-								class="mx-auto block font-semibold text-3xl md:text-[2.15rem] leading-[3.5rem] text-slate-600"
+								class="mx-auto block font-semibold text-3xl md:text-[2.15rem] leading-14 text-slate-600"
 							>
 								Reflections on my journey in design and code. 
 							</span>
@@ -78,7 +78,7 @@
 					{#if post.slug && post.slug.current}
 						<a
 							href={`/blog/${post.slug.current}`}
-							class="blog-card col-span-1 w-full md:w-1/2 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom pt-10 pb-10"
+							class="blog-card col-span-1 w-full md:w-1/2 rounded-3xl bg-zinc-100/75 backdrop-blur-xs shadow-custom pt-10 pb-10"
 						>
 							<span class="font-euclid font-medium text-lg text-slate-500 px-10"
 								>{new Date(post.publishedAt).toLocaleDateString(undefined, {
@@ -102,7 +102,7 @@
 				  {#if post.slug && post.slug.current}
 					<a
 					  href={`/blog/${post.slug.current}`}
-					  class="blog-card  col-span-1 w-full md:w-1/2 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm shadow-custom"
+					  class="blog-card  col-span-1 w-full md:w-1/2 rounded-3xl bg-zinc-100/75 backdrop-blur-xs shadow-custom"
 					>
 					  <!-- Image at the top of the card -->
 					  <img

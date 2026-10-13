@@ -32,7 +32,7 @@
       <section class="grid grid-cols-1 md:grid-cols-12 items-start gap-10">
           {#each testimonials as testimonial (testimonial._id)}
               <div
-                  class="testimonial-card md:col-span-4 p-8 rounded-3xl bg-zinc-100 bg-opacity-100 backdrop-blur-sm shadow-custom"
+                  class="testimonial-card md:col-span-4 p-8 rounded-3xl bg-zinc-100 backdrop-blur-xs shadow-custom"
               >
                   <div class="testimonial-content mb-4">
                       <p class="font-euclid text-lg text-slate-500">{testimonial.testimonialText}</p>

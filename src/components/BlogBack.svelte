@@ -26,7 +26,7 @@ onMount(() => {
 
 <div id="backButton" class="absolute top-0 m-[2vw] z-20" class:hide-backButton={hideButton}>
     <button
-      class="back text-slate-700 bg-slate-100 bg-opacity-80 hover:text-slate-550 rounded-xl font-euclid text-[16px] font-normal flex items-center justify-center w-24 h-9"
+      class="back text-slate-700 bg-slate-100/80 hover:text-slate-550 rounded-xl font-euclid text-[16px] font-normal flex items-center justify-center w-24 h-9"
       onclick={() => (window.location.href = '/blog')}
       aria-label="Back to blog"
       type="button"

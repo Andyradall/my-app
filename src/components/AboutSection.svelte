@@ -5,7 +5,7 @@
 		<div class="mx-auto">
 			<h2 class="font-euclid text-center">
 				<span
-					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-[4rem] md:leading-[8.2rem] pb-4 md:pb-6 text-slate-600"
+					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-16 md:leading-[8.2rem] pb-4 md:pb-6 text-slate-600"
 				>
 				A technical creative with years of experience
 				</span>
@@ -22,7 +22,7 @@
 		<section class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-0">
 			<!-- Text Card -->
 			<div
-				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100 bg-opacity-75 backdrop-blur-sm outline-4 outline-offset-[-4px] outline-zinc-350/30 p-6 md:p-10"
+				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100/75 backdrop-blur-xs outline-4 -outline-offset-4 outline-zinc-350/30 p-6 md:p-10"
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">From a young age</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
@@ -41,7 +41,7 @@
 
 			<!-- Image Card -->
 			<div
-				class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden outline-2 outline-offset-[-4px] outline-zinc-350/30 rounded-3xl"
+				class="image-card card-two shadow-custom col-span-1 md:col-span-6 flex justify-center items-center overflow-hidden outline-2 -outline-offset-4 outline-zinc-350/30 rounded-3xl"
 			>
 				<img
 					class="object-cover w-full max-h-[560px] h-full"

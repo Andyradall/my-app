@@ -152,7 +152,7 @@
 			</p>
 		</div>
 	</section>
-	<section class="bg-slate-800 bg-opacity-95 text-zinc-150 md:pb-20">
+	<section class="bg-slate-800/95 text-zinc-150 md:pb-20">
 		<div class="max-w-2xl pt-20 mx-auto">
 			<h2 class="pb-4">Research: Customer journey mapping</h2>
 			<h3 class="">Explore all possible options</h3>
@@ -372,7 +372,7 @@
 
 	<section
 		id="third"
-		class="pageSection bg-slate-800 bg-opacity-95 text-zinc-150 py-10 md:py-24 px-4"
+		class="pageSection bg-slate-800/95 text-zinc-150 py-10 md:py-24 px-4"
 	>
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Test Drive my Final Prototype.</h2>
@@ -464,6 +464,8 @@
 </footer>
 
 <style lang="postcss">
+	@reference "../../../global.css";
+
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];
 	}

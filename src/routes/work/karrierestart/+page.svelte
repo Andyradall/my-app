@@ -69,7 +69,7 @@
 			<h1 class="text-[2.95rem] md:text-7xl font-euclid font-black text-slate-600 md:py-4">
 				Karrierestart
 				<span
-					class="block text-[2rem] leading-[3rem] md: md:text-4xl font-euclid font-medium text-slate-500 md:py-4"
+					class="block text-[2rem] leading-12 md: md:text-4xl font-euclid font-medium text-slate-500 md:py-4"
 				>
 					<br />Improving the Onboarding Experience for Job Portal</span
 				>
@@ -136,7 +136,7 @@
 		<WorkNav {links} />
 	</section>
 
-	<section id="first" class="pageSection bg-slate-100 bg-opacity-20 py-10 px-4 md:py-20">
+	<section id="first" class="pageSection bg-slate-100/20 py-10 px-4 md:py-20">
 		<div class="md:max-w-2xl mx-auto">
 			<h2 class="pb-2">Doing Research in Covid Lockdown</h2>
 			<p>
@@ -212,7 +212,7 @@
 		</div>
 	</section>
 
-	<section class=" bg-slate-800 bg-opacity-95 text-zinc-150">
+	<section class=" bg-slate-800/95 text-zinc-150">
 		<figure class="sm:max-w-6xl mx-auto py-20">
 			<img src="/images/karrierestart/hook.webp" class="zooming-dark-bg" alt="Nir Eyal summary" />
 		</figure>
@@ -265,7 +265,7 @@
 		</figure>
 	</section>
 
-	<section id="third" class="pageSection bg-slate-100 bg-opacity-20 py-10 md:py-16 px-4 mx-auto">
+	<section id="third" class="pageSection bg-slate-100/20 py-10 md:py-16 px-4 mx-auto">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Variable rewards and nudges. Messages, badges, likes and followers.</h2>
 
@@ -298,7 +298,7 @@
 		</figure>
 	</section>
 
-	<section id="fourth" class="pageSection py-10 md:py-20 mx-auto px-4 bg-slate-100 bg-opacity-20">
+	<section id="fourth" class="pageSection py-10 md:py-20 mx-auto px-4 bg-slate-100/20">
 		<div class="max-w-2xl mx-auto">
 			<h2 class="pb-2">Stories and Guides</h2>
 			<p class="pb-4 md:pb-2">
@@ -379,6 +379,8 @@
 </footer>
 
 <style lang="postcss">
+	@reference "../../../global.css";
+
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];
 	}
