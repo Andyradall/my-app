@@ -26,6 +26,7 @@
   });
   
 
+// console.log(data);
 // console.log("BlockText imported successfully", BlockText);
 // console.log(JSON.stringify(data.posts.body, null, 2));
 </script>

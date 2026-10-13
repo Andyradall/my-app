@@ -53,7 +53,7 @@
 {/key} 
 
 <svelte:head>
-	<!-- Config options (GTM allows CORS from our domain, so no proxy is needed) -->
+	<!-- Config options -->
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {

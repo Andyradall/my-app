@@ -2,6 +2,7 @@
   import type { Snippet } from 'svelte';
   import type { BlockComponentProps } from '@portabletext/svelte';
 
+  // Accept the portableText prop
   interface Props {
     portableText: BlockComponentProps;
     children?: Snippet;
@@ -9,12 +10,19 @@
 
   let { portableText, children }: Props = $props();
 
+  // Destructure needed properties from portableText
   // `spans` is the block's own content array; `children` is the rendered snippet
   let value = $derived(portableText.value);
   let style = $derived(value.style);
   let spans = $derived(value.children);
   // Legacy 'link' blocks carry an href directly on the block
   let href = $derived((value as { href?: string }).href);
+
+  // Optional: Check if the block is preceded by a heading, similar to the example
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  let precededByHeading = $derived(
+    ['h1', 'h2', 'h3', 'h4', 'h5'].includes((spans?.[0] as { style?: string })?.style ?? '')
+  );
 </script>
 <!-- Optimized Render Logic -->
 {#if style === 'h2'}
@@ -30,3 +38,9 @@
   <!-- Fallback for unhandled styles -->
   <div class="font-euclid text-base text-red">{@render children?.()}</div>
 {/if}
+
+<!--
+{:else if style === 'link'}
+  <a href={value.href} target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">{children[0]?.text}</a>
+{:else}
+-->
