@@ -17,6 +17,7 @@
 		"node": "22.x"
 	},
 	"devDependencies": {
+		"@sanity/types": "^6.18.0",
 		"@sveltejs/adapter-vercel": "^6.0.0",
 		"@sveltejs/kit": "^2.70.3",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
@@ -40,9 +41,8 @@
 		"@hotjar/browser": "^1.0.9",
 		"@portabletext/svelte": "^4.0.0",
 		"@qwik.dev/partytown": "^1.0.0",
-		"@sanity/client": "^6.22.4",
-		"@sanity/image-url": "^1.1.0",
-		"@sanity/types": "^3.64.1",
+		"@sanity/client": "^8.9.0",
+		"@sanity/image-url": "^2.1.1",
 		"animejs": "^3.2.1",
 		"gsap": "^3.12.2",
 		"lightgallery": "^2.8.1",
