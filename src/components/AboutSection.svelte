@@ -43,10 +43,10 @@
 			>
 				<img
 					class="object-cover w-full max-h-[560px] h-full"
-					alt="Profile"
-					src="/images/about/profile0.webp"
-					height="620px"
-					width="622.5px"
+					alt="Anders Rådal smiling and dancing"
+					src="/images/about/profile1.webp"
+					height="620"
+					width="620"
 					style="object-position: center center;"
 				/>
 				<!--img
