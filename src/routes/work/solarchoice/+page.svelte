@@ -439,7 +439,7 @@
 		</div>
 	</section>
 
-	<section class="py-12 md:py-20 px-4 bbg-slate-100">
+	<section class="py-12 md:py-20 px-4 bg-slate-100/20">
 		<div class="mx-auto sm:max-w-2xl pb-2">
 			<h2>Webpage Mockups</h2>
 			<p>

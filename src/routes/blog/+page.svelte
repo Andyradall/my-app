@@ -6,6 +6,7 @@
 	import OnMount from '../../components/OnMount.svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import SvelteSeo from 'svelte-seo';
 
 	let blogPosts = $state([]);
 
@@ -29,6 +30,34 @@
 		blogPosts = await client.fetch(query);
 	});
 </script>
+
+<SvelteSeo
+	title="Blog by Anders Rådal"
+	description="Reflections on my journey in design and code."
+	canonical="https://www.andersra.com/blog"
+	openGraph={{
+		title: 'Blog by Anders Rådal',
+		description: 'Reflections on my journey in design and code.',
+		images: [
+			{
+				url: 'https://www.andersra.com/images/thumbs/PageThumb.webp',
+				width: 500,
+				height: 333,
+				alt: 'Page Thumbnail'
+			}
+		],
+		url: 'https://www.andersra.com/blog',
+		type: 'website'
+	}}
+	twitter={{
+		card: 'summary_large_image',
+		site: '@AndersRadal',
+		title: 'Blog by Anders Rådal',
+		description: 'Reflections on my journey in design and code.',
+		image: 'https://www.andersra.com/images/thumbs/PageThumb.webp'
+	}}
+/>
+
 <header class="relative">
 	<div class="absolute top-0 left-0">
 	</div>
