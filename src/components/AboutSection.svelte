@@ -22,18 +22,20 @@
 			<div
 				class="text-card card-one shadow-custom col-span-1 md:col-span-6 rounded-3xl bg-zinc-100/75 backdrop-blur-xs p-6 md:p-10"
 			>
-				<h2 class="font-euclid text-3xl font-semibold pb-3">From a young age</h2>
+				<h2 class="font-euclid text-3xl font-semibold pb-3">Youth</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
-					Born in 84, I grew up building computers and playing games like Wolfenstein. I remember
-					pulling a network cable across my parents lawn to download music and chat on IRC. I have
-					also always been creative and interested in art and design.
+					Born in ’84, I grew up building computers and pirating games on floppy disks between
+					friends. I remember pulling a Cat5 cable across my parents’ lawn for web access to chat on
+					IRC. Art, spiritual development and design are my main passions in life.
 				</p>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Design with Impact</h2>
 				<p class="font-euclid font-normal pb-4 text-lg">
-					I fell in love with Interaction design when I realised it allowed me to mix coding,
-					creativity, and business strategy all into one, it was like the stars aligned and it just
-					made sense. In my work, I aim for solutions that look good, works well for the users and
-					support business growth.
+					Interaction design allows me to work creatively with technology and business strategy. It
+					was like the stars aligned when I discovered it – everything suddenly made sense!
+				</p>
+				<p class="font-euclid font-normal pb-4 text-lg">
+					I’d love to help you get the same feeling, discover your core passion and communicate it
+					in a way that resonates with your audience.
 				</p>
 			</div>
 

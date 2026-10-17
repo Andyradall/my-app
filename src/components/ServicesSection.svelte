@@ -14,12 +14,12 @@
 				<span
 					class="mx-auto block max-w-2xl md:max-w-6xl font-bold text-5xl md:text-8xl leading-16 md:leading-34 pb-4 md:pb-10 text-zinc-100"
 				>
-					I will help you grow and perform on the web!
+					I will help you grow and perform on the web
 				</span>
 				<span
 					class="mx-auto block font-semibold text-3xl md:text-[2.375rem] max-w-xs md:max-w-3xl leading-14 text-zinc-100"
 				>
-					I create clear and beautiful websites that drive sales and your users love!
+					Clear and beautiful websites that reach your audience and drive sales
 				</span>
 			</h2>
 		</div>
@@ -31,10 +31,11 @@
 		>
 			<!-- Card Header -->
 			<header class="text-left">
-				<h2 class="font-euclid text-3xl font-semibold pb-2">Services</h2>
+				<h2 class="font-euclid text-3xl font-semibold pb-2">
+					Services – From pixel to performance
+				</h2>
 				<p class="font-euclid font-normal max-w-3xl text-lg">
-					My creative and technical toolbox that I use in my projects. This assets allow me to
-					decipher complexity and chaos, and to end up with clear and performant solutions.
+					Assets I use to reduce complexity and chaos, and develop clear and performant solutions.
 				</p>
 			</header>
 
@@ -85,9 +86,9 @@
 					<ul class="text-center font-euclid text-base space-y-2">
 						<li><h3 class="text-lg font-bold">User Centred Design</h3></li>
 						<li>Websites</li>
-						<li>Applications</li>
-						<li>Brand Design</li>
-						<li>Enterprise Design</li>
+						<li>Apps</li>
+						<li>Branding</li>
+						<li>Enterprise Solutions</li>
 					</ul>
 				</article>
 				<!-- Skill: Facilitation -->
@@ -112,10 +113,10 @@
 						<li>User Testing</li>
 						<li>Design Sprints</li>
 						<li>Workshops</li>
-						<li>Agile Workflow</li>
+						<li>Mindfulness</li>
 					</ul>
 				</article>
-				<!-- Skill: Figma -->
+				<!-- Skill: Design Systems (Figma) -->
 				<article class="skill flex-1 min-w-[180px] m-1 p-4">
 					<div class="skill-image flex justify-center my-2 py-2">
 						<svg
@@ -142,11 +143,11 @@
 						</svg>
 					</div>
 					<ul class="text-center font-euclid text-base space-y-2">
-						<li><h3 class="text-lg font-bold">Figma</h3></li>
-						<li>Design Systems</li>
-						<li>Components</li>
+						<li><h3 class="text-lg font-bold">Design Systems</h3></li>
+						<li>Figma</li>
+						<li>Component-driven approach</li>
 						<li>Prototyping</li>
-						<li>Handoff & QA</li>
+						<li>Handoff & QA to your developer, or I build the full solution for you</li>
 					</ul>
 				</article>
 				<!-- Skill: Development -->
@@ -167,10 +168,9 @@
 					</div>
 					<ul class="text-center font-euclid text-base space-y-2">
 						<li><h3 class="text-lg font-bold">Development</h3></li>
-						<li>Accessibility & SEO</li>
-						<li>Responsive Design</li>
-
-						<li>HTML5, CSS, JS, Wordpress, SvelteKit, Tailwind, Sanity, Git,</li>
+						<li>Tailored stacks for your goals</li>
+						<li>WordPress (Bricks or Breakdance), Shopify, Mailchimp.</li>
+						<li>Code: HTML, CSS, JS, Svelte, React, Tailwind, Sanity, Git.</li>
 					</ul>
 				</article>
 			</div>

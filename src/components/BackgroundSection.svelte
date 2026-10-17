@@ -6,6 +6,14 @@
 	import 'swiper/css/pagination';
 	import { resumeLink } from '../lib/resumeLink.js';
 
+	// Spam protection: the address is split up and only assembled on click,
+	// so it never appears as one string in the HTML or the JS bundle.
+	const emailParts = ['andershr2', 'gmail.com'];
+
+	function sendEmail() {
+		window.location.href = `mailto:${emailParts.join('@')}`;
+	}
+
 	onMount(() => {
 		new Swiper('.mySwiper', {
 			modules: [Autoplay, Pagination],
@@ -46,49 +54,53 @@
 			<!-- Text Section -->
 			<div class="split-card-text w-full md:w-1/2 py-4 px-6 md:px-8">
 				<h2 class="font-euclid text-3xl font-semibold my-4">Education</h2>
+				<p class="font-euclid font-normal text-lg pb-4">
+					I hold a BSc with First-class Honours, focused on innovation and interaction design.
+					Design lead diploma from Hyper Island. An ongoing mindfulness teacher education finishing
+					summer 2027.
+				</p>
 				<p class="font-euclid font-normal text-lg">
-					I finished my <strong>Interaction Design</strong> studies in 2019. Here I learned both
-					coding and user centred design. I never stop learning, and completed the
-					<strong>Design Lead</strong> study at Hyper Island in 2023. A hybrid work/school environment
-					where we focused both on brand design, and on building soft skills like performance in teams
-					and leadership.
+					I’m currently developing my own application combining AI with biometrics and timeless
+					Eastern wisdom traditions.
+				</p>
+				<h2 class="font-euclid text-3xl font-semibold mt-8 mb-4">Rå Design – Anders Rådal</h2>
+				<p class="font-euclid font-normal text-lg pb-4">
+					Currently offering my services as a freelance studio.
+				</p>
+				<p class="font-euclid font-normal text-lg">
+					Contact me if you are serious about figuring it out and growing your presence online.
 				</p>
 
-				<h2 class="font-euclid text-3xl font-semibold my-4">Work</h2>
-				<p class="font-euclid font-normal text-lg">
-					I worked at Studenttorget from 2019 with UX and product design. Here, I refined the user
-					experience on <strong>Karrierestart.no</strong>, leading to a 75% growth in users and
-					increased engagement. I recently did an internship at
-					<strong>Netlife Design</strong>, where I designed an administrator area for the tool,
-					Designmaskinen.
-				</p>
-
-				<div class="flex justify-center">
-					<button
-						class="inline-flex items-center bg-red-500/80 font-euclid font-medium text-zinc-100 hover:text-zinc-100 my-10 pt-3 pb-3 px-6 rounded-xl transition-all mx-auto"
+				<div class="flex flex-wrap gap-4 my-8">
+					<a
+						href={resumeLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="View my Resumé, opens in a new window"
+						class="resume-btn-custom-link inline-flex items-center justify-center min-w-[200px] border border-red-500/80 bg-zinc-100/60 font-euclid font-medium text-red-500 py-3 px-6 rounded-xl transition-all hover:bg-zinc-100"
 					>
-						<a
-							href={resumeLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label="View my Full Resumé"
-							class="resume-btn-custom-link flex items-center translate-y-[0.5px] translate-x-px"
-						>
-							View my Full Resumé
-							<span class="resume-btn-svg-icon ml-0.5 transition-transform">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									height="20"
-									viewBox="0 -960 960 960"
-									width="20"
-								>
-									<path
-										d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
-										fill="currentColor"
-									/>
-								</svg>
-							</span>
-						</a>
+						View my Resumé
+						<span class="resume-btn-svg-icon ml-0.5 transition-transform">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="20"
+								viewBox="0 -960 960 960"
+								width="20"
+								aria-hidden="true"
+							>
+								<path
+									d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
+									fill="currentColor"
+								/>
+							</svg>
+						</span>
+					</a>
+					<button
+						type="button"
+						onclick={sendEmail}
+						class="inline-flex items-center justify-center min-w-[200px] bg-red-500/80 font-euclid font-medium text-zinc-100 py-3 px-6 rounded-xl transition-all hover:bg-red-500"
+					>
+						Send me an email
 					</button>
 				</div>
 			</div>
@@ -101,12 +113,12 @@
 			>
 				<h2 class="font-euclid text-3xl font-semibold pb-3">Life Beyond Pixels</h2>
 				<p class="font-euclid font-normal text-lg pb-4">
-					I live in Oslo close to nature, and enjoy to go skiing in the Nordmarka forest, or
-					starting the day with a jog in the park with our dog.
+					I am a cross-country ski bum, living in a co-living project at Oslo Science Park, close to
+					the forest. I love to go into nature to find calm and reflect between projects.
 				</p>
 				<p class="font-euclid font-normal text-lg">
-					I am also very interested in meditation and yoga. It allows me to step into a very focused
-					state that opens up for creativity and flow.
+					A daily yoga and mindfulness practice allows me to step into a state where noise melts
+					away and I am left with creativity and focused flow.
 				</p>
 			</div>
 
