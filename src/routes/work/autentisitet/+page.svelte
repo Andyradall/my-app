@@ -22,9 +22,9 @@
 	const links = [
 		{ id: '#brand', title: 'Brand Exploration', ariaLabel: 'Brand Exploration' },
 		{ id: '#design', title: 'Design & Feedback', ariaLabel: 'Design & Feedback' },
-		{ id: '#surfaces', title: 'One Brand, Every Surface', ariaLabel: 'One Brand, Every Surface' },
-		{ id: '#build', title: 'Building with Bricks', ariaLabel: 'Building with Bricks' },
-		{ id: '#calendar', title: 'Events Calendar', ariaLabel: 'Events Calendar' },
+		{ id: '#surfaces', title: 'Every Surface', ariaLabel: 'Every Surface' },
+		{ id: '#build', title: 'Bricks', ariaLabel: 'Bricks' },
+		{ id: '#calendar', title: 'Events', ariaLabel: 'Events' },
 		{ id: '#results', title: 'Results', ariaLabel: 'Results' },
 		{ id: '#reflections', title: 'Reflections', ariaLabel: 'Reflections' }
 	];
@@ -256,6 +256,8 @@ add_action('wp_head', function () {
 			<div class="flex items-center justify-center h-full">
 				<img
 					src="{img}mockup.webp"
+					srcset="{img}mockup-640.webp 640w, {img}mockup-960.webp 960w, {img}mockup.webp 1315w"
+					sizes="(min-width: 768px) 576px, calc(100vw - 32px)"
 					width="1315"
 					height="924"
 					fetchpriority="high"
@@ -335,6 +337,8 @@ add_action('wp_head', function () {
 			<!-- svelte-ignore a11y_img_redundant_alt (alt text is verbatim from images.md; "photo" describes the content) -->
 			<img
 				src="{img}old-site.webp"
+				srcset="{img}old-site-900.webp 900w, {img}old-site.webp 1145w"
+				sizes="(min-width: 928px) 896px, calc(100vw - 32px)"
 				width="1145"
 				height="1045"
 				loading="lazy"

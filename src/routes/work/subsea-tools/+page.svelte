@@ -190,7 +190,8 @@
 			<div class="flex items-center justify-center h-full">
 				<img
 					src="/images/subsea-tools/subsea-intro-mockup.webp"
-					srcset="/images/subsea-tools/subsea-intro-mockup.webp 1x, /images/subsea-tools/subsea-intro-mockup@2x.webp 2x"
+					srcset="/images/subsea-tools/subsea-intro-mockup.webp 576w, /images/subsea-tools/subsea-intro-mockup-760.webp 760w, /images/subsea-tools/subsea-intro-mockup@2x.webp 1152w"
+					sizes="(min-width: 768px) 576px, calc(100vw - 32px)"
 					width="576"
 					height="457"
 					fetchpriority="high"
