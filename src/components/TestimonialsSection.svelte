@@ -39,10 +39,14 @@
 						<p class="font-euclid text-lg text-slate-500">{testimonial.testimonialText}</p>
 					</div>
 					<div class="testimonial-user flex items-center space-x-4">
+						<!-- Decorative: the name is right next to it. Sanity's CDN scales it to 2x the display size -->
 						<img
 							class="w-12 h-12 rounded-full testimonial-img"
-							alt="User Img"
-							src={testimonial.userImage.asset.url}
+							alt=""
+							src={`${testimonial.userImage.asset.url}?w=96&h=96&fit=crop&auto=format`}
+							width="48"
+							height="48"
+							loading="lazy"
 						/>
 						<div>
 							<div class="text-sm font-bold">{testimonial.userName}</div>
