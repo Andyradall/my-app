@@ -10,6 +10,16 @@ export const caseStudies = [
 		alt: 'Subsea.tools front page on a desktop monitor'
 	},
 	{
+		title: 'Autentisitet.no',
+		href: '/work/autentisitet',
+		ariaLabel: 'Autentisitet.no Case Study',
+		category: 'BRANDING | WEB DESIGN | DEVELOPMENT | 2025',
+		image: '/images/thumbs/autthumb800500.webp',
+		imageDesktop: '/images/thumbs/autthumb620387.webp',
+		imageMobile: '/images/thumbs/autthumb380237.webp',
+		alt: 'Autentisitet.no front page on a laptop'
+	},
+	{
 		title: 'Designmaskinen',
 		href: '/work/designmaskinen',
 		ariaLabel: 'Designmaskinen Case Study',

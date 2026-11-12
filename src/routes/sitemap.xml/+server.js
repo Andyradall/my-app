@@ -1,6 +1,7 @@
 export async function GET() {
 	const pages = [
 		'/',
+		'/work/autentisitet',
 		'/work/designmaskinen',
 		'/work/karrierestart',
 		'/work/smab',
