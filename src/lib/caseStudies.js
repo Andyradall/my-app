@@ -1,5 +1,15 @@
 export const caseStudies = [
 	{
+		title: 'Subsea.tools',
+		href: '/work/subsea-tools',
+		ariaLabel: 'Subsea.tools Case Study',
+		category: 'BRANDING | WEB DESIGN | DEVELOPMENT | 2025',
+		image: '/images/thumbs/subsea-thumb-800x500.webp',
+		imageDesktop: '/images/thumbs/subsea-thumb-620x387.webp',
+		imageMobile: '/images/thumbs/subsea-thumb-380x237.webp',
+		alt: 'Subsea.tools front page on a desktop monitor'
+	},
+	{
 		title: 'Designmaskinen',
 		href: '/work/designmaskinen',
 		ariaLabel: 'Designmaskinen Case Study',

@@ -43,7 +43,8 @@
 			return false;
 		});
 
-		currentActiveId = activeSection ? activeSection.id : sections[0].id;
+		// `sections` is reversed (bottom-up), so the fallback above the first section is the last item
+		currentActiveId = activeSection ? activeSection.id : sections[sections.length - 1].id;
 		animateIndicator();
 	}
 
@@ -164,6 +165,7 @@
 		align-items: center;
 		justify-content: space-evenly;
 		width: 100%;
+		min-width: 0;
 		background: #fff;
 	}
 
@@ -180,7 +182,11 @@
 	}
 
 	.header-navbar li {
-		width: 200px;
+		/* As wide as its label, free space shared evenly by the ul; wraps only as a last resort */
+		flex: 0 1 auto;
+		min-width: 0;
+		padding: 0 0.75rem;
+		text-align: center;
 		height: 48px;
 		display: flex;
 		align-items: center;
@@ -197,6 +203,28 @@
 		color: #536067;
 		font-size: 16px;
 		text-decoration: none;
+	}
+
+	/* Smaller screens: less side margin and slightly smaller labels so they stay on one line */
+	@media screen and (max-width: 1279px) {
+		.header-navbar ul {
+			margin: 0 1rem;
+		}
+		.header-navbar li {
+			padding: 0 0.5rem;
+		}
+		.header-navbar a {
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (max-width: 899px) {
+		.header-navbar li {
+			padding: 0 0.25rem;
+		}
+		.header-navbar a {
+			font-size: 13px;
+		}
 	}
 
 	.header-navbar a.active {
