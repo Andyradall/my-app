@@ -22,7 +22,7 @@
 			>
 			<span class="sr-only">to</span>
 		{/if}
-		<span class="text-7xl leading-none font-medium text-zinc-100">{score}</span>
+		<span class="text-7xl leading-none font-medium" style="color: #0CCE6B">{score}</span>
 	</span>
 	<span class="text-sm font-light">{details}</span>
 	<span class="text-sm font-light text-zinc-300">{lcp}</span>

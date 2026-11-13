@@ -40,9 +40,9 @@
 		description: 'Reflections on my journey in design and code.',
 		images: [
 			{
-				url: 'https://www.andersra.com/images/thumbs/PageThumb.webp',
-				width: 500,
-				height: 333,
+				url: 'https://www.andersra.com/images/thumbs/og-front.webp',
+				width: 1200,
+				height: 630,
 				alt: 'Page Thumbnail'
 			}
 		],
@@ -54,7 +54,7 @@
 		site: '@AndersRadal',
 		title: 'Blog by Anders Rådal',
 		description: 'Reflections on my journey in design and code.',
-		image: 'https://www.andersra.com/images/thumbs/PageThumb.webp'
+		image: 'https://www.andersra.com/images/thumbs/og-front.webp'
 	}}
 />
 

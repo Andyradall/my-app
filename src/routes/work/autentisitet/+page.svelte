@@ -204,13 +204,36 @@ add_action('wp_head', function () {
 	<section class="md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
 			<h1
-				class="text-[2.75rem] min-[380px]:text-[3rem] md:text-7xl font-euclid font-bold text-slate-600 py-4"
+				class="text-[2.75rem] min-[380px]:text-[3rem] md:text-7xl leading-tight font-euclid font-bold text-slate-600 py-4"
 			>
 				Autentisitet.no
-				<span class="text-[2rem] md:text-4xl font-euclid font-medium text-slate-500 py-4"
+				<span class="text-[2rem] md:text-4xl leading-tight font-euclid font-medium text-slate-500"
 					><br />Brand, Design & a 100/100 Bricks Build</span
 				>
 			</h1>
+			<a
+				href="https://autentisitet.no"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Visit autentisitet.no, opens in a new window"
+				class="live-link inline-flex items-center font-euclid font-medium text-lg text-red-500 hover:text-red-550 mt-2"
+			>
+				Visit autentisitet.no
+				<span class="live-link-icon ml-0.5 transition-transform">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="20"
+						viewBox="0 -960 960 960"
+						width="20"
+						aria-hidden="true"
+					>
+						<path
+							d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
+							fill="currentColor"
+						/>
+					</svg>
+				</span>
+			</a>
 		</div>
 	</section>
 
@@ -222,15 +245,16 @@ add_action('wp_head', function () {
 			<h2 class="pb-2">Introducing Autentisitet.no</h2>
 			<ul class="text-[18px] font-euclid font-light leading-[30px] pr-1 space-y-5">
 				<li>
-					Andreas Aubert is a life coach, psychotherapist and group facilitator. Through
-					Autentisitet.no he offers a 12-week one-to-one programme, breathwork groups and courses,
-					and men's groups. It started with events: in July 2025 we hosted Freedom Breathwork in the
-					garden of my shared house, and in September a second session followed "by popular demand".
+					Andreas Aubert is a teacher, coach and writer. Through Autentisitet.no he offers a 12-week
+					one-to-one programme, breathwork groups and courses, and men's groups. It started with
+					events: in July 2025 we hosted Freedom Breathwork in the garden of my shared house, and in
+					September a second session followed "by popular demand".
 				</li>
 				<li>
 					<strong class="font-semibold">Starting point:</strong> The old site still went by "Unfolding
 					Authenticity", ran on a dated WordPress theme and leaned on stock photos, with Lato and a pale
-					olive palette. It said little about what Andreas actually offers.
+					olive palette. Built in an outdated page builder, it was also slow. It said little about what
+					Andreas actually offers.
 				</li>
 				<li>
 					<strong class="font-semibold">Project Brief & Objectives:</strong> Rebuild autentisitet.no to
@@ -480,10 +504,9 @@ add_action('wp_head', function () {
 			<h3>Mixing a new green</h3>
 			<p>
 				With 01 too dark and 02 too loud, the calm third direction became the base, and the job was
-				to keep it from being bland. I had two candidate greens: a reference green that was a nice
-				shade but too warm and muddy, and a suggestion with exactly the right depth that was a touch
-				too cold. So I mixed one in between, then matched a yellow to it and built the background
-				and text shades from the pair.
+				to keep it from being bland. I had two candidate greens: one was a nice shade but too warm
+				and muddy, the other had exactly the right depth but was a touch too cold. So I mixed one in
+				between, then matched a yellow to it and built the background and text shades from the pair.
 			</p>
 		</div>
 		<div class="max-w-6xl mx-auto mt-10">
@@ -1248,6 +1271,15 @@ add_action('wp_head', function () {
 
 <style lang="postcss">
 	@reference "../../../global.css";
+
+	/* Live-site link under the title */
+	.live-link-icon {
+		transform: translateY(-1px);
+		transition: transform 0.08s;
+	}
+	.live-link:hover .live-link-icon {
+		transform: translateY(-2.5px) translateX(2px);
+	}
 
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];

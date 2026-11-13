@@ -140,12 +140,35 @@
 	<!-- Hero title -->
 	<section class="md:max-w-6xl mx-auto justify-center px-4 pt-40 pb-20">
 		<div>
-			<h1 class="text-[3rem] md:text-7xl font-euclid font-bold text-slate-600 py-4">
+			<h1 class="text-[3rem] md:text-7xl leading-tight font-euclid font-bold text-slate-600 py-4">
 				Subsea.tools
-				<span class="text-[2rem] md:text-4xl font-euclid font-medium text-slate-500 py-4"
+				<span class="text-[2rem] md:text-4xl leading-tight font-euclid font-medium text-slate-500"
 					><br />A One-Stop Shop for Subsea Operations</span
 				>
 			</h1>
+			<a
+				href="https://subsea.tools"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Visit subsea.tools, opens in a new window"
+				class="live-link inline-flex items-center font-euclid font-medium text-lg text-red-500 hover:text-red-550 mt-2"
+			>
+				Visit subsea.tools
+				<span class="live-link-icon ml-0.5 transition-transform">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="20"
+						viewBox="0 -960 960 960"
+						width="20"
+						aria-hidden="true"
+					>
+						<path
+							d="M215.522-152.348 151.869-216l460.892-460.891H356.413v-91h411v411h-91v-256.348L215.522-152.348Z"
+							fill="currentColor"
+						/>
+					</svg>
+				</span>
+			</a>
 		</div>
 	</section>
 
@@ -938,7 +961,7 @@
 				<img
 					src="/images/subsea-tools/live-contact.webp"
 					width="800"
-					height="1000"
+					height="1600"
 					loading="lazy"
 					class="{thumb} zooming-white-bg"
 					alt="Contact page: hero 'Talk to an engineer, not a call centre', a request form beside a dark card with email, phone and address, and a named contact below"
@@ -1065,11 +1088,11 @@
 				height="867"
 				loading="lazy"
 				class="w-full h-auto rounded-md zooming-white-bg"
-				alt="Braaten Technology's stand at a subsea symposium in Brazil: a dark wall with two load monitors under the heading 'SLM, Monitor de carga subáquatica', a screen, and a counter with the Braaten and Subsea.tools logos and a laptop showing the Subsea.tools front page"
+				alt="Braaten Technology's stand at a subsea symposium in Brazil: a dark wall with two load monitors under the heading 'SLM, Monitor de carga subáquatica', a screen showing the SLM Benchmark product page on Subsea.tools, and a counter with the Braaten and Subsea.tools logos and a laptop showing the Subsea.tools front page"
 			/>
 			<figcaption>
-				Braaten's stand in Brazil, November 2025, with Subsea.tools on the counter and on the
-				laptop.
+				Braaten's stand in Brazil, November 2025, with Subsea.tools on the counter, on the laptop
+				and on the screen.
 			</figcaption>
 		</figure>
 	</section>
@@ -1120,6 +1143,15 @@
 
 <style lang="postcss">
 	@reference "../../../global.css";
+
+	/* Live-site link under the title */
+	.live-link-icon {
+		transform: translateY(-1px);
+		transition: transform 0.08s;
+	}
+	.live-link:hover .live-link-icon {
+		transform: translateY(-2.5px) translateX(2px);
+	}
 
 	h2 {
 		@apply text-[34px] font-euclid font-medium leading-[48px];
