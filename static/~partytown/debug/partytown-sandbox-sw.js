@@ -1,4 +1,4 @@
-/* Partytown 1.0.0 - MIT QwikDev */
+/* Partytown 1.0.5 - MIT QwikDev */
 (window => {
     const isPromise = v => "object" == typeof v && v && v.then;
     const noop = () => {};
@@ -20,9 +20,10 @@
         return "";
     };
     const startsWith = (str, val) => str.startsWith(val);
-    const DEPRECATED_WINDOW_PROPERTIES = new Set([ "sharedStorage", "SharedStorage", "AttributionReporting", "attributionReporting", "AttributionReportingRequestOptions", "attributionSrc", "setAttributionReporting" ]);
+    const DEPRECATED_WINDOW_PROPERTIES = new Set([ "sharedStorage", "SharedStorage", "AttributionReporting", "attributionReporting", "AttributionReportingRequestOptions", "attributionSrc", "setAttributionReporting", "fence", "HTMLFencedFrameElement" ]);
     const isValidMemberName = memberName => !(startsWith(memberName, "webkit") || startsWith(memberName, "toJSON") || startsWith(memberName, "constructor") || startsWith(memberName, "toString") || startsWith(memberName, "_") || DEPRECATED_WINDOW_PROPERTIES.has(memberName));
     const getNodeName = node => 11 === node.nodeType && node.host ? "#s" : node.nodeName;
+    const EMPTY_ARRAY = [];
     const randomId = () => Math.round(Math.random() * Number.MAX_SAFE_INTEGER).toString(36);
     const defineConstructorName = (Cstr, value) => ((obj, memberName, descriptor) => Object.defineProperty(obj, memberName, {
         ...descriptor,
@@ -110,6 +111,7 @@
         WorkerMessageType[WorkerMessageType.LocationUpdate = 13] = "LocationUpdate";
         WorkerMessageType[WorkerMessageType.DocumentVisibilityState = 14] = "DocumentVisibilityState";
         WorkerMessageType[WorkerMessageType.CustomElementCallback = 15] = "CustomElementCallback";
+        WorkerMessageType[WorkerMessageType.ServiceWorkerBypassed = 16] = "ServiceWorkerBypassed";
     }(WorkerMessageType || (WorkerMessageType = {}));
     var LocationUpdateType;
     !function(LocationUpdateType) {
@@ -239,7 +241,10 @@
         }
     };
     let lastCleanup = 0;
-    const getPageFrame = win => Array.from(window.parent.document.querySelectorAll("iframe")).find(frame => frame.contentWindow === win);
+    const getPageFrame = win => {
+        var _a;
+        return Array.from((null === (_a = window.parent) || void 0 === _a ? void 0 : _a.document.querySelectorAll("iframe")) || EMPTY_ARRAY).find(frame => frame.contentWindow === win);
+    };
     const mainWindow = window.parent;
     const docImpl = document.implementation.createHTMLDocument();
     const config = mainWindow.partytown || {};
@@ -465,11 +470,17 @@
         let forwards = config.forward || [];
         let i;
         let mainForwardFn;
-        let forwardCall = ($forward$, args) => worker.postMessage([ WorkerMessageType.ForwardMainTrigger, {
-            $winId$: $winId$,
-            $forward$: $forward$,
-            $args$: serializeForWorker($winId$, Array.from(args))
-        } ]);
+        let forwardCall = ($forward$, args) => {
+            try {
+                worker.postMessage([ WorkerMessageType.ForwardMainTrigger, {
+                    $winId$: $winId$,
+                    $forward$: $forward$,
+                    $args$: serializeForWorker($winId$, Array.from(args))
+                } ]);
+            } catch (e) {
+                config.logForwardedEvents && logMain(`Forward event failed: ${$forward$.join(".")}()`);
+            }
+        };
         win._ptf = void 0;
         forwards.map(forwardProps => {
             const [property, {preserveBehavior: preserveBehavior}] = resolvePartytownForwardProperty(forwardProps);
@@ -757,25 +768,30 @@
     const addGlobalConstructorUsingPrototype = ($interfaces$, mainWindow, cstrName) => {
         void 0 !== mainWindow[cstrName] && $interfaces$.push([ cstrName, "Object", Object.keys(mainWindow[cstrName].prototype).map(propName => [ propName, InterfaceType.Property ]), InterfaceType.EnvGlobalConstructor ]);
     };
+    const fallbackOnMainThread = () => mainWindow.document.dispatchEvent(new CustomEvent("pt2"));
     let worker;
     (receiveMessage => {
         const swContainer = window.navigator.serviceWorker;
+        if (!swContainer.controller) {
+            fallbackOnMainThread();
+            return Promise.resolve(null);
+        }
         return swContainer.getRegistration().then(swRegistration => {
             swContainer.addEventListener("message", ev => receiveMessage(ev.data, accessRsp => swRegistration.active && swRegistration.active.postMessage(accessRsp)));
             return (worker, msg) => {
-                msg[0] === WorkerMessageType.MainDataRequestFromWorker ? worker.postMessage([ WorkerMessageType.MainDataResponseToWorker, readMainPlatform() ]) : msg[0] === WorkerMessageType.MainInterfacesRequestFromWorker ? worker.postMessage([ WorkerMessageType.MainInterfacesResponseToWorker, readMainInterfaces() ]) : onMessageFromWebWorker(worker, msg);
+                msg[0] === WorkerMessageType.MainDataRequestFromWorker ? worker.postMessage([ WorkerMessageType.MainDataResponseToWorker, readMainPlatform() ]) : msg[0] === WorkerMessageType.MainInterfacesRequestFromWorker ? worker.postMessage([ WorkerMessageType.MainInterfacesResponseToWorker, readMainInterfaces() ]) : msg[0] === WorkerMessageType.ServiceWorkerBypassed ? fallbackOnMainThread() : onMessageFromWebWorker(worker, msg);
             };
         });
     })((accessReq, responseCallback) => mainAccessHandler(worker, accessReq).then(responseCallback)).then(onMessageHandler => {
         if (onMessageHandler) {
-            worker = new Worker(trustedType("createScriptURL", libPath + "partytown-ww-sw.js?v=1.0.0"), {
+            worker = new Worker(trustedType("createScriptURL", libPath + "partytown-ww-sw.js?v=1.0.5"), {
                 name: "Partytown 🎉"
             });
             worker.onmessage = ev => {
                 const msg = ev.data;
                 msg[0] === WorkerMessageType.AsyncAccessRequest ? mainAccessHandler(worker, msg[1], 1) : onMessageHandler(worker, msg);
             };
-            logMain("Created Partytown web worker (1.0.0)");
+            logMain("Created Partytown web worker (1.0.5)");
             worker.onerror = ev => console.error("Web Worker Error", ev);
             mainWindow.addEventListener("pt1", ev => registerWindow(worker, getAndSetInstanceId(ev.detail.frameElement), ev.detail));
             window !== mainWindow && window.addEventListener("message", ev => {

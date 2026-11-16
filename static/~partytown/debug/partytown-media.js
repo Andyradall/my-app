@@ -1,4 +1,4 @@
-/* Partytown 1.0.0 - MIT QwikDev */
+/* Partytown 1.0.5 - MIT QwikDev */
 (self => {
     const [getter, setter, callMethod, constructGlobal, definePrototypePropertyDescriptor, randomId, WinIdKey, InstanceIdKey, ApplyPathKey] = self.$bridgeToMedia$;
     delete self.$bridgeToMedia$;
@@ -31,6 +31,7 @@
         WorkerMessageType[WorkerMessageType.LocationUpdate = 13] = "LocationUpdate";
         WorkerMessageType[WorkerMessageType.DocumentVisibilityState = 14] = "DocumentVisibilityState";
         WorkerMessageType[WorkerMessageType.CustomElementCallback = 15] = "CustomElementCallback";
+        WorkerMessageType[WorkerMessageType.ServiceWorkerBypassed = 16] = "ServiceWorkerBypassed";
     }(WorkerMessageType || (WorkerMessageType = {}));
     var LocationUpdateType;
     !function(LocationUpdateType) {

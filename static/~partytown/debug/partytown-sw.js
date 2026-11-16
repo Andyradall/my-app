@@ -1,4 +1,4 @@
-/* Partytown 1.0.0 - MIT QwikDev */
+/* Partytown 1.0.5 - MIT QwikDev */
 Object.freeze((obj => {
     const properties = new Set;
     let currentObj = obj;
@@ -24,7 +24,7 @@ const httpRequestFromWebWorker = req => new Promise(async resolve => {
         const client = ((clients, msgId) => {
             const tabId = msgId.split(".").pop();
             let client = clients.find(a => a.url.endsWith(`?${tabId}`));
-            client || (client = [ ...clients ].sort((a, b) => a.url > b.url ? -1 : a.url < b.url ? 1 : 0)[0]);
+            client || "undefined" != tabId || (client = [ ...clients ].sort((a, b) => a.url > b.url ? -1 : a.url < b.url ? 1 : 0)[0]);
             return client;
         })([ ...clients ], accessReq.$msgId$);
         if (client) {
@@ -68,7 +68,7 @@ self.onfetch = ev => {
     const url = new URL(req.url);
     const pathname = url.pathname;
     if (pathname.endsWith("sw.html")) {
-        ev.respondWith(response('<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><script src="./partytown-sandbox-sw.js?v=1.0.0"><\/script></head></html>'));
+        ev.respondWith(response('<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><script src="./partytown-sandbox-sw.js?v=1.0.5"><\/script></head></html>'));
     } else {
         pathname.endsWith("proxytown") && ev.respondWith(httpRequestFromWebWorker(req));
     }

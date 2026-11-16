@@ -1,4 +1,4 @@
-/* Partytown 1.0.0 - MIT QwikDev */
+/* Partytown 1.0.5 - MIT QwikDev */
 !function() {
     
     const trustedType = (create, value, g) => {
@@ -60,6 +60,7 @@
                         if (0 != (null == config ? void 0 : config.fallbackTimeout)) {
                             timeout = setTimeout(fallback, (null == config ? void 0 : config.fallbackTimeout) || 1e4);
                             doc.addEventListener("pt0", clearFallback);
+                            doc.addEventListener("pt2", fallback);
                         }
                         useAtomics ? loadSandbox(1) : nav.serviceWorker ? nav.serviceWorker.register(trustedType("createScriptURL", libPath + (config.swPath || "partytown-sw.js")), {
                             scope: libPath
@@ -98,18 +99,24 @@
                 sandbox.style.visibility = "hidden";
                 sandbox.setAttribute("aria-hidden", true);
             }
-            sandbox.src = isAtomics ? trustedType("createScriptURL", libPath + "partytown-atomics.js?v=1.0.0") : libPath + "partytown-sandbox-sw.html?" + win._pttab;
+            sandbox.src = isAtomics ? trustedType("createScriptURL", libPath + "partytown-atomics.js?v=1.0.5") : libPath + "partytown-sandbox-sw.html?" + win._pttab;
             doc.querySelector(config.sandboxParent || "body").appendChild(sandbox);
         }
-        function fallback(i, script) {
+        function fallback() {
             console.warn("Partytown script fallback");
             clearFallback();
-            top == win && (config.forward || []).map(function(forwardProps) {
-                const [property] = resolvePartytownForwardProperty(forwardProps);
-                delete win[property.split(".")[0]];
-            });
+            if (top == win) {
+                const forward = (config.forward || []).map(resolvePartytownForwardProperty);
+                forward.map(function([property]) {
+                    const name = property.split(".")[0];
+                    const isPreserved = forward.some(function([p, {preserveBehavior: preserveBehavior}]) {
+                        return preserveBehavior && ((str, val) => str.startsWith(val))(p, name + ".");
+                    });
+                    isPreserved || delete win[name];
+                });
+            }
             scripts = doc.querySelectorAll('script[type="text/partytown"]');
-            for (i = 0; i < scripts.length; i++) {
+            for (let i = 0; i < scripts.length; i++) {
                 fallbackScript(scripts[i]);
             }
             "undefined" != typeof MutationObserver && new MutationObserver(function(mutations) {
@@ -126,14 +133,17 @@
             sandbox && sandbox.parentNode.removeChild(sandbox);
         }
         function fallbackScript(orgScript, script) {
-            script = doc.createElement("script");
-            orgScript.src ? script.src = trustedType("createScriptURL", orgScript.src) : script.innerHTML = trustedType("createHTML", orgScript.innerHTML);
-            script.nonce = config.nonce;
-            orgScript.type += "-x";
-            doc.head.appendChild(script);
+            if (!orgScript.hasAttribute("data-ptworkeronly")) {
+                script = doc.createElement("script");
+                orgScript.src ? script.src = trustedType("createScriptURL", orgScript.src) : script.innerHTML = trustedType("createHTML", orgScript.innerHTML);
+                script.nonce = config.nonce;
+                orgScript.type += "-x";
+                doc.head.appendChild(script);
+            }
         }
         function clearFallback() {
             clearTimeout(timeout);
+            doc.removeEventListener("pt2", fallback);
         }
         config = win.partytown || {};
         top == win && (config.forward || []).map(function(forwardProps) {

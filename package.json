@@ -43,7 +43,7 @@
 	"dependencies": {
 		"@hotjar/browser": "^1.0.9",
 		"@portabletext/svelte": "^4.0.0",
-		"@qwik.dev/partytown": "^1.0.0",
+		"@qwik.dev/partytown": "^1.0.5",
 		"@sanity/client": "^8.9.0",
 		"@sanity/image-url": "^2.1.1",
 		"animejs": "^4.5.0",

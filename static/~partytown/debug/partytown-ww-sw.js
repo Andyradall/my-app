@@ -1,4 +1,4 @@
-/* Partytown 1.0.0 - MIT QwikDev */
+/* Partytown 1.0.5 - MIT QwikDev */
 (self => {
     var WorkerMessageType;
     !function(WorkerMessageType) {
@@ -18,6 +18,7 @@
         WorkerMessageType[WorkerMessageType.LocationUpdate = 13] = "LocationUpdate";
         WorkerMessageType[WorkerMessageType.DocumentVisibilityState = 14] = "DocumentVisibilityState";
         WorkerMessageType[WorkerMessageType.CustomElementCallback = 15] = "CustomElementCallback";
+        WorkerMessageType[WorkerMessageType.ServiceWorkerBypassed = 16] = "ServiceWorkerBypassed";
     }(WorkerMessageType || (WorkerMessageType = {}));
     var LocationUpdateType;
     !function(LocationUpdateType) {
@@ -521,6 +522,17 @@
     const logDimensionCacheClearMethod = (target, methodName) => {
         (webWorkerCtx.$config$.logGetters || webWorkerCtx.$config$.logCalls) && logWorker(`Dimension cache cleared from method call ${methodName}()`, target[WinIdKey]);
     };
+    let isBypassed = false;
+    const bypassServiceWorker = (webWorkerCtx, accessReq) => {
+        if (!isBypassed) {
+            isBypassed = true;
+            webWorkerCtx.$postMessage$([ WorkerMessageType.ServiceWorkerBypassed ]);
+        }
+        return {
+            $msgId$: accessReq.$msgId$,
+            $error$: "NoServiceWorker"
+        };
+    };
     const taskQueue = [];
     const queue = (instance, $applyPath$, callType, $assignInstanceId$, $groupedGetters$, buffer) => {
         if (instance[ApplyPathKey]) {
@@ -561,11 +573,15 @@
             taskQueue.length = 0;
             if (isBlocking) {
                 const accessRsp = ((webWorkerCtx, accessReq) => {
+                    const swContainer = navigator.serviceWorker;
+                    if (swContainer && !swContainer.controller) {
+                        return bypassServiceWorker(webWorkerCtx, accessReq);
+                    }
                     const xhr = new XMLHttpRequest;
                     xhr.open("POST", partytownLibUrl("proxytown"), false);
                     xhr.send(JSON.stringify(accessReq));
-                    return JSON.parse(xhr.responseText);
-                })(0, accessReq);
+                    return 200 != xhr.status ? bypassServiceWorker(webWorkerCtx, accessReq) : JSON.parse(xhr.responseText);
+                })(webWorkerCtx, accessReq);
                 const isPromise = accessRsp.$isPromise$;
                 const rtnValue = deserializeFromMain(endTask.$winId$, endTask.$instanceId$, endTask.$applyPath$, accessRsp.$rtnValue$);
                 if (accessRsp.$error$) {
@@ -957,7 +973,7 @@
         }
         return {};
     };
-    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=1.0.0")}"><\/script>`;
+    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=1.0.5")}"><\/script>`;
     const createImageConstructor = env => class HTMLImageElement {
         constructor() {
             this.s = "";
@@ -1709,7 +1725,7 @@
                         (() => {
                             if (!webWorkerCtx.$initWindowMedia$) {
                                 self.$bridgeToMedia$ = [ getter, setter, callMethod, constructGlobal, definePrototypePropertyDescriptor, randomId, WinIdKey, InstanceIdKey, ApplyPathKey ];
-                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=1.0.0"));
+                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=1.0.5"));
                                 webWorkerCtx.$initWindowMedia$ = self.$bridgeFromMedia$;
                                 delete self.$bridgeFromMedia$;
                             }

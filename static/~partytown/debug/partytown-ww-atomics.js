@@ -1,4 +1,4 @@
-/* Partytown 1.0.0 - MIT QwikDev */
+/* Partytown 1.0.5 - MIT QwikDev */
 (self => {
     var WorkerMessageType;
     !function(WorkerMessageType) {
@@ -18,6 +18,7 @@
         WorkerMessageType[WorkerMessageType.LocationUpdate = 13] = "LocationUpdate";
         WorkerMessageType[WorkerMessageType.DocumentVisibilityState = 14] = "DocumentVisibilityState";
         WorkerMessageType[WorkerMessageType.CustomElementCallback = 15] = "CustomElementCallback";
+        WorkerMessageType[WorkerMessageType.ServiceWorkerBypassed = 16] = "ServiceWorkerBypassed";
     }(WorkerMessageType || (WorkerMessageType = {}));
     var LocationUpdateType;
     !function(LocationUpdateType) {
@@ -521,6 +522,8 @@
     const logDimensionCacheClearMethod = (target, methodName) => {
         (webWorkerCtx.$config$.logGetters || webWorkerCtx.$config$.logCalls) && logWorker(`Dimension cache cleared from method call ${methodName}()`, target[WinIdKey]);
     };
+    const decoder = new TextDecoder;
+    let lastRequestId = 0;
     const taskQueue = [];
     const queue = (instance, $applyPath$, callType, $assignInstanceId$, $groupedGetters$, buffer) => {
         if (instance[ApplyPathKey]) {
@@ -563,15 +566,25 @@
                 const accessRsp = ((webWorkerCtx, accessReq) => {
                     const sharedDataBuffer = webWorkerCtx.$sharedDataBuffer$;
                     const sharedData = new Int32Array(sharedDataBuffer);
-                    Atomics.store(sharedData, 0, 0);
-                    webWorkerCtx.$postMessage$([ WorkerMessageType.ForwardWorkerAccessRequest, accessReq ]);
-                    Atomics.wait(sharedData, 0, 0);
-                    let dataLength = Atomics.load(sharedData, 0);
-                    let accessRespStr = "";
-                    let i = 0;
-                    for (;i < dataLength; i++) {
-                        accessRespStr += String.fromCharCode(sharedData[i + 1]);
+                    const requestId = lastRequestId = lastRequestId % 2147483647 + 1;
+                    const deadline = Date.now() + 12e4;
+                    Atomics.store(sharedData, 0, requestId);
+                    webWorkerCtx.$postMessage$([ WorkerMessageType.ForwardWorkerAccessRequest, accessReq, requestId ]);
+                    while (Atomics.load(sharedData, 0) === requestId) {
+                        const remaining = deadline - Date.now();
+                        if (remaining <= 0) {
+                            if (Atomics.compareExchange(sharedData, 0, requestId, 0) === requestId) {
+                                return {
+                                    $msgId$: accessReq.$msgId$,
+                                    $error$: "Timeout"
+                                };
+                            }
+                        } else {
+                            Atomics.wait(sharedData, 0, requestId, remaining);
+                        }
                     }
+                    const dataLength = Atomics.load(sharedData, 1);
+                    const accessRespStr = decoder.decode(new Uint8Array(sharedDataBuffer, 8, dataLength).slice());
                     return JSON.parse(accessRespStr);
                 })(webWorkerCtx, accessReq);
                 const isPromise = accessRsp.$isPromise$;
@@ -965,7 +978,7 @@
         }
         return {};
     };
-    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=1.0.0")}"><\/script>`;
+    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=1.0.5")}"><\/script>`;
     const createImageConstructor = env => class HTMLImageElement {
         constructor() {
             this.s = "";
@@ -1717,7 +1730,7 @@
                         (() => {
                             if (!webWorkerCtx.$initWindowMedia$) {
                                 self.$bridgeToMedia$ = [ getter, setter, callMethod, constructGlobal, definePrototypePropertyDescriptor, randomId, WinIdKey, InstanceIdKey, ApplyPathKey ];
-                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=1.0.0"));
+                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=1.0.5"));
                                 webWorkerCtx.$initWindowMedia$ = self.$bridgeFromMedia$;
                                 delete self.$bridgeFromMedia$;
                             }
